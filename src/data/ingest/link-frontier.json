@@ -1,0 +1,4769 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-27T06:57:36.058Z",
+  "jobs": [
+    {
+      "url": "http://eplus.jp/contact-form",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159649",
+      "hintedEventId": "evt_cd047d0c6371e85905aa8f7b",
+      "hintedEventIds": [
+        "evt_cd047d0c6371e85905aa8f7b"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 403,
+      "urlKind": "support",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:05:58.988Z",
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "http://eplus.jp/page/eplus/refund1/index.html",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159362",
+      "hintedEventId": "evt_447057a70eea88486d52bafe",
+      "hintedEventIds": [
+        "evt_447057a70eea88486d52bafe"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 200,
+      "urlKind": "refund",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:06:02.416Z",
+      "lastError": "URL 类型为 refund，不是有效购票页"
+    },
+    {
+      "url": "http://l-tike.com/search?keyword=11806",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=163256",
+      "hintedEventId": "evt_123298dea6431df433addc4c",
+      "hintedEventIds": [
+        "evt_123298dea6431df433addc4c",
+        "evt_5d17762d6d9a21bc07ebb09e"
+      ],
+      "status": "deferred",
+      "attemptCount": 0,
+      "nextCheckAt": "2026-09-03T05:32:38.942Z",
+      "lastHttpStatus": null,
+      "urlKind": "search",
+      "provider": "lawson",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 search，不作为具体购票页抓取"
+    },
+    {
+      "url": "http://l-tike.com/search?keyword=12670",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156297",
+      "hintedEventId": "evt_a8314692d77530abd7e5f1f9",
+      "hintedEventIds": [
+        "evt_a8314692d77530abd7e5f1f9"
+      ],
+      "status": "deferred",
+      "attemptCount": 0,
+      "nextCheckAt": "2026-09-03T05:32:38.942Z",
+      "lastHttpStatus": null,
+      "urlKind": "search",
+      "provider": "lawson",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 search，不作为具体购票页抓取"
+    },
+    {
+      "url": "https://eplus.jp/bluemash",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159001",
+      "hintedEventId": "evt_89c7d2f37bf96af3e8c45a4b",
+      "hintedEventIds": [
+        "evt_89c7d2f37bf96af3e8c45a4b"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:29.710Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:29.710Z",
+      "lastError": null
+    },
+    {
+      "url": "https://eplus.jp/el6",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=159007",
+      "hintedEventId": "evt_76baa565bca71e5195662c3f",
+      "hintedEventIds": [
+        "evt_76baa565bca71e5195662c3f",
+        "evt_dcea3120d379ceb36a92fb73"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:31.368Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:31.368Z",
+      "lastError": null
+    },
+    {
+      "url": "https://eplus.jp/kanekoayano",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156641",
+      "hintedEventId": "evt_6f7deafeba380b1bf290ffbb",
+      "hintedEventIds": [
+        "evt_6f7deafeba380b1bf290ffbb"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:34.102Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:34.102Z",
+      "lastError": null
+    },
+    {
+      "url": "https://eplus.jp/nanase30th-tour",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155442",
+      "hintedEventId": "evt_1ff1b39fe740adc5773e7257",
+      "hintedEventIds": [
+        "evt_1ff1b39fe740adc5773e7257"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:35.786Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:35.786Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://eplus.jp/sf/detail/0046360001?P1=0402&P59=1&P6=001"
+    },
+    {
+      "url": "https://eplus.jp/sf/detail/0719780001-P0030515?P1=0402&P59=1&P6=001",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=158954",
+      "hintedEventId": "evt_790e49241f364ddb4aa979ea",
+      "hintedEventIds": [
+        "evt_790e49241f364ddb4aa979ea"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "event_detail",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:06:15.281Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://eplus.jp/sf/detail/0719780001-P0030516?P1=0402&P59=1&P6=001",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=158955",
+      "hintedEventId": "evt_693c4d59e639f38ded43e138",
+      "hintedEventIds": [
+        "evt_693c4d59e639f38ded43e138"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "event_detail",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:06:16.410Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://eplus.jp/sf/detail/3192170001-P0030035?P1=0402&P59=1&P6=001",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=157167",
+      "hintedEventId": "evt_eec5633906789e9903755ecb",
+      "hintedEventIds": [
+        "evt_eec5633906789e9903755ecb"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "event_detail",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:06:17.976Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://eplus.jp/sf/detail/3841110001-P0030020P021001?P1=0175",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159134",
+      "hintedEventId": "evt_4b12eed7c9b49dcd7fb04e6b",
+      "hintedEventIds": [
+        "evt_4b12eed7c9b49dcd7fb04e6b"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:37.070Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:37.070Z",
+      "lastError": null
+    },
+    {
+      "url": "https://eplus.jp/sf/detail/4469370001?P1=0402&P59=1&P6=001",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157710",
+      "hintedEventId": "evt_3d89ce9288dc16a46363b3b0",
+      "hintedEventIds": [
+        "evt_3d89ce9288dc16a46363b3b0"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:37.645Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:37.645Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://eplus.jp/sf/detail/4469370001?P1=0402&P59=1&P6=001"
+    },
+    {
+      "url": "https://eplus.jp/slenderierecord/family2026",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159970",
+      "hintedEventId": "evt_581952c85ac9645b0225b1eb",
+      "hintedEventIds": [
+        "evt_581952c85ac9645b0225b1eb"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:38.989Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:38.989Z",
+      "lastError": null
+    },
+    {
+      "url": "https://eplus.jp/sophia",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155370",
+      "hintedEventId": "evt_49d1e08ce5cc9e478b2ccee4",
+      "hintedEventIds": [
+        "evt_49d1e08ce5cc9e478b2ccee4"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-26T16:06:28.735Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://eplus.jp/toe",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=158148",
+      "hintedEventId": "evt_13b68ce333e2e7c111a90adb",
+      "hintedEventIds": [
+        "evt_13b68ce333e2e7c111a90adb",
+        "evt_ab4f64953d0d48b4439f900c"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-27T09:26:41.715Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "eplus",
+      "lastCheckedAt": "2026-08-27T03:26:41.715Z",
+      "lastError": null
+    },
+    {
+      "url": "https://l-tike.com/artist/000000000848007",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=157167",
+      "hintedEventId": "evt_eec5633906789e9903755ecb",
+      "hintedEventIds": [
+        "evt_eec5633906789e9903755ecb"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-26T16:06:34.101Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://l-tike.com/concert/mevent?mid=774369",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157710",
+      "hintedEventId": "evt_3d89ce9288dc16a46363b3b0",
+      "hintedEventIds": [
+        "evt_3d89ce9288dc16a46363b3b0"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:45.667Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:26:45.667Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://l-tike.com/concert/mevent?mid=774369"
+    },
+    {
+      "url": "https://l-tike.com/cornelius",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156408",
+      "hintedEventId": "evt_ce34048aa2e19fc9f0402b90",
+      "hintedEventIds": [
+        "evt_ce34048aa2e19fc9f0402b90"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:49.438Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:26:49.438Z",
+      "lastError": null
+    },
+    {
+      "url": "https://l-tike.com/lovebites",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159009",
+      "hintedEventId": "evt_365ac0ebe5b517e6be3c8e38",
+      "hintedEventIds": [
+        "evt_365ac0ebe5b517e6be3c8e38"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:52.864Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:26:52.864Z",
+      "lastError": null
+    },
+    {
+      "url": "https://l-tike.com/nanase30th-tour",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155442",
+      "hintedEventId": "evt_1ff1b39fe740adc5773e7257",
+      "hintedEventIds": [
+        "evt_1ff1b39fe740adc5773e7257"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:26:56.506Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:26:56.506Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://l-tike.com/concert/mevent?mid=319198"
+    },
+    {
+      "url": "https://l-tike.com/search?keyword=11732",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=157888",
+      "hintedEventId": "evt_57abeaa33a9174f6eb3c958f",
+      "hintedEventIds": [
+        "evt_57abeaa33a9174f6eb3c958f"
+      ],
+      "status": "deferred",
+      "attemptCount": 0,
+      "nextCheckAt": "2026-09-03T05:32:38.939Z",
+      "lastHttpStatus": null,
+      "urlKind": "search",
+      "provider": "lawson",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 search，不作为具体购票页抓取"
+    },
+    {
+      "url": "https://l-tike.com/sophia",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155370",
+      "hintedEventId": "evt_49d1e08ce5cc9e478b2ccee4",
+      "hintedEventIds": [
+        "evt_49d1e08ce5cc9e478b2ccee4"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:01.408Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:27:01.408Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://l-tike.com/concert/mevent?mid=644132"
+    },
+    {
+      "url": "https://l-tike.com/takashi-fujii",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159970",
+      "hintedEventId": "evt_581952c85ac9645b0225b1eb",
+      "hintedEventIds": [
+        "evt_581952c85ac9645b0225b1eb"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:04.916Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "lawson",
+      "lastCheckedAt": "2026-08-27T03:27:04.916Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://l-tike.com/artist/000000000155305"
+    },
+    {
+      "url": "https://livepocket.jp/e/9t1kz",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159532",
+      "hintedEventId": "evt_4731670d99556a60a5bfa466",
+      "hintedEventIds": [
+        "evt_4731670d99556a60a5bfa466"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:07.305Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T03:27:07.305Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://livepocket.jp/e/9t1kz"
+    },
+    {
+      "url": "https://livepocket.jp/e/bb_rs",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160916",
+      "hintedEventId": "evt_e912cb05373a12af9141c910",
+      "hintedEventIds": [
+        "evt_e912cb05373a12af9141c910"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:08.948Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T03:27:08.948Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://livepocket.jp/e/bb_rs"
+    },
+    {
+      "url": "https://livepocket.jp/e/livehouseoneman",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=161845",
+      "hintedEventId": "evt_59b6d33d870afdde5987e7a2",
+      "hintedEventIds": [
+        "evt_59b6d33d870afdde5987e7a2"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:10.052Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T03:27:10.052Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://livepocket.jp/e/livehouseoneman"
+    },
+    {
+      "url": "https://livepocket.jp/e/one_more_step",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160477",
+      "hintedEventId": "evt_cd5946fd30fdf6d177834b69",
+      "hintedEventIds": [
+        "evt_cd5946fd30fdf6d177834b69"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:10.746Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T03:27:10.746Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://livepocket.jp/e/one_more_step"
+    },
+    {
+      "url": "https://t.livepocket.jp/e/7y68r",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=152927",
+      "hintedEventId": "evt_a071a4ea90eb83779637adc8",
+      "hintedEventIds": [
+        "evt_a071a4ea90eb83779637adc8"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:13.615Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T03:27:13.615Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://t.livepocket.jp/e/7y68r"
+    },
+    {
+      "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=I5220085",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=157167",
+      "hintedEventId": "evt_eec5633906789e9903755ecb",
+      "hintedEventIds": [
+        "evt_eec5633906789e9903755ecb"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:14.404Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "pia",
+      "lastCheckedAt": "2026-08-27T03:27:14.404Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://t.pia.jp/pia/artist/artists.do?artistsCd=I5220085"
+    },
+    {
+      "url": "https://t.pia.jp/pia/artist/artists.do?artistsCd=J9040009",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159662",
+      "hintedEventId": "evt_7ef3be3163b88320a61aef8b",
+      "hintedEventIds": [
+        "evt_7ef3be3163b88320a61aef8b"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:14.746Z",
+      "lastHttpStatus": 200,
+      "urlKind": "generic_provider",
+      "provider": "pia",
+      "lastCheckedAt": "2026-08-27T03:27:14.746Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "page_information_insufficient",
+      "finalUrl": "https://t.pia.jp/pia/artist/artists.do?artistsCd=J9040009"
+    },
+    {
+      "url": "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2668974",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158494",
+      "hintedEventId": "evt_39a0d419faabfb5bdbc9d1ce",
+      "hintedEventIds": [
+        "evt_39a0d419faabfb5bdbc9d1ce",
+        "evt_71c3e4999e95b6cb83b0af33"
+      ],
+      "status": "unmatched",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:15.954Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "pia",
+      "lastCheckedAt": "2026-08-27T03:27:15.954Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "unmatchedReason": "day_night_ambiguity",
+      "finalUrl": "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2668974"
+    },
+    {
+      "url": "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2669967",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=156619",
+      "hintedEventId": "evt_19e7d78f9c8bb72b1722fce6",
+      "hintedEventIds": [
+        "evt_19e7d78f9c8bb72b1722fce6"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:16.823Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "pia",
+      "lastCheckedAt": "2026-08-27T03:27:16.823Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2669967"
+    },
+    {
+      "url": "https://t.pia.jp/pia/event/event.do?eventCd=2609756",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157710",
+      "hintedEventId": "evt_3d89ce9288dc16a46363b3b0",
+      "hintedEventIds": [
+        "evt_3d89ce9288dc16a46363b3b0"
+      ],
+      "status": "done",
+      "attemptCount": 4,
+      "nextCheckAt": "2026-08-29T03:27:17.637Z",
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "pia",
+      "lastCheckedAt": "2026-08-27T03:27:17.637Z",
+      "lastError": null,
+      "unmatchedReason": null,
+      "finalUrl": "https://t.pia.jp/pia/event/event.do?eventCd=2609756"
+    },
+    {
+      "url": "https://t.pia.jp/pia/search_all.do?kw=317-872",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=157888",
+      "hintedEventId": "evt_57abeaa33a9174f6eb3c958f",
+      "hintedEventIds": [
+        "evt_57abeaa33a9174f6eb3c958f"
+      ],
+      "status": "deferred",
+      "attemptCount": 0,
+      "nextCheckAt": "2026-09-03T05:32:38.941Z",
+      "lastHttpStatus": null,
+      "urlKind": "search",
+      "provider": "pia",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 search，不作为具体购票页抓取"
+    },
+    {
+      "url": "https://ticket.tickebo.jp/show/event.html?info=15259",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157710",
+      "hintedEventId": "evt_3d89ce9288dc16a46363b3b0",
+      "hintedEventIds": [
+        "evt_3d89ce9288dc16a46363b3b0"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-26T16:07:13.002Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "https://ticket.tickebo.jp/sn/kym-shukabd-ky-ticket01",
+      "role": "ticket_detail",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160584",
+      "hintedEventId": "evt_c9df9e1241fa9c36cd97239c",
+      "hintedEventIds": [
+        "evt_c9df9e1241fa9c36cd97239c",
+        "evt_02fd96a5d1e8213cdd8d46cc"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-26T16:07:16.824Z",
+      "lastError": "HTTP 404 Not Found"
+    },
+    {
+      "url": "http://acidman.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160164",
+      "hintedEventId": "evt_1d37bb08f54a124f22ebb01c",
+      "hintedEventIds": [
+        "evt_1d37bb08f54a124f22ebb01c"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:39:32.026Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:39:32.026Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://acidman.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://arlequin-web.com/news/4825.html",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=156145",
+      "hintedEventId": "evt_2664c1dcd14c6d0836a37eab",
+      "hintedEventIds": [
+        "evt_2664c1dcd14c6d0836a37eab"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:03.626Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:03.626Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "http://arlequin-web.com/news/4825.html",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://kanekoayano.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158526",
+      "hintedEventId": "evt_3926e06f7520e53a54a310c4",
+      "hintedEventIds": [
+        "evt_3926e06f7520e53a54a310c4"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:05.719Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:05.719Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "http://kanekoayano.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://kyodotokyo.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158760",
+      "hintedEventId": "evt_0fa3c2646603f62177338432",
+      "hintedEventIds": [
+        "evt_0fa3c2646603f62177338432"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://ody-inc.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=163457",
+      "hintedEventId": "evt_b075e927136353ae386b3e46",
+      "hintedEventIds": [
+        "evt_b075e927136353ae386b3e46",
+        "evt_63277dfd04785f4a7d101a2e"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://ritta-japan.com/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=161796",
+      "hintedEventId": "evt_0ea1ecc380963a563da3a898",
+      "hintedEventIds": [
+        "evt_0ea1ecc380963a563da3a898"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "http://www.gogovanillas.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=159571",
+      "hintedEventId": "evt_c763e50782f54d4f85899703",
+      "hintedEventIds": [
+        "evt_c763e50782f54d4f85899703",
+        "evt_d543647bef04a184e04f65a7"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://www.kaisurf.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156809",
+      "hintedEventId": "evt_898422083b4987e22b4467d4",
+      "hintedEventIds": [
+        "evt_898422083b4987e22b4467d4"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://www.kmmusic.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=156639",
+      "hintedEventId": "evt_4d289871a65ba1f69a93ed4f",
+      "hintedEventIds": [
+        "evt_4d289871a65ba1f69a93ed4f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:06.252Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:06.252Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "http://www.kmmusic.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://www.kyodo-osaka.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=160028",
+      "hintedEventId": "evt_5a5ce309e2dfecafb8ee68fd",
+      "hintedEventIds": [
+        "evt_5a5ce309e2dfecafb8ee68fd",
+        "evt_3e030fa37d6aa260773840d7"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:07.730Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:07.730Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://kyodo-osaka.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://www.mmjp.or.jp/birthday",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=157532",
+      "hintedEventId": "evt_0272c20ef5381149086b39f2",
+      "hintedEventIds": [
+        "evt_0272c20ef5381149086b39f2"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://www.mongol800.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158451",
+      "hintedEventId": "evt_14e59aa63a5a8ddb9c9d7ad7",
+      "hintedEventIds": [
+        "evt_14e59aa63a5a8ddb9c9d7ad7"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:09.701Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:09.701Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.mongol800.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://www.red-hot.ne.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=165088",
+      "hintedEventId": "evt_b7477ff0b41c0ef75483e532",
+      "hintedEventIds": [
+        "evt_b7477ff0b41c0ef75483e532",
+        "evt_3926e06f7520e53a54a310c4",
+        "evt_a427657069ed3b14b639ae32",
+        "evt_51874f2b8df86091c22e6d8d"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:12.894Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:12.894Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "http://www.red-hot.ne.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://www.ske48.co.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=155437",
+      "hintedEventId": "evt_716b3e88818497887f5ae2cd",
+      "hintedEventIds": [
+        "evt_716b3e88818497887f5ae2cd",
+        "evt_9854773d3949598deaf94761"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "http://www.sogotokyo.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160405",
+      "hintedEventId": "evt_ce479195537c982421de53ba",
+      "hintedEventIds": [
+        "evt_ce479195537c982421de53ba",
+        "evt_72ec239935fe5061953f6779",
+        "evt_fb84ba6cff118421c62c70e3"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:14.743Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:14.743Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://sogotokyo.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "http://yabaitshirtsyasan.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160033",
+      "hintedEventId": "evt_fc9751c80bc583e7cd3eb981",
+      "hintedEventIds": [
+        "evt_fc9751c80bc583e7cd3eb981",
+        "evt_3fc598838f9b604a7f8b4b6a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://10-feet.kyoto/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160034",
+      "hintedEventId": "evt_40a15c51e9a89030cc0e150d",
+      "hintedEventIds": [
+        "evt_40a15c51e9a89030cc0e150d",
+        "evt_b0a896349c3f038d243b4b6f",
+        "evt_fb84ba6cff118421c62c70e3"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:16.869Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:16.869Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://10-feet.kyoto/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://5thanniv-djfestour.bluearchive.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159631",
+      "hintedEventId": "evt_26a57c0009e43d8e2e839ce1",
+      "hintedEventIds": [
+        "evt_26a57c0009e43d8e2e839ce1",
+        "evt_69278eac3d61162b1256f978"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:18.501Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:18.501Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://5thanniv-djfestour.bluearchive.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://abedon.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=159499",
+      "hintedEventId": "evt_919203b973b92382cea8d2ec",
+      "hintedEventIds": [
+        "evt_919203b973b92382cea8d2ec"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:24.899Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:24.899Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.abedon.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://alexandros.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=159660",
+      "hintedEventId": "evt_8c9588e2913235bcb5464d7f",
+      "hintedEventIds": [
+        "evt_8c9588e2913235bcb5464d7f",
+        "evt_587e59b69df790ded4ffe7d8",
+        "evt_d45f116bce2b6142ad8b6b92"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://atashi-shuka.bitfan.id/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160584",
+      "hintedEventId": "evt_c9df9e1241fa9c36cd97239c",
+      "hintedEventIds": [
+        "evt_c9df9e1241fa9c36cd97239c",
+        "evt_02fd96a5d1e8213cdd8d46cc"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://atjam.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=164690",
+      "hintedEventId": "evt_4930130bfb49b70ebf438b9f",
+      "hintedEventIds": [
+        "evt_4930130bfb49b70ebf438b9f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://avex.jp/yamauchi",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=157562",
+      "hintedEventId": "evt_77afb5fca9dfc5667e721fda",
+      "hintedEventIds": [
+        "evt_77afb5fca9dfc5667e721fda"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://basecamp.jp.net/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=155449",
+      "hintedEventId": "evt_8b5a54e8fa92c9f0b4b5692a",
+      "hintedEventIds": [
+        "evt_8b5a54e8fa92c9f0b4b5692a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://bf.pledge.im/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=167242",
+      "hintedEventId": "evt_c830876b524743fbe8929fa9",
+      "hintedEventIds": [
+        "evt_c830876b524743fbe8929fa9",
+        "evt_86a6ee2b4d91ed7818dcdf57"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://bluearchive.jp/contact-1-hint",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159631",
+      "hintedEventId": "evt_26a57c0009e43d8e2e839ce1",
+      "hintedEventIds": [
+        "evt_26a57c0009e43d8e2e839ce1",
+        "evt_69278eac3d61162b1256f978"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://bluemash.ryzm.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159001",
+      "hintedEventId": "evt_89c7d2f37bf96af3e8c45a4b",
+      "hintedEventIds": [
+        "evt_89c7d2f37bf96af3e8c45a4b",
+        "evt_4da5c8588b350b46fa438db0"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:40.706Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:40.706Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://bluemash.ryzm.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://buzz-ticket.com/e/DANCEHOLICNagoya",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=156049",
+      "hintedEventId": "evt_b173d61232d0a8a45c989efc",
+      "hintedEventIds": [
+        "evt_b173d61232d0a8a45c989efc"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://buzz-ticket.com/e/hobwpuoxpi",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=161014",
+      "hintedEventId": "evt_214d80c1ee4a41377ace6ad3",
+      "hintedEventIds": [
+        "evt_214d80c1ee4a41377ace6ad3"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://bz-vermillion.com/livegym2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156592",
+      "hintedEventId": "evt_410417abde5640e2e07aa60b",
+      "hintedEventIds": [
+        "evt_410417abde5640e2e07aa60b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://bz-vermillion.com/tmg/2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=157019",
+      "hintedEventId": "evt_e4ee21a0f695a94611138908",
+      "hintedEventIds": [
+        "evt_e4ee21a0f695a94611138908",
+        "evt_96fd12865d857982e589be7e"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://cloud9pro.co.jp/artist/profile/shallm",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=165234",
+      "hintedEventId": "evt_05e700d781652d7356fd78a5",
+      "hintedEventIds": [
+        "evt_05e700d781652d7356fd78a5"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://curtaincall.tokyo/tsubasa-imai",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=159726",
+      "hintedEventId": "evt_799c54ba722d1b9eae4495bd",
+      "hintedEventIds": [
+        "evt_799c54ba722d1b9eae4495bd",
+        "evt_9fc40283d7d6c2de876e6917"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://cutiestreet.asobisystem.com/feature/autumntour",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/cutie-street-japan-arena-tour-2026-autumn",
+      "hintedEventId": "evt_d96c340fb6a2039d4a09553c",
+      "hintedEventIds": [
+        "evt_d96c340fb6a2039d4a09553c"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:26.186Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:26.186Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://cutiestreet.asobisystem.com/feature/autumntour",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://d-a-i.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=156639",
+      "hintedEventId": "evt_4d289871a65ba1f69a93ed4f",
+      "hintedEventIds": [
+        "evt_4d289871a65ba1f69a93ed4f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:28.436Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:28.436Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://d-a-i.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://dennou-himeca.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159532",
+      "hintedEventId": "evt_4731670d99556a60a5bfa466",
+      "hintedEventIds": [
+        "evt_4731670d99556a60a5bfa466"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://diskgarage.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160633",
+      "hintedEventId": "evt_64fdfd3f39434b641b20d375",
+      "hintedEventIds": [
+        "evt_64fdfd3f39434b641b20d375"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://e-cube.tv/contact/event",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+      "hintedEventId": "evt_0e90bcbee79b2ae0ea4bb20f",
+      "hintedEventIds": [
+        "evt_0e90bcbee79b2ae0ea4bb20f"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://edp-edp.com/event/edp2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158672",
+      "hintedEventId": "evt_096f274956bf5c625648fe8a",
+      "hintedEventIds": [
+        "evt_096f274956bf5c625648fe8a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://el6.co.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=159012",
+      "hintedEventId": "evt_a1c9a501814e5e5e6f7e9a9c",
+      "hintedEventIds": [
+        "evt_a1c9a501814e5e5e6f7e9a9c",
+        "evt_76baa565bca71e5195662c3f",
+        "evt_dcea3120d379ceb36a92fb73",
+        "evt_11faeb3ad3901a7cce756719",
+        "evt_734d6471e05a499275b251b8",
+        "evt_f29d73cce315f1a3b659b8d3",
+        "evt_d251e855b916b4ecbae210a5"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:44.936Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:44.936Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://el6.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://event.tiget.net/zeppin_disco",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157626",
+      "hintedEventId": "evt_28c5d58a45eeca109656b16f",
+      "hintedEventIds": [
+        "evt_28c5d58a45eeca109656b16f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://eveofficial.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=157089",
+      "hintedEventId": "evt_0d022e52496d338d70cae1d3",
+      "hintedEventIds": [
+        "evt_0d022e52496d338d70cae1d3"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://exo-jp.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=160851",
+      "hintedEventId": "evt_72ba530db279ea8aa5d55008",
+      "hintedEventIds": [
+        "evt_72ba530db279ea8aa5d55008"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://faq.stpr-ticket.com/hc/ja/requests/new",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=161485",
+      "hintedEventId": "evt_6fb450681c6ec0da9aac0c7e",
+      "hintedEventIds": [
+        "evt_6fb450681c6ec0da9aac0c7e",
+        "evt_f0388de1435ae45933801058",
+        "evt_0184be8e7b66b3726e0c21c5"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://flight-lindberg.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161402",
+      "hintedEventId": "evt_c8f3349213c62f04ccb960af",
+      "hintedEventIds": [
+        "evt_c8f3349213c62f04ccb960af"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://fumino.b-rave.tokyo/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=158871",
+      "hintedEventId": "evt_b0b46958da9cd424d6f539e9",
+      "hintedEventIds": [
+        "evt_b0b46958da9cd424d6f539e9"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:30.702Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:30.702Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://fumino.b-rave.tokyo/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://ginbae.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160236",
+      "hintedEventId": "evt_5535d0346b417022160adb18",
+      "hintedEventIds": [
+        "evt_5535d0346b417022160adb18"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:33.886Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:33.886Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://ginbae.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://gogovanillas.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=158381",
+      "hintedEventId": "evt_27d9438a2a387fdb3eef3dce",
+      "hintedEventIds": [
+        "evt_27d9438a2a387fdb3eef3dce",
+        "evt_ba9105f325dd8bf8ffc8e174",
+        "evt_e51062db584d959c9f9ae3f2"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://gosan.g1-corp.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158760",
+      "hintedEventId": "evt_0fa3c2646603f62177338432",
+      "hintedEventIds": [
+        "evt_0fa3c2646603f62177338432"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://gre4n-boyz.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=155732",
+      "hintedEventId": "evt_e366dde5eafa649942974f77",
+      "hintedEventIds": [
+        "evt_e366dde5eafa649942974f77",
+        "evt_e785dab5a10072a74bcc3f4e",
+        "evt_57abeaa33a9174f6eb3c958f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:35.071Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:35.071Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://gre4n-boyz.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://gre4n-boyz.com/news/205",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=157887",
+      "hintedEventId": "evt_959aeda2f7b19f4d905a23fe",
+      "hintedEventIds": [
+        "evt_959aeda2f7b19f4d905a23fe"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://green-music.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=162919",
+      "hintedEventId": "evt_9fa4eed50fc7ca7f89a90ac9",
+      "hintedEventIds": [
+        "evt_9fa4eed50fc7ca7f89a90ac9"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:36.408Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:36.408Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://green-music.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://hal-event.jp/mj/2026fanmeeting",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=161399",
+      "hintedEventId": "evt_86d6cdfb2af7730a223bc57a",
+      "hintedEventIds": [
+        "evt_86d6cdfb2af7730a223bc57a",
+        "evt_c6da8a17ac54051fe190f5c9"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:41.443Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:41.443Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://hal-event.jp/mj/2026fanmeeting",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://haruluna5thlive.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157627",
+      "hintedEventId": "evt_5b0579f628d1ea6885374da3",
+      "hintedEventIds": [
+        "evt_5b0579f628d1ea6885374da3"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://helloproject.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=163457",
+      "hintedEventId": "evt_b075e927136353ae386b3e46",
+      "hintedEventIds": [
+        "evt_b075e927136353ae386b3e46",
+        "evt_63277dfd04785f4a7d101a2e",
+        "evt_b997b1304ffa826661ee6f84"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:45.800Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:45.800Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://helloproject.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://hypnosismic-stage.com/divisionjamtour",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=157035",
+      "hintedEventId": "evt_c48b64fbc46f4e1f2ceb2ef3",
+      "hintedEventIds": [
+        "evt_c48b64fbc46f4e1f2ceb2ef3",
+        "evt_717bbc7ede23d8978c29d584",
+        "evt_7327062180f7ec83ce94b99e"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://idolmaster-official.jp/live_events/765pro_tour_dualtwinlive",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=158752",
+      "hintedEventId": "evt_5e06da499135065e92840ebd",
+      "hintedEventIds": [
+        "evt_5e06da499135065e92840ebd",
+        "evt_d107022ea03271158b80034b"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:49.563Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:49.563Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://idolmaster-official.jp/live_events/765pro_tour_dualtwinlive",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://info.diskgarage.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=157223",
+      "hintedEventId": "evt_01f138ce23636c3efc2a505e",
+      "hintedEventIds": [
+        "evt_01f138ce23636c3efc2a505e",
+        "evt_56bd2ccfb9f748e69fdc3aa3",
+        "evt_77afb5fca9dfc5667e721fda",
+        "evt_c51ba8e45f1168c2a847df29",
+        "evt_af681e80f5f5de77c7d4c9b8",
+        "evt_5eb52236583b116f748157c6",
+        "evt_5b0579f628d1ea6885374da3",
+        "evt_d4e9fe9e897e02f38adb7fe4",
+        "evt_8f781c4463155e11a9df2e0b",
+        "evt_0a1e8b43af6883399e8a17f3",
+        "evt_973f42b4e70d47ef29e0505d",
+        "evt_7afe9b25357c9fccb0d31a98",
+        "evt_3dbc66bab4339eaf4a5a852d",
+        "evt_0496a29de1cbfccf05e32208",
+        "evt_d47e42035a6c12560b371822",
+        "evt_caa06e1c2da4f094b1b80cd9",
+        "evt_77d708c529063b4349a304ef",
+        "evt_01111b363688fd787aa5d0b2",
+        "evt_3b8ddef9c3f9560f3924e489",
+        "evt_47f031e877490f4c6b0d0e66",
+        "evt_959aeda2f7b19f4d905a23fe",
+        "evt_875f61ffdb76cbf4895d0c00",
+        "evt_1c8409213286ce3293c6ed1c",
+        "evt_2d05d495710fcfa25e575cdc",
+        "evt_9938ed181e1912af58441d3a",
+        "evt_d16abf32e9424b666b785d43",
+        "evt_919203b973b92382cea8d2ec",
+        "evt_f0b74450e493d3a24af66dd3",
+        "evt_417ce2f5eedfba537887cec9",
+        "evt_5535d0346b417022160adb18",
+        "evt_0f574db1e8c2cfc7c5274b04",
+        "evt_17b3e06f1821c2343f5ee0ca",
+        "evt_e0b7c05cdc1d6d064df8c398",
+        "evt_05e700d781652d7356fd78a5",
+        "evt_634786fd43dbaa1437a022cd",
+        "evt_09318a061eb5c5cd9a14ccde",
+        "evt_d47d6270fe39b8b01cb89c0a",
+        "evt_a8a8555a658bca3aae1a741e",
+        "evt_a78e41498c752f69ac54be67",
+        "evt_f636ea303f538f0751f1824d",
+        "evt_c8f3349213c62f04ccb960af",
+        "evt_95c3f766670665d85cde3034",
+        "evt_37e71b72083dba8a58a7a37f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:33:57.865Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:57.865Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://diskgarage.com/help",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://information-desk.info/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159420",
+      "hintedEventId": "evt_9d9d117de6c98fd6359f65f8",
+      "hintedEventIds": [
+        "evt_9d9d117de6c98fd6359f65f8",
+        "evt_51bc8819820524a6c598a66e"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:02.287Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:02.287Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://information-desk.info/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://islandafternoon.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=158384",
+      "hintedEventId": "evt_762b2c43302d2e6e9491edaa",
+      "hintedEventIds": [
+        "evt_762b2c43302d2e6e9491edaa",
+        "evt_cb4e6dc8706d12e4c0e1d1df"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://ivi-e.com/artist/crazymagnet",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=162090",
+      "hintedEventId": "evt_0b871fad5837a29c920189d6",
+      "hintedEventIds": [
+        "evt_0b871fad5837a29c920189d6",
+        "evt_3019b3748b957e48c68d8967"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://japan.miyavi.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159420",
+      "hintedEventId": "evt_9d9d117de6c98fd6359f65f8",
+      "hintedEventIds": [
+        "evt_9d9d117de6c98fd6359f65f8",
+        "evt_51bc8819820524a6c598a66e"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:04.128Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:04.128Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://japan.miyavi.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://jaywalk.fanpla.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=161721",
+      "hintedEventId": "evt_f8fc4992d06033255c9e93df",
+      "hintedEventIds": [
+        "evt_f8fc4992d06033255c9e93df"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:05.590Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:05.590Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://jaywalk.fanpla.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://kanekoayano.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=159249",
+      "hintedEventId": "evt_8996fb59158393ed50a9b46b",
+      "hintedEventIds": [
+        "evt_8996fb59158393ed50a9b46b",
+        "evt_bf81422e81ad33e01cdf2d41"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:08.081Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:08.081Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://kanekoayano.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://ki-zu.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=156144",
+      "hintedEventId": "evt_33977794a00b706b15ba1e77",
+      "hintedEventIds": [
+        "evt_33977794a00b706b15ba1e77",
+        "evt_a8314692d77530abd7e5f1f9",
+        "evt_5122a8908c8278c82ac95b98",
+        "evt_420bd53747112cf159d9ab11",
+        "evt_a489f91d7d0a1e5808688917"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:09.423Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:09.423Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://ki-zu.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://king-show.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=158284",
+      "hintedEventId": "evt_5b3f9e4567a934bfac79ed72",
+      "hintedEventIds": [
+        "evt_5b3f9e4567a934bfac79ed72"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://kroi.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=157963",
+      "hintedEventId": "evt_5f5e11c1f2c739dec88e652d",
+      "hintedEventIds": [
+        "evt_5f5e11c1f2c739dec88e652d",
+        "evt_32aca28f561ebc5b8b8fb18d",
+        "evt_b558c3678f249683b33dcef5",
+        "evt_2b4663ae9ab09bca505016ca",
+        "evt_d370fd1603eb55669292e1a9",
+        "evt_e67048be1e20f7e1205f9639"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:10.714Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:10.714Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://kroi.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://kyodo-osaka.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=157089",
+      "hintedEventId": "evt_0d022e52496d338d70cae1d3",
+      "hintedEventIds": [
+        "evt_0d022e52496d338d70cae1d3",
+        "evt_e366dde5eafa649942974f77",
+        "evt_fad1b1c83cc97151aab8435f",
+        "evt_b1a7c8a6e0e86cfddcb61ad6",
+        "evt_b7be6fe1b89ef9fc2d4fec5d",
+        "evt_73ddbea9e8118996cb4e3140",
+        "evt_976c1c4ccf24403bfbc0a285",
+        "evt_f7a6a9f409a5f9dca8a86d30",
+        "evt_fc308b5af3e4f7fd5051d8f6",
+        "evt_fd0b03b9d38e7b09e2f2f31a",
+        "evt_d7c92c217eb833c634f8d3bc",
+        "evt_687461a3355a580a327dcbfe",
+        "evt_8d742540749936977ea5bb33",
+        "evt_484183b0ee9629624180638b",
+        "evt_c3d34ca08a5b90fd94e5bc27",
+        "evt_b4243d5a4665792e6b4496c5",
+        "evt_8dd52ebdcbfc825c35802d2c",
+        "evt_a489f91d7d0a1e5808688917"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:12.089Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:12.089Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://kyodo-osaka.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://land-f.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156796",
+      "hintedEventId": "evt_3d7b98ff3cf81e9b6c561c2b",
+      "hintedEventIds": [
+        "evt_3d7b98ff3cf81e9b6c561c2b",
+        "evt_48769d96841996076994ead9",
+        "evt_b1747453acebef838cd78faf"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://land-f.jp/neoland/case6_2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=164703",
+      "hintedEventId": "evt_b1747453acebef838cd78faf",
+      "hintedEventIds": [
+        "evt_b1747453acebef838cd78faf"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://livemasters.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=158751",
+      "hintedEventId": "evt_d45f116bce2b6142ad8b6b92",
+      "hintedEventIds": [
+        "evt_d45f116bce2b6142ad8b6b92"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://lovebites.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=157610",
+      "hintedEventId": "evt_fd0b03b9d38e7b09e2f2f31a",
+      "hintedEventIds": [
+        "evt_fd0b03b9d38e7b09e2f2f31a"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:13.356Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:13.356Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://lovebites.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://lovebites.jp/budokan2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156344",
+      "hintedEventId": "evt_0494a9726929f99c552c4aac",
+      "hintedEventIds": [
+        "evt_0494a9726929f99c552c4aac",
+        "evt_365ac0ebe5b517e6be3c8e38"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:14.798Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:14.798Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://lovebites.jp/budokan2026",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://monaki.fanpla.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=165025",
+      "hintedEventId": "evt_b15a1f4c8f0fc8754e3f764b",
+      "hintedEventIds": [
+        "evt_b15a1f4c8f0fc8754e3f764b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://monaki.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=164994",
+      "hintedEventId": "evt_43b0ea0fc73093522ee48db9",
+      "hintedEventIds": [
+        "evt_43b0ea0fc73093522ee48db9"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://mondaydirtyjokes.bitfan.id/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159662",
+      "hintedEventId": "evt_7ef3be3163b88320a61aef8b",
+      "hintedEventIds": [
+        "evt_7ef3be3163b88320a61aef8b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://mountalive.com/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=162975",
+      "hintedEventId": "evt_7a89df92243e5243a250627d",
+      "hintedEventIds": [
+        "evt_7a89df92243e5243a250627d",
+        "evt_123298dea6431df433addc4c",
+        "evt_5d17762d6d9a21bc07ebb09e",
+        "evt_ba9105f325dd8bf8ffc8e174",
+        "evt_e51062db584d959c9f9ae3f2",
+        "evt_0c4583fde89d3bd5abc34390"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://neguse.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=157045",
+      "hintedEventId": "evt_d47d6270fe39b8b01cb89c0a",
+      "hintedEventIds": [
+        "evt_d47d6270fe39b8b01cb89c0a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://nextroad-p.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=156299",
+      "hintedEventId": "evt_5122a8908c8278c82ac95b98",
+      "hintedEventIds": [
+        "evt_5122a8908c8278c82ac95b98"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:15.573Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:15.573Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://nextroad-p.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://nssignjapan.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=156416",
+      "hintedEventId": "evt_a88b920212d0d3247a62b91c",
+      "hintedEventIds": [
+        "evt_a88b920212d0d3247a62b91c",
+        "evt_cadeac1bfbdc743b82c3df10"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:16.899Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:16.899Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://nssignjapan.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://official.watwing.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=156902",
+      "hintedEventId": "evt_95c3f766670665d85cde3034",
+      "hintedEventIds": [
+        "evt_95c3f766670665d85cde3034",
+        "evt_37e71b72083dba8a58a7a37f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://okazakitaiiku.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159362",
+      "hintedEventId": "evt_447057a70eea88486d52bafe",
+      "hintedEventIds": [
+        "evt_447057a70eea88486d52bafe",
+        "evt_9344e427c0430a05101cf1de"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:34:18.490Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:34:18.490Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://okazakitaiiku.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://otohaofficial.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159134",
+      "hintedEventId": "evt_4b12eed7c9b49dcd7fb04e6b",
+      "hintedEventIds": [
+        "evt_4b12eed7c9b49dcd7fb04e6b"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:46.346Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:46.346Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://otohaofficial.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://pc.lynch.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=162758",
+      "hintedEventId": "evt_9938ed181e1912af58441d3a",
+      "hintedEventIds": [
+        "evt_9938ed181e1912af58441d3a"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:35:48.776Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:35:48.776Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://pc.lynch.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://project-famiry.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=161332",
+      "hintedEventId": "evt_61bae0b09f2b84614700d324",
+      "hintedEventIds": [
+        "evt_61bae0b09f2b84614700d324",
+        "evt_fb14bd59b035b2000a3cca0c",
+        "evt_9027836be003741e9cd82c0a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://radwimps.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=164195",
+      "hintedEventId": "evt_86cd33aad31920c8715c2eea",
+      "hintedEventIds": [
+        "evt_86cd33aad31920c8715c2eea",
+        "evt_ee788c06938f38ce802c0c92"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://radwimps.jp/yurinchi",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=164200",
+      "hintedEventId": "evt_94c8631c499d4e1d7db004bb",
+      "hintedEventIds": [
+        "evt_94c8631c499d4e1d7db004bb",
+        "evt_6c0249968c49541c2dbb6142",
+        "evt_4bc8b47b5f98a2f431b00d66"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://realpiece.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=152927",
+      "hintedEventId": "evt_a071a4ea90eb83779637adc8",
+      "hintedEventIds": [
+        "evt_a071a4ea90eb83779637adc8"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:35:54.530Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:35:54.530Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://realpiece.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://realpiece.jp/inquiry/official",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=152927",
+      "hintedEventId": "evt_a071a4ea90eb83779637adc8",
+      "hintedEventIds": [
+        "evt_a071a4ea90eb83779637adc8"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:35:55.803Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:35:55.803Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://realpiece.jp/inquiry/official",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://rebon-corp.com/revolution",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157484",
+      "hintedEventId": "evt_7e93e03b2e55b9d2425f6363",
+      "hintedEventIds": [
+        "evt_7e93e03b2e55b9d2425f6363",
+        "evt_52f56405809e12ed8aaeeaa9"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://reirie.fanpla.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160231",
+      "hintedEventId": "evt_0384e513adf8d8a3b56a11fe",
+      "hintedEventIds": [
+        "evt_0384e513adf8d8a3b56a11fe",
+        "evt_16aa1b50ede120d06b6c3fb0"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://retroriron.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160300",
+      "hintedEventId": "evt_09318a061eb5c5cd9a14ccde",
+      "hintedEventIds": [
+        "evt_09318a061eb5c5cd9a14ccde",
+        "evt_0c4583fde89d3bd5abc34390"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://rikakoaida.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=156936",
+      "hintedEventId": "evt_da970b9545557f5d41f6b842",
+      "hintedEventIds": [
+        "evt_da970b9545557f5d41f6b842",
+        "evt_b6c10956e8c436b6af1002b6"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://rockonsocialclub.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=162398",
+      "hintedEventId": "evt_d16abf32e9424b666b785d43",
+      "hintedEventIds": [
+        "evt_d16abf32e9424b666b785d43",
+        "evt_f0b74450e493d3a24af66dd3",
+        "evt_123298dea6431df433addc4c",
+        "evt_5d17762d6d9a21bc07ebb09e"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:35:58.350Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:35:58.350Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://rockonsocialclub.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://rrkonnichiwa.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=160028",
+      "hintedEventId": "evt_5a5ce309e2dfecafb8ee68fd",
+      "hintedEventIds": [
+        "evt_5a5ce309e2dfecafb8ee68fd",
+        "evt_3e030fa37d6aa260773840d7"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:00.867Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:00.867Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://rrkonnichiwa.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://ryugujo-official.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158439",
+      "hintedEventId": "evt_739ec7255774aac4485dce9e",
+      "hintedEventIds": [
+        "evt_739ec7255774aac4485dce9e",
+        "evt_c29c3f968db2e95dd67ad6ab",
+        "evt_7cc2265053c26d59f3a70e31",
+        "evt_6e26bbec19f695eea138c2f9",
+        "evt_e6feb52d038f07eeb371f67e",
+        "evt_9d2a2804d4a0024d2618efad",
+        "evt_5146ebb91509163700e43906",
+        "evt_2ca8a76cd7ab38fb7f29b800",
+        "evt_97b63ced94e8fdd5f43caf6d"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:04.816Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:04.816Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://ryugujo-official.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://sasakirico.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=161403",
+      "hintedEventId": "evt_01111b363688fd787aa5d0b2",
+      "hintedEventIds": [
+        "evt_01111b363688fd787aa5d0b2"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://savepoint-official.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=163678",
+      "hintedEventId": "evt_46bfeeb16b1ab789ca49d047",
+      "hintedEventIds": [
+        "evt_46bfeeb16b1ab789ca49d047"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:06.951Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:06.951Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://savepoint-official.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://sd.dleague.co.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=155650",
+      "hintedEventId": "evt_f8bdcb8218b00c634c0a4c79",
+      "hintedEventIds": [
+        "evt_f8bdcb8218b00c634c0a4c79",
+        "evt_3e9d3cc8dbd9d746c7acb447"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:09.603Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:09.603Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://sd.dleague.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://singershigh.tokyo/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161022",
+      "hintedEventId": "evt_783479f0f21d8ff667c030c5",
+      "hintedEventIds": [
+        "evt_783479f0f21d8ff667c030c5",
+        "evt_172e96c0a4fd5ac9c45146bc"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:11.170Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:11.170Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://singershigh.tokyo/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://slenderierecord.futureartist.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=159970",
+      "hintedEventId": "evt_581952c85ac9645b0225b1eb",
+      "hintedEventIds": [
+        "evt_581952c85ac9645b0225b1eb"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:48.527Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:48.527Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://slenderierecord.futureartist.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://smash-jpn.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160662",
+      "hintedEventId": "evt_253fbbfbf5c0cd45160447d8",
+      "hintedEventIds": [
+        "evt_253fbbfbf5c0cd45160447d8"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://sneaker-step.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=161485",
+      "hintedEventId": "evt_6fb450681c6ec0da9aac0c7e",
+      "hintedEventIds": [
+        "evt_6fb450681c6ec0da9aac0c7e",
+        "evt_f0388de1435ae45933801058",
+        "evt_0184be8e7b66b3726e0c21c5"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://sneakerstep.stpr.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=155448",
+      "hintedEventId": "evt_aafea0c1b70d0277026ed755",
+      "hintedEventIds": [
+        "evt_aafea0c1b70d0277026ed755",
+        "evt_9522c7a3623c4238b9147acd",
+        "evt_475ef752040f6e3097db1866",
+        "evt_e13c86a0918399beef6a4be1",
+        "evt_053a3ddd379ae39843df57f5"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://sogotokyo.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158439",
+      "hintedEventId": "evt_739ec7255774aac4485dce9e",
+      "hintedEventIds": [
+        "evt_739ec7255774aac4485dce9e",
+        "evt_c29c3f968db2e95dd67ad6ab",
+        "evt_7cc2265053c26d59f3a70e31",
+        "evt_716b3e88818497887f5ae2cd",
+        "evt_9854773d3949598deaf94761",
+        "evt_da970b9545557f5d41f6b842",
+        "evt_b6c10956e8c436b6af1002b6",
+        "evt_99123040e3be1569a57d4738",
+        "evt_fc9751c80bc583e7cd3eb981",
+        "evt_40a15c51e9a89030cc0e150d",
+        "evt_14e59aa63a5a8ddb9c9d7ad7",
+        "evt_a88b920212d0d3247a62b91c",
+        "evt_cadeac1bfbdc743b82c3df10",
+        "evt_8b32341da34a6cb7f3f7102b",
+        "evt_306cb479acdec58403d5e837",
+        "evt_90d9242e36558130061a7826",
+        "evt_3fc598838f9b604a7f8b4b6a",
+        "evt_1d37bb08f54a124f22ebb01c"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:11.979Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:11.979Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://sogotokyo.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://sophia-eternal.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155370",
+      "hintedEventId": "evt_49d1e08ce5cc9e478b2ccee4",
+      "hintedEventIds": [
+        "evt_49d1e08ce5cc9e478b2ccee4",
+        "evt_fad1b1c83cc97151aab8435f",
+        "evt_b1a7c8a6e0e86cfddcb61ad6",
+        "evt_3d7b98ff3cf81e9b6c561c2b",
+        "evt_48769d96841996076994ead9"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://special.kroi.net/tour",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=157918",
+      "hintedEventId": "evt_7c54d5f8315145b605ffd770",
+      "hintedEventIds": [
+        "evt_7c54d5f8315145b605ffd770",
+        "evt_2fbf43a2c2a0c895ba6f1065"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://special.shibutanisubaru.com/feature/sbr_fanmeeting2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=157763",
+      "hintedEventId": "evt_973f42b4e70d47ef29e0505d",
+      "hintedEventIds": [
+        "evt_973f42b4e70d47ef29e0505d",
+        "evt_7afe9b25357c9fccb0d31a98",
+        "evt_3dbc66bab4339eaf4a5a852d",
+        "evt_d47e42035a6c12560b371822"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://starcruise2026.starglow.tokyo/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/starglow-1st-fan-meeting-star-cruise-special-edition",
+      "hintedEventId": "evt_841579360614c79062af984b",
+      "hintedEventIds": [
+        "evt_841579360614c79062af984b",
+        "evt_5ecf3af989eb4372432901e8"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://starpola.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160318",
+      "hintedEventId": "evt_926ffffcb103a5ca406db8fe",
+      "hintedEventIds": [
+        "evt_926ffffcb103a5ca406db8fe"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:15.090Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:15.090Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://starpola.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://starto.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=161008",
+      "hintedEventId": "evt_b7be6fe1b89ef9fc2d4fec5d",
+      "hintedEventIds": [
+        "evt_b7be6fe1b89ef9fc2d4fec5d",
+        "evt_73ddbea9e8118996cb4e3140",
+        "evt_976c1c4ccf24403bfbc0a285"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://starto.jp/s/p/live/10460",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/kis-my-ft2-live-tour-2026-fan-%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5",
+      "hintedEventId": "evt_4f256e1da9359416bc22e245",
+      "hintedEventIds": [
+        "evt_4f256e1da9359416bc22e245",
+        "evt_7761bd5414433ae300a6e14d",
+        "evt_983aec6ea2fe553906cdc1e1"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://starto.jp/s/p/live/10489",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/%E3%81%AA%E3%81%AB%E3%82%8F%E7%94%B7%E5%AD%90-live-tour-2026-%E3%80%8Cnd%E2%81%B5%E3%80%8D",
+      "hintedEventId": "evt_45f6b7f840c7e67af172fd98",
+      "hintedEventIds": [
+        "evt_45f6b7f840c7e67af172fd98",
+        "evt_5fe22661713d66c45894f511",
+        "evt_be5e1b7f4b1db46480f0a52b",
+        "evt_437cf54db4f64911f68ad440",
+        "evt_6e64facb897b8a34924849b9",
+        "evt_a7cd4f23a61d4c8dc798117f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://super-dragon.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160531",
+      "hintedEventId": "evt_c3d34ca08a5b90fd94e5bc27",
+      "hintedEventIds": [
+        "evt_c3d34ca08a5b90fd94e5bc27",
+        "evt_b4243d5a4665792e6b4496c5"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:16.810Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:16.810Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://super-dragon.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://t-dv.com/HEROINESFES-260803",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=167614",
+      "hintedEventId": "evt_891c55cf8a1d7a109dda334d",
+      "hintedEventIds": [
+        "evt_891c55cf8a1d7a109dda334d"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 200,
+      "urlKind": "event_detail",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:50.801Z",
+      "lastError": "官方页面跳转到不可用的占位页",
+      "finalUrl": "https://ticketdive.com/event/HEROINESFES-260803",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://takanenonadeshiko.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=163379",
+      "hintedEventId": "evt_56bd2ccfb9f748e69fdc3aa3",
+      "hintedEventIds": [
+        "evt_56bd2ccfb9f748e69fdc3aa3"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://theboyz.jp/s/n61?ima=4050",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=155651",
+      "hintedEventId": "evt_400ffbe9ee758362c2ad4663",
+      "hintedEventIds": [
+        "evt_400ffbe9ee758362c2ad4663",
+        "evt_4cfa4523afc3f5cafc36eb64"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:17.816Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:17.816Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://theboyz.jp/s/n61?ima=4050",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://theyellowmonkeysuper.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158547",
+      "hintedEventId": "evt_f08caea91d7be3275bfa3bba",
+      "hintedEventIds": [
+        "evt_f08caea91d7be3275bfa3bba"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://theyellowmonkeysuper.jp/feature/tour2026_60min",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=157280",
+      "hintedEventId": "evt_f3ccb199a6e4916422cfafdf",
+      "hintedEventIds": [
+        "evt_f3ccb199a6e4916422cfafdf"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:18.667Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:18.667Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://theyellowmonkeysuper.jp/feature/tour2026_60min",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://ticketdive.com/event/zepp_888",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=160700",
+      "hintedEventId": "evt_77fcd1d83563b948652af093",
+      "hintedEventIds": [
+        "evt_77fcd1d83563b948652af093"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://tiget.net/inquiry?event_id=493247&user_id=1251343",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157626",
+      "hintedEventId": "evt_28c5d58a45eeca109656b16f",
+      "hintedEventIds": [
+        "evt_28c5d58a45eeca109656b16f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://tiget.net/inquiry?event_id=495508&user_id=1370218",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157798",
+      "hintedEventId": "evt_bead0a5f740f3b98fbdb558c",
+      "hintedEventIds": [
+        "evt_bead0a5f740f3b98fbdb558c"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://toho-jp.net/news/detail.php?id=1134229",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/u-know-project-26-scene-%E2%99%AF1-%E2%80%93-edit",
+      "hintedEventId": "evt_ec972318ccdc5461b9bf9c37",
+      "hintedEventIds": [
+        "evt_ec972318ccdc5461b9bf9c37"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://tsukasa.bitfan.id/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160916",
+      "hintedEventId": "evt_e912cb05373a12af9141c910",
+      "hintedEventIds": [
+        "evt_e912cb05373a12af9141c910"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:20.378Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:20.378Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://tsukasa.bitfan.id/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://twitter.com/sunnyday_tokyo",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160662",
+      "hintedEventId": "evt_253fbbfbf5c0cd45160447d8",
+      "hintedEventIds": [
+        "evt_253fbbfbf5c0cd45160447d8"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://underdog-official.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160477",
+      "hintedEventId": "evt_cd5946fd30fdf6d177834b69",
+      "hintedEventIds": [
+        "evt_cd5946fd30fdf6d177834b69"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://vaundy.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=161273",
+      "hintedEventId": "evt_edf3c2f0a49f7e62ad99ff0a",
+      "hintedEventIds": [
+        "evt_edf3c2f0a49f7e62ad99ff0a",
+        "evt_cbe18b15f06740020b32e5f0"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://vintage-rock.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160541",
+      "hintedEventId": "evt_ecc4b8c150cd60bda96baf19",
+      "hintedEventIds": [
+        "evt_ecc4b8c150cd60bda96baf19",
+        "evt_71af906ef8d9d60b1e3ac2e9"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://voksydays.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160405",
+      "hintedEventId": "evt_ce479195537c982421de53ba",
+      "hintedEventIds": [
+        "evt_ce479195537c982421de53ba",
+        "evt_72ec239935fe5061953f6779"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://w-inds.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=167372",
+      "hintedEventId": "evt_2078a10ada53809c01d67077",
+      "hintedEventIds": [
+        "evt_2078a10ada53809c01d67077"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://w-inds25th.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=159664",
+      "hintedEventId": "evt_7b100741b5fe850a528e5414",
+      "hintedEventIds": [
+        "evt_7b100741b5fe850a528e5414"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://wess.jp/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=155370",
+      "hintedEventId": "evt_49d1e08ce5cc9e478b2ccee4",
+      "hintedEventIds": [
+        "evt_49d1e08ce5cc9e478b2ccee4",
+        "evt_1ff1b39fe740adc5773e7257",
+        "evt_edf3c2f0a49f7e62ad99ff0a",
+        "evt_cbe18b15f06740020b32e5f0",
+        "evt_581952c85ac9645b0225b1eb",
+        "evt_32aca28f561ebc5b8b8fb18d",
+        "evt_365ac0ebe5b517e6be3c8e38",
+        "evt_ce34048aa2e19fc9f0402b90",
+        "evt_9344e427c0430a05101cf1de",
+        "evt_f539d8fed446d8fda6c14f20",
+        "evt_4386306d563fbd5dc9976810",
+        "evt_410417abde5640e2e07aa60b",
+        "evt_762b2c43302d2e6e9491edaa",
+        "evt_cb4e6dc8706d12e4c0e1d1df"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://whitejam.jp/magnet",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=162975",
+      "hintedEventId": "evt_7a89df92243e5243a250627d",
+      "hintedEventIds": [
+        "evt_7a89df92243e5243a250627d"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://whitejam.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=156209",
+      "hintedEventId": "evt_0496a29de1cbfccf05e32208",
+      "hintedEventIds": [
+        "evt_0496a29de1cbfccf05e32208",
+        "evt_95025b5820fb62868ecb6196"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:21.643Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:21.643Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://whitejam.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://whitescorpion.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+      "hintedEventId": "evt_0e90bcbee79b2ae0ea4bb20f",
+      "hintedEventIds": [
+        "evt_0e90bcbee79b2ae0ea4bb20f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:22.554Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:22.554Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://whitescorpion.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.04limitedsazabys.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158383",
+      "hintedEventId": "evt_e0b7c05cdc1d6d064df8c398",
+      "hintedEventIds": [
+        "evt_e0b7c05cdc1d6d064df8c398",
+        "evt_477208a1ab432dd8f699f28d"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.abedon.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=158166",
+      "hintedEventId": "evt_cec034b0dcf2b946c5900c08",
+      "hintedEventIds": [
+        "evt_cec034b0dcf2b946c5900c08",
+        "evt_6f3a6566cacf91032b9199e8"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:24.155Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:24.155Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.abedon.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.asiankung-fu.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=157826",
+      "hintedEventId": "evt_f636ea303f538f0751f1824d",
+      "hintedEventIds": [
+        "evt_f636ea303f538f0751f1824d"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.bea-net.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156344",
+      "hintedEventId": "evt_0494a9726929f99c552c4aac",
+      "hintedEventIds": [
+        "evt_0494a9726929f99c552c4aac"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:25.490Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:25.490Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.bea-net.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.bea-net.com/index.html",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=160179",
+      "hintedEventId": "evt_6dd19a25dd0711a4c6de0aa3",
+      "hintedEventIds": [
+        "evt_6dd19a25dd0711a4c6de0aa3",
+        "evt_0dacb893d05688e84d88e00c",
+        "evt_587e59b69df790ded4ffe7d8",
+        "evt_1ef772b1c6ce903b3ed74edf",
+        "evt_f3ccb199a6e4916422cfafdf",
+        "evt_f8fc4992d06033255c9e93df",
+        "evt_7ac91fa4c11b97ef7bdbbb12",
+        "evt_2078a10ada53809c01d67077",
+        "evt_477208a1ab432dd8f699f28d",
+        "evt_e5f3d269485052dcbc22821e",
+        "evt_53139f18c542da363e05f3e8"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:27.086Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:27.086Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.bea-net.com/index.html",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.billboard-japan.com/therootsjapantour2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=165646",
+      "hintedEventId": "evt_a9fd347e243d7158bc6bdd43",
+      "hintedEventIds": [
+        "evt_a9fd347e243d7158bc6bdd43"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:37.619Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:37.619Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.billboard-japan.com/therootsjapantour2026",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.chicoxxx.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=157313",
+      "hintedEventId": "evt_5eb52236583b116f748157c6",
+      "hintedEventIds": [
+        "evt_5eb52236583b116f748157c6",
+        "evt_9f55a8096b45237a06eba947",
+        "evt_934c73d454f2905a28699f90"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:38.213Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:38.213Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.chicoxxx.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.cittaworks.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=158025",
+      "hintedEventId": "evt_14b0687acc881cea1af258dd",
+      "hintedEventIds": [
+        "evt_14b0687acc881cea1af258dd"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.cornelius-sound.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156327",
+      "hintedEventId": "evt_7ac91fa4c11b97ef7bdbbb12",
+      "hintedEventIds": [
+        "evt_7ac91fa4c11b97ef7bdbbb12",
+        "evt_ce34048aa2e19fc9f0402b90",
+        "evt_37ccd6c7ea9e41a589b9afa1"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:40.427Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:40.427Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.cornelius-sound.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.creativeman.co.jp/event/flo26",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=161450",
+      "hintedEventId": "evt_885d9e6587b2804d3baea1eb",
+      "hintedEventIds": [
+        "evt_885d9e6587b2804d3baea1eb"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:36:42.276Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:36:42.276Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.creativeman.co.jp/event/flo26",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.creativeman.co.jp/event/louis-tomlinson26",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=166532",
+      "hintedEventId": "evt_4ae554fb93553f5643717d66",
+      "hintedEventIds": [
+        "evt_4ae554fb93553f5643717d66"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.fmyokohama.co.jp/event/12067",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=163403",
+      "hintedEventId": "evt_51ce7dadc2e025d9244d69af",
+      "hintedEventIds": [
+        "evt_51ce7dadc2e025d9244d69af"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.greens-corp.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158836",
+      "hintedEventId": "evt_bf81422e81ad33e01cdf2d41",
+      "hintedEventIds": [
+        "evt_bf81422e81ad33e01cdf2d41",
+        "evt_172e96c0a4fd5ac9c45146bc",
+        "evt_13b68ce333e2e7c111a90adb",
+        "evt_af57fa433a24ec3fb5c1e04a"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:54.926Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:54.926Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.greens-corp.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.hide-city.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=156574",
+      "hintedEventId": "evt_8dd52ebdcbfc825c35802d2c",
+      "hintedEventIds": [
+        "evt_8dd52ebdcbfc825c35802d2c"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.hinatazaka46.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=162663",
+      "hintedEventId": "evt_caf3ce4dbabd09cb84d4081c",
+      "hintedEventIds": [
+        "evt_caf3ce4dbabd09cb84d4081c",
+        "evt_e3ea4d23ecbdbff402c5ce2b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.hinatazaka46.com/s/official?ima=0000",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=165842",
+      "hintedEventId": "evt_6ae1b6fe703365ec13be4e32",
+      "hintedEventIds": [
+        "evt_6ae1b6fe703365ec13be4e32"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.instagram.com/_mikado_ss",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160545",
+      "hintedEventId": "evt_687461a3355a580a327dcbfe",
+      "hintedEventIds": [
+        "evt_687461a3355a580a327dcbfe"
+      ],
+      "status": "blocked",
+      "attemptCount": 3,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://www.instagram.com/claquepot_official",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=160306",
+      "hintedEventId": "evt_b0fa5de327389c4d84f3e899",
+      "hintedEventIds": [
+        "evt_b0fa5de327389c4d84f3e899"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://www.instagram.com/danceholictko",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156051",
+      "hintedEventId": "evt_9ad6b41ae4420304a742ebd5",
+      "hintedEventIds": [
+        "evt_9ad6b41ae4420304a742ebd5"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://www.islandafternoon.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=156655",
+      "hintedEventId": "evt_e5f3d269485052dcbc22821e",
+      "hintedEventIds": [
+        "evt_e5f3d269485052dcbc22821e",
+        "evt_53139f18c542da363e05f3e8"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.jang-keunsuk.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160365",
+      "hintedEventId": "evt_f7a6a9f409a5f9dca8a86d30",
+      "hintedEventIds": [
+        "evt_f7a6a9f409a5f9dca8a86d30",
+        "evt_fc308b5af3e4f7fd5051d8f6"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.jvcmusic.co.jp/plt2026",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158494",
+      "hintedEventId": "evt_39a0d419faabfb5bdbc9d1ce",
+      "hintedEventIds": [
+        "evt_39a0d419faabfb5bdbc9d1ce",
+        "evt_71c3e4999e95b6cb83b0af33"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:18.288Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:18.288Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.jvcmusic.co.jp/plt2026",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=14347",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=163104",
+      "hintedEventId": "evt_7391afb5ce7c11a7bfa21d31",
+      "hintedEventIds": [
+        "evt_7391afb5ce7c11a7bfa21d31"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:20.359Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:20.359Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.kingrecords.co.jp/cs/artist/artist.aspx?artist=14347",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.kyodo-west.co.jp/main.php",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=159249",
+      "hintedEventId": "evt_8996fb59158393ed50a9b46b",
+      "hintedEventIds": [
+        "evt_8996fb59158393ed50a9b46b",
+        "evt_b0fa5de327389c4d84f3e899",
+        "evt_e13c86a0918399beef6a4be1",
+        "evt_053a3ddd379ae39843df57f5",
+        "evt_2ca8a76cd7ab38fb7f29b800",
+        "evt_97b63ced94e8fdd5f43caf6d",
+        "evt_b558c3678f249683b33dcef5",
+        "evt_2b4663ae9ab09bca505016ca",
+        "evt_b0a896349c3f038d243b4b6f",
+        "evt_420bd53747112cf159d9ab11",
+        "evt_27d9438a2a387fdb3eef3dce",
+        "evt_898422083b4987e22b4467d4",
+        "evt_c0f86fb5126e98be8e4fc8e3",
+        "evt_945188d9d5b30fa170557d8f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:22.432Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:22.432Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.kyodo-west.co.jp/main.php",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.kyodotokyo.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157710",
+      "hintedEventId": "evt_3d89ce9288dc16a46363b3b0",
+      "hintedEventIds": [
+        "evt_3d89ce9288dc16a46363b3b0"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.kyodoyokohama.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160584",
+      "hintedEventId": "evt_c9df9e1241fa9c36cd97239c",
+      "hintedEventIds": [
+        "evt_c9df9e1241fa9c36cd97239c",
+        "evt_02fd96a5d1e8213cdd8d46cc"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.liveexsam.co.jp/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158492",
+      "hintedEventId": "evt_8fb31a8fbcbbb95fb9ba8acb",
+      "hintedEventIds": [
+        "evt_8fb31a8fbcbbb95fb9ba8acb"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://www.liveexsam.co.jp/contact_sakamichi",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=162663",
+      "hintedEventId": "evt_caf3ce4dbabd09cb84d4081c",
+      "hintedEventIds": [
+        "evt_caf3ce4dbabd09cb84d4081c",
+        "evt_e3ea4d23ecbdbff402c5ce2b"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://www.livenationhip.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=161891",
+      "hintedEventId": "evt_361bdee91731a531d3658569",
+      "hintedEventIds": [
+        "evt_361bdee91731a531d3658569",
+        "evt_9eb2505f0db47aba0d8764d2",
+        "evt_f7ee8831372d7681cd59c4d9",
+        "evt_5aee07f48a904ea2ed02c0a0",
+        "evt_608df43b9a8cd50eb9bee618",
+        "evt_dc3bc01ec3c6e2e64fb2e7f4",
+        "evt_c1941a84277ff113bb5eda2c",
+        "evt_2b5bd8741738953c52d828a4"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.livenationhip.co.jp/all-events/lany-tickets-ae771408",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=160642",
+      "hintedEventId": "evt_c1941a84277ff113bb5eda2c",
+      "hintedEventIds": [
+        "evt_c1941a84277ff113bb5eda2c",
+        "evt_2b5bd8741738953c52d828a4"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.marv.jp/news/article/11681",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158232",
+      "hintedEventId": "evt_14e77b6f8dd835ea250f0b00",
+      "hintedEventIds": [
+        "evt_14e77b6f8dd835ea250f0b00",
+        "evt_a57361872eec52c70ff1259f"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.marv.jp/support/av",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=158232",
+      "hintedEventId": "evt_14e77b6f8dd835ea250f0b00",
+      "hintedEventIds": [
+        "evt_14e77b6f8dd835ea250f0b00",
+        "evt_a57361872eec52c70ff1259f"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://www.mobit.ne.jp/lp/mbit-project/index.html",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=165796",
+      "hintedEventId": "evt_5f8d4f8cda9d933560d59aec",
+      "hintedEventIds": [
+        "evt_5f8d4f8cda9d933560d59aec"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.momoclo.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=155382",
+      "hintedEventId": "evt_f7ee8831372d7681cd59c4d9",
+      "hintedEventIds": [
+        "evt_f7ee8831372d7681cd59c4d9",
+        "evt_5aee07f48a904ea2ed02c0a0"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.mountalive.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=165709",
+      "hintedEventId": "evt_4bc8b47b5f98a2f431b00d66",
+      "hintedEventIds": [
+        "evt_4bc8b47b5f98a2f431b00d66"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.mountalive.com/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=161335",
+      "hintedEventId": "evt_acbf435d8852fd0a69b00e54",
+      "hintedEventIds": [
+        "evt_acbf435d8852fd0a69b00e54",
+        "evt_57abeaa33a9174f6eb3c958f",
+        "evt_a8314692d77530abd7e5f1f9"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://www.myhairisbad.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156642",
+      "hintedEventId": "evt_f539d8fed446d8fda6c14f20",
+      "hintedEventIds": [
+        "evt_f539d8fed446d8fda6c14f20",
+        "evt_4386306d563fbd5dc9976810",
+        "evt_6d69656d14510566eef6a94d",
+        "evt_53677dbe9d7bd42a3f0f456d",
+        "evt_fb14bd59b035b2000a3cca0c",
+        "evt_9027836be003741e9cd82c0a"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:23.758Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:23.758Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.myhairisbad.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.nanase.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=155445",
+      "hintedEventId": "evt_58e39cd1c6fdb7d07add84d9",
+      "hintedEventIds": [
+        "evt_58e39cd1c6fdb7d07add84d9",
+        "evt_5d043d23ebd21a648d96d5ba",
+        "evt_1ff1b39fe740adc5773e7257",
+        "evt_8b5a54e8fa92c9f0b4b5692a",
+        "evt_7c2607ae683c7d3ac455e2f1"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.onmyo-za.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=162919",
+      "hintedEventId": "evt_9fa4eed50fc7ca7f89a90ac9",
+      "hintedEventIds": [
+        "evt_9fa4eed50fc7ca7f89a90ac9"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:25.291Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:25.291Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.onmyo-za.net/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.plastic-tree.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158986",
+      "hintedEventId": "evt_dd36b4d923f33d2a16c0925e",
+      "hintedEventIds": [
+        "evt_dd36b4d923f33d2a16c0925e"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.red-hot.ne.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159362",
+      "hintedEventId": "evt_447057a70eea88486d52bafe",
+      "hintedEventIds": [
+        "evt_447057a70eea88486d52bafe",
+        "evt_5f5e11c1f2c739dec88e652d",
+        "evt_19e7d78f9c8bb72b1722fce6",
+        "evt_e0d1ca6f5157f2815980baaa",
+        "evt_4fedef6ad21d1c075835c433",
+        "evt_c763e50782f54d4f85899703",
+        "evt_d543647bef04a184e04f65a7"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:26.156Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:26.156Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.red-hot.ne.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.reona-reona.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=160734",
+      "hintedEventId": "evt_d3aecd26855d2a8362c7bcdf",
+      "hintedEventIds": [
+        "evt_d3aecd26855d2a8362c7bcdf"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.saitosoma.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=155731",
+      "hintedEventId": "evt_f74b8247223e4b7fb6c061f5",
+      "hintedEventIds": [
+        "evt_f74b8247223e4b7fb6c061f5",
+        "evt_1ef772b1c6ce903b3ed74edf"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.se7enth-sense-official.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=166445",
+      "hintedEventId": "evt_2359d571a3faafb07e25f26b",
+      "hintedEventIds": [
+        "evt_2359d571a3faafb07e25f26b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.shimizuonsen.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=164388",
+      "hintedEventId": "evt_762e6d7ddefd2bb8a3c1014a",
+      "hintedEventIds": [
+        "evt_762e6d7ddefd2bb8a3c1014a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.sigure.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=164388",
+      "hintedEventId": "evt_762e6d7ddefd2bb8a3c1014a",
+      "hintedEventIds": [
+        "evt_762e6d7ddefd2bb8a3c1014a"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.sogoosaka.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158547",
+      "hintedEventId": "evt_f08caea91d7be3275bfa3bba",
+      "hintedEventIds": [
+        "evt_f08caea91d7be3275bfa3bba"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.sonymusic.co.jp/PR/NOMELONNOLEMON",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160796",
+      "hintedEventId": "evt_8f781c4463155e11a9df2e0b",
+      "hintedEventIds": [
+        "evt_8f781c4463155e11a9df2e0b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.sound-c.co.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=155838",
+      "hintedEventId": "evt_419d822cbf7af6f2015e2f04",
+      "hintedEventIds": [
+        "evt_419d822cbf7af6f2015e2f04",
+        "evt_97cd1e42fe90b11f01be29c3",
+        "evt_4da5c8588b350b46fa438db0",
+        "evt_96fd12865d857982e589be7e",
+        "evt_6d69656d14510566eef6a94d",
+        "evt_53677dbe9d7bd42a3f0f456d"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:31.790Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:31.790Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.sound-c.co.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.sound-c.co.jp/contact",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=162090",
+      "hintedEventId": "evt_0b871fad5837a29c920189d6",
+      "hintedEventIds": [
+        "evt_0b871fad5837a29c920189d6"
+      ],
+      "status": "invalid",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "support",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "URL 类型为 support，不是有效购票页"
+    },
+    {
+      "url": "https://www.sumika-official.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160326",
+      "hintedEventId": "evt_8d742540749936977ea5bb33",
+      "hintedEventIds": [
+        "evt_8d742540749936977ea5bb33",
+        "evt_484183b0ee9629624180638b",
+        "evt_c0f86fb5126e98be8e4fc8e3",
+        "evt_945188d9d5b30fa170557d8f"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:33.180Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:33.180Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.sumika-official.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.sundayfolk.com/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=155447",
+      "hintedEventId": "evt_5d043d23ebd21a648d96d5ba",
+      "hintedEventIds": [
+        "evt_5d043d23ebd21a648d96d5ba"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.sweet-alley.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=161845",
+      "hintedEventId": "evt_59b6d33d870afdde5987e7a2",
+      "hintedEventIds": [
+        "evt_59b6d33d870afdde5987e7a2"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:34.617Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:34.617Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.sweet-alley.com/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.tbsradio.jp/ht_10th",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=155807",
+      "hintedEventId": "evt_0236aff97e7c53c37a5d6a5b",
+      "hintedEventIds": [
+        "evt_0236aff97e7c53c37a5d6a5b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.thepredators.net/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160633",
+      "hintedEventId": "evt_64fdfd3f39434b641b20d375",
+      "hintedEventIds": [
+        "evt_64fdfd3f39434b641b20d375"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.toe.st/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=158148",
+      "hintedEventId": "evt_13b68ce333e2e7c111a90adb",
+      "hintedEventIds": [
+        "evt_13b68ce333e2e7c111a90adb",
+        "evt_ab4f64953d0d48b4439f900c"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:32:59.101Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:32:59.101Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.toe.st/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.toysfactory.co.jp/artist/kvibaba",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/shout-out-jesus-yokohama-arena",
+      "hintedEventId": "evt_9a04a4cad10fa41f1cec9339",
+      "hintedEventIds": [
+        "evt_9a04a4cad10fa41f1cec9339"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.tristone.co.jp/oguri",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=155838",
+      "hintedEventId": "evt_419d822cbf7af6f2015e2f04",
+      "hintedEventIds": [
+        "evt_419d822cbf7af6f2015e2f04"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.uverworld.jp/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=160094",
+      "hintedEventId": "evt_306cb479acdec58403d5e837",
+      "hintedEventIds": [
+        "evt_306cb479acdec58403d5e837",
+        "evt_90d9242e36558130061a7826"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:35.960Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:35.960Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.uverworld.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.youtube.com/@CrazyMagnet",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=161796",
+      "hintedEventId": "evt_0ea1ecc380963a563da3a898",
+      "hintedEventIds": [
+        "evt_0ea1ecc380963a563da3a898"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.yumebanchi.jp/",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=164195",
+      "hintedEventId": "evt_86cd33aad31920c8715c2eea",
+      "hintedEventIds": [
+        "evt_86cd33aad31920c8715c2eea",
+        "evt_ee788c06938f38ce802c0c92",
+        "evt_94c8631c499d4e1d7db004bb",
+        "evt_6c0249968c49541c2dbb6142",
+        "evt_85c9957e8d5540bdbd284299",
+        "evt_926ffffcb103a5ca406db8fe",
+        "evt_d370fd1603eb55669292e1a9",
+        "evt_e67048be1e20f7e1205f9639"
+      ],
+      "status": "unmatched",
+      "attemptCount": 1,
+      "nextCheckAt": "2026-08-29T05:37:36.637Z",
+      "lastHttpStatus": 200,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:36.637Z",
+      "lastError": "页面未找到与来源链事件相符的日期和场馆",
+      "finalUrl": "https://www.yumebanchi.jp/",
+      "unmatchedReason": "page_information_insufficient"
+    },
+    {
+      "url": "https://www.zepp.co.jp/cdn-cgi/l/email-protection",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=159665",
+      "hintedEventId": "evt_5f4cec7b13649da0dfdb8986",
+      "hintedEventIds": [
+        "evt_5f4cec7b13649da0dfdb8986",
+        "evt_096f274956bf5c625648fe8a",
+        "evt_c830876b524743fbe8929fa9",
+        "evt_7e93e03b2e55b9d2425f6363",
+        "evt_52f56405809e12ed8aaeeaa9",
+        "evt_86a6ee2b4d91ed7818dcdf57",
+        "evt_77fcd1d83563b948652af093",
+        "evt_a1c9a501814e5e5e6f7e9a9c",
+        "evt_cec034b0dcf2b946c5900c08",
+        "evt_5f8d4f8cda9d933560d59aec",
+        "evt_abba8c845b06acf5cd40a11e",
+        "evt_86d6cdfb2af7730a223bc57a",
+        "evt_c6da8a17ac54051fe190f5c9",
+        "evt_400ffbe9ee758362c2ad4663",
+        "evt_4cfa4523afc3f5cafc36eb64",
+        "evt_4b12eed7c9b49dcd7fb04e6b",
+        "evt_59b6d33d870afdde5987e7a2",
+        "evt_e912cb05373a12af9141c910",
+        "evt_11faeb3ad3901a7cce756719",
+        "evt_734d6471e05a499275b251b8",
+        "evt_46bfeeb16b1ab789ca49d047",
+        "evt_4607433f1d77bea177931676",
+        "evt_2dad597fc613baea570a4da6",
+        "evt_f29d73cce315f1a3b659b8d3",
+        "evt_d251e855b916b4ecbae210a5",
+        "evt_39a0d419faabfb5bdbc9d1ce",
+        "evt_37ccd6c7ea9e41a589b9afa1",
+        "evt_71c3e4999e95b6cb83b0af33",
+        "evt_0236aff97e7c53c37a5d6a5b",
+        "evt_762e6d7ddefd2bb8a3c1014a",
+        "evt_5b3f9e4567a934bfac79ed72"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "不是可访问的 HTTP(S) 官方页面"
+    },
+    {
+      "url": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/www.livenationhip.co.jp",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=167614",
+      "hintedEventId": "evt_891c55cf8a1d7a109dda334d",
+      "hintedEventIds": [
+        "evt_891c55cf8a1d7a109dda334d"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.zepp.co.jp/hall/haneda/schedule/single/www.red-hot.ne.jp",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=158741",
+      "hintedEventId": "evt_caee6fa64b058c4174cdf955",
+      "hintedEventIds": [
+        "evt_caee6fa64b058c4174cdf955"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.zepp.co.jp/hall/nagoya/schedule/single/www.jailhouse.jp",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=158437",
+      "hintedEventId": "evt_85b49ff7ab12d81be0783f16",
+      "hintedEventIds": [
+        "evt_85b49ff7ab12d81be0783f16"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:37:39.438Z",
+      "lastError": "HTTP 404 Not Found",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://www.zepp.co.jp/hall/sapporo/schedule/single/info@wess.co.jp",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/sapporo/schedule/single/?rid=156641",
+      "hintedEventId": "evt_6f7deafeba380b1bf290ffbb",
+      "hintedEventIds": [
+        "evt_6f7deafeba380b1bf290ffbb"
+      ],
+      "status": "invalid",
+      "attemptCount": 1,
+      "nextCheckAt": null,
+      "lastHttpStatus": 404,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": "2026-08-27T05:33:02.488Z",
+      "lastError": "HTTP 404 Not Found",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/info@galdir-media.com",
+      "role": "promoter_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=166445",
+      "hintedEventId": "evt_2359d571a3faafb07e25f26b",
+      "hintedEventIds": [
+        "evt_2359d571a3faafb07e25f26b"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://www.ziyoou-vachi.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=156937",
+      "hintedEventId": "evt_c51ba8e45f1168c2a847df29",
+      "hintedEventIds": [
+        "evt_c51ba8e45f1168c2a847df29"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://x.com/azu_ifn?lang=ja",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=161791",
+      "hintedEventId": "evt_d7c92c217eb833c634f8d3bc",
+      "hintedEventIds": [
+        "evt_d7c92c217eb833c634f8d3bc"
+      ],
+      "status": "blocked",
+      "attemptCount": 3,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://x.com/boakwon",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=155459",
+      "hintedEventId": "evt_4976a12beff97f8b965629fa",
+      "hintedEventIds": [
+        "evt_4976a12beff97f8b965629fa"
+      ],
+      "status": "blocked",
+      "attemptCount": 3,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取",
+      "unmatchedReason": null
+    },
+    {
+      "url": "https://x.com/claquepot",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=160308",
+      "hintedEventId": "evt_85c9957e8d5540bdbd284299",
+      "hintedEventIds": [
+        "evt_85c9957e8d5540bdbd284299"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://x.com/megater_0",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/haneda/schedule/single/?rid=158570",
+      "hintedEventId": "evt_99123040e3be1569a57d4738",
+      "hintedEventIds": [
+        "evt_99123040e3be1569a57d4738"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://x.com/passpo_crew",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=161891",
+      "hintedEventId": "evt_361bdee91731a531d3658569",
+      "hintedEventIds": [
+        "evt_361bdee91731a531d3658569"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://x.com/PhantomSiita?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=164354",
+      "hintedEventId": "evt_0a1e8b43af6883399e8a17f3",
+      "hintedEventIds": [
+        "evt_0a1e8b43af6883399e8a17f3"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://x.com/SAKURADOLL_JPN",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157798",
+      "hintedEventId": "evt_bead0a5f740f3b98fbdb558c",
+      "hintedEventIds": [
+        "evt_bead0a5f740f3b98fbdb558c"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://x.com/tarachio_info",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=158025",
+      "hintedEventId": "evt_14b0687acc881cea1af258dd",
+      "hintedEventIds": [
+        "evt_14b0687acc881cea1af258dd"
+      ],
+      "status": "blocked",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": "社交平台页面不进入自动二轮抓取"
+    },
+    {
+      "url": "https://yorushika.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.yokohama-arena.co.jp/event/detail/%E3%83%A8%E3%83%AB%E3%82%B7%E3%82%AB-live-tour-2026%E3%80%8C%E4%B8%80%E4%BA%BA%E7%A7%B0%E3%80%8D",
+      "hintedEventId": "evt_4382e666454bbd5820c8c8a8",
+      "hintedEventIds": [
+        "evt_4382e666454bbd5820c8c8a8"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    },
+    {
+      "url": "https://yuyategoshi.com/",
+      "role": "artist_official",
+      "discoveredFrom": "https://www.zepp.co.jp/hall/fukuoka/schedule/single/?rid=160179",
+      "hintedEventId": "evt_6dd19a25dd0711a4c6de0aa3",
+      "hintedEventIds": [
+        "evt_6dd19a25dd0711a4c6de0aa3",
+        "evt_0dacb893d05688e84d88e00c"
+      ],
+      "status": "pending",
+      "attemptCount": 0,
+      "nextCheckAt": null,
+      "lastHttpStatus": null,
+      "urlKind": "unknown",
+      "provider": "other",
+      "lastCheckedAt": null,
+      "lastError": null
+    }
+  ]
+}

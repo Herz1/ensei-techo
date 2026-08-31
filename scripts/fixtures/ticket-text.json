@@ -1,0 +1,64 @@
+[
+  {
+    "name": "single-price",
+    "input": "チケット ¥9,900",
+    "expected": {
+      "prices": [9900],
+      "ticketTypeCount": 1,
+      "taxIncluded": null
+    }
+  },
+  {
+    "name": "multiple-ticket-types",
+    "input": "[PRICE] 1Fスタンディング / ¥5,500 2F指定席 / ¥6,000",
+    "expected": {
+      "prices": [5500, 6000],
+      "ticketTypeCount": 2,
+      "names": ["1Fスタンディング", "2F指定席"]
+    }
+  },
+  {
+    "name": "zepp-bracket-ticket-types-without-slash",
+    "input": "料金 [1階アリーナスタンディング] ¥8,800 [2階指定席] ¥7,700 [2階ファミリー席] ¥6,600",
+    "expected": {
+      "prices": [6600, 7700, 8800],
+      "ticketTypeCount": 3,
+      "names": ["1階アリーナスタンディング", "2階指定席", "2階ファミリー席"]
+    }
+  },
+  {
+    "name": "tax-included",
+    "input": "全席指定 / ¥12,500（税込）",
+    "expected": {
+      "prices": [12500],
+      "ticketTypeCount": 1,
+      "taxIncluded": true
+    }
+  },
+  {
+    "name": "tax-excluded",
+    "input": "自由席 / ¥4,000（税別）",
+    "expected": {
+      "prices": [4000],
+      "ticketTypeCount": 1,
+      "taxIncluded": false
+    }
+  },
+  {
+    "name": "livehouse-drink-fee",
+    "input": "スタンディング / ¥5,500（税込） 別途ドリンク代 ¥600 必要",
+    "expected": {
+      "prices": [5500],
+      "ticketTypeCount": 1,
+      "taxIncluded": true,
+      "additionalFees": [
+        {
+          "type": "drink",
+          "label": "ドリンク代",
+          "amountJpy": 600,
+          "required": true
+        }
+      ]
+    }
+  }
+]

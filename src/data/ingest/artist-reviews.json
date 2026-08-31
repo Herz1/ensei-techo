@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 2,
+  "verifiedAt": "2026-07-30T05:26:13.350Z",
+  "reviewer": "codex-p1-lineup-evidence-audit-2026-07-30",
+  "batchHash": "b81f915a4d73ef63f9828be3e2dfb0e890c0e065505361fb13e6aed1058e6b12",
+  "approved": [
+    {
+      "id": "artist-ext-ee986c75042337ed",
+      "evidenceHash": "26baaaf365124d35647fa1bc7cf134ed5a09dc6757e77aed25a3fdd698624135"
+    },
+    {
+      "id": "artist-ext-1f0f80fd1e51a991",
+      "evidenceHash": "79e1db742a3d20ff13a562891ff7b80287c82c5a1415f27b26c74548a54e7c75"
+    },
+    {
+      "id": "artist-ext-f9287c5eb0aeac28",
+      "evidenceHash": "6b3694b389691240a00e3cb9bdeb3ccd22ba5c89c5ac3393aa979ffee167a5e4"
+    },
+    {
+      "id": "artist-ext-f9f795adda613844",
+      "evidenceHash": "032f8fc96bfbf7d3b2b0e195b67751996a0b638ddc911ca05b84b917bd748114"
+    },
+    {
+      "id": "artist-ext-f1cefbfbd437ec63",
+      "evidenceHash": "81523b97412c51de16afc885ff570560e0de5bf0ca51bbe9faf0e1742b6e529f"
+    },
+    {
+      "id": "artist-ext-f432236f1a51c19d",
+      "evidenceHash": "a72917647fdcb2bd5a0e0035ee47c193144fd1febe62c16cbe21039a3f0ed600"
+    },
+    {
+      "id": "artist-ext-78103532c7eeb1a5",
+      "evidenceHash": "9e4e163a551f940b25671c1c5fe1af73a686985fc2bfd80c3696af30c65f4786"
+    },
+    {
+      "id": "artist-ext-ded9d836543a81e7",
+      "evidenceHash": "9d5045e9928d5ebd90aede9e2efeb85c3aa221e11008c3a5b788c9e1e62fdd8d"
+    },
+    {
+      "id": "artist-ext-0ae680e94043034d",
+      "evidenceHash": "48b0059f10aa7b11730d45759d13fe20d737b21a6441b698026495d36b702906"
+    },
+    {
+      "id": "artist-ext-20592bfcb0e75c39",
+      "evidenceHash": "0566df24610c549706d220b420f692fcf9ac57d81198a4d0eb47c53d7cb8fe61"
+    },
+    {
+      "id": "artist-ext-937a3df0cd4b8306",
+      "evidenceHash": "58abf07e6f820f6846854e15903a64ee8a692c00f7e2b3e59992691193dd3431"
+    },
+    {
+      "id": "artist-ext-209f307b9fc21008",
+      "evidenceHash": "9ee0ea7044cfc7a8664badd28449243bcba8b376a65c8091645062a3d4c37fee"
+    },
+    {
+      "id": "artist-ext-6c6db9b1f31cd11c",
+      "evidenceHash": "4e7c26c8bbfc2dea6ad5ca275de861bb97c2bc89185ea79cd1ceb1643b132e90"
+    },
+    {
+      "id": "artist-ext-f01bbd3c9ef21e97",
+      "evidenceHash": "6b480187e50480a87db8ac5cc143a6909dd971f04d4e2ddb645fe227ccb2d63e"
+    },
+    {
+      "id": "artist-ext-1573945484b3e5dc",
+      "evidenceHash": "e6f0624113f610ffa2757ac24a0661ce1476cc64f642d5d76687173c263b314c"
+    },
+    {
+      "id": "artist-ext-f8cc71edc5378893",
+      "evidenceHash": "4c591217a0af7cef016b7c9e6e34a4a47b6d7220d9bf4a5721a4e9fb36471e02"
+    },
+    {
+      "id": "artist-ext-49f54058897858f8",
+      "evidenceHash": "2ed476663f8f97d21f5846741ef155aaf8394f5c855b5479fb6c52fc63be90dd"
+    },
+    {
+      "id": "artist-ext-18ccde571f694a64",
+      "evidenceHash": "dac2fe50da5e633c476088dc50a71e1678aa3c0f32c9ea4d346829c74d30cc79"
+    },
+    {
+      "id": "artist-ext-e32ff99d7e1039ba",
+      "evidenceHash": "efb224d89d195cb6091041d5ab76caf41b5fea48c79d4238863eb99745b202fa"
+    },
+    {
+      "id": "artist-ext-44eda92b789bc1fc",
+      "evidenceHash": "7defc096b5da7ac6e57d5052deefd629390aad0a2179ebe5f59f281d738dfda3"
+    },
+    {
+      "id": "artist-ext-cd611fbf089fe3d2",
+      "evidenceHash": "d58ff38ee2e4e1085ef6cd7305d3c46f2859c941368084c3b2542e32e5d16182"
+    },
+    {
+      "id": "artist-ext-737cbd3ff6169316",
+      "evidenceHash": "ca44aed7bd9def2cb506fba5a35b63dc3c2657880088d84b2b56588425ef6919"
+    },
+    {
+      "id": "artist-ext-2a0b6287a0e65cff",
+      "evidenceHash": "2e15a0a077412ee5e0dd796ccf2166b72d5ad3c74a22f1a2e435102ef35b0e30"
+    },
+    {
+      "id": "artist-ext-f49f3b8e2f439c94",
+      "evidenceHash": "2dfc8cf2e7d98feaef948583ab4fe88b5e8f3f31db75041a77a97b0467c2ab69"
+    },
+    {
+      "id": "artist-ext-7f41a1bd34b0005c",
+      "evidenceHash": "22fd933e0a9a79df08d609f456d91ab4290165b2ccd60d1425bdd755f55ff3e2"
+    },
+    {
+      "id": "artist-ext-2e79a4fb6568108a",
+      "evidenceHash": "9cecfcc9e58a3de4d2079d8bd3506739486284e71a38830d5651f2f4960f9744"
+    },
+    {
+      "id": "artist-ext-2dc512bfd5f0fee2",
+      "evidenceHash": "78ab21f3a29a89db67197fe63aada364514e512bd6cf6887cd1fe400d677b20d"
+    },
+    {
+      "id": "artist-ext-4f682b71153ffa91",
+      "evidenceHash": "3d29bb7359c09458592abbaa0825b1e986f9d75ae1b3306199e68cd6d1224120"
+    },
+    {
+      "id": "artist-ext-b5679ea7383b47df",
+      "evidenceHash": "06836de33a8f8983a0ac29d025530efd8741fdd98a80e5fc6bea61263a8d9901"
+    },
+    {
+      "id": "artist-ext-3100486406b39efc",
+      "evidenceHash": "f3debcde0e98c03d6e1f0b7ffb74c5ed31b4472c408e317919910fb8c9a3fd54"
+    },
+    {
+      "id": "artist-ext-8159410873244d1e",
+      "evidenceHash": "00644b6063b8f19dd7ce98590c4e4f4a0c697c27e80197da252703e06aa831c7"
+    },
+    {
+      "id": "artist-ext-21305f1bcd615275",
+      "evidenceHash": "6ba393883c73fc2cb68b488ac814d0ae020d13d07029a7a05a392725b761b05c"
+    },
+    {
+      "id": "artist-ext-b18aaa6c6b929b86",
+      "evidenceHash": "1ea14f73cae009c473511db8ebc46e884619cf67fa2e113d93ba1dbb2abee4bf"
+    },
+    {
+      "id": "artist-ext-3abdaa5ba7674bd2",
+      "evidenceHash": "f929b0c103541105deb1909a7027784f7aa700060765f7bbaef96c3fbdd9fbb0"
+    },
+    {
+      "id": "artist-ext-84abb794c0ab2638",
+      "evidenceHash": "ec33c1395549db2a87f35b13ce1ff50ce086f989e6b30f862f6be879bdf54483"
+    },
+    {
+      "id": "artist-ext-46bcbaf7d5fc6827",
+      "evidenceHash": "69ef3c833e52a4e0ca9b72799c1656b352564d2c86c04d2da6539c41134a005e"
+    }
+  ],
+  "rejected": [
+    {
+      "id": "artist-ext-d1d5eab8bb6b07cb",
+      "reason": "page_label_not_artist"
+    },
+    {
+      "id": "artist-ext-9e1fc871f1491c04",
+      "reason": "truncated_with_annotation"
+    },
+    {
+      "id": "artist-ext-8b0026f504f5fe79",
+      "reason": "event_or_venue_label_not_artist"
+    },
+    {
+      "id": "artist-ext-2a95e2ef9e4d24f0",
+      "reason": "page_label_not_artist"
+    },
+    {
+      "id": "artist-ext-bc691003939b33f2",
+      "reason": "page_label_not_artist"
+    },
+    {
+      "id": "artist-ext-23ddc4c9d300510f",
+      "reason": "event_or_venue_label_not_artist"
+    },
+    {
+      "id": "artist-ext-0138fe6d02f376af",
+      "reason": "event_or_venue_label_not_artist"
+    }
+  ]
+}

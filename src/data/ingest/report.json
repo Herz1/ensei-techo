@@ -1,0 +1,199 @@
+{
+  "generatedAt": "2026-07-30T05:28:12.015Z",
+  "summary": {
+    "sourceCount": 13,
+    "successfulSources": 12,
+    "failedSources": 0,
+    "skippedSources": 1,
+    "candidateCount": 519,
+    "readyForReview": 445,
+    "approved": 428,
+    "rejected": 0
+  },
+  "issueCounts": {
+    "unknown_artist": 60,
+    "required_field:openTime:not_checked:pending_review": 17,
+    "partial_artist_resolution": 14
+  },
+  "matchReviewQueue": [],
+  "staleReviewIds": [],
+  "sources": [
+    {
+      "id": "ticketmaster-jp",
+      "name": "Ticketmaster Discovery API (Japan)",
+      "type": "ticket_api",
+      "parserIds": [
+        "ticketmaster-json"
+      ],
+      "status": "skipped",
+      "startedAt": "2026-07-30T05:28:13.294Z",
+      "finishedAt": "2026-07-30T05:28:13.298Z",
+      "recordCount": 0,
+      "reason": "TICKETMASTER_API_KEY 未设置"
+    },
+    {
+      "id": "yokohama-arena-official",
+      "name": "横浜アリーナ公式イベントカレンダー",
+      "type": "venue_official",
+      "parserIds": [
+        "yokohama-arena-json",
+        "generic-jsonld",
+        "yokohama-arena-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.295Z",
+      "finishedAt": "2026-07-30T05:28:25.330Z",
+      "recordCount": 78
+    },
+    {
+      "id": "zepp-sapporo-official",
+      "name": "Zepp Sapporo 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.295Z",
+      "finishedAt": "2026-07-30T05:28:34.365Z",
+      "recordCount": 53
+    },
+    {
+      "id": "zepp-haneda-official",
+      "name": "Zepp Haneda(TOKYO) 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.296Z",
+      "finishedAt": "2026-07-30T05:28:37.833Z",
+      "recordCount": 80
+    },
+    {
+      "id": "zepp-divercity-official",
+      "name": "Zepp DiverCity(TOKYO) 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.296Z",
+      "finishedAt": "2026-07-30T05:28:37.448Z",
+      "recordCount": 80
+    },
+    {
+      "id": "zepp-shinjuku-official",
+      "name": "Zepp Shinjuku(TOKYO) 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:37.740Z",
+      "recordCount": 74
+    },
+    {
+      "id": "zepp-yokohama-official",
+      "name": "KT Zepp Yokohama 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:38.222Z",
+      "recordCount": 99
+    },
+    {
+      "id": "zepp-nagoya-official",
+      "name": "Zepp Nagoya 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:35.242Z",
+      "recordCount": 59
+    },
+    {
+      "id": "zepp-namba-official",
+      "name": "Zepp Namba(OSAKA) 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:33.384Z",
+      "recordCount": 53
+    },
+    {
+      "id": "zepp-osakabayside-official",
+      "name": "Zepp Osaka Bayside 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:37.019Z",
+      "recordCount": 67
+    },
+    {
+      "id": "zepp-fukuoka-official",
+      "name": "Zepp Fukuoka 公式スケジュール",
+      "type": "venue_official",
+      "parserIds": [
+        "generic-jsonld",
+        "zepp-schedule-html",
+        "zepp-detail-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:37.752Z",
+      "recordCount": 75
+    },
+    {
+      "id": "kenshi-yonezu-official",
+      "name": "米津玄師 REISSUE RECORDS",
+      "type": "artist_official",
+      "parserIds": [
+        "kenshi-tour-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:13.772Z",
+      "recordCount": 14
+    },
+    {
+      "id": "sheena-ringo-official",
+      "name": "椎名林檎 SR猫柳本線",
+      "type": "artist_official",
+      "parserIds": [
+        "sheena-tour-html"
+      ],
+      "status": "ok",
+      "startedAt": "2026-07-30T05:28:13.297Z",
+      "finishedAt": "2026-07-30T05:28:13.773Z",
+      "recordCount": 11
+    }
+  ]
+}

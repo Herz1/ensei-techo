@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+/* class 切换暗色模式(html.dark) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand: #7c3aed;
+  --color-brand-strong: #6d28d9;
+  --color-brand-soft: #ede9fe;
+  --color-accent: #d946ef;
+  --color-surface: #fafafa;
+  --color-surface-dark: #0b0b14;
+  --color-card-dark: #15151f;
+  --font-sans: "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, system-ui, -apple-system,
+    sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(a, button, input, select, textarea, summary):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-brand) 55%, transparent);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  button,
+  select,
+  summary {
+    min-height: 44px;
+  }
+
+  button[aria-label],
+  a[aria-label] {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@utility scrollbar-hide {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* 品牌渐变文字 */
+@utility text-gradient-brand {
+  background: linear-gradient(120deg, #7c3aed, #d946ef 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .site-bottom-tabs,
+  .print-hide {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .trip-print {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .trip-print section,
+  .trip-print article {
+    break-inside: avoid;
+    box-shadow: none !important;
+  }
+}

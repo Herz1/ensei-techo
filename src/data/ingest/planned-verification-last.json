@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "runId": "planned-verification-2026-08-31T04-07-03-708Z",
+  "generatedAt": "2026-08-31T04:07:03.711Z",
+  "mode": "dry-run",
+  "status": "dry_run",
+  "eventIds": [
+    "evt_e912cb05373a12af9141c910"
+  ],
+  "selectedCount": 1,
+  "unselectedEventCount": 427,
+  "formalDataChanged": false,
+  "conflicts": [],
+  "scopeAudit": {
+    "safe": true,
+    "violations": []
+  },
+  "failure": null,
+  "events": [
+    {
+      "eventId": "evt_e912cb05373a12af9141c910",
+      "title": "森本爵ONEMANLIVE ～Palindrome～",
+      "matrix": [
+        {
+          "field": "officialEventDetail",
+          "label": "官方演出详情",
+          "currentValue": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160916",
+          "sourceUrls": [
+            "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=160916"
+          ],
+          "lastVerifiedAt": "2026-07-30T05:28:40.705Z",
+          "changed": false,
+          "unknownReason": null,
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "officialTicketPage",
+          "label": "官方票务具体场次页",
+          "currentValue": "https://livepocket.jp/e/bb_rs",
+          "sourceUrls": [
+            "https://livepocket.jp/e/bb_rs"
+          ],
+          "lastVerifiedAt": "2026-08-27T03:26:24.945Z",
+          "changed": false,
+          "unknownReason": null,
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "visibleSalePhase",
+          "label": "当前可见申请阶段",
+          "currentValue": "其他官方渠道：open",
+          "sourceUrls": [
+            "https://livepocket.jp/e/bb_rs"
+          ],
+          "lastVerifiedAt": "2026-08-27T03:26:24.945Z",
+          "changed": false,
+          "unknownReason": null,
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "eligibility",
+          "label": "资格条件",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "membershipRequirement",
+          "label": "会员／账号要求",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "phoneRegion",
+          "label": "手机号／地区限制",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "ticketApp",
+          "label": "电子票 App",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "identityCheck",
+          "label": "本人确认",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "companionDistribution",
+          "label": "同行者／票券分配",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "applicationWindow",
+          "label": "申请开始／截止",
+          "currentValue": "其他官方渠道：2026-04-01T21:00+09:00 → 2026-09-03T23:59+09:00",
+          "sourceUrls": [
+            "https://livepocket.jp/e/bb_rs"
+          ],
+          "lastVerifiedAt": "2026-08-27T03:26:24.945Z",
+          "changed": false,
+          "unknownReason": null,
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "resultAt",
+          "label": "结果公布时间",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "paymentDeadline",
+          "label": "付款期限",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "ticketDisplayAt",
+          "label": "票券显示／下载时间",
+          "currentValue": null,
+          "sourceUrls": [],
+          "lastVerifiedAt": null,
+          "changed": false,
+          "unknownReason": "官方来源尚未披露",
+          "requiresManual": false,
+          "conflicts": []
+        },
+        {
+          "field": "lastVerifiedAt",
+          "label": "最近核验时间",
+          "currentValue": "2026-08-27T03:26:24.945Z",
+          "sourceUrls": [
+            "https://livepocket.jp/e/bb_rs"
+          ],
+          "lastVerifiedAt": "2026-08-27T03:26:24.945Z",
+          "changed": false,
+          "unknownReason": null,
+          "requiresManual": false,
+          "conflicts": []
+        }
+      ]
+    }
+  ]
+}

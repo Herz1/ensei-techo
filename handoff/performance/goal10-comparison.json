@@ -1,0 +1,332 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-31T06:01:13.514Z",
+  "before": {
+    "path": "E:\\claude use\\live\\ensei-techo\\handoff\\performance\\goal10-before.json",
+    "buildId": "qarzpFjauVT-aSSJaLI9y",
+    "generatedAt": "2026-08-31T05:10:48.845Z"
+  },
+  "after": {
+    "path": "E:\\claude use\\live\\ensei-techo\\handoff\\performance\\goal10-after.json",
+    "buildId": "yuR93rU0oPnhaqYHlHUjU",
+    "generatedAt": "2026-08-31T06:01:05.165Z"
+  },
+  "routes": [
+    {
+      "key": "home",
+      "label": "首页",
+      "path": "/",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 5569793,
+          "after": 655327,
+          "absolute": -4914466,
+          "percent": -88.23426651582922
+        },
+        "documentDecodedBytes": {
+          "before": 49908,
+          "after": 735968,
+          "absolute": 686060,
+          "percent": 1374.6493548128558
+        },
+        "rscDecodedBytes": {
+          "before": 23409,
+          "after": 0,
+          "absolute": -23409,
+          "percent": -100
+        },
+        "initialDataParseApproxMs": {
+          "before": 156.64,
+          "after": 85.76,
+          "absolute": -70.87999999999998,
+          "percent": -45.25025536261491
+        },
+        "firstInteractiveMs": {
+          "before": 1147.2,
+          "after": 895.9,
+          "absolute": -251.30000000000007,
+          "percent": -21.905509065550913
+        },
+        "jsHeapUsedBytes": {
+          "before": 20677948,
+          "after": 7365032,
+          "absolute": -13312916,
+          "percent": -64.38219111490173
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    },
+    {
+      "key": "events",
+      "label": "演出列表",
+      "path": "/events",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 5569793,
+          "after": 654869,
+          "absolute": -4914924,
+          "percent": -88.24248944260586
+        },
+        "documentDecodedBytes": {
+          "before": 20468,
+          "after": 706515,
+          "absolute": 686047,
+          "percent": 3351.8028141489153
+        },
+        "rscDecodedBytes": {
+          "before": 33362,
+          "after": 0,
+          "absolute": -33362,
+          "percent": -100
+        },
+        "initialDataParseApproxMs": {
+          "before": 193.16,
+          "after": 125.47,
+          "absolute": -67.69,
+          "percent": -35.04348726444398
+        },
+        "firstInteractiveMs": {
+          "before": 1259.8,
+          "after": 1090.2,
+          "absolute": -169.5999999999999,
+          "percent": -13.462454357834568
+        },
+        "jsHeapUsedBytes": {
+          "before": 24888656,
+          "after": 9439268,
+          "absolute": -15449388,
+          "percent": -62.07401476399529
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    },
+    {
+      "key": "eventDetail",
+      "label": "演出详情",
+      "path": "/events/evt_e912cb05373a12af9141c910",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 5648596,
+          "after": 657827,
+          "absolute": -4990769,
+          "percent": -88.35415030566888
+        },
+        "documentDecodedBytes": {
+          "before": 69283,
+          "after": 272784,
+          "absolute": 203501,
+          "percent": 293.72429022992657
+        },
+        "rscDecodedBytes": {
+          "before": 23341,
+          "after": 3852,
+          "absolute": -19489,
+          "percent": -83.49685103466004
+        },
+        "initialDataParseApproxMs": {
+          "before": 148.62,
+          "after": 79.78,
+          "absolute": -68.84,
+          "percent": -46.31947248015072
+        },
+        "firstInteractiveMs": {
+          "before": 1155.2,
+          "after": 1014.2,
+          "absolute": -141,
+          "percent": -12.205678670360111
+        },
+        "jsHeapUsedBytes": {
+          "before": 20441700,
+          "after": 6281492,
+          "absolute": -14160208,
+          "percent": -69.2711858602758
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    },
+    {
+      "key": "map",
+      "label": "地图",
+      "path": "/map",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 6520342,
+          "after": 1604691,
+          "absolute": -4915651,
+          "percent": -75.38946576728644
+        },
+        "documentDecodedBytes": {
+          "before": 20468,
+          "after": 706515,
+          "absolute": 686047,
+          "percent": 3351.8028141489153
+        },
+        "rscDecodedBytes": {
+          "before": 18935,
+          "after": 0,
+          "absolute": -18935,
+          "percent": -100
+        },
+        "initialDataParseApproxMs": {
+          "before": 485.6,
+          "after": 442.25,
+          "absolute": -43.35000000000002,
+          "percent": -8.927100494233942
+        },
+        "firstInteractiveMs": {
+          "before": 1902.1,
+          "after": 1709.8,
+          "absolute": -192.29999999999995,
+          "percent": -10.109878555281004
+        },
+        "jsHeapUsedBytes": {
+          "before": 29692252,
+          "after": 25708092,
+          "absolute": -3984160,
+          "percent": -13.41818060819368
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    },
+    {
+      "key": "me",
+      "label": "我的",
+      "path": "/me",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 5569793,
+          "after": 671419,
+          "absolute": -4898374,
+          "percent": -87.94535093135418
+        },
+        "documentDecodedBytes": {
+          "before": 32462,
+          "after": 718509,
+          "absolute": 686047,
+          "percent": 2113.3848807836857
+        },
+        "rscDecodedBytes": {
+          "before": 21000,
+          "after": 0,
+          "absolute": -21000,
+          "percent": -100
+        },
+        "initialDataParseApproxMs": {
+          "before": 148.2,
+          "after": 71.39,
+          "absolute": -76.80999999999999,
+          "percent": -51.828609986504716
+        },
+        "firstInteractiveMs": {
+          "before": 1029.8,
+          "after": 850.1,
+          "absolute": -179.69999999999993,
+          "percent": -17.449990289376572
+        },
+        "jsHeapUsedBytes": {
+          "before": 19978372,
+          "after": 6578016,
+          "absolute": -13400356,
+          "percent": -67.07431416333624
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    },
+    {
+      "key": "tripDetail",
+      "label": "远征详情",
+      "path": "/trips/trip-goal-10-performance",
+      "metrics": {
+        "clientJsDecodedBytes": {
+          "before": 5640197,
+          "after": 639815,
+          "absolute": -5000382,
+          "percent": -88.65615864126731
+        },
+        "documentDecodedBytes": {
+          "before": 20887,
+          "after": 590432,
+          "absolute": 569545,
+          "percent": 2726.79178436348
+        },
+        "rscDecodedBytes": {
+          "before": 23698,
+          "after": 0,
+          "absolute": -23698,
+          "percent": -100
+        },
+        "initialDataParseApproxMs": {
+          "before": 144.34,
+          "after": 68.18,
+          "absolute": -76.16,
+          "percent": -52.764306498545096
+        },
+        "firstInteractiveMs": {
+          "before": 1113.3,
+          "after": 811,
+          "absolute": -302.29999999999995,
+          "percent": -27.153507590047603
+        },
+        "jsHeapUsedBytes": {
+          "before": 20206404,
+          "after": 6664596,
+          "absolute": -13541808,
+          "percent": -67.0174069567252
+        }
+      },
+      "fullEventChunkBefore": true,
+      "fullEventChunkAfter": false
+    }
+  ],
+  "interactions": {
+    "searchResponseMs": {
+      "before": 37.4,
+      "after": 37.2,
+      "absolute": -0.19999999999999574,
+      "percent": -0.5347593582887586
+    },
+    "searchInteractionDataBytes": {
+      "before": 0,
+      "after": 255744,
+      "absolute": 255744,
+      "percent": null
+    },
+    "filterResponseMs": {
+      "before": 140.5,
+      "after": 142.7,
+      "absolute": 2.1999999999999886,
+      "percent": 1.5658362989323764
+    },
+    "mapInitializationMs": {
+      "before": 1299,
+      "after": 1261.2,
+      "absolute": -37.799999999999955,
+      "percent": -2.909930715935331
+    }
+  },
+  "fullEventBundle": {
+    "beforeChunks": [
+      {
+        "file": "04ga49dyj84or.js",
+        "bytes": 4728785,
+        "hasFixedEvent": true,
+        "hasTruthFields": true
+      }
+    ],
+    "beforeRoutes": [
+      "/",
+      "/events",
+      "/events/evt_e912cb05373a12af9141c910",
+      "/map",
+      "/me",
+      "/trips/trip-goal-10-performance"
+    ],
+    "afterChunks": [],
+    "afterRoutes": []
+  }
+}

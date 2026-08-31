@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-30T07:00:35.795Z",
+  "mode": "dry-run",
+  "status": "dry_run",
+  "proposedDataChanged": true,
+  "formalDataChanged": false,
+  "diff": {
+    "before": {
+      "eventCount": 428,
+      "offerCount": 89,
+      "detailUrlCount": 21,
+      "sourceFamilies": [
+        "artist",
+        "ticket:eplus",
+        "ticket:lawson",
+        "ticket:other",
+        "ticket:pia",
+        "venue"
+      ],
+      "unknownCounts": {
+        "saleStatus": 29,
+        "inventoryStatus": 84,
+        "startAt": 29,
+        "endAt": 29,
+        "resultAt": 88,
+        "paymentDeadline": 89,
+        "requiresJapanesePhone": 89,
+        "identityCheck": 85,
+        "ticketApp": 89,
+        "providerEventId": 73
+      }
+    },
+    "after": {
+      "eventCount": 428,
+      "offerCount": 89,
+      "detailUrlCount": 21,
+      "sourceFamilies": [
+        "artist",
+        "ticket:eplus",
+        "ticket:lawson",
+        "ticket:other",
+        "ticket:pia",
+        "venue"
+      ],
+      "unknownCounts": {
+        "saleStatus": 29,
+        "inventoryStatus": 84,
+        "startAt": 29,
+        "endAt": 29,
+        "resultAt": 88,
+        "paymentDeadline": 89,
+        "requiresJapanesePhone": 89,
+        "identityCheck": 85,
+        "ticketApp": 89,
+        "providerEventId": 73
+      }
+    },
+    "eventIds": {
+      "added": [],
+      "removed": []
+    },
+    "offerKeys": {
+      "added": [],
+      "removed": []
+    },
+    "eventDetailUrls": {
+      "added": [],
+      "removed": []
+    },
+    "sourceFamilies": {
+      "added": [],
+      "removed": []
+    },
+    "saleStatusChanges": [
+      {
+        "key": "evt_4b12eed7c9b49dcd7fb04e6b|offer:eplus:3841110001-P0030020P021001",
+        "before": "open",
+        "after": "closed"
+      },
+      {
+        "key": "evt_581952c85ac9645b0225b1eb|offer:eplus:3325100001-P0030017P0030018P0030019P0030020P0030021P0030022",
+        "before": "open",
+        "after": "closed"
+      },
+      {
+        "key": "evt_76baa565bca71e5195662c3f|offer:eplus:4332440001",
+        "before": "open",
+        "after": "closed"
+      },
+      {
+        "key": "evt_dcea3120d379ceb36a92fb73|offer:eplus:4332440001",
+        "before": "open",
+        "after": "closed"
+      }
+    ],
+    "inventoryStatusChanges": [],
+    "unknownCountChanges": [],
+    "validRemoved": [],
+    "blockers": [],
+    "safe": true
+  },
+  "failures": []
+}

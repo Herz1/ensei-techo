@@ -1,0 +1,3374 @@
+[
+  {
+    "id": "artist-ext-ee986c75042337ed",
+    "nameJa": "山口陽世",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6cdfa6",
+    "profileStatus": "minimal",
+    "eventCount": 3,
+    "eventIds": [
+      "evt_387f926ca2e18820ad1959d8",
+      "evt_6175a8a7207944c5fbc61ab9",
+      "evt_89e1d23f294bbf705cc25c2b"
+    ],
+    "evidenceHash": "26baaaf365124d35647fa1bc7cf134ed5a09dc6757e77aed25a3fdd698624135",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-osakabayside-official",
+        "sourceName": "Zepp Osaka Bayside 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=162670",
+        "sourceEventId": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=162670|2026-08-05|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "2bb83a79e61faeff6ec6b4d848ee23174e560396d1988b86bf80a719b57e0a24",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "90235a98ecdc916b44495cea96ebd157cf51979c1da7e18acb73fb0ae83f883d",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=162670",
+            "fetchStatus": "success",
+            "contentHash": "c764e20a8e1e880e00a4bf301b4982f190d52f6263a97dba0859d420c89e955a",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.liveexsam.co.jp/contact_sakamichi/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.hinatazaka46.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-nagoya-official",
+        "sourceName": "Zepp Nagoya 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=165842",
+        "sourceEventId": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=165842|2026-08-15|17:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "3c792161df00d3f5c6d37f85e1deb91d52d04c88c3994b9e26af863b5addd8ef",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-nagoya-official",
+            "url": "https://www.zepp.co.jp/hall/nagoya/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "5405a86f3108718dc26fae6c615e4a31ca562d7af674d2d4e09ae85df451d1e7",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-nagoya-official",
+            "url": "https://www.zepp.co.jp/hall/nagoya/schedule/single/?rid=165842",
+            "fetchStatus": "success",
+            "contentHash": "0850350dbd076f97533a12644dd01c82e63eaba759c2a6a5b907b7d142e7a533",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-nagoya-official",
+            "url": "https://www.hinatazaka46.com/s/official/?ima=0000",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-osakabayside-official",
+        "sourceName": "Zepp Osaka Bayside 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=165759",
+        "sourceEventId": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=165759|2026-08-16|17:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "28485db1ba2b796d22c32d67249c15e51d65d22c6b2dd3c2722a0449a4538033",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "90235a98ecdc916b44495cea96ebd157cf51979c1da7e18acb73fb0ae83f883d",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=165759",
+            "fetchStatus": "success",
+            "contentHash": "852d28d510199de91f3afb8b3ed762c8d20440d9a755d9f01f98bd1f5e5ded48",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.liveexsam.co.jp/contact_sakamichi/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.hinatazaka46.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-1f0f80fd1e51a991",
+    "nameJa": "ハロプロ研修生",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#0b7a89",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "79e1db742a3d20ff13a562891ff7b80287c82c5a1415f27b26c74548a54e7c75",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f9287c5eb0aeac28",
+    "nameJa": "苅部咲良",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#143106",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "6b3694b389691240a00e3cb9bdeb3ccd22ba5c89c5ac3393aa979ffee167a5e4",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f9f795adda613844",
+    "nameJa": "岸田桃果",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#9b0d96",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "032f8fc96bfbf7d3b2b0e195b67751996a0b638ddc911ca05b84b917bd748114",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f1cefbfbd437ec63",
+    "nameJa": "吉田光里",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6ded2c",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "81523b97412c51de16afc885ff570560e0de5bf0ca51bbe9faf0e1742b6e529f",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f432236f1a51c19d",
+    "nameJa": "宮﨑理帆",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#4bbc41",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "a72917647fdcb2bd5a0e0035ee47c193144fd1febe62c16cbe21039a3f0ed600",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-78103532c7eeb1a5",
+    "nameJa": "根本花凛",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#e70623",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "9e4e163a551f940b25671c1c5fe1af73a686985fc2bfd80c3696af30c65f4786",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-ded9d836543a81e7",
+    "nameJa": "佐藤絢音",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#5bed13",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "9d5045e9928d5ebd90aede9e2efeb85c3aa221e11008c3a5b788c9e1e62fdd8d",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-0ae680e94043034d",
+    "nameJa": "佐伯詩春",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#f5d6ea",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "48b0059f10aa7b11730d45759d13fe20d737b21a6441b698026495d36b702906",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-20592bfcb0e75c39",
+    "nameJa": "斎藤ゆり夏",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#66897b",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "0566df24610c549706d220b420f692fcf9ac57d81198a4d0eb47c53d7cb8fe61",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-937a3df0cd4b8306",
+    "nameJa": "坂田しおり",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#28bfb9",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "58abf07e6f820f6846854e15903a64ee8a692c00f7e2b3e59992691193dd3431",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-209f307b9fc21008",
+    "nameJa": "坂本葵花",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#2ee5e1",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "9ee0ea7044cfc7a8664badd28449243bcba8b376a65c8091645062a3d4c37fee",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-6c6db9b1f31cd11c",
+    "nameJa": "山本はな",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#39be6d",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "4e7c26c8bbfc2dea6ad5ca275de861bb97c2bc89185ea79cd1ceb1643b132e90",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f01bbd3c9ef21e97",
+    "nameJa": "青木優奈",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#fc2261",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "6b480187e50480a87db8ac5cc143a6909dd971f04d4e2ddb645fe227ccb2d63e",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-1573945484b3e5dc",
+    "nameJa": "染谷彩良",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6ddd0b",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "e6f0624113f610ffa2757ac24a0661ce1476cc64f642d5d76687173c263b314c",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f8cc71edc5378893",
+    "nameJa": "荘⼝彰久",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#a50c19",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_4d5aa430e0302d5cbb853354",
+      "evt_5ad4f72bf52bbfb469f30733"
+    ],
+    "evidenceHash": "4c591217a0af7cef016b7c9e6e34a4a47b6d7220d9bf4a5721a4e9fb36471e02",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756|2026-08-19|17:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "4f37369ab7c1d7e82cf5c5c1b0dad6938caaa09bcf93c7e38e254da380739d7c",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756",
+            "fetchStatus": "success",
+            "contentHash": "a1f3962fcf7a4b2d80e4233262e793ea5dd75bb020ba6713f31a7191e638b452",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://info.diskgarage.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756|2026-08-19|20:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "7f7835e76e0a66c551095305e0ef1293bd40494f461feb018edcb8952228cd6d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159756",
+            "fetchStatus": "success",
+            "contentHash": "a1f3962fcf7a4b2d80e4233262e793ea5dd75bb020ba6713f31a7191e638b452",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://info.diskgarage.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-49f54058897858f8",
+    "nameJa": "大野愛莉",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#ba0ab0",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "2ed476663f8f97d21f5846741ef155aaf8394f5c855b5479fb6c52fc63be90dd",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-18ccde571f694a64",
+    "nameJa": "長井莉依那",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#760cca",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "dac2fe50da5e633c476088dc50a71e1678aa3c0f32c9ea4d346829c74d30cc79",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-e32ff99d7e1039ba",
+    "nameJa": "田村梛々",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#807e34",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "efb224d89d195cb6091041d5ab76caf41b5fea48c79d4238863eb99745b202fa",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-44eda92b789bc1fc",
+    "nameJa": "樋口愛海",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#796fb4",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "7defc096b5da7ac6e57d5052deefd629390aad0a2179ebe5f59f281d738dfda3",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-cd611fbf089fe3d2",
+    "nameJa": "服部琉愛",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#f14d0c",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "d58ff38ee2e4e1085ef6cd7305d3c46f2859c941368084c3b2542e32e5d16182",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-737cbd3ff6169316",
+    "nameJa": "鈴木琴美",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#dd6399",
+    "profileStatus": "minimal",
+    "eventCount": 2,
+    "eventIds": [
+      "evt_8f04e8c2fa71a22632f3f6ca",
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "ca44aed7bd9def2cb506fba5a35b63dc3c2657880088d84b2b56588425ef6919",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334|2026-09-12|15:45",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "8dffe95cc30c246f976d0f640179ca3deab80e4c8d3946662dd3b2089dd2a56d",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159334",
+            "fetchStatus": "success",
+            "contentHash": "531063a852a29e7c4e37b64ac5ebd500d2ad2374654c02bd7ab2cb48e11d726e",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      },
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-2a0b6287a0e65cff",
+    "nameJa": "ACE",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#128f04",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "2e15a0a077412ee5e0dd796ccf2166b72d5ad3c74a22f1a2e435102ef35b0e30",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-f49f3b8e2f439c94",
+    "nameJa": "ACO",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#cae605",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "2dfc8cf2e7d98feaef948583ab4fe88b5e8f3f31db75041a77a97b0467c2ab69",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-7f41a1bd34b0005c",
+    "nameJa": "ALLY",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#1bd49d",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "22fd933e0a9a79df08d609f456d91ab4290165b2ccd60d1425bdd755f55ff3e2",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-2e79a4fb6568108a",
+    "nameJa": "AOI",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#9b4f99",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "9cecfcc9e58a3de4d2079d8bd3506739486284e71a38830d5651f2f4960f9744",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-2dc512bfd5f0fee2",
+    "nameJa": "CHOCO",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#5b48c4",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "78ab21f3a29a89db67197fe63aada364514e512bd6cf6887cd1fe400d677b20d",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-4f682b71153ffa91",
+    "nameJa": "COCO",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#0764f8",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "3d29bb7359c09458592abbaa0825b1e986f9d75ae1b3306199e68cd6d1224120",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-d1d5eab8bb6b07cb",
+    "nameJa": "FUKUOKA",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#e04d04",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_99e9366ad6346b0b6d4121f5"
+    ],
+    "evidenceHash": "7ce9268080692f11f3487b2de5d012fe6840b648bbbfa42a6bed987e0de781c8",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786|2026-08-05|15:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "f104f0977cc053aae8b8f0496eaa20c260b1af64043c359177328f214bcd1bef",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+            "fetchStatus": "success",
+            "contentHash": "aad250c6117e915e3486bb47571a81d280fe7c3f73dfc3aadd363d3c49e8a966",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://sogotokyo.com/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://ebidan.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-9e1fc871f1491c04",
+    "nameJa": "G-FREAK FACTORYw",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#9832a5",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_874db8f6272fefc6bb0a709d"
+    ],
+    "evidenceHash": "836378f38bcea164426b749ac056b6c90435f44711cc81d30d95f034e80c89e5",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158267",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158267|2026-10-10|18:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "e7b1f3019de70e816480022cac76ada2f392e7630d9c88c998f8df4869456b8e",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=10",
+            "fetchStatus": "success",
+            "contentHash": "c0b5e2ab4adab4ab2cc79695bb7d441f9628576740be92825502bffc92b9f01d",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=158267",
+            "fetchStatus": "success",
+            "contentHash": "e64a0282733550c6ceb165b0ecfd1fbb0776bbac1edf02891d396ca8b2d53460",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://info.diskgarage.com/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://g-freakfactory.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-b5679ea7383b47df",
+    "nameJa": "HANNA",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#e01fce",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "06836de33a8f8983a0ac29d025530efd8741fdd98a80e5fc6bea61263a8d9901",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-8b0026f504f5fe79",
+    "nameJa": "Luxury Soul Night",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#7e5872",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_314e6d501e945b445a238b32"
+    ],
+    "evidenceHash": "93221e42ebddc047e48c7a776ead80fb22b44dd64544568f78f4c64ddb924d69",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-namba-official",
+        "sourceName": "Zepp Namba(OSAKA) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=156611",
+        "sourceEventId": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=156611|2026-08-08|0",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "f5210ec621b79f4f967cd9899c2f582c740d0f7569927bf034d83236b49d779f",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-namba-official",
+            "url": "https://www.zepp.co.jp/hall/namba/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "5553dff46138aea3bb9c5635aada4622ad8a60d7d139f072295d494b8b4711b1",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-namba-official",
+            "url": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=156611",
+            "fetchStatus": "success",
+            "contentHash": "77f2109cf89276667b77ec78d410ece3d8a9f266a5e3dd14f2205c7caedb36da",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-namba-official",
+            "url": "https://pulse-beat.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-3100486406b39efc",
+    "nameJa": "MOMO",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#b6b4fa",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "f3debcde0e98c03d6e1f0b7ffb74c5ed31b4472c408e317919910fb8c9a3fd54",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-2a95e2ef9e4d24f0",
+    "nameJa": "NAGOYA",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6571cb",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_99e9366ad6346b0b6d4121f5"
+    ],
+    "evidenceHash": "4a4e62bef01e575646a3c13f6c9da067e5a2cf5384b284677965a0e02be17368",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786|2026-08-05|15:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "f104f0977cc053aae8b8f0496eaa20c260b1af64043c359177328f214bcd1bef",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+            "fetchStatus": "success",
+            "contentHash": "aad250c6117e915e3486bb47571a81d280fe7c3f73dfc3aadd363d3c49e8a966",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://sogotokyo.com/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://ebidan.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-8159410873244d1e",
+    "nameJa": "NATSU",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#7206c5",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "00644b6063b8f19dd7ce98590c4e4f4a0c697c27e80197da252703e06aa831c7",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-21305f1bcd615275",
+    "nameJa": "NAVI",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#c8ea4b",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "6ba393883c73fc2cb68b488ac814d0ae020d13d07029a7a05a392725b761b05c",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-b18aaa6c6b929b86",
+    "nameJa": "NICO",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6ae6c6",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_af7f5c524985e59503eab923"
+    ],
+    "evidenceHash": "1ea14f73cae009c473511db8ebc46e884619cf67fa2e113d93ba1dbb2abee4bf",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-yokohama-official",
+        "sourceName": "KT Zepp Yokohama 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+        "sourceEventId": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406|2026-09-11|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0d7f712bec38adf6d1de774a55cf6a5a991a9340c205d36e4c7a804e4a7e3d38",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "e79b6a19b41b8b8b77edeb872e1b8ff3da3c9037435140e2648d96bb306bb540",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://www.zepp.co.jp/hall/yokohama/schedule/single/?rid=161406",
+            "fetchStatus": "success",
+            "contentHash": "4005fd503391c9b6f733845bc7cafe11ded68720d2ce437eddd608e646a8b831",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://e-cube.tv/contact/event/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-yokohama-official",
+            "url": "https://whitescorpion.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-bc691003939b33f2",
+    "nameJa": "OSAKA",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#f45fbc",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_99e9366ad6346b0b6d4121f5"
+    ],
+    "evidenceHash": "cbc84188622540f5c238e590ed063132f80c0ac0e09a7998d09c655876808dd4",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786|2026-08-05|15:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "f104f0977cc053aae8b8f0496eaa20c260b1af64043c359177328f214bcd1bef",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=159786",
+            "fetchStatus": "success",
+            "contentHash": "aad250c6117e915e3486bb47571a81d280fe7c3f73dfc3aadd363d3c49e8a966",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://sogotokyo.com/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://ebidan.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-23ddc4c9d300510f",
+    "nameJa": "ぼーんとぅ盆踊り2026夏",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#f4adc2",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_d755a420fbe660eed98c93e1"
+    ],
+    "evidenceHash": "d42337786c2d4de58340f268350a645be04d74843600028a169831f04453961b",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-osakabayside-official",
+        "sourceName": "Zepp Osaka Bayside 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158948",
+        "sourceEventId": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158948|2026-08-15|16:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "627647e42bade96e8a231911b15be125126815a42b9d68244c9c2715d9f00bda",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "90235a98ecdc916b44495cea96ebd157cf51979c1da7e18acb73fb0ae83f883d",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://www.zepp.co.jp/hall/osakabayside/schedule/single/?rid=158948",
+            "fetchStatus": "success",
+            "contentHash": "2aa54e64bf8cdc89058adb5908f40142aafc3abfe9f10464c24b0de260720d28",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "promoter_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://live.yoshimoto.co.jp/live/live-28654/",
+            "fetchStatus": "not_checked"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-osakabayside-official",
+            "url": "https://live.yoshimoto.co.jp/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-3abdaa5ba7674bd2",
+    "nameJa": "ロージークロニクル",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#8d8372",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_e0b7bd58ef96f960593d8255"
+    ],
+    "evidenceHash": "f929b0c103541105deb1909a7027784f7aa700060765f7bbaef96c3fbdd9fbb0",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848|2026-09-12|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "337be75022792cdd6f0e0cb28b066fe743b13065b7909ecf87c4efae246fe966",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=9",
+            "fetchStatus": "success",
+            "contentHash": "8b15108a1ce726ed7316938fb095492df6707de3e2b9df6db2fa71987f3305d0",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=167848",
+            "fetchStatus": "success",
+            "contentHash": "aade884961dbff505871e42a916b0ad04df13d6301895814863b74ecd4f578a4",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "artist_official",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://helloproject.com/",
+            "fetchStatus": "not_checked"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-84abb794c0ab2638",
+    "nameJa": "剣翔",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#6d0ded",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_fdb75398523d4598d015d31d"
+    ],
+    "evidenceHash": "ec33c1395549db2a87f35b13ce1ff50ce086f989e6b30f862f6be879bdf54483",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-divercity-official",
+        "sourceName": "Zepp DiverCity(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160272",
+        "sourceEventId": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160272|2026-08-14|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "582a33dff8455cea2968b0ba45e8aaa062b3aad935160983617377529c9950b9",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "a81fb0e849cf079f7abd1fddb8e4e3bd7b87137affa7ad5fdee376927e647425",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-divercity-official",
+            "url": "https://www.zepp.co.jp/hall/divercity/schedule/single/?rid=160272",
+            "fetchStatus": "success",
+            "contentHash": "b37fda6171ada5f00f61045769a96705a61f27bc4a5abf94f5e33a6a378aae04",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-0138fe6d02f376af",
+    "nameJa": "大阪芸術大学 POP WAVE LIVE 2026",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#9f21ca",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_84f7348b4300c92f171c7fb6"
+    ],
+    "evidenceHash": "ccb57b0c029c736d11770db9650591eeb2f674e8269ee83a2fdbcdbdc5a268d8",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-namba-official",
+        "sourceName": "Zepp Namba(OSAKA) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=162218",
+        "sourceEventId": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=162218|2026-08-25|18:30",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "0344e1a8685d3e870248af27b8af58c73e471b864974e587511af65210436161",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-namba-official",
+            "url": "https://www.zepp.co.jp/hall/namba/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "5553dff46138aea3bb9c5635aada4622ad8a60d7d139f072295d494b8b4711b1",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-namba-official",
+            "url": "https://www.zepp.co.jp/hall/namba/schedule/single/?rid=162218",
+            "fetchStatus": "success",
+            "contentHash": "3e212901ed8419e7c911dc08b79472ee9a06efaaa295f9f85f86f86afa01f1f3",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "artist-ext-46bcbaf7d5fc6827",
+    "nameJa": "中西智子",
+    "nameZh": null,
+    "romaji": null,
+    "kana": null,
+    "aliases": [],
+    "genres": [],
+    "color": "#07e8eb",
+    "profileStatus": "minimal",
+    "eventCount": 1,
+    "eventIds": [
+      "evt_003284f884d6c0e5cef1b3fd"
+    ],
+    "evidenceHash": "69ef3c833e52a4e0ca9b72799c1656b352564d2c86c04d2da6539c41134a005e",
+    "reviewState": "pending_review",
+    "sources": [
+      {
+        "sourceId": "zepp-shinjuku-official",
+        "sourceName": "Zepp Shinjuku(TOKYO) 公式スケジュール",
+        "sourceType": "venue_official",
+        "sourceUrl": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157300",
+        "sourceEventId": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157300|2026-08-29|18:00",
+        "fetchedAt": "2026-07-30T05:25:30.448Z",
+        "contentHash": "b3ff5269f8f547815610735edc92ee6646ecb99b9cc29d837b94581b1085fda5",
+        "sourceChain": [
+          {
+            "role": "venue_schedule",
+            "sourceId": "zepp-shinjuku-official",
+            "url": "https://www.zepp.co.jp/hall/shinjuku/schedule/?_y=2026&_m=8",
+            "fetchStatus": "success",
+            "contentHash": "61ea6cdd1205a60b9f814103d504f04cff31d5be865dfea503cc80618e3a19c6",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          },
+          {
+            "role": "venue_detail",
+            "sourceId": "zepp-shinjuku-official",
+            "url": "https://www.zepp.co.jp/hall/shinjuku/schedule/single/?rid=157300",
+            "fetchStatus": "success",
+            "contentHash": "68fc08fd219f888d7d95a996012a39d5f2441e0a9f373b60073f66221af5e443",
+            "contentType": "text/html; charset=UTF-8",
+            "httpStatus": 200,
+            "fetchedAt": "2026-07-30T04:34:25.193Z"
+          }
+        ]
+      }
+    ]
+  }
+]

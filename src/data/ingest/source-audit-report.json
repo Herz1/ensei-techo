@@ -1,0 +1,1415 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-30T05:28:53.283Z",
+  "batchId": "2026-07-30T05-28-12-015Z",
+  "sourceCount": 13,
+  "sources": [
+    {
+      "id": "ticketmaster-jp",
+      "name": "Ticketmaster Discovery API (Japan)",
+      "status": "skipped",
+      "actualPageItems": 0,
+      "discoveredRecords": 0,
+      "candidateCount": 0,
+      "detailExpected": 0,
+      "detailVisited": 0,
+      "detailVisitRate": 0,
+      "detailFetchSuccessRate": 0,
+      "parseSuccessRate": 0,
+      "reviewable": 0,
+      "published": 0,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 0,
+        "requiredFields": 0
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "artist": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "venue": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "eventDate": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "openTime": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "startTime": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "ticketTypes": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "prices": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "additionalFees": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        },
+        "purchaseUrls": {
+          "count": 0,
+          "total": 0,
+          "percentage": 0
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 0,
+      "sampleSize": 0,
+      "sampleEventIds": []
+    },
+    {
+      "id": "yokohama-arena-official",
+      "name": "横浜アリーナ公式イベントカレンダー",
+      "status": "ok",
+      "actualPageItems": 56,
+      "discoveredRecords": 78,
+      "candidateCount": 55,
+      "detailExpected": 27,
+      "detailVisited": 27,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 100,
+      "parseSuccessRate": 100,
+      "reviewable": 21,
+      "published": 18,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 2,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 34,
+        "requiredFields": 37
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 21,
+          "total": 55,
+          "percentage": 38.2
+        },
+        "venue": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 29,
+          "total": 55,
+          "percentage": 52.7
+        },
+        "startTime": {
+          "count": 45,
+          "total": 55,
+          "percentage": 81.8
+        },
+        "ticketTypes": {
+          "count": 1,
+          "total": 55,
+          "percentage": 1.8
+        },
+        "prices": {
+          "count": 1,
+          "total": 55,
+          "percentage": 1.8
+        },
+        "additionalFees": {
+          "count": 0,
+          "total": 55,
+          "percentage": 0
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 55,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 0,
+          "total": 55,
+          "percentage": 0
+        },
+        "purchaseUrls": {
+          "count": 0,
+          "total": 55,
+          "percentage": 0
+        }
+      },
+      "parserFailed": 2,
+      "pageFetchFailed": 0,
+      "entityBlocked": 34,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_4382e666454bbd5820c8c8a8",
+        "evt_841579360614c79062af984b",
+        "evt_5ecf3af989eb4372432901e8",
+        "evt_45f6b7f840c7e67af172fd98",
+        "evt_5fe22661713d66c45894f511",
+        "evt_be5e1b7f4b1db46480f0a52b",
+        "evt_437cf54db4f64911f68ad440",
+        "evt_6e64facb897b8a34924849b9",
+        "evt_a7cd4f23a61d4c8dc798117f",
+        "evt_4f256e1da9359416bc22e245",
+        "evt_7761bd5414433ae300a6e14d",
+        "evt_983aec6ea2fe553906cdc1e1",
+        "evt_4999493cb23bdf8468e35c65",
+        "evt_d0f666684cc56dae7db13831",
+        "evt_a273c83274c6e25074737f79",
+        "evt_a3c179443089b159e5f8d843",
+        "evt_f6ccbcc1b636e9f58d2ae7c5",
+        "evt_0fd43e040f0979b113543e45",
+        "evt_5cb38d4d29cb9219a496442c",
+        "evt_a8dfa479ad273a7dd62ff220"
+      ]
+    },
+    {
+      "id": "zepp-sapporo-official",
+      "name": "Zepp Sapporo 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 48,
+      "discoveredRecords": 53,
+      "candidateCount": 35,
+      "detailExpected": 48,
+      "detailVisited": 48,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 100,
+      "parseSuccessRate": 100,
+      "reviewable": 30,
+      "published": 28,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 5,
+        "requiredFields": 7
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 30,
+          "total": 35,
+          "percentage": 85.7
+        },
+        "venue": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 33,
+          "total": 35,
+          "percentage": 94.3
+        },
+        "startTime": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "ticketTypes": {
+          "count": 33,
+          "total": 35,
+          "percentage": 94.3
+        },
+        "prices": {
+          "count": 33,
+          "total": 35,
+          "percentage": 94.3
+        },
+        "additionalFees": {
+          "count": 28,
+          "total": 35,
+          "percentage": 80
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 35,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 13,
+          "total": 35,
+          "percentage": 37.1
+        },
+        "purchaseUrls": {
+          "count": 12,
+          "total": 35,
+          "percentage": 34.3
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 5,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_49d1e08ce5cc9e478b2ccee4",
+        "evt_acbf435d8852fd0a69b00e54",
+        "evt_9ad6b41ae4420304a742ebd5",
+        "evt_7a89df92243e5243a250627d",
+        "evt_1ff1b39fe740adc5773e7257",
+        "evt_edf3c2f0a49f7e62ad99ff0a",
+        "evt_cbe18b15f06740020b32e5f0",
+        "evt_26a57c0009e43d8e2e839ce1",
+        "evt_7441c48779a83c6c91baf5ba",
+        "evt_8c6b09b840b74e675bab87cf",
+        "evt_3019b3748b957e48c68d8967",
+        "evt_6a45e7614c460a0402864988",
+        "evt_4bc8b47b5f98a2f431b00d66",
+        "evt_581952c85ac9645b0225b1eb",
+        "evt_32aca28f561ebc5b8b8fb18d",
+        "evt_57abeaa33a9174f6eb3c958f",
+        "evt_365ac0ebe5b517e6be3c8e38",
+        "evt_a8314692d77530abd7e5f1f9",
+        "evt_388d639b882aabb9f06743c9",
+        "evt_b4916cd9ed9f94fddff18cae"
+      ]
+    },
+    {
+      "id": "zepp-haneda-official",
+      "name": "Zepp Haneda(TOKYO) 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 74,
+      "discoveredRecords": 80,
+      "candidateCount": 56,
+      "detailExpected": 74,
+      "detailVisited": 74,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 85.1,
+      "parseSuccessRate": 85.9,
+      "reviewable": 54,
+      "published": 54,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 11,
+        "detailNotVisited": 0,
+        "entityMatching": 2,
+        "requiredFields": 2
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 55,
+          "total": 56,
+          "percentage": 98.2
+        },
+        "venue": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "startTime": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "ticketTypes": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "prices": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "additionalFees": {
+          "count": 42,
+          "total": 56,
+          "percentage": 75
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 56,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 15,
+          "total": 56,
+          "percentage": 26.8
+        },
+        "purchaseUrls": {
+          "count": 1,
+          "total": 56,
+          "percentage": 1.8
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 11,
+      "entityBlocked": 2,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_01f138ce23636c3efc2a505e",
+        "evt_716b3e88818497887f5ae2cd",
+        "evt_9854773d3949598deaf94761",
+        "evt_caee6fa64b058c4174cdf955",
+        "evt_4930130bfb49b70ebf438b9f",
+        "evt_ad5cff9439a32504e9883a2f",
+        "evt_86e95ff3406caa39d029f1ec",
+        "evt_c51ba8e45f1168c2a847df29",
+        "evt_5eb52236583b116f748157c6",
+        "evt_e2a67e1a89bfd4201779068c",
+        "evt_94c8631c499d4e1d7db004bb",
+        "evt_6c0249968c49541c2dbb6142",
+        "evt_973f42b4e70d47ef29e0505d",
+        "evt_7afe9b25357c9fccb0d31a98",
+        "evt_3dbc66bab4339eaf4a5a852d",
+        "evt_d47e42035a6c12560b371822",
+        "evt_e3ea4d23ecbdbff402c5ce2b",
+        "evt_99123040e3be1569a57d4738",
+        "evt_959aeda2f7b19f4d905a23fe",
+        "evt_844a1942434118bd633cd55e"
+      ]
+    },
+    {
+      "id": "zepp-divercity-official",
+      "name": "Zepp DiverCity(TOKYO) 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 68,
+      "discoveredRecords": 80,
+      "candidateCount": 55,
+      "detailExpected": 68,
+      "detailVisited": 68,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 88.2,
+      "parseSuccessRate": 88.9,
+      "reviewable": 47,
+      "published": 45,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 8,
+        "detailNotVisited": 0,
+        "entityMatching": 8,
+        "requiredFields": 10
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 53,
+          "total": 55,
+          "percentage": 96.4
+        },
+        "venue": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 55,
+          "total": 55,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 53,
+          "total": 55,
+          "percentage": 96.4
+        },
+        "startTime": {
+          "count": 53,
+          "total": 55,
+          "percentage": 96.4
+        },
+        "ticketTypes": {
+          "count": 50,
+          "total": 55,
+          "percentage": 90.9
+        },
+        "prices": {
+          "count": 50,
+          "total": 55,
+          "percentage": 90.9
+        },
+        "additionalFees": {
+          "count": 44,
+          "total": 55,
+          "percentage": 80
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 55,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 16,
+          "total": 55,
+          "percentage": 29.1
+        },
+        "purchaseUrls": {
+          "count": 7,
+          "total": 55,
+          "percentage": 12.7
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 8,
+      "entityBlocked": 8,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_99e9366ad6346b0b6d4121f5",
+        "evt_da970b9545557f5d41f6b842",
+        "evt_b6c10956e8c436b6af1002b6",
+        "evt_af681e80f5f5de77c7d4c9b8",
+        "evt_d4e9fe9e897e02f38adb7fe4",
+        "evt_a202db18c2940912e582ce16",
+        "evt_0272c20ef5381149086b39f2",
+        "evt_c9c52fcd01b060b73ef33f54",
+        "evt_caa06e1c2da4f094b1b80cd9",
+        "evt_77d708c529063b4349a304ef",
+        "evt_eec5633906789e9903755ecb",
+        "evt_3b8ddef9c3f9560f3924e489",
+        "evt_47f031e877490f4c6b0d0e66",
+        "evt_7c2607ae683c7d3ac455e2f1",
+        "evt_1c8409213286ce3293c6ed1c",
+        "evt_2d05d495710fcfa25e575cdc",
+        "evt_ce479195537c982421de53ba",
+        "evt_72ec239935fe5061953f6779",
+        "evt_14e59aa63a5a8ddb9c9d7ad7",
+        "evt_8305240fd1b38fe740c7af32"
+      ]
+    },
+    {
+      "id": "zepp-shinjuku-official",
+      "name": "Zepp Shinjuku(TOKYO) 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 71,
+      "discoveredRecords": 74,
+      "candidateCount": 47,
+      "detailExpected": 71,
+      "detailVisited": 71,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 85.9,
+      "parseSuccessRate": 86.7,
+      "reviewable": 45,
+      "published": 45,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 10,
+        "detailNotVisited": 0,
+        "entityMatching": 2,
+        "requiredFields": 2
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "venue": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "startTime": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "ticketTypes": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "prices": {
+          "count": 47,
+          "total": 47,
+          "percentage": 100
+        },
+        "additionalFees": {
+          "count": 35,
+          "total": 47,
+          "percentage": 74.5
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 47,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 17,
+          "total": 47,
+          "percentage": 36.2
+        },
+        "purchaseUrls": {
+          "count": 10,
+          "total": 47,
+          "percentage": 21.3
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 10,
+      "entityBlocked": 2,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_5f4cec7b13649da0dfdb8986",
+        "evt_790e49241f364ddb4aa979ea",
+        "evt_b7477ff0b41c0ef75483e532",
+        "evt_7e93e03b2e55b9d2425f6363",
+        "evt_52f56405809e12ed8aaeeaa9",
+        "evt_4731670d99556a60a5bfa466",
+        "evt_447057a70eea88486d52bafe",
+        "evt_693c4d59e639f38ded43e138",
+        "evt_361bdee91731a531d3658569",
+        "evt_28c5d58a45eeca109656b16f",
+        "evt_5b0579f628d1ea6885374da3",
+        "evt_7ef3be3163b88320a61aef8b",
+        "evt_3d89ce9288dc16a46363b3b0",
+        "evt_cd5946fd30fdf6d177834b69",
+        "evt_214d80c1ee4a41377ace6ad3",
+        "evt_608df43b9a8cd50eb9bee618",
+        "evt_dc3bc01ec3c6e2e64fb2e7f4",
+        "evt_bead0a5f740f3b98fbdb558c",
+        "evt_0384e513adf8d8a3b56a11fe",
+        "evt_16aa1b50ede120d06b6c3fb0"
+      ]
+    },
+    {
+      "id": "zepp-yokohama-official",
+      "name": "KT Zepp Yokohama 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 84,
+      "discoveredRecords": 99,
+      "candidateCount": 66,
+      "detailExpected": 84,
+      "detailVisited": 84,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 88.1,
+      "parseSuccessRate": 88.6,
+      "reviewable": 61,
+      "published": 59,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 10,
+        "detailNotVisited": 0,
+        "entityMatching": 5,
+        "requiredFields": 7
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 66,
+          "total": 66,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 63,
+          "total": 66,
+          "percentage": 95.5
+        },
+        "venue": {
+          "count": 66,
+          "total": 66,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 66,
+          "total": 66,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 64,
+          "total": 66,
+          "percentage": 97
+        },
+        "startTime": {
+          "count": 64,
+          "total": 66,
+          "percentage": 97
+        },
+        "ticketTypes": {
+          "count": 64,
+          "total": 66,
+          "percentage": 97
+        },
+        "prices": {
+          "count": 64,
+          "total": 66,
+          "percentage": 97
+        },
+        "additionalFees": {
+          "count": 56,
+          "total": 66,
+          "percentage": 84.8
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 66,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 25,
+          "total": 66,
+          "percentage": 37.9
+        },
+        "purchaseUrls": {
+          "count": 4,
+          "total": 66,
+          "percentage": 6.1
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 10,
+      "entityBlocked": 5,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_739ec7255774aac4485dce9e",
+        "evt_c29c3f968db2e95dd67ad6ab",
+        "evt_7cc2265053c26d59f3a70e31",
+        "evt_096f274956bf5c625648fe8a",
+        "evt_c830876b524743fbe8929fa9",
+        "evt_86a6ee2b4d91ed7818dcdf57",
+        "evt_0fa3c2646603f62177338432",
+        "evt_441d16668e254ca02e136dd2",
+        "evt_6428b4ea2d590f613f16c69c",
+        "evt_56bd2ccfb9f748e69fdc3aa3",
+        "evt_77afb5fca9dfc5667e721fda",
+        "evt_5f5e11c1f2c739dec88e652d",
+        "evt_8f781c4463155e11a9df2e0b",
+        "evt_9eb2505f0db47aba0d8764d2",
+        "evt_0a1e8b43af6883399e8a17f3",
+        "evt_f7ee8831372d7681cd59c4d9",
+        "evt_5aee07f48a904ea2ed02c0a0",
+        "evt_0496a29de1cbfccf05e32208",
+        "evt_c9df9e1241fa9c36cd97239c",
+        "evt_02fd96a5d1e8213cdd8d46cc"
+      ]
+    },
+    {
+      "id": "zepp-nagoya-official",
+      "name": "Zepp Nagoya 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 52,
+      "discoveredRecords": 59,
+      "candidateCount": 35,
+      "detailExpected": 52,
+      "detailVisited": 52,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 100,
+      "parseSuccessRate": 100,
+      "reviewable": 32,
+      "published": 29,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 3,
+        "requiredFields": 6
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 32,
+          "total": 35,
+          "percentage": 91.4
+        },
+        "venue": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 35,
+          "total": 35,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 32,
+          "total": 35,
+          "percentage": 91.4
+        },
+        "startTime": {
+          "count": 34,
+          "total": 35,
+          "percentage": 97.1
+        },
+        "ticketTypes": {
+          "count": 29,
+          "total": 35,
+          "percentage": 82.9
+        },
+        "prices": {
+          "count": 29,
+          "total": 35,
+          "percentage": 82.9
+        },
+        "additionalFees": {
+          "count": 29,
+          "total": 35,
+          "percentage": 82.9
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 35,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 5,
+          "total": 35,
+          "percentage": 14.3
+        },
+        "purchaseUrls": {
+          "count": 2,
+          "total": 35,
+          "percentage": 5.7
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 3,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_8c9588e2913235bcb5464d7f",
+        "evt_32abd5566b88c9af549dcc23",
+        "evt_5d043d23ebd21a648d96d5ba",
+        "evt_b173d61232d0a8a45c989efc",
+        "evt_6fb450681c6ec0da9aac0c7e",
+        "evt_f0388de1435ae45933801058",
+        "evt_0184be8e7b66b3726e0c21c5",
+        "evt_caf3ce4dbabd09cb84d4081c",
+        "evt_6e26bbec19f695eea138c2f9",
+        "evt_e6feb52d038f07eeb371f67e",
+        "evt_d3aecd26855d2a8362c7bcdf",
+        "evt_f74b8247223e4b7fb6c061f5",
+        "evt_2944f2098ca6667d19e1abdf",
+        "evt_e1d003428c1f61883c486d08",
+        "evt_aea8e6352cf95db360371f4e",
+        "evt_6ae1b6fe703365ec13be4e32",
+        "evt_e785dab5a10072a74bcc3f4e",
+        "evt_aa9e47dc72996c7acae1c8ac",
+        "evt_43b0ea0fc73093522ee48db9",
+        "evt_7c54d5f8315145b605ffd770"
+      ]
+    },
+    {
+      "id": "zepp-namba-official",
+      "name": "Zepp Namba(OSAKA) 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 46,
+      "discoveredRecords": 53,
+      "candidateCount": 38,
+      "detailExpected": 46,
+      "detailVisited": 46,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 100,
+      "parseSuccessRate": 100,
+      "reviewable": 34,
+      "published": 30,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 4,
+        "requiredFields": 8
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 38,
+          "total": 38,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 34,
+          "total": 38,
+          "percentage": 89.5
+        },
+        "venue": {
+          "count": 38,
+          "total": 38,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 38,
+          "total": 38,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 32,
+          "total": 38,
+          "percentage": 84.2
+        },
+        "startTime": {
+          "count": 36,
+          "total": 38,
+          "percentage": 94.7
+        },
+        "ticketTypes": {
+          "count": 35,
+          "total": 38,
+          "percentage": 92.1
+        },
+        "prices": {
+          "count": 35,
+          "total": 38,
+          "percentage": 92.1
+        },
+        "additionalFees": {
+          "count": 35,
+          "total": 38,
+          "percentage": 92.1
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 38,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 12,
+          "total": 38,
+          "percentage": 31.6
+        },
+        "purchaseUrls": {
+          "count": 1,
+          "total": 38,
+          "percentage": 2.6
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 4,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_58e39cd1c6fdb7d07add84d9",
+        "evt_4302614c5f231244afefbd8a",
+        "evt_3f6090294d80457c6b0530c7",
+        "evt_fd39aaf7b599f6f265b6f485",
+        "evt_314e6d501e945b445a238b32",
+        "evt_9d2a2804d4a0024d2618efad",
+        "evt_5146ebb91509163700e43906",
+        "evt_0b871fad5837a29c920189d6",
+        "evt_0e9c4c713248ecccf848e7f6",
+        "evt_dc6a7a60c6e0a38edd2fdb4a",
+        "evt_3f50199eb47259929c2fb15b",
+        "evt_c48b64fbc46f4e1f2ceb2ef3",
+        "evt_717bbc7ede23d8978c29d584",
+        "evt_7327062180f7ec83ce94b99e",
+        "evt_aafea0c1b70d0277026ed755",
+        "evt_9522c7a3623c4238b9147acd",
+        "evt_475ef752040f6e3097db1866",
+        "evt_b15a1f4c8f0fc8754e3f764b",
+        "evt_692f5574bbc0370864f309ca",
+        "evt_cec034b0dcf2b946c5900c08"
+      ]
+    },
+    {
+      "id": "zepp-osakabayside-official",
+      "name": "Zepp Osaka Bayside 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 62,
+      "discoveredRecords": 67,
+      "candidateCount": 51,
+      "detailExpected": 62,
+      "detailVisited": 62,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 88.7,
+      "parseSuccessRate": 89.4,
+      "reviewable": 46,
+      "published": 45,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 7,
+        "detailNotVisited": 0,
+        "entityMatching": 5,
+        "requiredFields": 6
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 51,
+          "total": 51,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 48,
+          "total": 51,
+          "percentage": 94.1
+        },
+        "venue": {
+          "count": 51,
+          "total": 51,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 51,
+          "total": 51,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 50,
+          "total": 51,
+          "percentage": 98
+        },
+        "startTime": {
+          "count": 50,
+          "total": 51,
+          "percentage": 98
+        },
+        "ticketTypes": {
+          "count": 48,
+          "total": 51,
+          "percentage": 94.1
+        },
+        "prices": {
+          "count": 48,
+          "total": 51,
+          "percentage": 94.1
+        },
+        "additionalFees": {
+          "count": 43,
+          "total": 51,
+          "percentage": 84.3
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 51,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 18,
+          "total": 51,
+          "percentage": 35.3
+        },
+        "purchaseUrls": {
+          "count": 1,
+          "total": 51,
+          "percentage": 2
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 7,
+      "entityBlocked": 5,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_0d022e52496d338d70cae1d3",
+        "evt_e366dde5eafa649942974f77",
+        "evt_86cd33aad31920c8715c2eea",
+        "evt_ee788c06938f38ce802c0c92",
+        "evt_f7a081b61b19efded91deb2b",
+        "evt_fad1b1c83cc97151aab8435f",
+        "evt_b1a7c8a6e0e86cfddcb61ad6",
+        "evt_a1c9a501814e5e5e6f7e9a9c",
+        "evt_d755a420fbe660eed98c93e1",
+        "evt_4316398f55cf3394bea52054",
+        "evt_b7be6fe1b89ef9fc2d4fec5d",
+        "evt_73ddbea9e8118996cb4e3140",
+        "evt_976c1c4ccf24403bfbc0a285",
+        "evt_f7a6a9f409a5f9dca8a86d30",
+        "evt_fc308b5af3e4f7fd5051d8f6",
+        "evt_419d822cbf7af6f2015e2f04",
+        "evt_85c9957e8d5540bdbd284299",
+        "evt_97cd1e42fe90b11f01be29c3",
+        "evt_86d6cdfb2af7730a223bc57a",
+        "evt_c6da8a17ac54051fe190f5c9"
+      ]
+    },
+    {
+      "id": "zepp-fukuoka-official",
+      "name": "Zepp Fukuoka 公式スケジュール",
+      "status": "ok",
+      "actualPageItems": 71,
+      "discoveredRecords": 75,
+      "candidateCount": 56,
+      "detailExpected": 71,
+      "detailVisited": 71,
+      "detailVisitRate": 100,
+      "detailFetchSuccessRate": 85.9,
+      "parseSuccessRate": 86.7,
+      "reviewable": 50,
+      "published": 50,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 10,
+        "detailNotVisited": 0,
+        "entityMatching": 6,
+        "requiredFields": 6
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 51,
+          "total": 56,
+          "percentage": 91.1
+        },
+        "venue": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 56,
+          "total": 56,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 53,
+          "total": 56,
+          "percentage": 94.6
+        },
+        "startTime": {
+          "count": 53,
+          "total": 56,
+          "percentage": 94.6
+        },
+        "ticketTypes": {
+          "count": 53,
+          "total": 56,
+          "percentage": 94.6
+        },
+        "prices": {
+          "count": 53,
+          "total": 56,
+          "percentage": 94.6
+        },
+        "additionalFees": {
+          "count": 44,
+          "total": 56,
+          "percentage": 78.6
+        },
+        "ticketPhases": {
+          "count": 0,
+          "total": 56,
+          "percentage": 0
+        },
+        "eligibility": {
+          "count": 22,
+          "total": 56,
+          "percentage": 39.3
+        },
+        "purchaseUrls": {
+          "count": 0,
+          "total": 56,
+          "percentage": 0
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 10,
+      "entityBlocked": 6,
+      "sampleSize": 20,
+      "sampleEventIds": [
+        "evt_03e4bfae24fb940f1b8afa07",
+        "evt_891c55cf8a1d7a109dda334d",
+        "evt_0ea1ecc380963a563da3a898",
+        "evt_6dd19a25dd0711a4c6de0aa3",
+        "evt_0dacb893d05688e84d88e00c",
+        "evt_77fcd1d83563b948652af093",
+        "evt_3d7b98ff3cf81e9b6c561c2b",
+        "evt_48769d96841996076994ead9",
+        "evt_8b5a54e8fa92c9f0b4b5692a",
+        "evt_8996fb59158393ed50a9b46b",
+        "evt_587e59b69df790ded4ffe7d8",
+        "evt_b0fa5de327389c4d84f3e899",
+        "evt_a74184fe96fc07e36a28b611",
+        "evt_1ef772b1c6ce903b3ed74edf",
+        "evt_e13c86a0918399beef6a4be1",
+        "evt_053a3ddd379ae39843df57f5",
+        "evt_61bae0b09f2b84614700d324",
+        "evt_2ca8a76cd7ab38fb7f29b800",
+        "evt_97b63ced94e8fdd5f43caf6d",
+        "evt_0494a9726929f99c552c4aac"
+      ]
+    },
+    {
+      "id": "kenshi-yonezu-official",
+      "name": "米津玄師 REISSUE RECORDS",
+      "status": "ok",
+      "actualPageItems": 14,
+      "discoveredRecords": 14,
+      "candidateCount": 14,
+      "detailExpected": 0,
+      "detailVisited": 0,
+      "detailVisitRate": 0,
+      "detailFetchSuccessRate": 0,
+      "parseSuccessRate": 100,
+      "reviewable": 14,
+      "published": 14,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 0,
+        "requiredFields": 0
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "venue": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "startTime": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "ticketTypes": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "prices": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "additionalFees": {
+          "count": 0,
+          "total": 14,
+          "percentage": 0
+        },
+        "ticketPhases": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        },
+        "eligibility": {
+          "count": 0,
+          "total": 14,
+          "percentage": 0
+        },
+        "purchaseUrls": {
+          "count": 14,
+          "total": 14,
+          "percentage": 100
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 0,
+      "sampleSize": 14,
+      "sampleEventIds": [
+        "evt_d99f3bd06d11106d983278a2",
+        "evt_7bc4eaa54d865fe7d56f1d86",
+        "evt_5dd639b6f6d7513c82c6e678",
+        "evt_7c4eabc63b350ed8164426f4",
+        "evt_bd76102928a143475715f71e",
+        "evt_098a60d9c05ab6192b2d29dd",
+        "evt_c215db782b82120c098cc360",
+        "evt_e188d0333f513ffecd00b412",
+        "evt_0eba3cd6dd39ee1964ac873e",
+        "evt_a0728cf4cd342d9ea90f27c9",
+        "evt_41c67407f557ec83fbddbe14",
+        "evt_832c91a58e3157a38faeeaa0",
+        "evt_ebaaee73dcfbb3b943432911",
+        "evt_ada22f4cfeb9331b532244ab"
+      ]
+    },
+    {
+      "id": "sheena-ringo-official",
+      "name": "椎名林檎 SR猫柳本線",
+      "status": "ok",
+      "actualPageItems": 11,
+      "discoveredRecords": 11,
+      "candidateCount": 11,
+      "detailExpected": 0,
+      "detailVisited": 0,
+      "detailVisitRate": 0,
+      "detailFetchSuccessRate": 0,
+      "parseSuccessRate": 100,
+      "reviewable": 11,
+      "published": 11,
+      "missed": 0,
+      "missedReasons": {
+        "pageStructure": 0,
+        "pageFetch": 0,
+        "detailNotVisited": 0,
+        "entityMatching": 0,
+        "requiredFields": 0
+      },
+      "fieldCoverage": {
+        "title": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "artist": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "venue": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "eventDate": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "openTime": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "startTime": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "ticketTypes": {
+          "count": 0,
+          "total": 11,
+          "percentage": 0
+        },
+        "prices": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "additionalFees": {
+          "count": 0,
+          "total": 11,
+          "percentage": 0
+        },
+        "ticketPhases": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "eligibility": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        },
+        "purchaseUrls": {
+          "count": 11,
+          "total": 11,
+          "percentage": 100
+        }
+      },
+      "parserFailed": 0,
+      "pageFetchFailed": 0,
+      "entityBlocked": 0,
+      "sampleSize": 11,
+      "sampleEventIds": [
+        "evt_44b946cc613ff6e1e80ec415",
+        "evt_4cd1bf2dad9953e231e2e0ab",
+        "evt_d83f15dc6c3b659da09a419d",
+        "evt_8f40b72a32b0b7a329222890",
+        "evt_a331c482f3400fb59c6a14b2",
+        "evt_2de787a853ba23152858153f",
+        "evt_fb94bfb9040d9ef7833ec494",
+        "evt_0af8608bf1366a8a96628715",
+        "evt_e6778ced6fdd678b4dd5ec32",
+        "evt_4c47b54d2532d21c904589f9",
+        "evt_ed0ca5a103d2421099d70390"
+      ]
+    }
+  ]
+}

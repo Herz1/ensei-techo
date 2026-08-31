@@ -1,0 +1,2506 @@
+{
+  "schemaVersion": 1,
+  "label": "after",
+  "generatedAt": "2026-08-31T06:01:05.165Z",
+  "environment": {
+    "os": "win32 10.0.22631 x64",
+    "cpu": "AMD Ryzen 7 5800H with Radeon Graphics",
+    "logicalCores": 16,
+    "totalMemoryGb": 15.9,
+    "browser": "151.0.7922.174",
+    "browserExecutable": "C:/Program Files/Google/Chrome/Application/chrome.exe",
+    "node": "v24.19.0",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "runs": 3,
+    "buildId": "yuR93rU0oPnhaqYHlHUjU",
+    "baseUrl": "http://127.0.0.1:3733",
+    "cache": "disabled per fresh context",
+    "externalNetwork": "blocked; PNG map tiles fulfilled with an in-memory 1x1 transparent image"
+  },
+  "method": {
+    "clientBytes": "PerformanceResourceTiming decodedBodySize; unique fresh context per sample",
+    "pageData": "document decodedBodySize plus resources whose URL contains _rsc",
+    "initialDataParse": "CDP Performance.ScriptDuration at route-ready as a stable parse/evaluate proxy; JSON.parse >=1KB separately instrumented",
+    "firstInteractive": "navigationStart to click-driven global search dialog visible",
+    "search": "fill 森本爵 to visible [data-event-id=evt_e912cb05373a12af9141c910]",
+    "filter": "select 售票阶段=open to URL state committed and next animation frame",
+    "map": "navigationStart to data-map-ready=true with heatRendered>0 and venueRendered>0",
+    "memory": "Runtime.getHeapUsage usedSize at route-ready"
+  },
+  "sourceData": {
+    "path": "src/data/events.json",
+    "eventCount": 428,
+    "eventsJsonBytes": 5847793
+  },
+  "routes": [
+    {
+      "key": "home",
+      "label": "首页",
+      "path": "/",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/",
+          "routeReadyMs": 266.3,
+          "firstInteractiveMs": 939.6,
+          "searchResponseMs": 46.1,
+          "searchInteractionDataBytes": 255744,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 159.6,
+          "loadMs": 223.6,
+          "instrumentedJsonParseMs": 3.4,
+          "startupScriptEvaluationMs": 70.19,
+          "initialDataParseApproxMs": 70.19,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 7452132,
+          "jsHeapTotalBytes": 11124736,
+          "embedderHeapUsedBytes": 4499080,
+          "documents": 4,
+          "nodes": 1475,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 199152,
+          "clientJsEncodedBytes": 195552,
+          "clientJsDecodedBytes": 655327,
+          "documentTransferBytes": 90575,
+          "documentEncodedBytes": 90275,
+          "documentDecodedBytes": 735968,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 12,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 37.4
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 42.4
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 42.5
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 37.8
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 46.8
+            },
+            {
+              "file": "3njrs8c74ato1.js",
+              "transferBytes": 10724,
+              "decodedBytes": 34510,
+              "durationMs": 47
+            },
+            {
+              "file": "3z4jm3131m_j4.js",
+              "transferBytes": 11476,
+              "decodedBytes": 33283,
+              "durationMs": 47.2
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 15.9
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 25.2
+            },
+            {
+              "file": "3nk3hjq6nho9i.js",
+              "transferBytes": 7538,
+              "decodedBytes": 18455,
+              "durationMs": 45.9
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 41.6
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 39.6
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/",
+          "routeReadyMs": 301.7,
+          "firstInteractiveMs": 874.5,
+          "searchResponseMs": 28.8,
+          "searchInteractionDataBytes": 255744,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 190.7,
+          "loadMs": 251.6,
+          "instrumentedJsonParseMs": 3.9,
+          "startupScriptEvaluationMs": 85.76,
+          "initialDataParseApproxMs": 85.76,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 7353380,
+          "jsHeapTotalBytes": 11386880,
+          "embedderHeapUsedBytes": 4504584,
+          "documents": 4,
+          "nodes": 1475,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 199152,
+          "clientJsEncodedBytes": 195552,
+          "clientJsDecodedBytes": 655327,
+          "documentTransferBytes": 90575,
+          "documentEncodedBytes": 90275,
+          "documentDecodedBytes": 735968,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 12,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 30.1
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 33.6
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 34.2
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 29.4
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 37.2
+            },
+            {
+              "file": "3njrs8c74ato1.js",
+              "transferBytes": 10724,
+              "decodedBytes": 34510,
+              "durationMs": 38
+            },
+            {
+              "file": "3z4jm3131m_j4.js",
+              "transferBytes": 11476,
+              "decodedBytes": 33283,
+              "durationMs": 38.8
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 12
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.5
+            },
+            {
+              "file": "3nk3hjq6nho9i.js",
+              "transferBytes": 7538,
+              "decodedBytes": 18455,
+              "durationMs": 37.8
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 33.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 31.9
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/",
+          "routeReadyMs": 318,
+          "firstInteractiveMs": 895.9,
+          "searchResponseMs": 37.2,
+          "searchInteractionDataBytes": 255744,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 199.5,
+          "loadMs": 261.8,
+          "instrumentedJsonParseMs": 4.1,
+          "startupScriptEvaluationMs": 94.75,
+          "initialDataParseApproxMs": 94.75,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 7365032,
+          "jsHeapTotalBytes": 11124736,
+          "embedderHeapUsedBytes": 4535032,
+          "documents": 4,
+          "nodes": 1475,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 199152,
+          "clientJsEncodedBytes": 195552,
+          "clientJsDecodedBytes": 655327,
+          "documentTransferBytes": 90575,
+          "documentEncodedBytes": 90275,
+          "documentDecodedBytes": 735968,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 12,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 26.9
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 27
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 34.3
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 28
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 34
+            },
+            {
+              "file": "3njrs8c74ato1.js",
+              "transferBytes": 10724,
+              "decodedBytes": 34510,
+              "durationMs": 35.2
+            },
+            {
+              "file": "3z4jm3131m_j4.js",
+              "transferBytes": 11476,
+              "decodedBytes": 33283,
+              "durationMs": 35.6
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 13
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.2
+            },
+            {
+              "file": "3nk3hjq6nho9i.js",
+              "transferBytes": 7538,
+              "decodedBytes": 18455,
+              "durationMs": 36.1
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 29.1
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 28.4
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 301.7,
+        "firstInteractiveMs": 895.9,
+        "searchResponseMs": 37.2,
+        "searchInteractionDataBytes": 255744,
+        "filterResponseMs": null,
+        "mapInitializationMs": null,
+        "domContentLoadedMs": 190.7,
+        "loadMs": 251.6,
+        "instrumentedJsonParseMs": 3.9,
+        "startupScriptEvaluationMs": 85.76,
+        "initialDataParseApproxMs": 85.76,
+        "startupLongestTaskMs": 0,
+        "jsHeapUsedBytes": 7365032,
+        "jsHeapTotalBytes": 11124736,
+        "embedderHeapUsedBytes": 4504584,
+        "documents": 4,
+        "nodes": 1475,
+        "clientJsTransferBytes": 199152,
+        "clientJsEncodedBytes": 195552,
+        "clientJsDecodedBytes": 655327,
+        "documentTransferBytes": 90575,
+        "documentEncodedBytes": 90275,
+        "documentDecodedBytes": 735968,
+        "rscTransferBytes": 0,
+        "rscEncodedBytes": 0,
+        "rscDecodedBytes": 0,
+        "rscRequestCount": 0,
+        "scriptCount": 12,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": null,
+        "largestScripts": [
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 37.4
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 42.4
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 42.5
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 37.8
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 46.8
+          },
+          {
+            "file": "3njrs8c74ato1.js",
+            "transferBytes": 10724,
+            "decodedBytes": 34510,
+            "durationMs": 47
+          },
+          {
+            "file": "3z4jm3131m_j4.js",
+            "transferBytes": 11476,
+            "decodedBytes": 33283,
+            "durationMs": 47.2
+          },
+          {
+            "file": "1sv6a5t9bzgoa.js",
+            "transferBytes": 8880,
+            "decodedBytes": 27819,
+            "durationMs": 15.9
+          }
+        ]
+      }
+    },
+    {
+      "key": "events",
+      "label": "演出列表",
+      "path": "/events",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/events?sale=open",
+          "routeReadyMs": 544.6,
+          "firstInteractiveMs": 1141.4,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": 174.7,
+          "filterResultCount": "6 场结果",
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 142.3,
+          "loadMs": 213,
+          "instrumentedJsonParseMs": 4.4,
+          "startupScriptEvaluationMs": 149.13,
+          "initialDataParseApproxMs": 149.13,
+          "startupLongestTaskMs": 111,
+          "jsHeapUsedBytes": 9420912,
+          "jsHeapTotalBytes": 15060992,
+          "embedderHeapUsedBytes": 13388440,
+          "documents": 6,
+          "nodes": 5921,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 196652,
+          "clientJsEncodedBytes": 193352,
+          "clientJsDecodedBytes": 654869,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 27.7
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 26
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 30.4
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 33.2
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 24.3
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 32.6
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 32.1
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 10.7
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 17.1
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 27.2
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 24.7
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/events?sale=open",
+          "routeReadyMs": 517.5,
+          "firstInteractiveMs": 817.1,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": 142.7,
+          "filterResultCount": "6 场结果",
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 118.8,
+          "loadMs": 184.4,
+          "instrumentedJsonParseMs": 3.9,
+          "startupScriptEvaluationMs": 125.47,
+          "initialDataParseApproxMs": 125.47,
+          "startupLongestTaskMs": 88,
+          "jsHeapUsedBytes": 9449284,
+          "jsHeapTotalBytes": 15060992,
+          "embedderHeapUsedBytes": 13004392,
+          "documents": 6,
+          "nodes": 5921,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 196652,
+          "clientJsEncodedBytes": 193352,
+          "clientJsDecodedBytes": 654869,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 28.7
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 30.5
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 35.3
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 37.3
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 30.8
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 36.6
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 36
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 12.3
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.5
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 33.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 33.7
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/events?sale=open",
+          "routeReadyMs": 504.8,
+          "firstInteractiveMs": 1090.2,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": 133.4,
+          "filterResultCount": "6 场结果",
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 129.3,
+          "loadMs": 194.6,
+          "instrumentedJsonParseMs": 3.6,
+          "startupScriptEvaluationMs": 122.07,
+          "initialDataParseApproxMs": 122.07,
+          "startupLongestTaskMs": 85,
+          "jsHeapUsedBytes": 9439268,
+          "jsHeapTotalBytes": 15060992,
+          "embedderHeapUsedBytes": 13390040,
+          "documents": 6,
+          "nodes": 5921,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 196652,
+          "clientJsEncodedBytes": 193352,
+          "clientJsDecodedBytes": 654869,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 27.8
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 27.2
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 31.1
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 33.9
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 26.5
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 32.6
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 33
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 13.5
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 19.6
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 30
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 27.2
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 517.5,
+        "firstInteractiveMs": 1090.2,
+        "searchResponseMs": null,
+        "searchInteractionDataBytes": null,
+        "filterResponseMs": 142.7,
+        "mapInitializationMs": null,
+        "domContentLoadedMs": 129.3,
+        "loadMs": 194.6,
+        "instrumentedJsonParseMs": 3.9,
+        "startupScriptEvaluationMs": 125.47,
+        "initialDataParseApproxMs": 125.47,
+        "startupLongestTaskMs": 88,
+        "jsHeapUsedBytes": 9439268,
+        "jsHeapTotalBytes": 15060992,
+        "embedderHeapUsedBytes": 13388440,
+        "documents": 6,
+        "nodes": 5921,
+        "clientJsTransferBytes": 196652,
+        "clientJsEncodedBytes": 193352,
+        "clientJsDecodedBytes": 654869,
+        "documentTransferBytes": 85323,
+        "documentEncodedBytes": 85023,
+        "documentDecodedBytes": 706515,
+        "rscTransferBytes": 0,
+        "rscEncodedBytes": 0,
+        "rscDecodedBytes": 0,
+        "rscRequestCount": 0,
+        "scriptCount": 11,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": "6 场结果",
+        "largestScripts": [
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 27.7
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 26
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 30.4
+          },
+          {
+            "file": "0rgh9g61fitaq.js",
+            "transferBytes": 16026,
+            "decodedBytes": 53111,
+            "durationMs": 33.2
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 24.3
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 32.6
+          },
+          {
+            "file": "23_vb-8b-mhgw.js",
+            "transferBytes": 11212,
+            "decodedBytes": 32679,
+            "durationMs": 32.1
+          },
+          {
+            "file": "1sv6a5t9bzgoa.js",
+            "transferBytes": 8880,
+            "decodedBytes": 27819,
+            "durationMs": 10.7
+          }
+        ]
+      }
+    },
+    {
+      "key": "eventDetail",
+      "label": "演出详情",
+      "path": "/events/evt_e912cb05373a12af9141c910",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/events/evt_e912cb05373a12af9141c910",
+          "routeReadyMs": 568.1,
+          "firstInteractiveMs": 1219.5,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 475.4,
+          "loadMs": 529.3,
+          "instrumentedJsonParseMs": 2.1,
+          "startupScriptEvaluationMs": 66.78,
+          "initialDataParseApproxMs": 66.78,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6309108,
+          "jsHeapTotalBytes": 9314304,
+          "embedderHeapUsedBytes": 4575680,
+          "documents": 8,
+          "nodes": 1205,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 195997,
+          "clientJsEncodedBytes": 192697,
+          "clientJsDecodedBytes": 657827,
+          "documentTransferBytes": 62797,
+          "documentEncodedBytes": 62497,
+          "documentDecodedBytes": 272784,
+          "rscTransferBytes": 3546,
+          "rscEncodedBytes": 2346,
+          "rscDecodedBytes": 3852,
+          "rscRequestCount": 4,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 37.8
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 36.1
+            },
+            {
+              "file": "1c40tegdw68-v.js",
+              "transferBytes": 15372,
+              "decodedBytes": 56069,
+              "durationMs": 45
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 38.8
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 33.7
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 43.8
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 44.3
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 12.4
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 25.8
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 37.5
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 33.7
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/events/evt_e912cb05373a12af9141c910",
+          "routeReadyMs": 330.6,
+          "firstInteractiveMs": 990,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 217.4,
+          "loadMs": 284.2,
+          "instrumentedJsonParseMs": 1.1,
+          "startupScriptEvaluationMs": 79.78,
+          "initialDataParseApproxMs": 79.78,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6281492,
+          "jsHeapTotalBytes": 9052160,
+          "embedderHeapUsedBytes": 4585920,
+          "documents": 8,
+          "nodes": 1205,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 195997,
+          "clientJsEncodedBytes": 192697,
+          "clientJsDecodedBytes": 657827,
+          "documentTransferBytes": 62797,
+          "documentEncodedBytes": 62497,
+          "documentDecodedBytes": 272784,
+          "rscTransferBytes": 3547,
+          "rscEncodedBytes": 2347,
+          "rscDecodedBytes": 3852,
+          "rscRequestCount": 4,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 28.6
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 27.1
+            },
+            {
+              "file": "1c40tegdw68-v.js",
+              "transferBytes": 15372,
+              "decodedBytes": 56069,
+              "durationMs": 33
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 30.5
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 28
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 32
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 32.9
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 15.2
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 22.3
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 30.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 28.1
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/events/evt_e912cb05373a12af9141c910",
+          "routeReadyMs": 348.7,
+          "firstInteractiveMs": 1014.2,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 228.3,
+          "loadMs": 294.8,
+          "instrumentedJsonParseMs": 0.9,
+          "startupScriptEvaluationMs": 86.11,
+          "initialDataParseApproxMs": 86.11,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6256256,
+          "jsHeapTotalBytes": 9314304,
+          "embedderHeapUsedBytes": 4569128,
+          "documents": 8,
+          "nodes": 1205,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 195997,
+          "clientJsEncodedBytes": 192697,
+          "clientJsDecodedBytes": 657827,
+          "documentTransferBytes": 62797,
+          "documentEncodedBytes": 62497,
+          "documentDecodedBytes": 272784,
+          "rscTransferBytes": 3548,
+          "rscEncodedBytes": 2348,
+          "rscDecodedBytes": 3852,
+          "rscRequestCount": 4,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 32.4
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 30.7
+            },
+            {
+              "file": "1c40tegdw68-v.js",
+              "transferBytes": 15372,
+              "decodedBytes": 56069,
+              "durationMs": 36.3
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 33.7
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 30
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 35.5
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 35.6
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 15.9
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 21.6
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 33.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 30.1
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 348.7,
+        "firstInteractiveMs": 1014.2,
+        "searchResponseMs": null,
+        "searchInteractionDataBytes": null,
+        "filterResponseMs": null,
+        "mapInitializationMs": null,
+        "domContentLoadedMs": 228.3,
+        "loadMs": 294.8,
+        "instrumentedJsonParseMs": 1.1,
+        "startupScriptEvaluationMs": 79.78,
+        "initialDataParseApproxMs": 79.78,
+        "startupLongestTaskMs": 0,
+        "jsHeapUsedBytes": 6281492,
+        "jsHeapTotalBytes": 9314304,
+        "embedderHeapUsedBytes": 4575680,
+        "documents": 8,
+        "nodes": 1205,
+        "clientJsTransferBytes": 195997,
+        "clientJsEncodedBytes": 192697,
+        "clientJsDecodedBytes": 657827,
+        "documentTransferBytes": 62797,
+        "documentEncodedBytes": 62497,
+        "documentDecodedBytes": 272784,
+        "rscTransferBytes": 3547,
+        "rscEncodedBytes": 2347,
+        "rscDecodedBytes": 3852,
+        "rscRequestCount": 4,
+        "scriptCount": 11,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": null,
+        "largestScripts": [
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 37.8
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 36.1
+          },
+          {
+            "file": "1c40tegdw68-v.js",
+            "transferBytes": 15372,
+            "decodedBytes": 56069,
+            "durationMs": 45
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 38.8
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 33.7
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 43.8
+          },
+          {
+            "file": "1-u2vyicdbjob.js",
+            "transferBytes": 11211,
+            "decodedBytes": 32679,
+            "durationMs": 44.3
+          },
+          {
+            "file": "1sv6a5t9bzgoa.js",
+            "transferBytes": 8880,
+            "decodedBytes": 27819,
+            "durationMs": 12.4
+          }
+        ]
+      }
+    },
+    {
+      "key": "map",
+      "label": "地图",
+      "path": "/map",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/events?view=map",
+          "routeReadyMs": 1349.7,
+          "firstInteractiveMs": 1841.7,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": 1349.7,
+          "domContentLoadedMs": 158.2,
+          "loadMs": 226.6,
+          "instrumentedJsonParseMs": 5.3,
+          "startupScriptEvaluationMs": 542.95,
+          "initialDataParseApproxMs": 542.95,
+          "startupLongestTaskMs": 219,
+          "jsHeapUsedBytes": 16291428,
+          "jsHeapTotalBytes": 47771648,
+          "embedderHeapUsedBytes": 2343312,
+          "documents": 5,
+          "nodes": 917,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 447020,
+          "clientJsEncodedBytes": 443120,
+          "clientJsDecodedBytes": 1604691,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 13,
+          "scripts": [
+            {
+              "file": "2zearjp0g3d4f.js",
+              "transferBytes": 249252,
+              "decodedBytes": 949006,
+              "durationMs": 45.4
+            },
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 51.6
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 41.2
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 42.8
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 48.4
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 39.9
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 44.9
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 47.5
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 14.5
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 24.6
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 42.3
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 37.4
+            },
+            {
+              "file": "1od7dst_3u0zc.js",
+              "transferBytes": 1116,
+              "decodedBytes": 816,
+              "durationMs": 9
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/events?view=map",
+          "routeReadyMs": 1254,
+          "firstInteractiveMs": 1685.5,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": 1254,
+          "domContentLoadedMs": 138.9,
+          "loadMs": 201.9,
+          "instrumentedJsonParseMs": 5.3,
+          "startupScriptEvaluationMs": 440.5,
+          "initialDataParseApproxMs": 440.5,
+          "startupLongestTaskMs": 129,
+          "jsHeapUsedBytes": 25708092,
+          "jsHeapTotalBytes": 51965952,
+          "embedderHeapUsedBytes": 2352584,
+          "documents": 6,
+          "nodes": 924,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 447020,
+          "clientJsEncodedBytes": 443120,
+          "clientJsDecodedBytes": 1604691,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 13,
+          "scripts": [
+            {
+              "file": "2zearjp0g3d4f.js",
+              "transferBytes": 249252,
+              "decodedBytes": 949006,
+              "durationMs": 45
+            },
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 28.1
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 29
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 37.6
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 42
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 28.3
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 39.2
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 39.5
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 12.1
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.9
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 37.4
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 36.7
+            },
+            {
+              "file": "1od7dst_3u0zc.js",
+              "transferBytes": 1116,
+              "decodedBytes": 816,
+              "durationMs": 9.9
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/events?view=map",
+          "routeReadyMs": 1261.2,
+          "firstInteractiveMs": 1709.8,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": 1261.2,
+          "domContentLoadedMs": 132.8,
+          "loadMs": 207.9,
+          "instrumentedJsonParseMs": 4.6,
+          "startupScriptEvaluationMs": 442.25,
+          "initialDataParseApproxMs": 442.25,
+          "startupLongestTaskMs": 129,
+          "jsHeapUsedBytes": 26348404,
+          "jsHeapTotalBytes": 52490240,
+          "embedderHeapUsedBytes": 2348344,
+          "documents": 6,
+          "nodes": 921,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 447020,
+          "clientJsEncodedBytes": 443120,
+          "clientJsDecodedBytes": 1604691,
+          "documentTransferBytes": 85323,
+          "documentEncodedBytes": 85023,
+          "documentDecodedBytes": 706515,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 13,
+          "scripts": [
+            {
+              "file": "2zearjp0g3d4f.js",
+              "transferBytes": 249252,
+              "decodedBytes": 949006,
+              "durationMs": 43
+            },
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 26.7
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 27.8
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 29.7
+            },
+            {
+              "file": "0rgh9g61fitaq.js",
+              "transferBytes": 16026,
+              "decodedBytes": 53111,
+              "durationMs": 37.5
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 26.7
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 34
+            },
+            {
+              "file": "23_vb-8b-mhgw.js",
+              "transferBytes": 11212,
+              "decodedBytes": 32679,
+              "durationMs": 33.2
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 10.3
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 16.7
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 30
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 28.1
+            },
+            {
+              "file": "1od7dst_3u0zc.js",
+              "transferBytes": 1116,
+              "decodedBytes": 816,
+              "durationMs": 11.7
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 1261.2,
+        "firstInteractiveMs": 1709.8,
+        "searchResponseMs": null,
+        "searchInteractionDataBytes": null,
+        "filterResponseMs": null,
+        "mapInitializationMs": 1261.2,
+        "domContentLoadedMs": 138.9,
+        "loadMs": 207.9,
+        "instrumentedJsonParseMs": 5.3,
+        "startupScriptEvaluationMs": 442.25,
+        "initialDataParseApproxMs": 442.25,
+        "startupLongestTaskMs": 129,
+        "jsHeapUsedBytes": 25708092,
+        "jsHeapTotalBytes": 51965952,
+        "embedderHeapUsedBytes": 2348344,
+        "documents": 6,
+        "nodes": 921,
+        "clientJsTransferBytes": 447020,
+        "clientJsEncodedBytes": 443120,
+        "clientJsDecodedBytes": 1604691,
+        "documentTransferBytes": 85323,
+        "documentEncodedBytes": 85023,
+        "documentDecodedBytes": 706515,
+        "rscTransferBytes": 0,
+        "rscEncodedBytes": 0,
+        "rscDecodedBytes": 0,
+        "rscRequestCount": 0,
+        "scriptCount": 13,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": null,
+        "largestScripts": [
+          {
+            "file": "2zearjp0g3d4f.js",
+            "transferBytes": 249252,
+            "decodedBytes": 949006,
+            "durationMs": 45.4
+          },
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 51.6
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 41.2
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 42.8
+          },
+          {
+            "file": "0rgh9g61fitaq.js",
+            "transferBytes": 16026,
+            "decodedBytes": 53111,
+            "durationMs": 48.4
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 39.9
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 44.9
+          },
+          {
+            "file": "23_vb-8b-mhgw.js",
+            "transferBytes": 11212,
+            "decodedBytes": 32679,
+            "durationMs": 47.5
+          }
+        ]
+      }
+    },
+    {
+      "key": "me",
+      "label": "我的",
+      "path": "/me",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/me",
+          "routeReadyMs": 297.1,
+          "firstInteractiveMs": 870.9,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 175.5,
+          "loadMs": 246.9,
+          "instrumentedJsonParseMs": 3.7,
+          "startupScriptEvaluationMs": 75.88,
+          "initialDataParseApproxMs": 75.88,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6591528,
+          "jsHeapTotalBytes": 9818112,
+          "embedderHeapUsedBytes": 3234264,
+          "documents": 4,
+          "nodes": 1181,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 202991,
+          "clientJsEncodedBytes": 199691,
+          "clientJsDecodedBytes": 671419,
+          "documentTransferBytes": 87788,
+          "documentEncodedBytes": 87488,
+          "documentDecodedBytes": 718509,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 30.9
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 28.1
+            },
+            {
+              "file": "24v_miibzlqcw.js",
+              "transferBytes": 22366,
+              "decodedBytes": 69661,
+              "durationMs": 39.2
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 33.8
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 31.8
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 36.3
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 35.1
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 13.4
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 19.1
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 32.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 32.1
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/me",
+          "routeReadyMs": 268.1,
+          "firstInteractiveMs": 850.1,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 149.9,
+          "loadMs": 214,
+          "instrumentedJsonParseMs": 4,
+          "startupScriptEvaluationMs": 71.39,
+          "initialDataParseApproxMs": 71.39,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6576368,
+          "jsHeapTotalBytes": 9818112,
+          "embedderHeapUsedBytes": 3236888,
+          "documents": 4,
+          "nodes": 1181,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 202991,
+          "clientJsEncodedBytes": 199691,
+          "clientJsDecodedBytes": 671419,
+          "documentTransferBytes": 87788,
+          "documentEncodedBytes": 87488,
+          "documentDecodedBytes": 718509,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 31.3
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 30
+            },
+            {
+              "file": "24v_miibzlqcw.js",
+              "transferBytes": 22366,
+              "decodedBytes": 69661,
+              "durationMs": 37.8
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 33.2
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 24.1
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 32.5
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 36.7
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 10.3
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.8
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 32
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 29.1
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/me",
+          "routeReadyMs": 270.8,
+          "firstInteractiveMs": 842.9,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 149.3,
+          "loadMs": 216.1,
+          "instrumentedJsonParseMs": 4.2,
+          "startupScriptEvaluationMs": 68.47,
+          "initialDataParseApproxMs": 68.47,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6578016,
+          "jsHeapTotalBytes": 10080256,
+          "embedderHeapUsedBytes": 3234880,
+          "documents": 4,
+          "nodes": 1181,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 202991,
+          "clientJsEncodedBytes": 199691,
+          "clientJsDecodedBytes": 671419,
+          "documentTransferBytes": 87788,
+          "documentEncodedBytes": 87488,
+          "documentDecodedBytes": 718509,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 11,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 26.2
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 25.4
+            },
+            {
+              "file": "24v_miibzlqcw.js",
+              "transferBytes": 22366,
+              "decodedBytes": 69661,
+              "durationMs": 31.7
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 28.3
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 25.3
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 30
+            },
+            {
+              "file": "1-u2vyicdbjob.js",
+              "transferBytes": 11211,
+              "decodedBytes": 32679,
+              "durationMs": 31
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 11.5
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.1
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 27.5
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 25.2
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 270.8,
+        "firstInteractiveMs": 850.1,
+        "searchResponseMs": null,
+        "searchInteractionDataBytes": null,
+        "filterResponseMs": null,
+        "mapInitializationMs": null,
+        "domContentLoadedMs": 149.9,
+        "loadMs": 216.1,
+        "instrumentedJsonParseMs": 4,
+        "startupScriptEvaluationMs": 71.39,
+        "initialDataParseApproxMs": 71.39,
+        "startupLongestTaskMs": 0,
+        "jsHeapUsedBytes": 6578016,
+        "jsHeapTotalBytes": 9818112,
+        "embedderHeapUsedBytes": 3234880,
+        "documents": 4,
+        "nodes": 1181,
+        "clientJsTransferBytes": 202991,
+        "clientJsEncodedBytes": 199691,
+        "clientJsDecodedBytes": 671419,
+        "documentTransferBytes": 87788,
+        "documentEncodedBytes": 87488,
+        "documentDecodedBytes": 718509,
+        "rscTransferBytes": 0,
+        "rscEncodedBytes": 0,
+        "rscDecodedBytes": 0,
+        "rscRequestCount": 0,
+        "scriptCount": 11,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": null,
+        "largestScripts": [
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 30.9
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 28.1
+          },
+          {
+            "file": "24v_miibzlqcw.js",
+            "transferBytes": 22366,
+            "decodedBytes": 69661,
+            "durationMs": 39.2
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 33.8
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 31.8
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 36.3
+          },
+          {
+            "file": "1-u2vyicdbjob.js",
+            "transferBytes": 11211,
+            "decodedBytes": 32679,
+            "durationMs": 35.1
+          },
+          {
+            "file": "1sv6a5t9bzgoa.js",
+            "transferBytes": 8880,
+            "decodedBytes": 27819,
+            "durationMs": 13.4
+          }
+        ]
+      }
+    },
+    {
+      "key": "tripDetail",
+      "label": "远征详情",
+      "path": "/trips/trip-goal-10-performance",
+      "samples": [
+        {
+          "iteration": 1,
+          "finalUrl": "http://127.0.0.1:3733/trips/trip-goal-10-performance",
+          "routeReadyMs": 374,
+          "firstInteractiveMs": 840.2,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 160.2,
+          "loadMs": 225.9,
+          "instrumentedJsonParseMs": 3.3,
+          "startupScriptEvaluationMs": 68.18,
+          "initialDataParseApproxMs": 68.18,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6662992,
+          "jsHeapTotalBytes": 9363456,
+          "embedderHeapUsedBytes": 3914776,
+          "documents": 8,
+          "nodes": 1014,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 190740,
+          "clientJsEncodedBytes": 187740,
+          "clientJsDecodedBytes": 639815,
+          "documentTransferBytes": 65973,
+          "documentEncodedBytes": 65673,
+          "documentDecodedBytes": 590432,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 10,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 44.1
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 44.6
+            },
+            {
+              "file": "3o72pmpntpp6j.js",
+              "transferBytes": 21326,
+              "decodedBytes": 70736,
+              "durationMs": 51.8
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 45.1
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 45.8
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 46.6
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 20.4
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 37.3
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 45.3
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 39.8
+            }
+          ]
+        },
+        {
+          "iteration": 2,
+          "finalUrl": "http://127.0.0.1:3733/trips/trip-goal-10-performance",
+          "routeReadyMs": 352.4,
+          "firstInteractiveMs": 811,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 136.5,
+          "loadMs": 202.3,
+          "instrumentedJsonParseMs": 3.6,
+          "startupScriptEvaluationMs": 69.93,
+          "initialDataParseApproxMs": 69.93,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6664596,
+          "jsHeapTotalBytes": 9101312,
+          "embedderHeapUsedBytes": 3915680,
+          "documents": 8,
+          "nodes": 1014,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 190740,
+          "clientJsEncodedBytes": 187740,
+          "clientJsDecodedBytes": 639815,
+          "documentTransferBytes": 65973,
+          "documentEncodedBytes": 65673,
+          "documentDecodedBytes": 590432,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 10,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 25.7
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 24.2
+            },
+            {
+              "file": "3o72pmpntpp6j.js",
+              "transferBytes": 21326,
+              "decodedBytes": 70736,
+              "durationMs": 31.3
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 28.2
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 24.6
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 30.2
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 11.4
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 16.8
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 28.2
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 26.7
+            }
+          ]
+        },
+        {
+          "iteration": 3,
+          "finalUrl": "http://127.0.0.1:3733/trips/trip-goal-10-performance",
+          "routeReadyMs": 345.4,
+          "firstInteractiveMs": 801.8,
+          "searchResponseMs": null,
+          "searchInteractionDataBytes": null,
+          "filterResponseMs": null,
+          "filterResultCount": null,
+          "mapInitializationMs": null,
+          "domContentLoadedMs": 135.3,
+          "loadMs": 204.3,
+          "instrumentedJsonParseMs": 3.6,
+          "startupScriptEvaluationMs": 63.91,
+          "initialDataParseApproxMs": 63.91,
+          "startupLongestTaskMs": 0,
+          "jsHeapUsedBytes": 6686356,
+          "jsHeapTotalBytes": 8839168,
+          "embedderHeapUsedBytes": 3916088,
+          "documents": 8,
+          "nodes": 1014,
+          "pageErrors": [],
+          "fullEventChunkLoaded": false,
+          "fullEventChunks": [],
+          "clientJsTransferBytes": 190740,
+          "clientJsEncodedBytes": 187740,
+          "clientJsDecodedBytes": 639815,
+          "documentTransferBytes": 65973,
+          "documentEncodedBytes": 65673,
+          "documentDecodedBytes": 590432,
+          "rscTransferBytes": 0,
+          "rscEncodedBytes": 0,
+          "rscDecodedBytes": 0,
+          "rscRequestCount": 0,
+          "scriptCount": 10,
+          "scripts": [
+            {
+              "file": "3jh1u-s3k0bkk.js",
+              "transferBytes": 64372,
+              "decodedBytes": 203384,
+              "durationMs": 26.3
+            },
+            {
+              "file": "3k_1mf66d3bqr.js",
+              "transferBytes": 39729,
+              "decodedBytes": 146881,
+              "durationMs": 25.1
+            },
+            {
+              "file": "3o72pmpntpp6j.js",
+              "transferBytes": 21326,
+              "decodedBytes": 70736,
+              "durationMs": 30.8
+            },
+            {
+              "file": "14mrh2-p_w84d.js",
+              "transferBytes": 13175,
+              "decodedBytes": 54646,
+              "durationMs": 28.3
+            },
+            {
+              "file": "0paxexg6-m0de.js",
+              "transferBytes": 9469,
+              "decodedBytes": 43946,
+              "durationMs": 26
+            },
+            {
+              "file": "14bg562gcca5r.js",
+              "transferBytes": 14614,
+              "decodedBytes": 40822,
+              "durationMs": 29.9
+            },
+            {
+              "file": "1sv6a5t9bzgoa.js",
+              "transferBytes": 8880,
+              "decodedBytes": 27819,
+              "durationMs": 12.8
+            },
+            {
+              "file": "0ro772wcmsc4w.js",
+              "transferBytes": 7540,
+              "decodedBytes": 24268,
+              "durationMs": 18.1
+            },
+            {
+              "file": "2f-ey2m4fvcii.js",
+              "transferBytes": 7171,
+              "decodedBytes": 16700,
+              "durationMs": 27.7
+            },
+            {
+              "file": "turbopack-21w1cxhtklm9z.js",
+              "transferBytes": 4464,
+              "decodedBytes": 10613,
+              "durationMs": 26.7
+            }
+          ]
+        }
+      ],
+      "median": {
+        "routeReadyMs": 352.4,
+        "firstInteractiveMs": 811,
+        "searchResponseMs": null,
+        "searchInteractionDataBytes": null,
+        "filterResponseMs": null,
+        "mapInitializationMs": null,
+        "domContentLoadedMs": 136.5,
+        "loadMs": 204.3,
+        "instrumentedJsonParseMs": 3.6,
+        "startupScriptEvaluationMs": 68.18,
+        "initialDataParseApproxMs": 68.18,
+        "startupLongestTaskMs": 0,
+        "jsHeapUsedBytes": 6664596,
+        "jsHeapTotalBytes": 9101312,
+        "embedderHeapUsedBytes": 3915680,
+        "documents": 8,
+        "nodes": 1014,
+        "clientJsTransferBytes": 190740,
+        "clientJsEncodedBytes": 187740,
+        "clientJsDecodedBytes": 639815,
+        "documentTransferBytes": 65973,
+        "documentEncodedBytes": 65673,
+        "documentDecodedBytes": 590432,
+        "rscTransferBytes": 0,
+        "rscEncodedBytes": 0,
+        "rscDecodedBytes": 0,
+        "rscRequestCount": 0,
+        "scriptCount": 10,
+        "fullEventChunkLoaded": false,
+        "fullEventChunks": [],
+        "pageErrors": [],
+        "filterResultCount": null,
+        "largestScripts": [
+          {
+            "file": "3jh1u-s3k0bkk.js",
+            "transferBytes": 64372,
+            "decodedBytes": 203384,
+            "durationMs": 44.1
+          },
+          {
+            "file": "3k_1mf66d3bqr.js",
+            "transferBytes": 39729,
+            "decodedBytes": 146881,
+            "durationMs": 44.6
+          },
+          {
+            "file": "3o72pmpntpp6j.js",
+            "transferBytes": 21326,
+            "decodedBytes": 70736,
+            "durationMs": 51.8
+          },
+          {
+            "file": "14mrh2-p_w84d.js",
+            "transferBytes": 13175,
+            "decodedBytes": 54646,
+            "durationMs": 45.1
+          },
+          {
+            "file": "0paxexg6-m0de.js",
+            "transferBytes": 9469,
+            "decodedBytes": 43946,
+            "durationMs": 45.8
+          },
+          {
+            "file": "14bg562gcca5r.js",
+            "transferBytes": 14614,
+            "decodedBytes": 40822,
+            "durationMs": 46.6
+          },
+          {
+            "file": "1sv6a5t9bzgoa.js",
+            "transferBytes": 8880,
+            "decodedBytes": 27819,
+            "durationMs": 20.4
+          },
+          {
+            "file": "0ro772wcmsc4w.js",
+            "transferBytes": 7540,
+            "decodedBytes": 24268,
+            "durationMs": 37.3
+          }
+        ]
+      }
+    }
+  ],
+  "interactions": {
+    "searchResponseMs": 37.2,
+    "searchInteractionDataBytes": 255744,
+    "filterResponseMs": 142.7,
+    "filterResultCount": "6 场结果",
+    "mapInitializationMs": 1261.2
+  },
+  "bundleEvidence": {
+    "signature": "evt_e912cb05373a12af9141c910 + fieldProvenance + verification",
+    "chunks": [],
+    "routes": []
+  }
+}

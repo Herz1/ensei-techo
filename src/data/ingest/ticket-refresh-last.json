@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "runId": "ticket-frontier-2026-08-30T07-00-35-551Z",
+  "generatedAt": "2026-08-30T07:00:35.572Z",
+  "mode": "dry-run",
+  "selection": {
+    "policy": {
+      "defaultScope": "nextCheckAt 已到期的 deferred",
+      "pendingSelection": "未选择 pending",
+      "pendingLimit": 0,
+      "batchLimit": 10,
+      "allRoles": false
+    },
+    "selected": [],
+    "omittedByBatchLimit": []
+  },
+  "counts": {
+    "selected": 0,
+    "fetchSucceeded": 0,
+    "validMatches": 0,
+    "invalid": 0,
+    "ambiguous": 0,
+    "blocked": 0,
+    "deferred": 0,
+    "manualReview": 0
+  },
+  "outcomes": [],
+  "observationDataChanged": false,
+  "formalDataChanged": false,
+  "publish": {
+    "status": "not_run",
+    "reason": "本脚本仅维护 frontier/观察数据；需另行运行发布命令并通过发布保护。"
+  }
+}

@@ -1,0 +1,1288 @@
+[
+  {
+    "id": "tokyo-dome",
+    "nameJa": "東京ドーム",
+    "nameZh": "东京巨蛋",
+    "prefecture": "tokyo",
+    "city": "文京区",
+    "lat": 35.7056,
+    "lng": 139.7519,
+    "capacity": 55000,
+    "tier": "dome",
+    "stations": [
+      { "line": "JR中央・総武線", "station": "水道橋", "walkMin": 3 },
+      { "line": "都営三田線", "station": "水道橋", "walkMin": 1 },
+      { "line": "東京メトロ丸ノ内線・南北線", "station": "後楽園", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR中央線→御茶ノ水换乘総武線→水道橋", "min": 15 },
+      { "from": "羽田空港", "route": "モノレール→浜松町→JR→水道橋", "min": 45 }
+    ],
+    "lockers": "场内及周边(LaQua/东京巨蛋城)约3000个,公演日极度紧张,建议到达车站后先寄存",
+    "notes": "演唱会模式约5.5万人;残响偏大,二层建议携带望远镜",
+    "model3d": "tokyo-dome"
+  },
+  {
+    "id": "kyocera-dome",
+    "nameJa": "京セラドーム大阪",
+    "nameZh": "京瓷巨蛋大阪",
+    "prefecture": "osaka",
+    "city": "大阪市西区",
+    "lat": 34.6693,
+    "lng": 135.4762,
+    "capacity": 55000,
+    "tier": "dome",
+    "stations": [
+      { "line": "阪神なんば線", "station": "ドーム前", "walkMin": 1 },
+      { "line": "地下鉄長堀鶴見緑地線", "station": "ドーム前千代崎", "walkMin": 1 },
+      { "line": "JR大阪環状線", "station": "大正", "walkMin": 7 }
+    ],
+    "hubAccess": [
+      { "from": "大阪駅", "route": "JR環状線内回り→大正", "min": 12 },
+      { "from": "関西空港", "route": "南海→なんば→阪神なんば線→ドーム前", "min": 55 }
+    ],
+    "lockers": "馆内寄物柜有限,可利用隣接イオンモール的寄物柜",
+    "model3d": "tokyo-dome"
+  },
+  {
+    "id": "vantelin-dome",
+    "nameJa": "バンテリンドーム ナゴヤ",
+    "nameZh": "万特林巨蛋名古屋",
+    "prefecture": "aichi",
+    "city": "名古屋市東区",
+    "lat": 35.1859,
+    "lng": 136.9475,
+    "capacity": 49000,
+    "tier": "dome",
+    "stations": [
+      { "line": "地下鉄名城線", "station": "ナゴヤドーム前矢田", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "名古屋駅", "route": "地下鉄東山線→栄换乘名城線", "min": 25 }
+    ],
+    "model3d": "tokyo-dome"
+  },
+  {
+    "id": "mizuho-paypay-dome",
+    "nameJa": "みずほPayPayドーム福岡",
+    "nameZh": "瑞穗PayPay巨蛋福冈",
+    "prefecture": "fukuoka",
+    "city": "福岡市中央区",
+    "lat": 33.5953,
+    "lng": 130.362,
+    "capacity": 52500,
+    "tier": "dome",
+    "stations": [
+      { "line": "地下鉄空港線", "station": "唐人町", "walkMin": 15 }
+    ],
+    "hubAccess": [
+      { "from": "博多駅", "route": "地下鉄空港線→唐人町+徒步", "min": 25 },
+      { "from": "福岡空港", "route": "地下鉄空港線直达", "min": 30 }
+    ],
+    "model3d": "tokyo-dome"
+  },
+  {
+    "id": "sapporo-dome",
+    "nameJa": "札幌ドーム",
+    "nameZh": "札幌巨蛋",
+    "prefecture": "hokkaido",
+    "city": "札幌市豊平区",
+    "lat": 43.0151,
+    "lng": 141.4097,
+    "capacity": 53000,
+    "tier": "dome",
+    "stations": [
+      { "line": "地下鉄東豊線", "station": "福住", "walkMin": 10 }
+    ],
+    "hubAccess": [
+      { "from": "札幌駅", "route": "地下鉄東豊線→福住", "min": 20 }
+    ],
+    "model3d": "tokyo-dome"
+  },
+  {
+    "id": "kokuritsu",
+    "nameJa": "国立競技場",
+    "nameZh": "国立竞技场",
+    "prefecture": "tokyo",
+    "city": "新宿区",
+    "lat": 35.6779,
+    "lng": 139.7145,
+    "capacity": 68000,
+    "tier": "stadium",
+    "stations": [
+      { "line": "都営大江戸線", "station": "国立競技場", "walkMin": 1 },
+      { "line": "JR中央・総武線", "station": "千駄ケ谷", "walkMin": 5 },
+      { "line": "JR中央・総武線", "station": "信濃町", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR中央線→四ツ谷换乘総武線→千駄ケ谷", "min": 15 }
+    ],
+    "notes": "体育场级公演,散场规制退场时间较长"
+  },
+  {
+    "id": "nissan-stadium",
+    "nameJa": "日産スタジアム",
+    "nameZh": "日产体育场",
+    "prefecture": "kanagawa",
+    "city": "横浜市港北区",
+    "lat": 35.5101,
+    "lng": 139.6062,
+    "capacity": 72000,
+    "tier": "stadium",
+    "stations": [
+      { "line": "JR横浜線", "station": "小机", "walkMin": 7 },
+      { "line": "JR・市営地下鉄", "station": "新横浜", "walkMin": 14 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "東海道新幹線→新横浜", "min": 20 },
+      { "from": "横浜駅", "route": "JR横浜線直通", "min": 15 }
+    ],
+    "notes": "日本最大规模会场;散场后新横浜方向极为拥挤,可考虑小机站分流"
+  },
+  {
+    "id": "zozo-marine",
+    "nameJa": "ZOZOマリンスタジアム",
+    "nameZh": "ZOZO海洋体育场",
+    "prefecture": "chiba",
+    "city": "千葉市美浜区",
+    "lat": 35.6451,
+    "lng": 140.0308,
+    "capacity": 30000,
+    "tier": "stadium",
+    "stations": [
+      { "line": "JR京葉線", "station": "海浜幕張", "walkMin": 15 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR京葉線快速→海浜幕張", "min": 35 }
+    ],
+    "notes": "夏季音乐节圣地,海风较大注意防晒防风"
+  },
+  {
+    "id": "ajinomoto-stadium",
+    "nameJa": "味の素スタジアム",
+    "nameZh": "味之素体育场",
+    "prefecture": "tokyo",
+    "city": "調布市",
+    "lat": 35.6645,
+    "lng": 139.5271,
+    "capacity": 49000,
+    "tier": "stadium",
+    "stations": [
+      { "line": "京王線", "station": "飛田給", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "新宿駅", "route": "京王線特急→調布换乘各停→飛田給", "min": 25 }
+    ]
+  },
+  {
+    "id": "budokan",
+    "nameJa": "日本武道館",
+    "nameZh": "日本武道馆",
+    "prefecture": "tokyo",
+    "city": "千代田区",
+    "lat": 35.6933,
+    "lng": 139.7497,
+    "capacity": 14471,
+    "tier": "arena",
+    "stations": [
+      { "line": "東京メトロ東西線・半蔵門線/都営新宿線", "station": "九段下", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "東京メトロ東西線(大手町乘车)→九段下", "min": 10 }
+    ],
+    "lockers": "馆内寄物柜数量少,九段下站寄物柜公演日常满",
+    "notes": "音乐圣地;八角形屋顶结构,天井悬挂巨大日章旗",
+    "model3d": "budokan"
+  },
+  {
+    "id": "yokohama-arena",
+    "nameJa": "横浜アリーナ",
+    "nameZh": "横滨体育馆",
+    "prefecture": "kanagawa",
+    "city": "横浜市港北区",
+    "lat": 35.511,
+    "lng": 139.6194,
+    "capacity": 17000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR・市営地下鉄・東急", "station": "新横浜", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "東海道新幹線→新横浜", "min": 20 },
+      { "from": "渋谷駅", "route": "東急東横線→新横浜線直通", "min": 30 }
+    ],
+    "lockers": "馆内及新横浜站周边较充足",
+    "notes": "座位分センター/アリーナ/スタンド,センター为可动席",
+    "model3d": "yokohama-arena"
+  },
+  {
+    "id": "saitama-super-arena",
+    "nameJa": "さいたまスーパーアリーナ",
+    "nameZh": "埼玉超级竞技场",
+    "prefecture": "saitama",
+    "city": "さいたま市中央区",
+    "lat": 35.8949,
+    "lng": 139.6308,
+    "capacity": 22500,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR京浜東北線・宇都宮線・高崎線", "station": "さいたま新都心", "walkMin": 3 },
+      { "line": "JR埼京線", "station": "北与野", "walkMin": 7 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR上野東京ライン→さいたま新都心", "min": 35 },
+      { "from": "新宿駅", "route": "JR埼京線→北与野", "min": 35 }
+    ],
+    "notes": "スタジアムモード最大约3.7万人,アリーナモード约2.2万人"
+  },
+  {
+    "id": "k-arena-yokohama",
+    "nameJa": "Kアリーナ横浜",
+    "nameZh": "K-Arena 横滨",
+    "prefecture": "kanagawa",
+    "city": "横浜市西区",
+    "lat": 35.464,
+    "lng": 139.6262,
+    "capacity": 20000,
+    "tier": "arena",
+    "stations": [
+      { "line": "みなとみらい線", "station": "新高島", "walkMin": 5 },
+      { "line": "JR各線", "station": "横浜", "walkMin": 11 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR東海道線→横浜+徒步", "min": 40 }
+    ],
+    "notes": "2023年开业的音乐专用馆,全席面向舞台"
+  },
+  {
+    "id": "pia-arena-mm",
+    "nameJa": "ぴあアリーナMM",
+    "nameZh": "PIA Arena MM",
+    "prefecture": "kanagawa",
+    "city": "横浜市西区",
+    "lat": 35.4633,
+    "lng": 139.632,
+    "capacity": 12000,
+    "tier": "arena",
+    "stations": [
+      { "line": "みなとみらい線", "station": "みなとみらい", "walkMin": 7 },
+      { "line": "JR根岸線", "station": "桜木町", "walkMin": 12 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "ariake-arena",
+    "nameJa": "有明アリーナ",
+    "nameZh": "有明体育馆",
+    "prefecture": "tokyo",
+    "city": "江東区",
+    "lat": 35.6486,
+    "lng": 139.7947,
+    "capacity": 15000,
+    "tier": "arena",
+    "stations": [
+      { "line": "ゆりかもめ", "station": "有明テニスの森", "walkMin": 8 },
+      { "line": "りんかい線", "station": "国際展示場", "walkMin": 15 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "garden-theater",
+    "nameJa": "東京ガーデンシアター",
+    "nameZh": "东京花园剧场",
+    "prefecture": "tokyo",
+    "city": "江東区",
+    "lat": 35.642,
+    "lng": 139.792,
+    "capacity": 8000,
+    "tier": "arena",
+    "stations": [
+      { "line": "ゆりかもめ", "station": "有明", "walkMin": 3 },
+      { "line": "りんかい線", "station": "国際展示場", "walkMin": 10 }
+    ],
+    "hubAccess": [],
+    "notes": "四层环形结构,各层视野均衡"
+  },
+  {
+    "id": "yoyogi-first",
+    "nameJa": "国立代々木競技場 第一体育館",
+    "nameZh": "代代木第一体育馆",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6672,
+    "lng": 139.7009,
+    "capacity": 13000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR山手線", "station": "原宿", "walkMin": 5 },
+      { "line": "東京メトロ千代田線・副都心線", "station": "明治神宮前", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "osaka-jo-hall",
+    "nameJa": "大阪城ホール",
+    "nameZh": "大阪城 Hall",
+    "prefecture": "osaka",
+    "city": "大阪市中央区",
+    "lat": 34.692,
+    "lng": 135.534,
+    "capacity": 16000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR大阪環状線", "station": "大阪城公園", "walkMin": 5 },
+      { "line": "地下鉄長堀鶴見緑地線", "station": "大阪ビジネスパーク", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "大阪駅", "route": "JR環状線内回り→大阪城公園", "min": 10 }
+    ]
+  },
+  {
+    "id": "asue-arena-osaka",
+    "nameJa": "Asueアリーナ大阪",
+    "nameZh": "Asue Arena 大阪",
+    "prefecture": "osaka",
+    "city": "大阪市港区",
+    "lat": 34.6608,
+    "lng": 135.461,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "地下鉄中央線", "station": "朝潮橋", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "world-hall",
+    "nameJa": "神戸ワールド記念ホール",
+    "nameZh": "神户世界纪念馆",
+    "prefecture": "hyogo",
+    "city": "神戸市中央区",
+    "lat": 34.6565,
+    "lng": 135.2129,
+    "capacity": 8000,
+    "tier": "arena",
+    "stations": [
+      { "line": "ポートライナー", "station": "市民広場", "walkMin": 3 }
+    ],
+    "hubAccess": [
+      { "from": "三宮駅", "route": "ポートライナー→市民広場", "min": 12 }
+    ]
+  },
+  {
+    "id": "glion-arena-kobe",
+    "nameJa": "GLION ARENA KOBE",
+    "nameZh": "GLION Arena 神户",
+    "prefecture": "hyogo",
+    "city": "神戸市中央区",
+    "lat": 34.6797,
+    "lng": 135.1852,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR神戸線・阪神", "station": "三ノ宮", "walkMin": 18 }
+    ],
+    "hubAccess": [
+      { "from": "三宮駅", "route": "ポートループバス→新港町", "min": 10 }
+    ],
+    "notes": "2025年开业的海滨新馆"
+  },
+  {
+    "id": "gaishi-hall",
+    "nameJa": "日本ガイシホール",
+    "nameZh": "名古屋 Gaishi Hall",
+    "prefecture": "aichi",
+    "city": "名古屋市南区",
+    "lat": 35.093,
+    "lng": 136.9345,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR東海道本線", "station": "笠寺", "walkMin": 3 }
+    ],
+    "hubAccess": [
+      { "from": "名古屋駅", "route": "JR東海道本線→笠寺", "min": 15 }
+    ]
+  },
+  {
+    "id": "ig-arena",
+    "nameJa": "IGアリーナ",
+    "nameZh": "IG Arena(爱知国际竞技场)",
+    "prefecture": "aichi",
+    "city": "名古屋市北区",
+    "lat": 35.199,
+    "lng": 136.908,
+    "capacity": 17000,
+    "tier": "arena",
+    "stations": [
+      { "line": "地下鉄名城線", "station": "名城公園", "walkMin": 5 }
+    ],
+    "hubAccess": [],
+    "notes": "2025年开业,中部地区最大规模室内馆"
+  },
+  {
+    "id": "port-messe-nagoya",
+    "nameJa": "ポートメッセなごや",
+    "nameZh": "名古屋港 Messe",
+    "prefecture": "aichi",
+    "city": "名古屋市港区",
+    "lat": 35.0561,
+    "lng": 136.8451,
+    "capacity": 20000,
+    "tier": "arena",
+    "stations": [
+      { "line": "あおなみ線", "station": "金城ふ頭", "walkMin": 5 }
+    ],
+    "hubAccess": [],
+    "notes": "展示馆规格,大型立见公演为主"
+  },
+  {
+    "id": "makuhari-event-hall",
+    "nameJa": "幕張メッセ イベントホール",
+    "nameZh": "幕张活动厅",
+    "prefecture": "chiba",
+    "city": "千葉市美浜区",
+    "lat": 35.6479,
+    "lng": 140.0344,
+    "capacity": 9000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR京葉線", "station": "海浜幕張", "walkMin": 7 }
+    ],
+    "hubAccess": [
+      { "from": "東京駅", "route": "JR京葉線快速→海浜幕張", "min": 35 }
+    ]
+  },
+  {
+    "id": "makuhari-messe-hall",
+    "nameJa": "幕張メッセ 国際展示場9-11ホール",
+    "nameZh": "幕张 Messe 展示厅 9-11",
+    "prefecture": "chiba",
+    "city": "千葉市美浜区",
+    "lat": 35.6467,
+    "lng": 140.033,
+    "capacity": 20000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR京葉線", "station": "海浜幕張", "walkMin": 9 }
+    ],
+    "hubAccess": [],
+    "notes": "大型音乐节与对盘活动常用会场"
+  },
+  {
+    "id": "lala-arena",
+    "nameJa": "LaLa arena TOKYO-BAY",
+    "nameZh": "LaLa Arena 东京湾",
+    "prefecture": "chiba",
+    "city": "船橋市",
+    "lat": 35.687,
+    "lng": 139.988,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR京葉線", "station": "南船橋", "walkMin": 7 }
+    ],
+    "hubAccess": [],
+    "notes": "2024年开业"
+  },
+  {
+    "id": "hiroshima-green-arena",
+    "nameJa": "広島グリーンアリーナ",
+    "nameZh": "广岛绿色竞技场",
+    "prefecture": "hiroshima",
+    "city": "広島市中区",
+    "lat": 34.3963,
+    "lng": 132.4496,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "アストラムライン", "station": "県庁前", "walkMin": 5 },
+      { "line": "広島電鉄", "station": "紙屋町西", "walkMin": 8 }
+    ],
+    "hubAccess": [
+      { "from": "広島駅", "route": "路面電車→紙屋町西", "min": 20 }
+    ]
+  },
+  {
+    "id": "marine-messe-a",
+    "nameJa": "マリンメッセ福岡A館",
+    "nameZh": "福冈海洋 Messe A馆",
+    "prefecture": "fukuoka",
+    "city": "福岡市博多区",
+    "lat": 33.6005,
+    "lng": 130.4098,
+    "capacity": 15000,
+    "tier": "arena",
+    "stations": [
+      { "line": "地下鉄箱崎線", "station": "呉服町", "walkMin": 15 }
+    ],
+    "hubAccess": [
+      { "from": "博多駅", "route": "巴士→国際センター前", "min": 15 }
+    ]
+  },
+  {
+    "id": "sekisui-heim-super-arena",
+    "nameJa": "セキスイハイムスーパーアリーナ",
+    "nameZh": "SEKISUI HEIM 超级竞技场(宫城)",
+    "prefecture": "miyagi",
+    "city": "宮城郡利府町",
+    "lat": 38.333,
+    "lng": 140.96,
+    "capacity": 7000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR東北本線(利府支線)", "station": "利府", "walkMin": 25 }
+    ],
+    "hubAccess": [
+      { "from": "仙台駅", "route": "JR利府線→利府+接驳巴士", "min": 40 }
+    ]
+  },
+  {
+    "id": "toki-messe",
+    "nameJa": "朱鷺メッセ",
+    "nameZh": "朱鹭 Messe",
+    "prefecture": "niigata",
+    "city": "新潟市中央区",
+    "lat": 37.9282,
+    "lng": 139.0616,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR各線", "station": "新潟", "walkMin": 20 }
+    ],
+    "hubAccess": [
+      { "from": "新潟駅", "route": "巴士→朱鷺メッセ", "min": 8 }
+    ]
+  },
+  {
+    "id": "ecopa-arena",
+    "nameJa": "エコパアリーナ",
+    "nameZh": "Ecopa Arena(静冈)",
+    "prefecture": "shizuoka",
+    "city": "袋井市",
+    "lat": 34.7433,
+    "lng": 137.9705,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR東海道本線", "station": "愛野", "walkMin": 15 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "mie-sun-arena",
+    "nameJa": "三重県営サンアリーナ",
+    "nameZh": "三重县营太阳竞技场",
+    "prefecture": "mie",
+    "city": "伊勢市",
+    "lat": 34.4926,
+    "lng": 136.6885,
+    "capacity": 11000,
+    "tier": "arena",
+    "stations": [
+      { "line": "近鉄山田線", "station": "宇治山田", "walkMin": 90 }
+    ],
+    "hubAccess": [
+      { "from": "宇治山田駅", "route": "公演日临时巴士", "min": 20 }
+    ]
+  },
+  {
+    "id": "okinawa-arena",
+    "nameJa": "沖縄アリーナ",
+    "nameZh": "冲绳竞技场",
+    "prefecture": "okinawa",
+    "city": "沖縄市",
+    "lat": 26.3283,
+    "lng": 127.777,
+    "capacity": 10000,
+    "tier": "arena",
+    "stations": [],
+    "hubAccess": [
+      { "from": "那覇空港", "route": "高速巴士→コザ运动公园", "min": 70 }
+    ]
+  },
+  {
+    "id": "makomanai-ice-arena",
+    "nameJa": "真駒内セキスイハイムアイスアリーナ",
+    "nameZh": "真驹内冰上竞技场",
+    "prefecture": "hokkaido",
+    "city": "札幌市南区",
+    "lat": 42.9868,
+    "lng": 141.3407,
+    "capacity": 11500,
+    "tier": "arena",
+    "stations": [
+      { "line": "地下鉄南北線", "station": "真駒内", "walkMin": 25 }
+    ],
+    "hubAccess": [
+      { "from": "真駒内駅", "route": "巴士→上町1丁目", "min": 10 }
+    ]
+  },
+  {
+    "id": "kitaele",
+    "nameJa": "北海きたえーる",
+    "nameZh": "北海 Kitaele",
+    "prefecture": "hokkaido",
+    "city": "札幌市豊平区",
+    "lat": 43.033,
+    "lng": 141.389,
+    "capacity": 8000,
+    "tier": "arena",
+    "stations": [
+      { "line": "地下鉄東豊線", "station": "豊平公園", "walkMin": 1 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "nagano-big-hat",
+    "nameJa": "ビッグハット",
+    "nameZh": "长野 Big Hat",
+    "prefecture": "nagano",
+    "city": "長野市",
+    "lat": 36.628,
+    "lng": 138.193,
+    "capacity": 8000,
+    "tier": "arena",
+    "stations": [
+      { "line": "JR各線", "station": "長野", "walkMin": 30 }
+    ],
+    "hubAccess": [
+      { "from": "長野駅", "route": "巴士→ビッグハット前", "min": 10 }
+    ]
+  },
+  {
+    "id": "nhk-hall",
+    "nameJa": "NHKホール",
+    "nameZh": "NHK Hall",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6654,
+    "lng": 139.6994,
+    "capacity": 3600,
+    "tier": "hall",
+    "stations": [
+      { "line": "JR山手線", "station": "原宿", "walkMin": 8 },
+      { "line": "東京メトロ千代田線", "station": "明治神宮前", "walkMin": 8 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "line-cube-shibuya",
+    "nameJa": "LINE CUBE SHIBUYA",
+    "nameZh": "LINE CUBE 涩谷(涩谷公会堂)",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.662,
+    "lng": 139.6982,
+    "capacity": 2000,
+    "tier": "hall",
+    "stations": [
+      { "line": "JR・東京メトロ・東急", "station": "渋谷", "walkMin": 7 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "kokusai-forum-a",
+    "nameJa": "東京国際フォーラム ホールA",
+    "nameZh": "东京国际论坛 Hall A",
+    "prefecture": "tokyo",
+    "city": "千代田区",
+    "lat": 35.6768,
+    "lng": 139.7638,
+    "capacity": 5000,
+    "tier": "hall",
+    "stations": [
+      { "line": "JR山手線・京浜東北線", "station": "有楽町", "walkMin": 1 },
+      { "line": "JR各線", "station": "東京", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "tokyo-dome-city-hall",
+    "nameJa": "TOKYO DOME CITY HALL",
+    "nameZh": "东京巨蛋城 Hall",
+    "prefecture": "tokyo",
+    "city": "文京区",
+    "lat": 35.7051,
+    "lng": 139.7539,
+    "capacity": 3100,
+    "tier": "hall",
+    "stations": [
+      { "line": "JR中央・総武線", "station": "水道橋", "walkMin": 2 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "hitomi-kinen",
+    "nameJa": "昭和女子大学 人見記念講堂",
+    "nameZh": "昭和女子大学人见纪念讲堂",
+    "prefecture": "tokyo",
+    "city": "世田谷区",
+    "lat": 35.641,
+    "lng": 139.671,
+    "capacity": 2000,
+    "tier": "hall",
+    "stations": [
+      { "line": "東急田園都市線", "station": "三軒茶屋", "walkMin": 7 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "hibiya-yaon",
+    "nameJa": "日比谷公園大音楽堂(日比谷野音)",
+    "nameZh": "日比谷野外大音乐堂",
+    "prefecture": "tokyo",
+    "city": "千代田区",
+    "lat": 35.6738,
+    "lng": 139.7565,
+    "capacity": 3100,
+    "tier": "hall",
+    "stations": [
+      { "line": "東京メトロ丸ノ内線・日比谷線", "station": "霞ケ関", "walkMin": 5 },
+      { "line": "都営三田線", "station": "内幸町", "walkMin": 5 }
+    ],
+    "hubAccess": [],
+    "notes": "露天圣地,雨天决行为多"
+  },
+  {
+    "id": "pacifico-yokohama",
+    "nameJa": "パシフィコ横浜 国立大ホール",
+    "nameZh": "太平洋横滨会展中心国立大厅",
+    "prefecture": "kanagawa",
+    "city": "横浜市西区",
+    "lat": 35.459,
+    "lng": 139.637,
+    "capacity": 5000,
+    "tier": "hall",
+    "stations": [
+      { "line": "みなとみらい線", "station": "みなとみらい", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "festival-hall",
+    "nameJa": "フェスティバルホール",
+    "nameZh": "大阪 Festival Hall",
+    "prefecture": "osaka",
+    "city": "大阪市北区",
+    "lat": 34.6935,
+    "lng": 135.4913,
+    "capacity": 2700,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄四つ橋線", "station": "肥後橋", "walkMin": 1 },
+      { "line": "京阪中之島線", "station": "渡辺橋", "walkMin": 1 }
+    ],
+    "hubAccess": [],
+    "notes": "以音响出色著称的老牌名门音乐厅"
+  },
+  {
+    "id": "orix-theater",
+    "nameJa": "オリックス劇場",
+    "nameZh": "ORIX 剧场",
+    "prefecture": "osaka",
+    "city": "大阪市西区",
+    "lat": 34.6752,
+    "lng": 135.493,
+    "capacity": 2400,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄四つ橋線", "station": "四ツ橋", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "rohm-theatre",
+    "nameJa": "ロームシアター京都 メインホール",
+    "nameZh": "ROHM 剧场京都",
+    "prefecture": "kyoto",
+    "city": "京都市左京区",
+    "lat": 35.0128,
+    "lng": 135.7787,
+    "capacity": 2000,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄東西線", "station": "東山", "walkMin": 10 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "century-hall",
+    "nameJa": "名古屋国際会議場 センチュリーホール",
+    "nameZh": "名古屋国际会议场世纪厅",
+    "prefecture": "aichi",
+    "city": "名古屋市熱田区",
+    "lat": 35.129,
+    "lng": 136.899,
+    "capacity": 3000,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄名港線", "station": "日比野", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "hbg-hall",
+    "nameJa": "広島文化学園HBGホール",
+    "nameZh": "广岛文化学园 HBG Hall",
+    "prefecture": "hiroshima",
+    "city": "広島市中区",
+    "lat": 34.382,
+    "lng": 132.462,
+    "capacity": 2000,
+    "tier": "hall",
+    "stations": [
+      { "line": "広島電鉄", "station": "中電前", "walkMin": 10 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "fukuoka-sunpalace",
+    "nameJa": "福岡サンパレス",
+    "nameZh": "福冈 Sun Palace",
+    "prefecture": "fukuoka",
+    "city": "福岡市博多区",
+    "lat": 33.601,
+    "lng": 130.411,
+    "capacity": 2300,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄箱崎線", "station": "呉服町", "walkMin": 12 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "sendai-sunplaza",
+    "nameJa": "仙台サンプラザホール",
+    "nameZh": "仙台 Sunplaza Hall",
+    "prefecture": "miyagi",
+    "city": "仙台市宮城野区",
+    "lat": 38.257,
+    "lng": 140.895,
+    "capacity": 2700,
+    "tier": "hall",
+    "stations": [
+      { "line": "JR仙石線", "station": "榴ケ岡", "walkMin": 1 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "hitaru",
+    "nameJa": "札幌文化芸術劇場 hitaru",
+    "nameZh": "札幌文化艺术剧场 hitaru",
+    "prefecture": "hokkaido",
+    "city": "札幌市中央区",
+    "lat": 43.062,
+    "lng": 141.356,
+    "capacity": 2300,
+    "tier": "hall",
+    "stations": [
+      { "line": "地下鉄各線", "station": "大通", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "kumamoto-jo-hall",
+    "nameJa": "熊本城ホール",
+    "nameZh": "熊本城 Hall",
+    "prefecture": "kumamoto",
+    "city": "熊本市中央区",
+    "lat": 32.799,
+    "lng": 130.708,
+    "capacity": 2300,
+    "tier": "hall",
+    "stations": [
+      { "line": "熊本市電", "station": "花畑町", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-haneda",
+    "nameJa": "Zepp Haneda(TOKYO)",
+    "nameZh": "Zepp 羽田",
+    "prefecture": "tokyo",
+    "city": "大田区",
+    "lat": 35.5482,
+    "lng": 139.7448,
+    "capacity": 2900,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "京急空港線・東京モノレール", "station": "天空橋", "walkMin": 1 }
+    ],
+    "hubAccess": [
+      { "from": "羽田空港", "route": "京急/モノレール一站", "min": 5 }
+    ],
+    "notes": "站体直结,远征航班衔接最方便的 Zepp"
+  },
+  {
+    "id": "zepp-divercity",
+    "nameJa": "Zepp DiverCity(TOKYO)",
+    "nameZh": "Zepp DiverCity 台场",
+    "prefecture": "tokyo",
+    "city": "江東区",
+    "lat": 35.6252,
+    "lng": 139.7756,
+    "capacity": 2400,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "ゆりかもめ", "station": "台場", "walkMin": 8 },
+      { "line": "りんかい線", "station": "東京テレポート", "walkMin": 8 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-shinjuku",
+    "nameJa": "Zepp Shinjuku(TOKYO)",
+    "nameZh": "Zepp 新宿",
+    "prefecture": "tokyo",
+    "city": "新宿区",
+    "lat": 35.6952,
+    "lng": 139.7019,
+    "capacity": 1500,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "西武新宿線", "station": "西武新宿", "walkMin": 1 },
+      { "line": "JR各線", "station": "新宿", "walkMin": 7 }
+    ],
+    "hubAccess": [],
+    "notes": "東急歌舞伎町タワー地下"
+  },
+  {
+    "id": "kt-zepp-yokohama",
+    "nameJa": "KT Zepp Yokohama",
+    "nameZh": "KT Zepp 横滨",
+    "prefecture": "kanagawa",
+    "city": "横浜市西区",
+    "lat": 35.462,
+    "lng": 139.627,
+    "capacity": 2100,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "みなとみらい線", "station": "新高島", "walkMin": 3 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-namba",
+    "nameJa": "Zepp Namba(OSAKA)",
+    "nameZh": "Zepp 难波",
+    "prefecture": "osaka",
+    "city": "大阪市浪速区",
+    "lat": 34.6591,
+    "lng": 135.4953,
+    "capacity": 2500,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄御堂筋線・四つ橋線", "station": "なんば", "walkMin": 10 },
+      { "line": "JR大和路線", "station": "JR難波", "walkMin": 8 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-osaka-bayside",
+    "nameJa": "Zepp Osaka Bayside",
+    "nameZh": "Zepp 大阪湾岸",
+    "prefecture": "osaka",
+    "city": "大阪市此花区",
+    "lat": 34.665,
+    "lng": 135.413,
+    "capacity": 2800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JRゆめ咲線", "station": "桜島", "walkMin": 3 }
+    ],
+    "hubAccess": [],
+    "notes": "USJ 旁,可顺路游园"
+  },
+  {
+    "id": "zepp-nagoya",
+    "nameJa": "Zepp Nagoya",
+    "nameZh": "Zepp 名古屋",
+    "prefecture": "aichi",
+    "city": "名古屋市中村区",
+    "lat": 35.162,
+    "lng": 136.8837,
+    "capacity": 1800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "あおなみ線", "station": "ささしまライブ", "walkMin": 2 },
+      { "line": "JR各線", "station": "名古屋", "walkMin": 15 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-sapporo",
+    "nameJa": "Zepp Sapporo",
+    "nameZh": "Zepp 札幌",
+    "prefecture": "hokkaido",
+    "city": "札幌市中央区",
+    "lat": 43.057,
+    "lng": 141.354,
+    "capacity": 2000,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄東豊線", "station": "豊水すすきの", "walkMin": 3 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "zepp-fukuoka",
+    "nameJa": "Zepp Fukuoka",
+    "nameZh": "Zepp 福冈",
+    "prefecture": "fukuoka",
+    "city": "福岡市中央区",
+    "lat": 33.5905,
+    "lng": 130.36,
+    "capacity": 2000,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄空港線", "station": "唐人町", "walkMin": 12 }
+    ],
+    "hubAccess": [],
+    "notes": "PayPayドーム 旁"
+  },
+  {
+    "id": "spotify-o-east",
+    "nameJa": "Spotify O-EAST",
+    "nameZh": "涩谷 O-EAST",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6608,
+    "lng": 139.6963,
+    "capacity": 1300,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JR・東京メトロ・東急", "station": "渋谷", "walkMin": 10 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "shibuya-quattro",
+    "nameJa": "渋谷CLUB QUATTRO",
+    "nameZh": "涩谷 CLUB QUATTRO",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6598,
+    "lng": 139.6987,
+    "capacity": 750,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JR・東京メトロ・東急", "station": "渋谷", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "liquidroom",
+    "nameJa": "LIQUIDROOM",
+    "nameZh": "惠比寿 LIQUIDROOM",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6482,
+    "lng": 139.7089,
+    "capacity": 900,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JR山手線・埼京線", "station": "恵比寿", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "shimokita-shelter",
+    "nameJa": "下北沢SHELTER",
+    "nameZh": "下北泽 SHELTER",
+    "prefecture": "tokyo",
+    "city": "世田谷区",
+    "lat": 35.662,
+    "lng": 139.6667,
+    "capacity": 250,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "小田急線・京王井の頭線", "station": "下北沢", "walkMin": 3 }
+    ],
+    "hubAccess": [],
+    "notes": "摇滚小箱圣地"
+  },
+  {
+    "id": "shibuya-www",
+    "nameJa": "渋谷WWW",
+    "nameZh": "涩谷 WWW",
+    "prefecture": "tokyo",
+    "city": "渋谷区",
+    "lat": 35.6597,
+    "lng": 139.6982,
+    "capacity": 500,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JR・東京メトロ・東急", "station": "渋谷", "walkMin": 7 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "toyosu-pit",
+    "nameJa": "豊洲PIT",
+    "nameZh": "丰洲 PIT",
+    "prefecture": "tokyo",
+    "city": "江東区",
+    "lat": 35.6455,
+    "lng": 139.7834,
+    "capacity": 3100,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "ゆりかもめ", "station": "新豊洲", "walkMin": 1 },
+      { "line": "東京メトロ有楽町線", "station": "豊洲", "walkMin": 10 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "shinsaibashi-bigcat",
+    "nameJa": "心斎橋BIGCAT",
+    "nameZh": "心斋桥 BIGCAT",
+    "prefecture": "osaka",
+    "city": "大阪市中央区",
+    "lat": 34.674,
+    "lng": 135.499,
+    "capacity": 850,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄御堂筋線", "station": "心斎橋", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "umeda-quattro",
+    "nameJa": "梅田CLUB QUATTRO",
+    "nameZh": "梅田 CLUB QUATTRO",
+    "prefecture": "osaka",
+    "city": "大阪市北区",
+    "lat": 34.704,
+    "lng": 135.498,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "阪急各線", "station": "大阪梅田", "walkMin": 3 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "nagoya-quattro",
+    "nameJa": "名古屋CLUB QUATTRO",
+    "nameZh": "名古屋 CLUB QUATTRO",
+    "prefecture": "aichi",
+    "city": "名古屋市中区",
+    "lat": 35.168,
+    "lng": 136.905,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄名城線", "station": "矢場町", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "sendai-rensa",
+    "nameJa": "仙台Rensa",
+    "nameZh": "仙台 Rensa",
+    "prefecture": "miyagi",
+    "city": "仙台市青葉区",
+    "lat": 38.262,
+    "lng": 140.872,
+    "capacity": 700,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄南北線", "station": "広瀬通", "walkMin": 3 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "penny-lane24",
+    "nameJa": "札幌PENNY LANE24",
+    "nameZh": "札幌 PENNY LANE24",
+    "prefecture": "hokkaido",
+    "city": "札幌市中央区",
+    "lat": 43.071,
+    "lng": 141.34,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄南北線", "station": "北12条", "walkMin": 10 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "drum-logos",
+    "nameJa": "福岡DRUM LOGOS",
+    "nameZh": "福冈 DRUM LOGOS",
+    "prefecture": "fukuoka",
+    "city": "福岡市中央区",
+    "lat": 33.589,
+    "lng": 130.393,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "地下鉄空港線", "station": "赤坂", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "kanazawa-eight-hall",
+    "nameJa": "金沢EIGHT HALL",
+    "nameZh": "金泽 EIGHT HALL",
+    "prefecture": "ishikawa",
+    "city": "金沢市",
+    "lat": 36.578,
+    "lng": 136.648,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "北鉄巴士", "station": "香林坊", "walkMin": 5 }
+    ],
+    "hubAccess": [
+      { "from": "金沢駅", "route": "巴士→香林坊", "min": 10 }
+    ]
+  },
+  {
+    "id": "takamatsu-festhalle",
+    "nameJa": "高松festhalle",
+    "nameZh": "高松 festhalle",
+    "prefecture": "kagawa",
+    "city": "高松市",
+    "lat": 34.351,
+    "lng": 134.048,
+    "capacity": 800,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "ことでん琴平線", "station": "瓦町", "walkMin": 5 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "crazymama-kingdom",
+    "nameJa": "岡山CRAZYMAMA KINGDOM",
+    "nameZh": "冈山 CRAZYMAMA KINGDOM",
+    "prefecture": "okayama",
+    "city": "岡山市北区",
+    "lat": 34.662,
+    "lng": 133.918,
+    "capacity": 1000,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "JR各線", "station": "岡山", "walkMin": 15 }
+    ],
+    "hubAccess": []
+  },
+  {
+    "id": "hiroshima-quattro",
+    "nameJa": "広島CLUB QUATTRO",
+    "nameZh": "广岛 CLUB QUATTRO",
+    "prefecture": "hiroshima",
+    "city": "広島市中区",
+    "lat": 34.397,
+    "lng": 132.46,
+    "capacity": 700,
+    "tier": "livehouse",
+    "stations": [
+      { "line": "広島電鉄", "station": "八丁堀", "walkMin": 3 }
+    ],
+    "hubAccess": []
+  }
+]
