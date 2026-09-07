@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Search } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import FrontendSwitch from "@/components/frontend/FrontendSwitch";
 
 const NAV = [
   { href: "/", label: "发现" },
@@ -66,6 +67,7 @@ export default function Header() {
             </kbd>
           </button>
           <ThemeToggle />
+          <FrontendSwitch />
         </div>
       </div>
     </header>

@@ -111,12 +111,15 @@ async function assertNotCoveredByBottomNav(page, locator, label) {
   await locator.scrollIntoViewIfNeeded();
   const box = await locator.boundingBox();
   assert.ok(box, `${label} 没有可见布局框`);
-  const nav = await page.locator(".site-bottom-tabs").boundingBox();
+  const nav = await page.locator(".site-bottom-tabs, .paper-bottom-nav").boundingBox();
   if (nav) assert.ok(box.y + box.height <= nav.y + 1, `${label} 被底部导航遮挡`);
 }
 
 async function runFlow(browser, viewport, label) {
   const context = await browser.newContext({ viewport, acceptDownloads: true });
+  if (process.env.FRONTEND_TEST_MODE === "paper") {
+    await context.addInitScript(() => localStorage.setItem("ensei-frontend", "paper"));
+  }
   await context.route("**/*", async (route) => {
     const url = new URL(route.request().url());
     if (url.origin === new URL(baseUrl).origin || ["data:", "blob:"].includes(url.protocol)) await route.continue();

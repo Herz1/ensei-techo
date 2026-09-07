@@ -1,9 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { RAF_FALLBACK_SNIPPET } from "@/lib/raf-fallback";
-import Header from "@/components/layout/Header";
-import BottomTabs from "@/components/layout/BottomTabs";
-import Footer from "@/components/layout/Footer";
+import FrontendFrame from "@/components/frontend/FrontendFrame";
+import "./paper.css";
 import SearchModal from "@/components/search/SearchModal";
 
 export const metadata: Metadata = {
@@ -36,10 +35,7 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />
       </head>
       <body className="flex min-h-full flex-col bg-surface text-zinc-900 antialiased dark:bg-surface-dark dark:text-zinc-100">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <BottomTabs />
+        <FrontendFrame>{children}</FrontendFrame>
         <SearchModal />
       </body>
     </html>

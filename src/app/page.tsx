@@ -1,9 +1,9 @@
-import DiscoverClient from "@/components/discover/DiscoverClient";
+import HomeFrontends from "@/components/frontend/HomeFrontends";
 import { artistSummaries, eventSummaries, venueSummaries } from "@/data/client-data";
 
 export default function Home() {
   return (
-    <DiscoverClient
+    <HomeFrontends
       events={eventSummaries}
       artists={artistSummaries}
       venues={venueSummaries}
