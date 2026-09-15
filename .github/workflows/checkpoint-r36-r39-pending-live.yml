@@ -1,0 +1,72 @@
+name: Round 36-39 Pending Live Diagnostic
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-round36-39-pending-live
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pending-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Create pending-only ingest copy
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = 'scripts/ingest-events.mjs';
+          let source = fs.readFileSync(file, 'utf8');
+          const start = source.indexOf('  const adapters = [');
+          const marker = '  adapters.push(...await createPendingSourceAdapters(adapterContext));';
+          const markerIndex = source.indexOf(marker);
+          if (start < 0 || markerIndex < 0 || markerIndex <= start) throw new Error('adapter markers not found');
+          const before = source.slice(0, start);
+          const after = source.slice(markerIndex + marker.length);
+          source = `${before}  const adapters = [...await createPendingSourceAdapters(adapterContext)];${after}`;
+          fs.writeFileSync('scripts/ingest-events-pending-only.mjs', source);
+          NODE
+          node --check scripts/ingest-events-pending-only.mjs
+      - name: Run pending-only live ingest
+        run: node scripts/ingest-events-pending-only.mjs && node scripts/report-source-health.mjs
+      - name: Verify Round 36-39 source outcomes
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const ids = [
+            'aimyon-cosmic-official',
+            'generations-parallel-quest-official',
+            'fantastics-sunflower-official',
+            'ini-city-of-lights-official',
+            'vaundy-horo-official',
+          ];
+          const sources = report.sources ?? [];
+          const rows = ids.map((id) => sources.find((s) => s.id === id));
+          if (rows.some((row) => !row)) throw new Error('missing Round 36-39 source in report');
+          console.log(JSON.stringify(rows.map((s) => ({
+            id:s.id,status:s.status,recordCount:s.recordCount,reason:s.reason,
+            health:s.health ?? s.sourceHealth ?? null,
+          })), null, 2));
+          for (const s of rows) {
+            if (s.status === 'failed') throw new Error(`${s.id} failed`);
+            const health = s.health ?? s.sourceHealth;
+            if (health?.actionable === true) throw new Error(`${s.id} health actionable`);
+          }
+          const active = rows.filter((s) => s.status === 'ok');
+          if (!active.length) throw new Error('no active Round 36-39 source');
+          if (active.some((s) => Number(s.recordCount ?? 0) <= 0)) throw new Error('active Round 36-39 source returned zero records');
+          NODE
