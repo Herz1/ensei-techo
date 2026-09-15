@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { normalizeName } from "./event-ingest-lib.mjs";
 import { parseWorldMemorialHallMonth } from "./parsers/world-memorial-hall.mjs";
 
 const octoberUrl = "https://www.kobe-spokyo.jp/world-kobe/cal_event?ym=202610";
@@ -39,7 +40,7 @@ const known = new Set([
   "cutie street",
   "ko1keyz",
   "me:i",
-]);
+].map(normalizeName));
 
 const october = parseWorldMemorialHallMonth(octoberHtml, octoberUrl, {
   year: 2026,

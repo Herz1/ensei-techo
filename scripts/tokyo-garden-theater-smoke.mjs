@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { normalizeName } from "./event-ingest-lib.mjs";
 import {
   parseTokyoGardenTheaterDetail,
   parseTokyoGardenTheaterScheduleLinks,
@@ -96,7 +97,7 @@ const sung = parseTokyoGardenTheaterDetail(
   "https://www.shopping-sumitomo-rd.com/tokyo_garden_theater/schedule/5162/",
   {
     discoveryText: discovered.links[1].discoveryText,
-    knownArtistNames: new Set(["sung si kyung"]),
+    knownArtistNames: new Set(["sung si kyung"].map(normalizeName)),
   },
 );
 assert.equal(sung.ok, true);

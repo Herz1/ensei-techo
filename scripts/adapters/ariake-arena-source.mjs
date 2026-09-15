@@ -11,7 +11,7 @@ export function createAriakeArenaSourceAdapter(context) {
     type: "venue_official",
     role: "venue_schedule",
     parserIds: ["ariake-arena-event-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://ariake-arena.tokyo/event/",
     fetchedAt: context.generatedAt,
   };

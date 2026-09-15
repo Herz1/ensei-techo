@@ -24,7 +24,7 @@ export function createVaundyHoroSourceAdapter(context) {
     type: "artist_official",
     role: "artist_official",
     parserIds: ["vaundy-horo-japan-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://member.vaundy.jp/feature/ASIAARENATOUR_2026",
     fetchedAt: context.generatedAt,
   };

@@ -7,7 +7,6 @@ import {
 
 const TITLE = 'Vaundy ASIA ARENA TOUR 2026 "HORO"';
 const TITLE_RE = /Vaundy\s+ASIA\s+ARENA\s+TOUR\s+2026\s+[“"]HORO[”"]/iu;
-const DATE_RE = /(20\d{2})\s+(\d{1,2})[.\/]\s*(\d{1,2})\s+(?:mon|tue|wed|thu|fri|sat|sun)/iu;
 const TIME_RE = /(\d{1,2}:\d{2})\s*[／/]\s*(\d{1,2}:\d{2})/u;
 const PRICE_RE = /スタンディング\s*([0-9][0-9,]*)\s*円\s*[（(]税込[）)]/u;
 
@@ -27,8 +26,8 @@ function compact(value) {
   return value.normalize("NFKC").replace(/\s+/gu, "").toLowerCase();
 }
 
-function venueFromCells(cells) {
-  const joined = compact(cells.join(" "));
+function venueFromText(value) {
+  const joined = compact(value);
   if (
     joined.includes(compact("幕張メッセ 9・11ホール")) ||
     joined.includes(compact("Makuhari Messe Halls 9 & 11"))
@@ -52,34 +51,47 @@ function ticketTypesFrom(bodyText) {
   return [{ name: "スタンディング", priceJpy, taxIncluded: true, notes: [] }];
 }
 
+function parseDateFromRow($, row) {
+  const dateCell = $(row).find("td.date").first();
+  if (!dateCell.length) return undefined;
+  const dateText = cleanText(dateCell.text()).normalize("NFKC");
+  const explicitYear = cleanText(dateCell.find(".year").first().text()).normalize("NFKC");
+  const year = explicitYear.match(/20\d{2}/u)?.[0] ?? dateText.match(/20\d{2}/u)?.[0];
+  if (!year) return undefined;
+  const withoutYear = dateText.replace(year, "");
+  const monthDay = withoutYear.match(/(\d{1,2})\s*[.\/]\s*(\d{1,2})/u);
+  if (!monthDay) return undefined;
+  return toIsoDate(year, monthDay[1], monthDay[2]);
+}
+
 function parseJapanSchedule($) {
   const records = [];
-  for (const row of $("table tr").toArray()) {
-    const cells = $(row).find("th,td").toArray()
-      .map((cell) => cleanText($(cell).text()).normalize("NFKC"))
-      .filter(Boolean);
-    if (cells.length < 2) continue;
+  for (const table of $("table").toArray()) {
+    let currentVenue;
+    for (const row of $(table).find("tr").toArray()) {
+      const rowText = cleanText($(row).text()).normalize("NFKC");
+      if (!rowText || /CANCELLED|CANCELED|中止/iu.test(rowText)) continue;
 
-    const venueName = venueFromCells(cells);
-    if (!venueName) continue;
-    const rowText = cleanText(cells.join(" ")).normalize("NFKC");
-    const dateMatch = rowText.match(DATE_RE);
-    const timeMatch = rowText.match(TIME_RE);
-    if (!dateMatch || !timeMatch) continue;
+      const venueText = cleanText($(row).find("td.venue .venue_place, td.venue").first().text()).normalize("NFKC");
+      if (venueText) currentVenue = venueFromText(venueText);
+      if (!currentVenue) continue;
 
-    const date = toIsoDate(dateMatch[1], dateMatch[2], dateMatch[3]);
-    const openTime = normalizeTime(timeMatch[1]);
-    const startTime = normalizeTime(timeMatch[2]);
-    if (!date || !openTime || !startTime) continue;
+      const date = parseDateFromRow($, row);
+      const timeText = cleanText($(row).find("td.time").first().text()).normalize("NFKC");
+      const timeMatch = timeText.match(TIME_RE);
+      const openTime = timeMatch ? normalizeTime(timeMatch[1]) : undefined;
+      const startTime = timeMatch ? normalizeTime(timeMatch[2]) : undefined;
+      if (!date || !openTime || !startTime) continue;
 
-    records.push({
-      title: TITLE,
-      artistNames: ["Vaundy"],
-      venueName,
-      date,
-      openTime,
-      startTime,
-    });
+      records.push({
+        title: TITLE,
+        artistNames: ["Vaundy"],
+        venueName: currentVenue,
+        date,
+        openTime,
+        startTime,
+      });
+    }
   }
 
   return records.filter(
