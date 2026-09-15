@@ -1,0 +1,27 @@
+name: Regenerate client data
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-regenerate-client-data
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run prepare:client-data
+      - uses: actions/upload-artifact@v4
+        with:
+          name: regenerated-client-data
+          path: |
+            src/data/generated/event-summary-index.json
+            public/data/search-index.json
