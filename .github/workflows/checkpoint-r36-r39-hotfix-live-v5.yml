@@ -1,0 +1,85 @@
+name: Round 36-39 Hotfix Live Checkpoint v5
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-hotfix-live-v5
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hotfix-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run full checks
+        run: npm run check
+      - name: Create pending-only ingest copy
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const file = 'scripts/ingest-events.mjs';
+          let source = fs.readFileSync(file, 'utf8');
+          const start = source.indexOf('  const adapters = [');
+          const marker = '  adapters.push(...await createPendingSourceAdapters(adapterContext));';
+          const markerIndex = source.indexOf(marker);
+          if (start < 0 || markerIndex < 0 || markerIndex <= start) throw new Error('adapter markers not found');
+          const before = source.slice(0, start);
+          const after = source.slice(markerIndex + marker.length);
+          source = `${before}  const adapters = [...await createPendingSourceAdapters(adapterContext)];${after}`;
+          fs.writeFileSync('scripts/ingest-events-pending-only.mjs', source);
+          NODE
+          node --check scripts/ingest-events-pending-only.mjs
+      - name: Run pending-only live ingest
+        run: node scripts/ingest-events-pending-only.mjs && node scripts/report-source-health.mjs
+      - name: Verify live outcomes
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const ids = [
+            'aimyon-tour-2027-official',
+            'generations-parallel-quest-official',
+            'fantastics-sunflower-official',
+            'ini-city-of-lights-official',
+            'vaundy-horo-official',
+          ];
+          const rows = ids.map((id) => report.sources?.find((s) => s.id === id));
+          const summary = rows.map((s, i) => s ? ({
+            id:s.id,status:s.status,recordCount:s.recordCount,reason:s.reason,
+            health:s.health ?? s.sourceHealth ?? null,
+          }) : ({id:ids[i],missing:true}));
+          fs.writeFileSync('hotfix-live-summary.json', JSON.stringify(summary,null,2)+'\n');
+          console.log(JSON.stringify(summary,null,2));
+          if (rows.some((row) => !row)) throw new Error('missing source in report');
+          for (const s of rows) {
+            if (s.status === 'failed') throw new Error(`${s.id} failed`);
+            const health = s.health ?? s.sourceHealth;
+            if (health?.actionable === true) throw new Error(`${s.id} health actionable`);
+            if (s.status === 'ok' && Number(s.recordCount ?? 0) <= 0) throw new Error(`${s.id} active with zero records`);
+          }
+          NODE
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-hotfix-live-v5-evidence
+          path: |
+            hotfix-live-summary.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+            src/data/ingest/raw
