@@ -11,6 +11,7 @@ import { createKArenaSourceAdapter } from "./adapters/k-arena-source.mjs";
 import { createOsakaJoHallSourceAdapter } from "./adapters/osaka-johall-source.mjs";
 import { createSaitamaArenaSourceAdapter } from "./adapters/saitama-arena-source.mjs";
 import { createBudokanSogoSourceAdapter } from "./adapters/budokan-sogo-source.mjs";
+import { createTokyoDomeSourceAdapter } from "./adapters/tokyo-dome-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -320,6 +321,7 @@ async function main() {
     createOsakaJoHallSourceAdapter(adapterContext),
     createSaitamaArenaSourceAdapter(adapterContext),
     createBudokanSogoSourceAdapter(adapterContext),
+    createTokyoDomeSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
