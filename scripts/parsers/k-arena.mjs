@@ -36,6 +36,32 @@ function sectionText(text, label) {
   return cleanText(match?.[1]);
 }
 
+function domSectionText($, label) {
+  const headings = $("h1,h2,h3,h4,h5,h6,dt").toArray();
+  const heading = headings.find((element) => cleanText($(element).text()) === label);
+  if (!heading) return "";
+
+  if (heading.tagName?.toLowerCase() === "dt") {
+    return cleanText($(heading).next("dd").first().text());
+  }
+
+  const parts = [];
+  let sibling = $(heading).next();
+  while (sibling.length) {
+    if (/^h[1-6]$/iu.test(sibling[0]?.tagName ?? "")) break;
+    const value = cleanText(sibling.text());
+    if (value) parts.push(value);
+    sibling = sibling.next();
+  }
+  if (parts.length) return cleanText(parts.join(" "));
+
+  const container = $(heading).closest("section,article,li,div").first();
+  if (!container.length) return "";
+  const clone = container.clone();
+  clone.find("h1,h2,h3,h4,h5,h6,dt").first().remove();
+  return cleanText(clone.text());
+}
+
 function normalizeTicketCurrency(text) {
   return String(text ?? "").replace(/([0-9][0-9,]*)\s*円/gu, "¥$1");
 }
@@ -146,10 +172,10 @@ export function parseKArenaDetail(html, sourceUrl) {
     };
   }
 
-  const artistText = sectionText(bodyText, "ARTIST");
-  const openStartText = sectionText(bodyText, "OPEN/START");
-  const ticketText = sectionText(bodyText, "TICKETS");
-  const notesText = sectionText(bodyText, "NOTES");
+  const artistText = domSectionText($, "ARTIST") || sectionText(bodyText, "ARTIST");
+  const openStartText = domSectionText($, "OPEN/START") || sectionText(bodyText, "OPEN/START");
+  const ticketText = domSectionText($, "TICKETS") || sectionText(bodyText, "TICKETS");
+  const notesText = domSectionText($, "NOTES") || sectionText(bodyText, "NOTES");
   const times = openStartText.match(
     /OPEN\s*(\d{1,2}:\d{2})\s*(?:\/|／)?\s*START\s*(\d{1,2}:\d{2})/iu,
   );
