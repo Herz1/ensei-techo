@@ -14,6 +14,7 @@ import { createBudokanSogoSourceAdapter } from "./adapters/budokan-sogo-source.m
 import { createTokyoDomeSourceAdapter } from "./adapters/tokyo-dome-source.mjs";
 import { createIgArenaSourceAdapter } from "./adapters/ig-arena-source.mjs";
 import { createPayPayDomeSourceAdapter } from "./adapters/paypay-dome-source.mjs";
+import { createMarineMesseASourceAdapter } from "./adapters/marine-messe-a-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -326,6 +327,7 @@ async function main() {
     createTokyoDomeSourceAdapter(adapterContext),
     createIgArenaSourceAdapter(adapterContext),
     createPayPayDomeSourceAdapter(adapterContext),
+    createMarineMesseASourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
