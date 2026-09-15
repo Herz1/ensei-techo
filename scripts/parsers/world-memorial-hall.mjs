@@ -6,7 +6,8 @@ import {
   toIsoDate,
 } from "../event-ingest-lib.mjs";
 
-const DATE_TOKEN = /(\d{1,2})月(\d{1,2})日[（(][^）)]*[）)]/gu;
+const DATE_TOKEN_SINGLE = /(\d{1,2})月(\d{1,2})日[（(][^）)]*[）)]/u;
+const DATE_TOKEN_GLOBAL = /(\d{1,2})月(\d{1,2})日[（(][^）)]*[）)]/gu;
 const NON_MUSIC = /(ディズニー(?:・|オン・アイス)|DESTRUCTION\s+in\s+KOBE|プロレス|格闘|ボクシング|ETHICS\s+FAN\s+MEETING|実践倫理|展示会|見本市|全国大会|研究集会|式典)/iu;
 const MUSIC_SIGNAL = /(?:\bLIVE\b|\bTOUR\b|\bCONCERT\b|\bARENA\b|\bMUSIC\b|\bFES(?:TIVAL)?\b|\bCOLORFUL\s+LIVE\b|ライブ|コンサート|歌謡|音楽|ツアー)/iu;
 
@@ -27,7 +28,9 @@ function allowedMonthKeys(months) {
 }
 
 function eventContainers($) {
-  const nodes = $("li").toArray().filter((element) => DATE_TOKEN.test(cleanText($(element).text())));
+  const nodes = $("li").toArray().filter((element) =>
+    DATE_TOKEN_SINGLE.test(cleanText($(element).text())),
+  );
   const set = new Set(nodes);
   return nodes.filter((element) =>
     !$(element).find("li").toArray().some((child) => child !== element && set.has(child)),
@@ -35,9 +38,9 @@ function eventContainers($) {
 }
 
 function titleFrom(text) {
-  const match = text.match(DATE_TOKEN);
+  const match = DATE_TOKEN_SINGLE.exec(text);
   if (!match) return "";
-  return cleanText(text.slice(0, match.index ?? 0));
+  return cleanText(text.slice(0, match.index));
 }
 
 function pageYearFor(pageYear, pageMonth, eventMonth) {
@@ -50,7 +53,7 @@ function pageYearFor(pageYear, pageMonth, eventMonth) {
 }
 
 function performancesFrom(text, pageYear, pageMonth, allowed) {
-  const matches = [...text.matchAll(DATE_TOKEN)];
+  const matches = [...text.matchAll(DATE_TOKEN_GLOBAL)];
   const records = [];
   for (let index = 0; index < matches.length; index += 1) {
     const match = matches[index];
