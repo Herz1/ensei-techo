@@ -57,7 +57,7 @@ export function createKyoceraDomeSourceAdapter(context) {
             ];
             if (event.officialEventUrl && event.officialEventUrl !== url) {
               sourceChain.push({
-                role: "venue_event_detail",
+                role: "venue_detail",
                 sourceId: definition.id,
                 url: event.officialEventUrl,
                 fetchStatus: "not_checked",
