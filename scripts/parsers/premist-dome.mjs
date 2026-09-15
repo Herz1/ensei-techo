@@ -60,11 +60,11 @@ function eventContainers($, sourceUrl) {
 }
 
 function categoryFrom(text) {
-  if (/\bコンサート\b/u.test(text)) return "コンサート";
-  if (/\bイベント\b/u.test(text)) return "イベント";
-  if (/\bサッカー\b/u.test(text)) return "サッカー";
-  if (/\b野球\b/u.test(text)) return "野球";
-  if (/\bラグビー\b/u.test(text)) return "ラグビー";
+  if (text.includes("コンサート")) return "コンサート";
+  if (text.includes("イベント")) return "イベント";
+  if (text.includes("サッカー")) return "サッカー";
+  if (text.includes("野球")) return "野球";
+  if (text.includes("ラグビー")) return "ラグビー";
   return "other";
 }
 
