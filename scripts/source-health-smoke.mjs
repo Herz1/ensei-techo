@@ -21,8 +21,13 @@ function result(id, recordCount, status = "ok", extra = {}) {
   };
 }
 
-function entry(sourceId, fetchStatus, parserStatus) {
-  return { sourceId, fetchStatus, parserStatus };
+function entry(sourceId, fetchStatus, parserStatus, key = "main") {
+  return {
+    sourceId,
+    fetchStatus,
+    parserStatus,
+    requestedUrl: `https://example.test/${sourceId}/${key}`,
+  };
 }
 
 const previousSnapshot = {
@@ -46,6 +51,7 @@ const previousSnapshot = {
 
 const sourceResults = [
   result("healthy-source", 12),
+  result("retry-source", 4),
   result("kuroko-kun-hall-official", 0),
   result("unexpected-zero-source", 0),
   result("parser-source", 0),
@@ -58,12 +64,14 @@ const sourceResults = [
 
 const rawEntries = [
   entry("healthy-source", "success", "success"),
+  entry("retry-source", "http_error", "success"),
+  entry("retry-source", "success", "success"),
   entry("kuroko-kun-hall-official", "success", "success"),
   entry("unexpected-zero-source", "cache_reused", "success"),
   entry("parser-source", "success", "parser_failed"),
   entry("fetch-source", "page_fetch_failed", "not_run"),
-  entry("partial-source", "success", "success"),
-  entry("partial-source", "page_fetch_failed", "not_run"),
+  entry("partial-source", "success", "success", "schedule"),
+  entry("partial-source", "page_fetch_failed", "not_run", "detail"),
   entry("drop-source", "success", "success"),
   entry("repeat-zero-source", "success", "success"),
 ];
@@ -77,6 +85,10 @@ const health = attachSourceHealth({
 
 const byId = new Map(health.sources.map((source) => [source.id, source]));
 assert.equal(byId.get("healthy-source").health.state, "healthy");
+assert.equal(byId.get("retry-source").health.state, "healthy");
+assert.equal(byId.get("retry-source").health.evidence.requestCount, 1);
+assert.equal(byId.get("retry-source").health.evidence.attemptCount, 2);
+assert.equal(byId.get("retry-source").health.evidence.fetchFailures, 0);
 assert.equal(byId.get("kuroko-kun-hall-official").health.state, "expected_zero");
 assert.equal(byId.get("kuroko-kun-hall-official").health.actionable, false);
 assert.equal(byId.get("unexpected-zero-source").health.state, "unexpected_zero");
@@ -87,7 +99,7 @@ assert.equal(byId.get("drop-source").health.state, "degraded");
 assert.equal(byId.get("drop-source").health.recordCountRatio, 0.2);
 assert.equal(byId.get("repeat-zero-source").health.consecutiveAnomalies, 3);
 assert.equal(byId.get("ticketmaster-jp").health.state, "skipped");
-assert.equal(health.summary.total, 9);
+assert.equal(health.summary.total, 10);
 assert.equal(health.summary.actionable, 6);
 assert.deepEqual(health.collectionWindow.months, [
   "2026-09",
@@ -104,7 +116,7 @@ const snapshot = buildSourceHealthSnapshot({
   sources: health.sources,
 });
 assert.equal(snapshot.schemaVersion, 1);
-assert.equal(snapshot.sources.length, 9);
+assert.equal(snapshot.sources.length, 10);
 assert.equal(snapshot.sources[0].health.state, "healthy");
 
 const shiftedWindow = attachSourceHealth({
