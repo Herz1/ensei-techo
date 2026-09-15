@@ -37,7 +37,7 @@ function parseArtistNames(eventText, title) {
   const remainder = cleanText(eventText.replace(title, ""));
   const matches = [...remainder.matchAll(/[（(]([^()（）]{2,160})[）)]/gu)];
   for (const match of matches) {
-    const value = cleanText(match[1]);
+    const value = cleanText(match[1]).replace(/\s*(?:ほか|他)\s*$/u, "");
     if (!value || /駐車場|混雑|部$/u.test(value)) continue;
     const names = splitArtistNames(value);
     if (names.length) return names;
