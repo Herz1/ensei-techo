@@ -81,6 +81,7 @@ function candidateArtistPrefix(title) {
     /^(.+?)\s+DOME\s+TOUR\b/iu,
     /^(.+?)\s+LIVE\s+TOUR\b/iu,
     /^(.+?)\s+CONCERT\s+TOUR\b/iu,
+    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
     /^(.+?)\s+TOUR\s+20\d{2}\b/iu,
   ];
   for (const rule of rules) {
