@@ -31,7 +31,7 @@ function isEventDetailUrl(value, sourceUrl) {
     const source = new URL(sourceUrl);
     if (url.hostname !== source.hostname) return false;
     if (!url.pathname.startsWith("/schedule/")) return false;
-    if (/^\/schedule\/(?:\d{4}\/\d{2}\/?|?)$/u.test(url.pathname)) return false;
+    if (/^\/schedule\/(?:\d{4}\/\d{2}\/?|)$/u.test(url.pathname)) return false;
     return /^\/schedule\/[^/]+\/?$/u.test(url.pathname);
   } catch {
     return false;
@@ -242,7 +242,7 @@ function showsFromSchedule(scheduleText) {
 }
 
 function artistNamesFromTitle(value) {
-  let title = cleanText(value)
+  const title = cleanText(value)
     .replace(/^\d{4}\s+/u, "")
     .replace(/^FANCLUB\s+presents\s+/iu, "");
   const patterns = [
