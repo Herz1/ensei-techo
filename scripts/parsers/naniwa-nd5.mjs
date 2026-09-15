@@ -2,7 +2,7 @@ import * as cheerio from "cheerio";
 import { cleanText, normalizeTime, toIsoDate } from "../event-ingest-lib.mjs";
 
 const TITLE = "なにわ男子 LIVE TOUR 2026 「ND⁵」";
-const TITLE_RE = /なにわ男子\s+LIVE\s+TOUR\s+2026\s*[「\"]?ND5[」\"]?/iu;
+const TITLE_RE = /なにわ男子\s+LIVE\s+TOUR\s+2026\s*[「"]?ND5[」"]?/iu;
 const DATE_RE = /(20\d{2})[.\/](\d{1,2})[.\/](\d{1,2})[（(][^）)]*[）)]/gu;
 const TIME_RE = /\d{1,2}:\d{2}/gu;
 const MEMBER_PRICE_RE = /(?:ファミリークラブ会員チケット|Family\s+Club\s+Member\s+Ticket)\s*([0-9][0-9,]*)\s*(?:円|yen)\s*[（(](?:税込|tax\s+included)[）)]/iu;
