@@ -17,18 +17,25 @@ async function readJson(file, fallback) {
 }
 
 async function main() {
-  const [batch, reviews, existingVenues] = await Promise.all([
+  const [batch, reviews, existingVenues, baseVenues] = await Promise.all([
     readJson(path.join(ingestDir, "entity-review-batch.json")),
     readJson(path.join(ingestDir, "venue-reviews.json")),
     readJson(path.join(dataDir, "venues-ingested.json"), []),
+    readJson(path.join(dataDir, "venues.json"), []),
   ]);
+  const baseVenueIds = new Set(baseVenues.map((venue) => venue.id));
+  const retainedExisting = existingVenues.filter(
+    (venue) => !baseVenueIds.has(venue.id),
+  );
+  const removedCanonicalDuplicates = existingVenues.length - retainedExisting.length;
   const approved = new Map(
     (reviews.approved ?? []).map((item) => [item.id, item.evidenceHash]),
   );
   const venues = batch.venues
     .filter((candidate) =>
       candidate.decision === "approve" &&
-      approved.get(candidate.id) === candidate.evidenceHash,
+      approved.get(candidate.id) === candidate.evidenceHash &&
+      !baseVenueIds.has(candidate.id),
     )
     .map((candidate) => ({
       id: candidate.id,
@@ -57,12 +64,12 @@ async function main() {
       },
     }));
 
-  if (!venues.length) {
+  if (!venues.length && removedCanonicalDuplicates === 0) {
     console.log("没有新的已批准最小场馆实体；保留现有 venues-ingested.json");
     return;
   }
 
-  const merged = new Map(existingVenues.map((venue) => [venue.id, venue]));
+  const merged = new Map(retainedExisting.map((venue) => [venue.id, venue]));
   for (const venue of venues) merged.set(venue.id, venue);
   const output = [...merged.values()];
 
@@ -72,7 +79,7 @@ async function main() {
     "utf8",
   );
   console.log(
-    `最小场馆实体已发布：新增/更新 ${venues.length} 个，合计保留 ${output.length} 个`,
+    `最小场馆实体已发布：新增/更新 ${venues.length} 个，清理 canonical 重复 ${removedCanonicalDuplicates} 个，合计保留 ${output.length} 个`,
   );
 }
 

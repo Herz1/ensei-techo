@@ -49,7 +49,9 @@ function fallbackBlocks(text) {
 function titleFromBlock(text) {
   const eventIndex = text.indexOf("イベント");
   if (eventIndex < 0) return "";
-  const tail = cleanText(text.slice(eventIndex + "イベント".length).replace(/^[:：|｜]\s*/u, ""));
+  const tail = cleanText(
+    text.slice(eventIndex + "イベント".length).replace(/^\s*[:：|｜]\s*/u, ""),
+  );
   const stop = ["開演時間", "開催時間", "お問い合わせ"]
     .map((marker) => tail.indexOf(marker))
     .filter((index) => index >= 0)
@@ -57,10 +59,36 @@ function titleFromBlock(text) {
   return cleanText(stop === undefined ? tail : tail.slice(0, stop));
 }
 
-function parseLabelTime(text, label) {
-  const before = text.match(new RegExp(`(\\d{1,2}:\\d{2})\\s*${label}`, "u"))?.[1];
-  const after = text.match(new RegExp(`${label}\\s*[／/]?\\s*(\\d{1,2}:\\d{2})`, "u"))?.[1];
-  return normalizeTime(before ?? after);
+function parseEventTimes(text) {
+  const beforeLabels = text.match(
+    /(\d{1,2}:\d{2})\s*開場\s*(\d{1,2}:\d{2})\s*開演/u,
+  );
+  if (beforeLabels) {
+    return {
+      openTime: normalizeTime(beforeLabels[1]),
+      startTime: normalizeTime(beforeLabels[2]),
+    };
+  }
+
+  const afterLabels = text.match(
+    /開場\s*[／/]?\s*(\d{1,2}:\d{2})\s*開演\s*[／/]?\s*(\d{1,2}:\d{2})/u,
+  );
+  if (afterLabels) {
+    return {
+      openTime: normalizeTime(afterLabels[1]),
+      startTime: normalizeTime(afterLabels[2]),
+    };
+  }
+
+  const openTime = normalizeTime(
+    text.match(/開場\s*[／/]?\s*(\d{1,2}:\d{2})/u)?.[1] ??
+      text.match(/(\d{1,2}:\d{2})\s*開場/u)?.[1],
+  );
+  const startTime = normalizeTime(
+    text.match(/開演\s*[／/]?\s*(\d{1,2}:\d{2})/u)?.[1] ??
+      text.match(/(\d{1,2}:\d{2})\s*開演/u)?.[1],
+  );
+  return { openTime, startTime };
 }
 
 function isMusicEvent(title, knownArtistNames = new Set()) {
@@ -75,6 +103,7 @@ function isMusicEvent(title, knownArtistNames = new Set()) {
 
 function candidateArtistPrefix(title) {
   const strongRules = [
+    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
     /^(.+?)\s+DOME\s+TOUR\b/iu,
     /^(.+?)\s+LIVE\s+TOUR\b/iu,
     /^(.+?)\s+CONCERT\s+TOUR\b/iu,
@@ -87,7 +116,6 @@ function candidateArtistPrefix(title) {
   const weakRules = [
     /^(.+?)\s+PRESENTS\b/iu,
     /^(.+?)\s+(?:\d{4}\s+)?WORLD\s+TOUR\b/iu,
-    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
   ];
   for (const rule of weakRules) {
     const match = title.match(rule);
@@ -156,11 +184,12 @@ function parseBlock(text, { $, element, sourceUrl, allowedMonths, knownArtistNam
   const title = titleFromBlock(text);
   if (!isMusicEvent(title, knownArtistNames)) return null;
   const eventUrl = officialEventUrl($, element, sourceUrl, title);
+  const { openTime, startTime } = parseEventTimes(text);
   return {
     title,
     date,
-    openTime: parseLabelTime(text, "開場"),
-    startTime: parseLabelTime(text, "開演"),
+    openTime,
+    startTime,
     artistNames: artistNamesFromTitle(title, knownArtistNames, eventUrl),
     officialEventUrl: eventUrl,
   };
