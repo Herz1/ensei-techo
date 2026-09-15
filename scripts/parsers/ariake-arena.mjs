@@ -215,12 +215,13 @@ function contextualExternalUrl($, element, sourceUrl, marker) {
     if (!url || new URL(url).hostname === sourceHost || new URL(url).hostname.endsWith("ariake-arena.tokyo")) {
       continue;
     }
-    const contexts = [anchor, ...$(anchor).parents().toArray()];
-    const matched = contexts.find((node) => {
-      const value = cleanText($(node).text());
-      return value.includes(marker) && value.length <= 320;
-    });
-    if (matched) return url;
+
+    const local = $(anchor).closest("p,li,tr,dd,td").first();
+    let context = cleanText(local.text());
+    if (local.is("dd")) {
+      context = cleanText(`${local.prevAll("dt").first().text()} ${context}`);
+    }
+    if (context.includes(marker)) return url;
   }
   return undefined;
 }
