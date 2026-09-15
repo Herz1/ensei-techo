@@ -24,9 +24,9 @@ export async function createPendingSourceAdapters(context) {
   const latest = await latestPendingRegistry();
   if (!latest) return [];
 
-  const module = await import(`./${latest.filename}`);
+  const registryModule = await import(`./${latest.filename}`);
   const factoryName = `createPendingSourceAdaptersR${latest.round}`;
-  const factory = module[factoryName];
+  const factory = registryModule[factoryName];
   if (typeof factory !== "function") {
     throw new Error(
       `最新 pending registry ${latest.filename} 缺少导出 ${factoryName}`,
