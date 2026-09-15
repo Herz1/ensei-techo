@@ -1,0 +1,38 @@
+name: Commit regenerated client data
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-regenerate-client-data
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Checkout hotfix branch
+        run: |
+          git fetch origin fix/checkpoint-r36-r39-live-parser-drift
+          git checkout -B hotfix-client-data origin/fix/checkpoint-r36-r39-live-parser-drift
+      - run: npm ci
+      - run: npm run prepare:client-data
+      - name: Commit generated snapshots only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/generated/event-summary-index.json public/data/search-index.json
+          if git diff --cached --quiet; then
+            echo "No generated client-data changes"
+            exit 0
+          fi
+          git commit -m "chore: refresh client data after venue cleanup"
+          git push origin HEAD:fix/checkpoint-r36-r39-live-parser-drift
