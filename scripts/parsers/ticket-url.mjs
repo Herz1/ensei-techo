@@ -10,6 +10,7 @@ const TICKET_HOSTS = [
   "livepocket.jp",
   "zaiko.io",
   "cnplayguide.com",
+  "ig-arena.venue-ticket.jp",
 ];
 
 export function isSpecificTicketUrl(value) {
