@@ -14,7 +14,7 @@ const VENUE_IDS = new Map([
   ["GLION ARENA KOBE", "glion-arena-kobe"],
   ["広島グリーンアリーナ", "hiroshima-green-arena"],
   ["Aichi Sky Expo(愛知県国際展示場) ホールA", "aichi-sky-expo-hall-a"],
-  ["函館サーモン・まるなまアリーナ(函館アリーナ)", "hakodate-arena"],
+  ["函館サーモン・まるなまアリーナ（函館アリーナ）", "hakodate-arena"],
   ["横浜アリーナ", "yokohama-arena"],
 ]);
 
