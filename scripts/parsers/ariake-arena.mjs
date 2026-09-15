@@ -170,7 +170,9 @@ function performanceRecords(text, monthYears) {
 }
 
 function parseTicketTypes(text) {
-  const priceText = segmentBetween(text, "料金", ["公式サイト"])
+  const rawPriceText = segmentBetween(text, "料金", ["公式サイト"]);
+  const taxIncluded = /税込/u.test(rawPriceText) ? true : null;
+  const priceText = rawPriceText
     .replace(/[（(]税込[)）]/gu, "|")
     .replace(/[（(]税込み[)）]/gu, "|");
   const chunks = priceText.split("|").map(cleanText).filter(Boolean);
@@ -189,7 +191,7 @@ function parseTicketTypes(text) {
     ticketTypes.push({
       name,
       priceJpy,
-      taxIncluded: true,
+      taxIncluded,
       notes: [],
     });
   }
