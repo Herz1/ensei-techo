@@ -19,6 +19,7 @@ import { createVantelinDomeSourceAdapter } from "./adapters/vantelin-dome-source
 import { createKyoceraDomeSourceAdapter } from "./adapters/kyocera-dome-source.mjs";
 import { createAriakeArenaSourceAdapter } from "./adapters/ariake-arena-source.mjs";
 import { createTokyoGardenTheaterSourceAdapter } from "./adapters/tokyo-garden-theater-source.mjs";
+import { createKurokoKunHallSourceAdapter } from "./adapters/kuroko-kun-hall-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -336,6 +337,7 @@ async function main() {
     createKyoceraDomeSourceAdapter(adapterContext),
     createAriakeArenaSourceAdapter(adapterContext),
     createTokyoGardenTheaterSourceAdapter(adapterContext),
+    createKurokoKunHallSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
