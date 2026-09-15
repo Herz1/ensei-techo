@@ -1,0 +1,38 @@
+name: Round 36-39 Check Sweep
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-check-sweep
+
+permissions:
+  contents: read
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Run every check component and collect failures
+        run: |
+          node <<'NODE'
+          const { readFileSync } = require('node:fs');
+          const { spawnSync } = require('node:child_process');
+          const pkg = JSON.parse(readFileSync('package.json','utf8'));
+          const commands = pkg.scripts.check.split(/\s*&&\s*/u).map((s) => s.trim()).filter(Boolean);
+          const failures = [];
+          for (const command of commands) {
+            console.log(`\n===== ${command} =====`);
+            const result = spawnSync(command, { shell: true, stdio: 'inherit', env: process.env });
+            if (result.status !== 0) failures.push({ command, status: result.status, signal: result.signal });
+          }
+          console.log('\n===== CHECK SWEEP SUMMARY =====');
+          console.log(JSON.stringify({ total: commands.length, failures }, null, 2));
+          if (failures.length) process.exitCode = 1;
+          NODE
