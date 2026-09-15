@@ -1,0 +1,86 @@
+name: Round 36-39 Final Gate
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-final-gate
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Full project checks
+        run: npm run check
+      - name: Production build
+        run: npm run build
+
+  cumulative-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Full force-refresh ingest and Source Health
+        id: ingest
+        continue-on-error: true
+        run: npm run ingest:events
+      - name: Audit cumulative report
+        id: audit
+        if: always()
+        continue-on-error: true
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const sources = report.sources ?? [];
+          const failed = sources.filter((s) => s.status === 'failed');
+          const actionable = sources.filter((s) => (s.health ?? s.sourceHealth)?.actionable === true);
+          const zeroOk = sources.filter((s) => s.status === 'ok' && Number(s.recordCount ?? 0) === 0);
+          const summary = {
+            sourceCount: sources.length,
+            failed: failed.map((s) => ({ id:s.id, reason:s.reason })),
+            actionable: actionable.map((s) => ({ id:s.id, health:s.health ?? s.sourceHealth })),
+            zeroOk: zeroOk.map((s) => ({ id:s.id, health:s.health ?? s.sourceHealth })),
+            sourceHealthSummary: report.sourceHealthSummary ?? null,
+          };
+          fs.writeFileSync('cumulative-audit.json', JSON.stringify(summary,null,2)+'\n');
+          console.log(JSON.stringify(summary,null,2));
+          if (failed.length) throw new Error(`${failed.length} source(s) failed`);
+          if (actionable.length) throw new Error(`${actionable.length} source(s) have actionable Source Health`);
+          NODE
+      - name: Upload cumulative evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-final-cumulative-evidence
+          path: |
+            cumulative-audit.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+            src/data/ingest/raw/
+      - name: Final live gate
+        if: always()
+        run: |
+          test "${{ steps.ingest.outcome }}" = "success"
+          test "${{ steps.audit.outcome }}" = "success"
