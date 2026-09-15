@@ -4,6 +4,8 @@ import {
 } from "../event-ingest-lib.mjs";
 import { parseSuperBeaverArenaTour } from "../parsers/super-beaver-arena.mjs";
 
+const ACTIVE_MONTHS = new Set(["2027-01", "2027-02", "2027-03"]);
+
 const VENUE_IDS = new Map([
   ["Kアリーナ横浜", "k-arena-yokohama"],
   ["グランメッセ熊本", "grandmesse-kumamoto"],
@@ -12,6 +14,12 @@ const VENUE_IDS = new Map([
   ["朱鷺メッセ", "toki-messe"],
   ["三重県営サンアリーナ", "mie-sun-arena"],
 ]);
+
+function collectionOverlapsArenaTour(months) {
+  return months.some(({ year, month }) =>
+    ACTIVE_MONTHS.has(`${Number(year)}-${String(Number(month)).padStart(2, "0")}`),
+  );
+}
 
 export function createSuperBeaverArenaSourceAdapter(context) {
   const definition = {
@@ -28,6 +36,14 @@ export function createSuperBeaverArenaSourceAdapter(context) {
   return {
     definition,
     async collect({ fetchText, recordParserResult, getRawEvidence }) {
+      if (!collectionOverlapsArenaTour(context.months)) {
+        return {
+          skipped: true,
+          reason: "目标 collection window 不覆盖 SUPER BEAVER Arena Tour 的 2027-01 至 2027-03",
+          records: [],
+        };
+      }
+
       const html = await fetchText(definition.url, {
         evidenceRole: "artist_official",
       });
