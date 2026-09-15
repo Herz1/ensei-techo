@@ -1,0 +1,145 @@
+name: Round 36-39 Hotfix Final Checkpoint
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-hotfix-final
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Full project checks
+        run: npm run check
+      - name: Production build
+        run: npm run build
+
+  pending-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Create pending-only ingest copy
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          let source = fs.readFileSync('scripts/ingest-events.mjs', 'utf8');
+          const start = source.indexOf('  const adapters = [');
+          const marker = '  adapters.push(...await createPendingSourceAdapters(adapterContext));';
+          const markerIndex = source.indexOf(marker);
+          if (start < 0 || markerIndex < 0 || markerIndex <= start) throw new Error('adapter markers not found');
+          const before = source.slice(0, start);
+          const after = source.slice(markerIndex + marker.length);
+          source = `${before}  const adapters = [...await createPendingSourceAdapters(adapterContext)];${after}`;
+          fs.writeFileSync('scripts/ingest-events-pending-only.mjs', source);
+          NODE
+          node --check scripts/ingest-events-pending-only.mjs
+      - name: Live ingest Round 36-39 sources
+        run: node scripts/ingest-events-pending-only.mjs && node scripts/report-source-health.mjs
+      - name: Verify Round 36-39 source health
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const activeIds = [
+            'generations-parallel-quest-official',
+            'fantastics-sunflower-official',
+            'ini-city-of-lights-official',
+            'vaundy-horo-official',
+          ];
+          const aimyonId = 'aimyon-tour-2027-official';
+          const byId = new Map((report.sources ?? []).map((s) => [s.id, s]));
+          const aimyon = byId.get(aimyonId);
+          if (!aimyon || aimyon.status !== 'skipped') throw new Error('AIMYON should be skipped outside 2027 tour window');
+          const summary = [];
+          for (const id of activeIds) {
+            const s = byId.get(id);
+            if (!s) throw new Error(`missing source ${id}`);
+            const health = s.health ?? s.sourceHealth;
+            summary.push({ id, status:s.status, recordCount:s.recordCount, health });
+            if (s.status !== 'ok') throw new Error(`${id} status=${s.status}`);
+            if (Number(s.recordCount ?? 0) <= 0) throw new Error(`${id} returned zero records`);
+            if (health?.actionable === true) throw new Error(`${id} health actionable`);
+          }
+          console.log(JSON.stringify({ aimyon:{status:aimyon.status,reason:aimyon.reason}, active:summary }, null, 2));
+          NODE
+      - name: Upload pending live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-hotfix-pending-live
+          path: |
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+            src/data/ingest/raw/
+
+  cumulative-live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Full cumulative live ingest
+        run: npm run ingest:events
+      - name: Audit cumulative report and Source Health
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const sources = report.sources ?? [];
+          const failed = sources.filter((s) => s.status === 'failed');
+          const actionable = sources.filter((s) => (s.health ?? s.sourceHealth)?.actionable === true);
+          const zeroOk = sources.filter((s) => s.status === 'ok' && Number(s.recordCount ?? 0) === 0);
+          const summary = {
+            sourceCount: sources.length,
+            failed: failed.map((s) => ({id:s.id,reason:s.reason})),
+            actionable: actionable.map((s) => ({id:s.id,health:s.health ?? s.sourceHealth})),
+            zeroOk: zeroOk.map((s) => ({id:s.id,health:s.health ?? s.sourceHealth})),
+            sourceHealthSummary: report.sourceHealthSummary ?? null,
+          };
+          console.log(JSON.stringify(summary, null, 2));
+          fs.writeFileSync('cumulative-audit.json', JSON.stringify(summary,null,2)+'\n');
+          if (failed.length) throw new Error(`${failed.length} source(s) failed`);
+          if (actionable.length) throw new Error(`${actionable.length} source(s) have actionable health`);
+          NODE
+      - name: Upload cumulative live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-hotfix-cumulative-live
+          path: |
+            cumulative-audit.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
