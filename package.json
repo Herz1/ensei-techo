@@ -17,6 +17,7 @@
     "validate:data": "node scripts/validate-data.mjs",
     "test:map-runtime": "node scripts/map-runtime-smoke.mjs",
     "test:event-ingest": "node scripts/event-ingest-smoke.mjs",
+    "test:source-health": "node scripts/source-health-smoke.mjs",
     "test:k-arena-source": "node scripts/k-arena-smoke.mjs",
     "test:osaka-johall-source": "node scripts/osaka-johall-smoke.mjs",
     "test:saitama-arena-source": "node scripts/saitama-arena-smoke.mjs",
@@ -44,7 +45,7 @@
     "measure:performance": "node scripts/measure-client-performance.mjs",
     "compare:performance": "node scripts/compare-client-performance.mjs",
     "test:frontier-policy": "node scripts/frontier-policy-smoke.mjs",
-    "ingest:events": "node scripts/ingest-events.mjs",
+    "ingest:events": "node scripts/ingest-events.mjs && node scripts/report-source-health.mjs",
     "discover:artists": "node scripts/discover-artists.mjs",
     "review:entities:prepare": "node scripts/prepare-entity-review.mjs",
     "review:entities:apply": "node scripts/apply-entity-review.mjs",
@@ -62,8 +63,9 @@
     "review:apply": "node scripts/apply-field-review.mjs",
     "report:data": "node scripts/report-data.mjs && node scripts/report-source-audit.mjs",
     "report:source-audit": "node scripts/report-source-audit.mjs",
+    "report:source-health": "node scripts/report-source-health.mjs",
     "report:tickets": "node scripts/report-ticket-coverage.mjs --write src/data/ingest/ticket-coverage-current.json --markdown src/data/ingest/ticket-coverage-current.md",
-    "check": "npm run lint && npm run typecheck && npm run validate:data && npm run check:client-data && npm run test:event-ingest && npm run test:k-arena-source && npm run test:osaka-johall-source && npm run test:saitama-arena-source && npm run test:budokan-sogo-source && npm run test:tokyo-dome-source && npm run test:ig-arena-source && npm run test:paypay-dome-source && npm run test:marine-messe-a-source && npm run test:vantelin-dome-source && npm run test:kyocera-dome-source && npm run test:ariake-arena-source && npm run test:tokyo-garden-theater-source && npm run test:kuroko-kun-hall-source && npm run test:premist-dome-source && npm run test:xebio-arena-sendai-source && npm run test:world-memorial-hall-source && npm run test:ticket-offers && npm run test:frontier-policy && npm run test:ticket-refresh && npm run test:planned-verification && npm run test:social-leads && npm run test:deadline",
+    "check": "npm run lint && npm run typecheck && npm run validate:data && npm run check:client-data && npm run test:event-ingest && npm run test:source-health && npm run test:k-arena-source && npm run test:osaka-johall-source && npm run test:saitama-arena-source && npm run test:budokan-sogo-source && npm run test:tokyo-dome-source && npm run test:ig-arena-source && npm run test:paypay-dome-source && npm run test:marine-messe-a-source && npm run test:vantelin-dome-source && npm run test:kyocera-dome-source && npm run test:ariake-arena-source && npm run test:tokyo-garden-theater-source && npm run test:kuroko-kun-hall-source && npm run test:premist-dome-source && npm run test:xebio-arena-sendai-source && npm run test:world-memorial-hall-source && npm run test:ticket-offers && npm run test:frontier-policy && npm run test:ticket-refresh && npm run test:planned-verification && npm run test:social-leads && npm run test:deadline",
     "verify:events": "npm run ingest:events && npm run validate:data"
   },
   "dependencies": {
