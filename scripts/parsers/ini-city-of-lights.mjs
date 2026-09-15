@@ -7,7 +7,7 @@ import {
 
 const TITLE = "2026 INI 5TH ANNIVERSARY DOME TOUR [CITY OF LIGHTS]";
 const TITLE_RE = /2026\s+INI\s+5TH\s+ANNIVERSARY\s+DOME\s+TOUR\s*\[CITY\s+OF\s+LIGHTS\]/iu;
-const DATE_TIME_RE = /(20\d{2})\/(\d{1,2})\/(\d{1,2})\s*[（(][^）)]*[）)]\s*(?:開場|Doors\s+open)\s*(\d{1,2}:\d{2})\s*[／/]\s*(?:開演|Show\s+starts?|Start)\s*(\d{1,2}:\d{2})/giu;
+const DATE_TIME_RE = /(20\d{2})\/(\d{1,2})\/(\d{1,2})\s*[（(][^）)]*[）)]\s*(?:開場|Doors\s*open)\s*(\d{1,2}:\d{2})\s*[／/]\s*(?:開演|Show\s*starts?|Start)\s*(\d{1,2}:\d{2})/giu;
 const PRICE_RE = /(?:^|\s|■)指定席\s*[:：]?\s*([0-9][0-9,]*)円\s*[（(]税込[）)]/u;
 
 const VENUE_MARKERS = [
