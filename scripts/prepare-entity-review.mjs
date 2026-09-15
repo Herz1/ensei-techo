@@ -39,6 +39,36 @@ const VENUE_FACTS = new Map([
     city: "松山市",
     sourceUrl: "https://www.cul-spo.or.jp/mcph/access",
   }],
+  ["IGアリーナ", {
+    id: "ig-arena",
+    prefecture: "aichi",
+    city: "名古屋市北区",
+    sourceUrl: "https://www.ig-arena.jp/access/",
+  }],
+  ["ゼビオアリーナ仙台", {
+    id: "xebio-arena-sendai",
+    prefecture: "miyagi",
+    city: "仙台市太白区",
+    sourceUrl: "https://www.xebioarena.com/",
+  }],
+  ["あなぶきアリーナ香川", {
+    id: "anabuki-arena-kagawa",
+    prefecture: "kagawa",
+    city: "高松市",
+    sourceUrl: "https://kagawa-arena.com/",
+  }],
+  ["サンドーム福井", {
+    id: "sundome-fukui",
+    prefecture: "fukui",
+    city: "越前市",
+    sourceUrl: "https://sundome.sankan.jp/",
+  }],
+  ["ビッグハット", {
+    id: "big-hat-nagano",
+    prefecture: "nagano",
+    city: "長野市",
+    sourceUrl: "https://www.nagano-mwave.co.jp/bighat/",
+  }],
 ]);
 
 async function readJson(file) {
@@ -124,7 +154,7 @@ async function main() {
     const sources = [...group.sources.values()];
     const hashes = rawHashes(sources);
     const decision = facts && hashes.length ? "approve" : "reject";
-    const id = `venue-ext-${sha256(normalizeName(group.nameJa)).slice(0, 16)}`;
+    const id = facts?.id ?? `venue-ext-${sha256(normalizeName(group.nameJa)).slice(0, 16)}`;
     const evidenceHash = sha256(JSON.stringify({
       nameJa: group.nameJa,
       prefecture: facts?.prefecture ?? null,
