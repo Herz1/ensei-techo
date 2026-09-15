@@ -14,6 +14,7 @@ const DETAIL_PATH = /\/tokyo_garden_theater\/schedule\/\d+\/?$/u;
 const PERFORMANCE = /(20\d{2})\s*\/\s*(\d{1,2})\s*\/\s*(\d{1,2})\s*[（(][^）)]*[）)]\s*〖?開場〗?\s*(\d{1,2}:\d{2})\s*〖?開演〗?\s*(\d{1,2}:\d{2})/gu;
 const EVENT_SIGNAL = /(?:\bLIVE\b|\bTOUR\b|\bCONCERT\b|\bFES(?:TIVAL)?\b|\bFANMEETING\b|\bPARTY\b|ライブ|コンサート|ツアー|フェス|パーティー|公演|祭)/iu;
 const GENERIC_IDENTITY = /^(?:EVENT|イベント詳細|コンサート・ショー|OPEN\s*\/\s*START|INFORMATION|お問い合わせ|チケット購入|イベントカレンダー\(一覧\))$/iu;
+const LEAF_SELECTORS = "h1,h2,h3,h4,h5,h6,p,li,dd,dt,strong,b,span";
 
 function normalizeUrl(value, base) {
   try {
@@ -83,10 +84,9 @@ export function parseTokyoGardenTheaterScheduleLinks(
 }
 
 function leafTexts($) {
-  const selectors = "h1,h2,h3,h4,h5,h6,p,li,dd,dt,strong,b,span";
   const values = [];
-  for (const node of $(selectors).toArray()) {
-    if ($(node).find(selectors).length) continue;
+  for (const node of $(LEAF_SELECTORS).toArray()) {
+    if ($(node).find(LEAF_SELECTORS).length) continue;
     const value = cleanText($(node).text());
     if (!value || value.length > 220 || GENERIC_IDENTITY.test(value)) continue;
     if (!values.includes(value)) values.push(value);
@@ -95,23 +95,38 @@ function leafTexts($) {
 }
 
 function identityCandidates($) {
-  const values = leafTexts($).filter((value) => {
-    if (/^20\d{2}\s*\/\s*\d{1,2}\s*\/\s*\d{1,2}/u.test(value)) return false;
-    if (/^[¥￥]?\s*[\d,]+\s*円?$/u.test(value)) return false;
-    if (/^(?:TEL|URL)\b/iu.test(value)) return false;
-    return true;
-  });
-  const categoryIndex = values.findIndex((value) => value === "コンサート・ショー");
-  if (categoryIndex < 0) return values;
-  return values.slice(Math.max(0, categoryIndex - 2), categoryIndex + 4);
+  const values = [];
+  for (const node of $(LEAF_SELECTORS).toArray()) {
+    if ($(node).find(LEAF_SELECTORS).length) continue;
+    const value = cleanText($(node).text());
+    if (!value) continue;
+    if (/^OPEN\s*\/\s*START$/iu.test(value)) break;
+    if (value.length > 220 || GENERIC_IDENTITY.test(value)) continue;
+    if (/^20\d{2}\s*\/\s*\d{1,2}\s*\/\s*\d{1,2}/u.test(value)) continue;
+    if (/^(?:20\d{2}|\d{1,2}|(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun)\.)$/iu.test(value)) continue;
+    if (/^[¥￥]?\s*[\d,]+\s*円?$/u.test(value)) continue;
+    if (/^(?:TEL|URL)\b/iu.test(value)) continue;
+    if (!values.includes(value)) values.push(value);
+  }
+  return values;
 }
 
 function pickIdentity($, discoveryText, knownArtistNames = new Set()) {
   const candidates = identityCandidates($);
+  const normalizedDiscovery = normalizeName(discoveryText);
+  const discoveryCandidates = candidates.filter((value) => {
+    const normalized = normalizeName(value);
+    return normalized && normalizedDiscovery.includes(normalized);
+  });
   const known = candidates.filter((value) => knownArtistNames.has(normalizeName(value)));
-  const eventCandidates = candidates.filter((value) => EVENT_SIGNAL.test(value));
-  const title = (eventCandidates.length
-    ? eventCandidates.slice().sort((a, b) => b.length - a.length)[0]
+  const eventCandidates = discoveryCandidates.filter((value) => EVENT_SIGNAL.test(value));
+  const titlePool = eventCandidates.length
+    ? eventCandidates
+    : discoveryCandidates.length
+      ? discoveryCandidates
+      : candidates.filter((value) => EVENT_SIGNAL.test(value));
+  const title = (titlePool.length
+    ? titlePool.slice().sort((a, b) => b.length - a.length)[0]
     : candidates.slice().sort((a, b) => b.length - a.length)[0]) ?? "";
 
   const artistNames = [];
@@ -121,13 +136,11 @@ function pickIdentity($, discoveryText, knownArtistNames = new Set()) {
     }
   }
   if (!artistNames.length) {
-    const normalizedDiscovery = normalizeName(discoveryText);
-    for (const candidate of candidates) {
+    for (const candidate of discoveryCandidates) {
       const normalized = normalizeName(candidate);
       if (
         normalized &&
         normalized !== normalizeName(title) &&
-        normalizedDiscovery.includes(normalized) &&
         knownArtistNames.has(normalized) &&
         !artistNames.includes(candidate)
       ) {
