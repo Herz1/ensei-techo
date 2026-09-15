@@ -33,6 +33,23 @@ function expectedZeroPolicy(sourceId, monthKeys) {
       reason: "2026-08-06 至 2026-11-30 因亚洲/亚残运相关安排暂停一般利用；9-11 月为完整受限月",
     };
   }
+  if (
+    sourceId === "big-hat-nagano-official" &&
+    monthKeys.length > 0 &&
+    monthKeys.every((key) => [
+      "2027-05",
+      "2027-06",
+      "2027-07",
+      "2027-08",
+      "2027-09",
+      "2027-10",
+    ].includes(key))
+  ) {
+    return {
+      expected: true,
+      reason: "ビッグハット官方公告 2027 年 4 月上旬至 10 月末因设施长寿命化改修休馆；5-10 月为完整休馆月",
+    };
+  }
   return { expected: false, reason: null };
 }
 
