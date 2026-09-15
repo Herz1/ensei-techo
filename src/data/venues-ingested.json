@@ -340,5 +340,32 @@
         }
       ]
     }
+  },
+  {
+    "id": "sundome-fukui",
+    "nameJa": "サンドーム福井",
+    "nameZh": null,
+    "prefecture": "fukui",
+    "city": "越前市",
+    "lat": null,
+    "lng": null,
+    "capacity": null,
+    "tier": null,
+    "stations": [],
+    "hubAccess": [],
+    "profileStatus": "minimal",
+    "verification": {
+      "state": "verified",
+      "checkedAt": "2026-09-15T09:20:00.000Z",
+      "evidenceHash": "b875d7bb6f916dc0ec874e1e1e5ea0b04def6b9bff7e01e016033113acc04c21",
+      "sources": [
+        {
+          "name": "サンドーム福井公式サイト",
+          "type": "venue_official",
+          "url": "https://sundome.sankan.jp/",
+          "fetchedAt": "2026-09-15T09:20:00.000Z"
+        }
+      ]
+    }
   }
 ]
