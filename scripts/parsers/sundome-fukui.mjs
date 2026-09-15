@@ -101,7 +101,12 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
     const match = title.match(rule);
     if (!match?.[1]) continue;
     const candidate = cleanText(match[1]);
-    if (knownArtistNames.has(normalizeName(candidate))) return [candidate];
+    if (
+      knownArtistNames.has(normalizeName(candidate)) ||
+      /^[\p{L}\p{N}][\p{L}\p{N} .・_'!&+.-]{1,80}$/u.test(candidate)
+    ) {
+      return [candidate];
+    }
   }
 
   const normalized = normalizeName(title);
