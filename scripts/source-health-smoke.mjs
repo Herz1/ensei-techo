@@ -133,4 +133,27 @@ assert.equal(shiftedWindow.sources[0].health.state, "healthy");
 assert.equal(shiftedWindow.sources[0].health.comparableWindow, false);
 assert.equal(shiftedWindow.sources[0].health.recordCountRatio, null);
 
+const bigHatClosure = attachSourceHealth({
+  sourceResults: [result("big-hat-nagano-official", 0)],
+  rawEntries: [entry("big-hat-nagano-official", "success", "success")],
+  months: [
+    { year: 2027, month: 5 },
+    { year: 2027, month: 6 },
+    { year: 2027, month: 7 },
+    { year: 2027, month: 8 },
+  ],
+});
+assert.equal(bigHatClosure.sources[0].health.state, "expected_zero");
+assert.equal(bigHatClosure.sources[0].health.actionable, false);
+
+const bigHatAprilBoundary = attachSourceHealth({
+  sourceResults: [result("big-hat-nagano-official", 0)],
+  rawEntries: [entry("big-hat-nagano-official", "success", "success")],
+  months: [
+    { year: 2027, month: 4 },
+    { year: 2027, month: 5 },
+  ],
+});
+assert.equal(bigHatAprilBoundary.sources[0].health.state, "unexpected_zero");
+
 console.log("Source Health smoke: ok");

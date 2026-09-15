@@ -7,14 +7,20 @@ const projectDir = path.resolve(scriptDir, "..");
 const dataDir = path.join(projectDir, "src", "data");
 const ingestDir = path.join(dataDir, "ingest");
 
-async function readJson(file) {
-  return JSON.parse(await readFile(file, "utf8"));
+async function readJson(file, fallback) {
+  try {
+    return JSON.parse(await readFile(file, "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT" && fallback !== undefined) return fallback;
+    throw error;
+  }
 }
 
 async function main() {
-  const [batch, reviews] = await Promise.all([
+  const [batch, reviews, existingVenues] = await Promise.all([
     readJson(path.join(ingestDir, "entity-review-batch.json")),
     readJson(path.join(ingestDir, "venue-reviews.json")),
+    readJson(path.join(dataDir, "venues-ingested.json"), []),
   ]);
   const approved = new Map(
     (reviews.approved ?? []).map((item) => [item.id, item.evidenceHash]),
@@ -50,13 +56,24 @@ async function main() {
         })),
       },
     }));
-  if (!venues.length) throw new Error("没有已批准的最小场馆实体，拒绝覆盖");
+
+  if (!venues.length) {
+    console.log("没有新的已批准最小场馆实体；保留现有 venues-ingested.json");
+    return;
+  }
+
+  const merged = new Map(existingVenues.map((venue) => [venue.id, venue]));
+  for (const venue of venues) merged.set(venue.id, venue);
+  const output = [...merged.values()];
+
   await writeFile(
     path.join(dataDir, "venues-ingested.json"),
-    `${JSON.stringify(venues, null, 2)}\n`,
+    `${JSON.stringify(output, null, 2)}\n`,
     "utf8",
   );
-  console.log(`最小场馆实体已发布：${venues.length} 个`);
+  console.log(
+    `最小场馆实体已发布：新增/更新 ${venues.length} 个，合计保留 ${output.length} 个`,
+  );
 }
 
 main().catch((error) => {
