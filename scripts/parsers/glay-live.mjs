@@ -91,6 +91,7 @@ export function parseGlayLivePage(html, sourceUrl, { months = [] } = {}) {
     const cells = $(row).find("td").toArray().map((cell) => ({
       node: cell,
       text: cleanText($(cell).text()).normalize("NFKC"),
+      hasLink: $(cell).find("a[href]").length > 0,
     }));
     if (!cells.length) continue;
 
@@ -110,10 +111,14 @@ export function parseGlayLivePage(html, sourceUrl, { months = [] } = {}) {
     const venueCell = cells.find((cell) =>
       cell.node !== dateCell.node &&
       cell.node !== timeCell?.node &&
+      !cell.hasLink &&
       cell.text &&
       !/(?:TEL|平日|全日|info@|月|火|水|木|金|土|日)/iu.test(cell.text),
     );
-    if (venueCell?.text) currentVenueName = normalizeVenueName(venueCell.text);
+    if (venueCell?.text) {
+      currentVenueName = normalizeVenueName(venueCell.text);
+      currentPromoterUrl = undefined;
+    }
 
     const links = externalLinks($, row, sourceUrl);
     if (links.length) currentPromoterUrl = links[0];
