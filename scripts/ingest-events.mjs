@@ -30,6 +30,7 @@ import { createGlayLiveSourceAdapter } from "./adapters/glay-live-source.mjs";
 import { createSuperBeaverArenaSourceAdapter } from "./adapters/super-beaver-arena-source.mjs";
 import { createMrChildrenTourSourceAdapter } from "./adapters/mrchildren-tour-source.mjs";
 import { createBumpTourSourceAdapter } from "./adapters/bump-tour-source.mjs";
+import { createPendingSourceAdapters } from "./adapters/pending-source-registry.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -359,6 +360,7 @@ async function main() {
     createMrChildrenTourSourceAdapter(adapterContext),
     createBumpTourSourceAdapter(adapterContext),
   ];
+  adapters.push(...await createPendingSourceAdapters(adapterContext));
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
     batchId,
