@@ -1,0 +1,86 @@
+name: Round 36-39 Pending Live Fixed
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-round36-39-pending-live-fixed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pending-live-fixed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Create pending-only ingest copy
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          let source = fs.readFileSync('scripts/ingest-events.mjs', 'utf8');
+          const start = source.indexOf('  const adapters = [');
+          const marker = '  adapters.push(...await createPendingSourceAdapters(adapterContext));';
+          const markerIndex = source.indexOf(marker);
+          if (start < 0 || markerIndex < 0 || markerIndex <= start) throw new Error('adapter markers not found');
+          source = `${source.slice(0, start)}  const adapters = [...await createPendingSourceAdapters(adapterContext)];${source.slice(markerIndex + marker.length)}`;
+          fs.writeFileSync('scripts/ingest-events-pending-only.mjs', source);
+          NODE
+          node --check scripts/ingest-events-pending-only.mjs
+      - name: Run pending source smokes
+        run: node scripts/run-pending-source-smokes.mjs
+      - name: Run pending-only live ingest
+        run: node scripts/ingest-events-pending-only.mjs && node scripts/report-source-health.mjs
+      - name: Verify live source outcomes
+        id: verify
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const ids = [
+            'aimyon-tour-2027-official',
+            'generations-parallel-quest-official',
+            'fantastics-sunflower-official',
+            'ini-city-of-lights-official',
+            'vaundy-horo-official',
+          ];
+          const sources = report.sources ?? [];
+          const rows = ids.map((id) => sources.find((s) => s.id === id));
+          const summary = rows.map((s, i) => s ? ({
+            id:s.id,status:s.status,recordCount:s.recordCount,reason:s.reason,
+            health:s.health ?? s.sourceHealth ?? null,
+          }) : ({id:ids[i],missing:true}));
+          fs.writeFileSync('pending-live-fixed-summary.json', JSON.stringify(summary,null,2)+'\n');
+          console.log(JSON.stringify(summary,null,2));
+          if (rows.some((row) => !row)) throw new Error('missing expected source');
+          const aimyon = rows[0];
+          if (aimyon.status !== 'skipped') throw new Error(`AIMYON expected skipped, got ${aimyon.status}`);
+          for (const s of rows.slice(1)) {
+            if (s.status !== 'ok') throw new Error(`${s.id} expected ok, got ${s.status}`);
+            if (Number(s.recordCount ?? 0) <= 0) throw new Error(`${s.id} returned zero records`);
+            const health = s.health ?? s.sourceHealth;
+            if (health?.actionable === true) throw new Error(`${s.id} health actionable`);
+          }
+          NODE
+      - name: Upload live evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-pending-live-fixed-evidence
+          path: |
+            pending-live-fixed-summary.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+            src/data/ingest/raw/**
