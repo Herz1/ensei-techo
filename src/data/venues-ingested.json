@@ -54,7 +54,7 @@
     "verification": {
       "state": "verified",
       "checkedAt": "2026-07-30T05:19:27.174Z",
-      "evidenceHash": "5c2ffc32292b7c4cf2b4f8a70c62a25f0efc21d10118e6779ad4ca2213412b49",
+      "evidenceHash": "5c2ffc32292b7c1462be6ac1fe59a25f0efc21d10118e6779ad4ca2213412b49",
       "sources": [
         {
           "name": "椎名林檎 SR猫柳本線",
@@ -256,6 +256,33 @@
           "rawContentHashes": [
             "d27e6393f7fd235796d1c340776696ec34fcac81dfd6ff108d8383dc4946188a"
           ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "ig-arena",
+    "nameJa": "IGアリーナ",
+    "nameZh": null,
+    "prefecture": "aichi",
+    "city": "名古屋市北区",
+    "lat": null,
+    "lng": null,
+    "capacity": null,
+    "tier": null,
+    "stations": [],
+    "hubAccess": [],
+    "profileStatus": "minimal",
+    "verification": {
+      "state": "verified",
+      "checkedAt": "2026-09-15T06:48:36.578Z",
+      "evidenceHash": "fcfe82610ae0d1730317937b0b6fcedeaf05d0b372714186d41865dcec204be0",
+      "sources": [
+        {
+          "name": "IGアリーナ公式アクセス",
+          "type": "venue_official",
+          "url": "https://www.ig-arena.jp/access/",
+          "fetchedAt": "2026-09-15T06:48:36.578Z"
         }
       ]
     }
