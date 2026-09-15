@@ -135,6 +135,12 @@ const VENUE_FACTS = new Map([
     city: "刈谷市",
     sourceUrl: "https://kariya.hall-info.jp/",
   }],
+  ["SENDAI GIGS", {
+    id: "sendai-gigs",
+    prefecture: "miyagi",
+    city: "仙台市若林区",
+    sourceUrl: "https://www.sendaigigs.com/",
+  }],
 ]);
 
 async function readJson(file) {
