@@ -16,8 +16,16 @@ function requireExactlyOnce(source, marker, label) {
 }
 
 export function injectPendingRegistry(source) {
-  if (source.includes(PENDING_IMPORT) || source.includes(PENDING_PUSH)) {
-    throw new Error("pending ingest transform 拒绝重复注入");
+  const importCount = occurrenceCount(source, PENDING_IMPORT);
+  const pushCount = occurrenceCount(source, PENDING_PUSH);
+
+  if (importCount === 1 && pushCount === 1) {
+    return source;
+  }
+  if (importCount !== 0 || pushCount !== 0) {
+    throw new Error(
+      `pending ingest transform 检测到不完整或重复接线：import=${importCount}, push=${pushCount}`,
+    );
   }
 
   requireExactlyOnce(source, RAW_STORE_IMPORT, "raw store import marker");

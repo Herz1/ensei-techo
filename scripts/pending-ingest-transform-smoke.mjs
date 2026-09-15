@@ -41,6 +41,7 @@ assert.equal(
   1,
 );
 
+assert.equal(injectPendingRegistry(transformed), transformed);
 assert.throws(
   () => injectPendingRegistry(source.replace('import { createRawEvidenceStore } from "./raw-evidence-store.mjs";\n', "")),
   /raw store import marker/u,
@@ -54,8 +55,22 @@ assert.throws(
   /raw store construction marker/u,
 );
 assert.throws(
-  () => injectPendingRegistry(transformed),
-  /拒绝重复注入/u,
+  () => injectPendingRegistry(
+    source.replace(
+      'import { createRawEvidenceStore } from "./raw-evidence-store.mjs";',
+      'import { createPendingSourceAdapters } from "./adapters/pending-source-registry.mjs";\nimport { createRawEvidenceStore } from "./raw-evidence-store.mjs";',
+    ),
+  ),
+  /不完整或重复接线/u,
+);
+assert.throws(
+  () => injectPendingRegistry(
+    transformed.replace(
+      "  adapters.push(...await createPendingSourceAdapters(adapterContext));",
+      "  adapters.push(...await createPendingSourceAdapters(adapterContext));\n  adapters.push(...await createPendingSourceAdapters(adapterContext));",
+    ),
+  ),
+  /不完整或重复接线/u,
 );
 
 console.log("Pending ingest transform smoke: ok");
