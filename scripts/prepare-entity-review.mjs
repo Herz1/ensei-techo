@@ -69,6 +69,18 @@ const VENUE_FACTS = new Map([
     city: "長野市",
     sourceUrl: "https://www.nagano-mwave.co.jp/bighat/",
   }],
+  ["Aichi Sky Expo(愛知県国際展示場) ホールA", {
+    id: "aichi-sky-expo-hall-a",
+    prefecture: "aichi",
+    city: "常滑市",
+    sourceUrl: "https://www.aichiskyexpo.com/",
+  }],
+  ["函館サーモン・まるなまアリーナ（函館アリーナ）", {
+    id: "hakodate-arena",
+    prefecture: "hokkaido",
+    city: "函館市",
+    sourceUrl: "https://zaidan-hakodate.com/arena/",
+  }],
 ]);
 
 async function readJson(file) {
