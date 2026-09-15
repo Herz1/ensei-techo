@@ -50,7 +50,7 @@ jobs:
           const fs = require('node:fs');
           const report = JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
           const ids = [
-            'aimyon-cosmic-official',
+            'aimyon-tour-2027-official',
             'generations-parallel-quest-official',
             'fantastics-sunflower-official',
             'ini-city-of-lights-official',
@@ -85,6 +85,7 @@ jobs:
             src/data/ingest/source-health.json
             src/data/ingest/raw-manifest.json
             src/data/ingest/candidates.json
+            src/data/ingest/raw/**
       - name: Final diagnostic gate
         if: always()
         run: test "${{ steps.verify.outcome }}" = "success"
