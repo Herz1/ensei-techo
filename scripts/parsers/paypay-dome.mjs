@@ -3,13 +3,12 @@ import {
   cleanText,
   normalizeName,
   normalizeTime,
-  splitArtistNames,
   toIsoDate,
 } from "../event-ingest-lib.mjs";
 
 const EVENT_DATE = /(20\d{2})\/(\d{1,2})\/(\d{1,2})/u;
 const NON_MUSIC = /(就職|EXPO|トヨタ|フィールド無料開放|リレーマラソン|マラソン|サッカー|Pet博|焼酎|うまいもん|SPECIAL MATCH|野球|スポーツ|展示会|商談会|説明会|キッズ|無料開放)/iu;
-const MUSIC_SIGNAL = /(?:\bLIVE\b|\bWORLD\s+TOUR\b|\bDOME\s+TOUR\b|\bLIVE\s+TOUR\b|\bCONCERT\b|\bMUSIC\b|\bFES(?:TIVAL)?\b|\bROCK\b|SMTOWN|NUMBER\s*SHOT|ライブ|コンサート|音楽|フェス)/iu;
+const MUSIC_SIGNAL = /(?:\bLIVE\b|\bTOUR\b|\bCONCERT\b|\bMUSIC\b|\bFES(?:TIVAL)?\b|\bROCK\b|SMTOWN|NUMBER\s*SHOT|ライブ|コンサート|音楽|フェス)/iu;
 const FESTIVAL_SIGNAL = /(?:FES(?:TIVAL)?|MUSIC\s+CIRCUS|NUMBER\s*SHOT|GREATEST\s+ROCK|SMTOWN)/iu;
 
 function normalizeUrl(value, base) {
@@ -75,28 +74,51 @@ function isMusicEvent(title, knownArtistNames = new Set()) {
 }
 
 function candidateArtistPrefix(title) {
-  const rules = [
-    /^(.+?)\s+PRESENTS\b/iu,
-    /^(.+?)\s+(?:\d{4}\s+)?WORLD\s+TOUR\b/iu,
+  const strongRules = [
     /^(.+?)\s+DOME\s+TOUR\b/iu,
     /^(.+?)\s+LIVE\s+TOUR\b/iu,
     /^(.+?)\s+CONCERT\s+TOUR\b/iu,
-    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
     /^(.+?)\s+TOUR\s+20\d{2}\b/iu,
   ];
-  for (const rule of rules) {
+  for (const rule of strongRules) {
     const match = title.match(rule);
-    if (match?.[1]) return cleanText(match[1]);
+    if (match?.[1]) return { prefix: cleanText(match[1]), strong: true };
   }
-  return "";
+  const weakRules = [
+    /^(.+?)\s+PRESENTS\b/iu,
+    /^(.+?)\s+(?:\d{4}\s+)?WORLD\s+TOUR\b/iu,
+    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
+  ];
+  for (const rule of weakRules) {
+    const match = title.match(rule);
+    if (match?.[1]) return { prefix: cleanText(match[1]), strong: false };
+  }
+  return null;
 }
 
-function artistNamesFromTitle(title, knownArtistNames = new Set()) {
+function hostSupportsArtist(url, normalizedArtist) {
+  if (!url || !normalizedArtist) return false;
+  try {
+    const host = normalizeName(new URL(url).hostname.replace(/^www\./u, ""));
+    return normalizedArtist.length >= 4 && host.includes(normalizedArtist);
+  } catch {
+    return false;
+  }
+}
+
+function artistNamesFromTitle(title, knownArtistNames = new Set(), eventUrl) {
   if (FESTIVAL_SIGNAL.test(title)) return [];
-  const prefix = candidateArtistPrefix(title);
-  if (!prefix) return [];
-  const names = splitArtistNames(prefix);
-  return names.filter((name) => knownArtistNames.has(normalizeName(name)));
+  const candidate = candidateArtistPrefix(title);
+  if (!candidate?.prefix) return [];
+  const normalized = normalizeName(candidate.prefix);
+  if (!normalized) return [];
+  if (knownArtistNames.has(normalized)) return [candidate.prefix];
+  if (candidate.strong) return [candidate.prefix];
+  if (hostSupportsArtist(eventUrl, normalized)) return [candidate.prefix];
+  if (/^[A-Z0-9][A-Z0-9 ._!&'+=-]{1,40}$/u.test(candidate.prefix)) {
+    return [candidate.prefix];
+  }
+  return [];
 }
 
 function officialEventUrl($, element, sourceUrl, title) {
@@ -133,13 +155,14 @@ function parseBlock(text, { $, element, sourceUrl, allowedMonths, knownArtistNam
   }
   const title = titleFromBlock(text);
   if (!isMusicEvent(title, knownArtistNames)) return null;
+  const eventUrl = officialEventUrl($, element, sourceUrl, title);
   return {
     title,
     date,
     openTime: parseLabelTime(text, "開場"),
     startTime: parseLabelTime(text, "開演"),
-    artistNames: artistNamesFromTitle(title, knownArtistNames),
-    officialEventUrl: officialEventUrl($, element, sourceUrl, title),
+    artistNames: artistNamesFromTitle(title, knownArtistNames, eventUrl),
+    officialEventUrl: eventUrl,
   };
 }
 
