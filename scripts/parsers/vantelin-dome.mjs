@@ -37,18 +37,6 @@ function requestedMonthYears(months) {
   return result;
 }
 
-function eventContainers($) {
-  const candidates = $("article,section,li,tr,div,dl,dd").toArray().filter((element) =>
-    EVENT_HEADER.test(cleanText($(element).text())),
-  );
-  const set = new Set(candidates);
-  return candidates.filter((element) =>
-    !$(element).find("article,section,li,tr,div,dl,dd").toArray().some(
-      (child) => child !== element && set.has(child),
-    ),
-  );
-}
-
 function fallbackBlocks(text) {
   const matches = [...text.matchAll(EVENT_HEADER_GLOBAL)];
   return matches.map((match, index) =>
@@ -63,27 +51,25 @@ function cleanTailTitle(text) {
   const match = text.match(EVENT_HEADER);
   if (!match) return "";
   let tail = cleanText(text.slice((match.index ?? 0) + match[0].length));
-  const stopPattern = /(?:お問い合わせ|問い合わせ|TEL[:：]|コンコース売店|プリズマクラブ|ドーム内駐車場|正面チケット売場|中日ドラゴンズコールセンター|キョードー東海|サンデーフォークプロモーション|ファミリークラブ|インフォメーション|ニュース＆トピックス|トップページへ)/u;
+  const stopPattern = /(?:20\d{2}年\d{1,2}月は予定がありません|お問い合わせ|問い合わせ|TEL[:：]|コンコース売店|プリズマクラブ|ドーム内駐車場|正面チケット売場|中日ドラゴンズコールセンター|キョードー東海|サンデーフォークプロモーション|ファミリークラブ|インフォメーション|ニュース＆トピックス|トップページへ)/u;
   const stop = tail.search(stopPattern);
   if (stop >= 0) tail = tail.slice(0, stop);
   return cleanText(tail);
 }
 
-function titleFromBlock($, element, text) {
+function titleFromBlock($, text) {
   const tail = cleanTailTitle(text);
-  if (element) {
-    const anchors = $(element).find("a[href]").toArray()
-      .map((anchor) => cleanText($(anchor).text()))
-      .filter(Boolean)
-      .filter((label) => !/^(?:詳細|こちら|トップ|アクセス|チケット)$/u.test(label));
-    const normalizedTail = normalizeName(tail);
-    const anchored = anchors.find((label) => {
+  const normalizedTail = normalizeName(tail);
+  if (!normalizedTail) return "";
+  const anchored = $("a[href]").toArray()
+    .map((anchor) => cleanText($(anchor).text()))
+    .filter(Boolean)
+    .filter((label) => !/^(?:詳細|こちら|トップ|アクセス|チケット)$/u.test(label))
+    .find((label) => {
       const normalized = normalizeName(label);
       return normalized.length >= 3 && normalizedTail.includes(normalized);
     });
-    if (anchored) return anchored;
-  }
-  return tail;
+  return anchored || tail;
 }
 
 function isMusicEvent(title, knownArtistNames = new Set()) {
@@ -122,20 +108,20 @@ function artistNamesFromTitle(title, knownArtistNames = new Set()) {
   if (!normalized) return [];
   if (knownArtistNames.has(normalized)) return [prefix];
   if (/^[A-Z0-9][A-Z0-9 ._!&'+=-]{1,48}$/u.test(prefix)) return [prefix];
-  if (/^[A-Za-z0-9][A-Za-z0-9 ._!&'+=-]{1,48}$/u.test(prefix) && /\b(?:WORLD|DOME|LIVE|CONCERT)\s+TOUR\b/iu.test(title)) {
+  if (
+    /^[A-Za-z0-9][A-Za-z0-9 ._!&'+=-]{1,48}$/u.test(prefix) &&
+    /\b(?:WORLD|DOME|LIVE|CONCERT)\s+TOUR\b/iu.test(title)
+  ) {
     return [prefix];
   }
   return [];
 }
 
-function officialEventUrl($, element, sourceUrl, title) {
+function officialEventUrl($, sourceUrl, title) {
   const wanted = normalizeName(title);
   if (!wanted) return undefined;
   const sourceHost = new URL(sourceUrl).hostname;
-  const anchors = element
-    ? $(element).find("a[href]").toArray()
-    : $("a[href]").toArray();
-  const candidates = anchors
+  const candidates = $("a[href]").toArray()
     .map((anchor) => {
       const label = cleanText($(anchor).text());
       const url = normalizeUrl($(anchor).attr("href"), sourceUrl);
@@ -165,25 +151,24 @@ function parsePublishedTime(value) {
   return normalizeTime(value);
 }
 
-function parseBlock(text, { $, element, sourceUrl, monthYears, knownArtistNames }) {
+function parseBlock(text, { $, sourceUrl, monthYears, knownArtistNames }) {
   const match = text.match(EVENT_HEADER);
   if (!match) return null;
   const month = Number(match[1]);
   const day = Number(match[2]);
   const year = monthYears.get(month);
   if (!year) return null;
-  const title = titleFromBlock($, element, text);
+  const title = titleFromBlock($, text);
   if (!isMusicEvent(title, knownArtistNames)) return null;
   const date = toIsoDate(year, month, day);
   if (!date) return null;
-  const eventUrl = officialEventUrl($, element, sourceUrl, title);
   return {
     title,
     date,
     openTime: parsePublishedTime(match[3]),
     startTime: parsePublishedTime(match[4]),
     artistNames: artistNamesFromTitle(title, knownArtistNames),
-    officialEventUrl: eventUrl,
+    officialEventUrl: officialEventUrl($, sourceUrl, title),
   };
 }
 
@@ -193,7 +178,7 @@ export function parseVantelinDomeSchedule(
   { months = [], knownArtistNames = new Set() } = {},
 ) {
   const $ = cheerio.load(html);
-  const bodyText = cleanText($("body").text());
+  const bodyText = cleanText($("body").text().replace(/\r?\n/gu, " "));
   if (!bodyText.includes("イベントカレンダー") || !bodyText.includes("バンテリンドーム ナゴヤ")) {
     return {
       ok: false,
@@ -221,31 +206,14 @@ export function parseVantelinDomeSchedule(
     };
   }
 
-  const records = [];
-  const containers = eventContainers($);
-  if (containers.length) {
-    for (const element of containers) {
-      const record = parseBlock(cleanText($(element).text()), {
-        $,
-        element,
-        sourceUrl,
-        monthYears,
-        knownArtistNames,
-      });
-      if (record) records.push(record);
-    }
-  } else {
-    for (const block of fallbackBlocks(bodyText)) {
-      const record = parseBlock(cleanText(block), {
-        $,
-        element: null,
-        sourceUrl,
-        monthYears,
-        knownArtistNames,
-      });
-      if (record) records.push(record);
-    }
-  }
+  const records = fallbackBlocks(bodyText)
+    .map((block) => parseBlock(cleanText(block), {
+      $,
+      sourceUrl,
+      monthYears,
+      knownArtistNames,
+    }))
+    .filter(Boolean);
 
   return {
     ok: true,
