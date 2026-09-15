@@ -141,6 +141,12 @@ const VENUE_FACTS = new Map([
     city: "仙台市若林区",
     sourceUrl: "https://www.sendaigigs.com/",
   }],
+  ["マリンメッセ福岡B館", {
+    id: "marine-messe-b",
+    prefecture: "fukuoka",
+    city: "福岡市博多区",
+    sourceUrl: "https://www.marinemesse.or.jp/messe-b/",
+  }],
 ]);
 
 async function readJson(file) {
