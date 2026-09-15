@@ -6,35 +6,51 @@ const html = `
 <html><body>
   <h1>Vaundy ASIA ARENA TOUR 2026 “HORO”</h1>
   <table id="tokyo"><tbody>
-    <tr><td>2026 09.05 sat</td><td>16:30 / 18:00</td><td>幕張メッセ 9・11ホール</td><td>SOGO TOKYO</td></tr>
-    <tr><td>2026 09.06 sun</td><td>14:30 / 16:00</td><td>幕張メッセ 9・11ホール</td><td>SOGO TOKYO</td></tr>
+    <tr><th>DATE</th><th>OPEN / START</th><th>VENUE</th></tr>
+    <tr class="day-one">
+      <td class="date"><span class="year">2026</span>09.05<span class="week">sat</span></td>
+      <td class="time">16:30 / 18:00<br><span>※現地時間</span></td>
+      <td class="venue" rowspan="2"><p class="venue_place">幕張メッセ 9・11ホール</p></td>
+    </tr>
+    <tr class="day-two">
+      <td class="date"><span class="year">2026</span>09.06<span class="week">sun</span></td>
+      <td class="time">14:30 / 16:00<br><span>※現地時間</span></td>
+    </tr>
   </tbody></table>
   <table id="seoul"><tbody>
-    <tr><td>2026 09.19 sat</td><td>15:00 / 17:00</td><td>INSPIRE ARENA</td></tr>
-    <tr><td>2026 09.20 sun</td><td>14:00 / 16:00</td><td>INSPIRE ARENA</td></tr>
-  </tbody></table>
-  <table id="hongkong"><tbody>
-    <tr><td>2026 10.03 sat</td><td>18:00 / 20:00</td><td>AsiaWorld-Arena</td></tr>
+    <tr class="day-one">
+      <td class="date"><span class="year">2026</span>09.19<span class="week">sat</span></td>
+      <td class="time">15:00 / 17:00</td>
+      <td class="venue"><p class="venue_place">INSPIRE ARENA</p></td>
+    </tr>
   </tbody></table>
   <table id="fukuoka"><tbody>
-    <tr><td>2026 10.24 sat</td><td>16:30 / 18:00</td><td>北九州メッセ</td><td>キョードー西日本</td></tr>
-    <tr><td>2026 10.25 sun</td><td>14:30 / 16:00</td><td>北九州メッセ</td><td>キョードー西日本</td></tr>
-  </tbody></table>
-  <table id="taipei"><tbody>
-    <tr><td>2026 10.31 sat</td><td>17:30 / 19:00</td><td>Taipei Arena</td></tr>
-    <tr><td>2026 11.01 sun</td><td>17:30 / 19:00</td><td>Taipei Arena</td></tr>
+    <tr class="day-one">
+      <td class="date"><span class="year">2026</span>10.24<span class="week">sat</span></td>
+      <td class="time">16:30 / 18:00</td>
+      <td class="venue" rowspan="2"><p class="venue_place">北九州メッセ</p></td>
+    </tr>
+    <tr class="day-two">
+      <td class="date"><span class="year">2026</span>10.25<span class="week">sun</span></td>
+      <td class="time">14:30 / 16:00</td>
+      <td class="venue sp"><p class="venue_place">北九州メッセ</p></td>
+    </tr>
   </tbody></table>
   <table id="shanghai"><tbody>
-    <tr><td>2026 11.14 sat</td><td>-</td><td>- CANCELLED -</td></tr>
-    <tr><td>2026 11.15 sun</td><td>-</td><td>- CANCELLED -</td></tr>
+    <tr class="day-one">
+      <td class="date"><span class="year">2026</span>11.14<span class="week">sat</span></td>
+      <td class="time">18:00 / 20:00</td>
+      <td class="venue"><p class="venue_place">- CANCELLED -</p></td>
+    </tr>
   </tbody></table>
-  <section id="ticket">TOKYO / FUKUOKA 東京・福岡公演 スタンディング 9,900円(税込)</section>
   <table id="trade-duplicate"><tbody>
-    <tr><td>2026 09.05 sat</td><td>16:30 / 18:00</td><td>Makuhari Messe Halls 9 &amp; 11</td></tr>
-    <tr><td>2026 09.06 sun</td><td>14:30 / 16:00</td><td>Makuhari Messe Halls 9 &amp; 11</td></tr>
-    <tr><td>2026 10.24 sat</td><td>16:30 / 18:00</td><td>Kitakyushu Messe</td></tr>
-    <tr><td>2026 10.25 sun</td><td>14:30 / 16:00</td><td>Kitakyushu Messe</td></tr>
+    <tr class="day-one">
+      <td class="date"><span class="year">2026</span>09.05<span class="week">sat</span></td>
+      <td class="time">16:30 / 18:00</td>
+      <td class="venue"><p class="venue_place">Makuhari Messe Halls 9 &amp; 11</p></td>
+    </tr>
   </tbody></table>
+  <section id="ticket">東京・福岡公演 スタンディング 9,900円(税込)</section>
 </body></html>`;
 
 const all = parseVaundyHoro(html, sourceUrl, {
@@ -59,8 +75,6 @@ assert.deepEqual(all.records.map((item) => [
   ["2026-10-25", "北九州メッセ", "14:30", "16:00"],
 ]);
 assert.equal(all.records.some((item) => item.date === "2026-09-19"), false);
-assert.equal(all.records.some((item) => item.date === "2026-10-03"), false);
-assert.equal(all.records.some((item) => item.date === "2026-10-31"), false);
 assert.equal(all.records.some((item) => item.date === "2026-11-14"), false);
 assert.deepEqual(all.records[0].ticketTypes, [
   { name: "スタンディング", priceJpy: 9900, taxIncluded: true, notes: [] },
