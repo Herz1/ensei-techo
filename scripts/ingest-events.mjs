@@ -7,6 +7,7 @@ import {
   normalizeAndMerge,
 } from "./event-ingest-lib.mjs";
 import { createOfficialSourceAdapters } from "./adapters/official-sources.mjs";
+import { createKArenaSourceAdapter } from "./adapters/k-arena-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -292,7 +293,7 @@ async function main() {
     rejected: [],
   });
 
-  const adapters = createOfficialSourceAdapters({
+  const adapterContext = {
     today,
     months,
     monthCount,
@@ -309,7 +310,11 @@ async function main() {
         ...(artist.aliases ?? []),
       ]).filter(Boolean).map(normalizeName),
     ),
-  });
+  };
+  const adapters = [
+    ...createOfficialSourceAdapters(adapterContext),
+    createKArenaSourceAdapter(adapterContext),
+  ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
     batchId,
