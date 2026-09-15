@@ -6,7 +6,7 @@ import {
 } from "../event-ingest-lib.mjs";
 
 const TOUR_TITLE = "GLAY ARENA TOUR 2026-2027 “EXOFIRE”";
-const TOUR_TITLE_RE = /GLAY\s+ARENA\s+TOUR\s+(20\d{2})-(20\d{2})\s+[“\"]EXOFIRE[”\"]/iu;
+const TOUR_TITLE_RE = /GLAY\s+ARENA\s+TOUR\s+(20\d{2})-(20\d{2})\s+[“"]EXOFIRE[”"]/iu;
 const DATE_RE = /(?:(20\d{2})\.)?(\d{1,2})\.(\d{1,2})[（(][^）)]*[）)]/u;
 const TIME_RE = /(\d{1,2}:\d{2})\s*\/\s*(\d{1,2}:\d{2})/u;
 
