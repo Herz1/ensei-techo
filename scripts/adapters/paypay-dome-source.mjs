@@ -11,7 +11,7 @@ export function createPayPayDomeSourceAdapter(context) {
     type: "venue_official",
     role: "venue_schedule",
     parserIds: ["paypay-dome-year-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://www.softbankhawks.co.jp/stadium/event_schedule/",
     fetchedAt: context.generatedAt,
   };
