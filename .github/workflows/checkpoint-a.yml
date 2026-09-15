@@ -1,0 +1,52 @@
+name: Checkpoint A - Round 1-8 validation
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-round1-8-validation
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout cumulative Round 8 snapshot
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run cumulative checks
+        run: npm run check
+
+      - name: Build application
+        run: npm run build
+
+  live-ingest:
+    needs: validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout cumulative Round 8 snapshot
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Run live event ingest without publish
+        run: npm run ingest:events
