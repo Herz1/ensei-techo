@@ -81,6 +81,18 @@ const VENUE_FACTS = new Map([
     city: "函館市",
     sourceUrl: "https://zaidan-hakodate.com/arena/",
   }],
+  ["グランメッセ熊本", {
+    id: "grandmesse-kumamoto",
+    prefecture: "kumamoto",
+    city: "益城町",
+    sourceUrl: "https://www.grandmesse.jp/",
+  }],
+  ["和歌山ビッグホエール", {
+    id: "wakayama-big-whale",
+    prefecture: "wakayama",
+    city: "和歌山市",
+    sourceUrl: "https://www.wakayamasposhin.or.jp/big-whale/",
+  }],
 ]);
 
 async function readJson(file) {
