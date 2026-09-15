@@ -1,0 +1,145 @@
+name: Round 36-39 Cumulative Checkpoint
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-round36-39-cumulative
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checkpoint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        id: install
+        continue-on-error: true
+        run: npm ci 2>&1 | tee checkpoint-install.log
+
+      - name: Run full checks
+        id: check
+        if: always() && steps.install.outcome == 'success'
+        continue-on-error: true
+        run: npm run check 2>&1 | tee checkpoint-check.log
+
+      - name: Run live ingest and Source Health
+        id: ingest
+        if: always() && steps.install.outcome == 'success'
+        continue-on-error: true
+        run: npm run ingest:events 2>&1 | tee checkpoint-ingest.log
+
+      - name: Audit live ingest report
+        id: audit
+        if: always() && steps.ingest.outcome == 'success'
+        continue-on-error: true
+        shell: bash
+        run: |
+          node <<'NODE' | tee checkpoint-audit.log
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const root = path.join(process.cwd(), 'src', 'data', 'ingest');
+          const read = (name, fallback) => {
+            try { return JSON.parse(fs.readFileSync(path.join(root, name), 'utf8')); }
+            catch (error) { if (fallback !== undefined) return fallback; throw error; }
+          };
+          const report = read('report.json');
+          const health = read('source-health.json', {});
+          const manifest = read('raw-manifest.json', { entries: [] });
+          const candidates = read('candidates.json', []);
+          const sources = report.sources ?? report.sourceResults ?? [];
+          const failedSources = sources.filter((s) => s.status === 'failed');
+          const zeroOkSources = sources.filter((s) => s.status === 'ok' && Number(s.recordCount ?? 0) === 0);
+          const sourceHealthRows = report.sources ?? [];
+          const actionable = sourceHealthRows.filter((s) => s.health?.actionable === true || s.sourceHealth?.actionable === true || s.actionable === true);
+          const parserFailures = (manifest.entries ?? []).filter((e) => (e.parserStatus ?? e.status) === 'parser_failed' || (e.parserErrors?.length ?? 0) > 0);
+          const unknownVenue = candidates.filter((c) => c.issues?.includes('unknown_venue'));
+          const unresolvedArtist = candidates.filter((c) => c.issues?.includes('unknown_artist') || c.issues?.includes('unresolved_artist'));
+          const nonMusic = candidates.filter((c) => c.issues?.includes('non_music') || c.issues?.includes('nonmusic'));
+          const badDateTime = candidates.filter((c) => !/^\d{4}-\d{2}-\d{2}$/.test(c.date ?? '') || (c.startTime && !/^\d{2}:\d{2}$/.test(c.startTime)) || (c.openTime && !/^\d{2}:\d{2}$/.test(c.openTime)));
+          const duplicateMap = new Map();
+          for (const c of candidates) {
+            const key = [c.date, c.venueId ?? c.venueName, c.startTime ?? '', c.title ?? ''].join('|');
+            duplicateMap.set(key, (duplicateMap.get(key) ?? 0) + 1);
+          }
+          const duplicates = [...duplicateMap.entries()].filter(([, count]) => count > 1);
+          const targetIds = [
+            'aimyon-cosmic-official',
+            'generations-parallel-quest-official',
+            'fantastics-sunflower-official',
+            'ini-city-of-lights-official',
+            'vaundy-horo-official',
+          ];
+          const targetSources = targetIds.map((id) => sources.find((s) => s.id === id)).filter(Boolean);
+          const summary = {
+            generatedAt: report.generatedAt ?? null,
+            collectionWindow: report.collectionWindow ?? null,
+            sourceCount: sources.length,
+            failedSources: failedSources.map((s) => ({ id: s.id, error: s.error })),
+            zeroOkSources: zeroOkSources.map((s) => s.id),
+            actionableHealth: actionable.map((s) => ({ id: s.id, health: s.health ?? s.sourceHealth ?? null })),
+            parserFailureCount: parserFailures.length,
+            candidateCount: candidates.length,
+            unknownVenueCount: unknownVenue.length,
+            unresolvedArtistCount: unresolvedArtist.length,
+            nonMusicCount: nonMusic.length,
+            badDateTimeCount: badDateTime.length,
+            duplicateKeyCount: duplicates.length,
+            targetSources: targetSources.map((s) => ({ id: s.id, status: s.status, recordCount: s.recordCount, reason: s.reason, health: s.health ?? s.sourceHealth ?? null })),
+            sourceHealthSnapshot: health,
+          };
+          fs.writeFileSync('checkpoint-summary.json', JSON.stringify(summary, null, 2) + '\n');
+          console.log(JSON.stringify(summary, null, 2));
+          const blocking = failedSources.length > 0 || actionable.length > 0 || parserFailures.length > 0 || badDateTime.length > 0 || duplicates.length > 0 || nonMusic.length > 0;
+          if (blocking) process.exitCode = 1;
+          NODE
+
+      - name: Build application
+        id: build
+        if: always() && steps.install.outcome == 'success'
+        continue-on-error: true
+        run: npm run build 2>&1 | tee checkpoint-build.log
+
+      - name: Upload checkpoint evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-checkpoint-evidence
+          if-no-files-found: warn
+          path: |
+            checkpoint-*.log
+            checkpoint-summary.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+
+      - name: Final checkpoint gate
+        if: always()
+        shell: bash
+        run: |
+          echo "install=${{ steps.install.outcome }}"
+          echo "check=${{ steps.check.outcome }}"
+          echo "ingest=${{ steps.ingest.outcome }}"
+          echo "audit=${{ steps.audit.outcome }}"
+          echo "build=${{ steps.build.outcome }}"
+          test "${{ steps.install.outcome }}" = "success"
+          test "${{ steps.check.outcome }}" = "success"
+          test "${{ steps.ingest.outcome }}" = "success"
+          test "${{ steps.audit.outcome }}" = "success"
+          test "${{ steps.build.outcome }}" = "success"
