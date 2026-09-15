@@ -77,6 +77,7 @@ function isMusicEvent(title, knownArtistNames = new Set()) {
 
 function candidateArtistPrefix(title) {
   const strongRules = [
+    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
     /^(.+?)\s+DOME\s+TOUR\b/iu,
     /^(.+?)\s+LIVE\s+TOUR\b/iu,
     /^(.+?)\s+CONCERT\s+TOUR\b/iu,
@@ -89,7 +90,6 @@ function candidateArtistPrefix(title) {
   const weakRules = [
     /^(.+?)\s+PRESENTS\b/iu,
     /^(.+?)\s+(?:\d{4}\s+)?WORLD\s+TOUR\b/iu,
-    /^(.+?)\s+ASIA\b.*\b(?:DOME|STADIUM)\b.*\bTOUR\b/iu,
   ];
   for (const rule of weakRules) {
     const match = title.match(rule);
