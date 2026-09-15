@@ -96,6 +96,21 @@ function candidateArtistPrefix(title) {
   return null;
 }
 
+function knownArtistDisplayPrefix(title, knownArtistNames = new Set()) {
+  const normalizedTitle = normalizeName(title);
+  const known = [...knownArtistNames].find(
+    (candidate) => candidate.length >= 4 && normalizedTitle.startsWith(candidate),
+  );
+  if (!known) return null;
+
+  const marker = title.search(
+    /\s+(?:(?:20\d{2}\s+)?WORLD\s+TOUR|DOME\s+TOUR|LIVE\s+TOUR|CONCERT\s+TOUR|ASIA\b|TOUR\s+20\d{2})/iu,
+  );
+  if (marker <= 0) return null;
+  const prefix = cleanText(title.slice(0, marker)).replace(/\s+20\d{2}$/u, "");
+  return normalizeName(prefix) === known ? prefix : null;
+}
+
 function hostSupportsArtist(url, normalizedArtist) {
   if (!url || !normalizedArtist) return false;
   try {
@@ -108,6 +123,8 @@ function hostSupportsArtist(url, normalizedArtist) {
 
 function artistNamesFromTitle(title, knownArtistNames = new Set(), eventUrl) {
   if (FESTIVAL_SIGNAL.test(title)) return [];
+  const knownPrefix = knownArtistDisplayPrefix(title, knownArtistNames);
+  if (knownPrefix) return [knownPrefix];
   const candidate = candidateArtistPrefix(title);
   if (!candidate?.prefix) return [];
   const normalized = normalizeName(candidate.prefix);
