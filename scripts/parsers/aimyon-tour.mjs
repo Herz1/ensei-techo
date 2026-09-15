@@ -39,10 +39,14 @@ function allowedMonthKeys(months) {
   );
 }
 
+function compact(value) {
+  return value.normalize("NFKC").replace(/\s+/gu, "");
+}
+
 function venueFromSegment(segment) {
-  const normalized = segment.normalize("NFKC");
+  const normalized = compact(segment);
   for (const [needle, canonical] of VENUES) {
-    if (normalized.includes(needle.normalize("NFKC"))) return canonical;
+    if (normalized.includes(compact(needle))) return canonical;
   }
   return undefined;
 }
