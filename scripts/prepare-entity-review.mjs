@@ -117,6 +117,12 @@ const VENUE_FACTS = new Map([
     city: "佐賀市",
     sourceUrl: "https://saga-sunrisepark.com/",
   }],
+  ["北九州メッセ", {
+    id: "kitakyushu-messe",
+    prefecture: "fukuoka",
+    city: "北九州市小倉北区",
+    sourceUrl: "https://hello-kitakyushu.or.jp/messe/",
+  }],
 ]);
 
 async function readJson(file) {
