@@ -3,7 +3,7 @@ import { cleanText, normalizeTime, toIsoDate } from "../event-ingest-lib.mjs";
 
 const TITLE = "M!LK ARENA TOUR 2026-2027「シャカリキレボリューション」";
 const TITLE_RE = /M!LK\s+ARENA\s+TOUR\s+2026-2027\s*[「"]?シャカリキレボリューション[」"]?/iu;
-const DATE_RE = /(20\d{2})(?:年|\s+|[.\/])(\d{1,2})(?:月|[.\/])(\d{1,2})(?:日)?[（(][^）)]*[）)]/gu;
+const DATE_RE = /(20\d{2})(?:年|\s+|[.\/])?(\d{1,2})(?:月|[.\/])(\d{1,2})(?:日)?[（(][^）)]*[）)]/gu;
 const OPEN_START_RE = /OPEN\s*(\d{1,2}:\d{2})\s*(?:\/|／)?\s*START\s*(\d{1,2}:\d{2})/giu;
 
 const VENUES = [
