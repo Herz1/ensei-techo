@@ -103,7 +103,7 @@ function timedDates(text) {
       index + 1 < matches.length ? matches[index + 1].index : text.length,
     );
     const times = [...segment.matchAll(/(?:[①②③④⑤]\s*)?(?:開場|開演)?\s*[\/:／]?\s*(\d{1,2}[：:]\d{2})/gu)]
-      .map((timeMatch) => normalizeTime(timeMatch[1]))
+      .map((timeMatch) => normalizeTime(timeMatch[1].normalize("NFKC").replaceAll("：", ":")))
       .filter(Boolean);
     records.push({ date, times: [...new Set(times)] });
   }
@@ -145,12 +145,12 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
   return matches.length === 1 ? [matches[0]] : [];
 }
 
-function ticketTypesFrom($) {
+function ticketTypesFrom($, bodyText) {
   const results = [];
   const nodes = $("p,li,dd,div").toArray();
   for (const node of nodes) {
     if ($(node).find("p,li,dd,div").length) continue;
-    const value = cleanText($(node).text());
+    const value = cleanText($(node).text()).normalize("NFKC");
     const match = value.match(/^(.{1,80}?)[：:\s　]+([0-9][0-9,]*)\s*円\s*[（(]税込[)）]?$/u);
     if (!match) continue;
     const name = cleanText(match[1]).replace(/^[・※*\s]+/u, "");
@@ -158,6 +158,20 @@ function ticketTypesFrom($) {
     if (!name || !Number.isInteger(priceJpy) || priceJpy <= 0) continue;
     if (results.some((item) => item.name === name && item.priceJpy === priceJpy)) continue;
     results.push({ name, priceJpy, taxIncluded: true, notes: [] });
+  }
+
+  if (!results.length) {
+    const priceText = segmentBetween(bodyText, "料金", ["公式サイト", "お問い合わせ", "備考"])
+      .normalize("NFKC");
+    for (const match of priceText.matchAll(/([^0-9]{1,70}?)[：:\s]+([0-9][0-9,]*)\s*円\s*\(税込\)/gu)) {
+      const name = cleanText(match[1])
+        .replace(/^.*[)）]\s*/u, "")
+        .replace(/^[・※*\s]+/u, "");
+      const priceJpy = Number(match[2].replaceAll(",", ""));
+      if (!name || !Number.isInteger(priceJpy) || priceJpy <= 0) continue;
+      if (results.some((item) => item.name === name && item.priceJpy === priceJpy)) continue;
+      results.push({ name, priceJpy, taxIncluded: true, notes: [] });
+    }
   }
   return results;
 }
@@ -212,7 +226,7 @@ export function parseAnabukiArenaDetail(
     return { ok: false, reason: "详情页未解析到目标月份内的明确开演时间", records: [] };
   }
 
-  const ticketTypes = ticketTypesFrom($);
+  const ticketTypes = ticketTypesFrom($, bodyText);
   const pricesJpy = [...new Set(ticketTypes.map((item) => item.priceJpy))].sort((a, b) => a - b);
   const links = classifiedLinks($, sourceUrl);
   const artistNames = artistNamesFrom(title, knownArtistNames);
