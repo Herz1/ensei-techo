@@ -101,8 +101,8 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
     /^(.+?)\s+Ringo\s+Jam\s+Tour\b/iu,
     /^(.+?)\s+LIVE\s+TOUR\b/iu,
     /^(.+?)\s+ARENA\s+TOUR\b/iu,
-    /^(.+?)\s+TOUR\b/iu,
     /^(.+?)(?=20\d{2}\s+TOUR\b)/iu,
+    /^(.+?)\s+TOUR\b/iu,
     /^(.+?)\s+コンサート\b/u,
   ];
   for (const rule of rules) {
