@@ -10,6 +10,7 @@ const EVENT_DATE = /(20\d{2})\/(\d{1,2})\/(\d{1,2})/u;
 const NON_MUSIC = /(就職|EXPO|トヨタ|フィールド無料開放|リレーマラソン|マラソン|サッカー|Pet博|焼酎|うまいもん|SPECIAL MATCH|野球|スポーツ|展示会|商談会|説明会|キッズ|無料開放)/iu;
 const MUSIC_SIGNAL = /(?:\bLIVE\b|\bTOUR\b|\bCONCERT\b|\bMUSIC\b|\bFES(?:TIVAL)?\b|\bROCK\b|SMTOWN|NUMBER\s*SHOT|ライブ|コンサート|音楽|フェス)/iu;
 const FESTIVAL_SIGNAL = /(?:FES(?:TIVAL)?|MUSIC\s+CIRCUS|NUMBER\s*SHOT|GREATEST\s+ROCK|SMTOWN)/iu;
+const CLOCK = "(\\d{1,2}:\\d{2})";
 
 function normalizeUrl(value, base) {
   try {
@@ -57,10 +58,35 @@ function titleFromBlock(text) {
   return cleanText(stop === undefined ? tail : tail.slice(0, stop));
 }
 
-function parseLabelTime(text, label) {
-  const before = text.match(new RegExp(`(\\d{1,2}:\\d{2})\\s*${label}`, "u"))?.[1];
-  const after = text.match(new RegExp(`${label}\\s*[／/]?\\s*(\\d{1,2}:\\d{2})`, "u"))?.[1];
-  return normalizeTime(before ?? after);
+function parseEventTimes(text) {
+  const labelFirst = text.match(
+    new RegExp(`開場\\s*[／/]?\\s*${CLOCK}\\s*(?:[／/|｜]\\s*)?開演\\s*[／/]?\\s*${CLOCK}`, "u"),
+  );
+  if (labelFirst) {
+    return {
+      openTime: normalizeTime(labelFirst[1]),
+      startTime: normalizeTime(labelFirst[2]),
+    };
+  }
+
+  const timeFirst = text.match(
+    new RegExp(`${CLOCK}\\s*開場\\s*(?:[／/|｜]\\s*)?${CLOCK}\\s*開演`, "u"),
+  );
+  if (timeFirst) {
+    return {
+      openTime: normalizeTime(timeFirst[1]),
+      startTime: normalizeTime(timeFirst[2]),
+    };
+  }
+
+  const startAfter = text.match(new RegExp(`開演\\s*[／/]?\\s*${CLOCK}`, "u"))?.[1];
+  const startBefore = text.match(new RegExp(`${CLOCK}\\s*開演`, "u"))?.[1];
+  const openAfter = text.match(new RegExp(`開場\\s*[／/]?\\s*${CLOCK}`, "u"))?.[1];
+  const openBefore = text.match(new RegExp(`${CLOCK}\\s*開場`, "u"))?.[1];
+  return {
+    openTime: normalizeTime(openAfter ?? openBefore),
+    startTime: normalizeTime(startAfter ?? startBefore),
+  };
 }
 
 function isMusicEvent(title, knownArtistNames = new Set()) {
@@ -173,11 +199,12 @@ function parseBlock(text, { $, element, sourceUrl, allowedMonths, knownArtistNam
   const title = titleFromBlock(text);
   if (!isMusicEvent(title, knownArtistNames)) return null;
   const eventUrl = officialEventUrl($, element, sourceUrl, title);
+  const times = parseEventTimes(text);
   return {
     title,
     date,
-    openTime: parseLabelTime(text, "開場"),
-    startTime: parseLabelTime(text, "開演"),
+    openTime: times.openTime,
+    startTime: times.startTime,
     artistNames: artistNamesFromTitle(title, knownArtistNames, eventUrl),
     officialEventUrl: eventUrl,
   };
