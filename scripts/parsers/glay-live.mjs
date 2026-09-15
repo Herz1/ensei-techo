@@ -27,9 +27,13 @@ function normalizeUrl(value, base) {
 }
 
 function normalizeVenueName(value) {
-  return cleanText(value)
+  const normalized = cleanText(value)
     .replace(/^(?:宮城|東京|新潟|北海道|兵庫|神奈川)・/u, "")
     .replace(/^マリンメッセ福岡\s+A館$/u, "マリンメッセ福岡A館");
+  if (normalized === "函館サーモン・まるなまアリーナ(函館アリーナ)") {
+    return "函館サーモン・まるなまアリーナ（函館アリーナ）";
+  }
+  return normalized;
 }
 
 function tourTable($) {
