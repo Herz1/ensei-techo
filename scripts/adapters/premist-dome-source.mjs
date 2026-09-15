@@ -60,7 +60,7 @@ export function createPremistDomeSourceAdapter(context) {
           }
           if (event.officialEventUrl) {
             sourceChain.push({
-              role: "event_official",
+              role: "artist_official",
               sourceId: definition.id,
               url: event.officialEventUrl,
               fetchStatus: "not_checked",
