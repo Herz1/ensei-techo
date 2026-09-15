@@ -24,6 +24,12 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Pending smoke list
+        run: node scripts/run-pending-source-smokes.mjs --list 2>&1 | tee pending-smoke-list.log
+      - name: Aggregate pending smoke runner
+        id: aggregate
+        continue-on-error: true
+        run: node scripts/run-pending-source-smokes.mjs 2>&1 | tee pending-smoke-runner.log
       - name: GENERATIONS smoke
         id: generations
         continue-on-error: true
@@ -67,6 +73,8 @@ jobs:
         with:
           name: round36-39-parser-fix-debug
           path: |
+            pending-smoke-list.log
+            pending-smoke-runner.log
             *-smoke.log
             pending-live.log
             pending-summary.log
@@ -77,10 +85,12 @@ jobs:
       - name: Final gate
         if: always()
         run: |
+          echo "aggregate=${{ steps.aggregate.outcome }}"
           echo "generations=${{ steps.generations.outcome }}"
           echo "fantastics=${{ steps.fantastics.outcome }}"
           echo "vaundy=${{ steps.vaundy.outcome }}"
           echo "live=${{ steps.live.outcome }}"
+          test "${{ steps.aggregate.outcome }}" = "success"
           test "${{ steps.generations.outcome }}" = "success"
           test "${{ steps.fantastics.outcome }}" = "success"
           test "${{ steps.vaundy.outcome }}" = "success"
