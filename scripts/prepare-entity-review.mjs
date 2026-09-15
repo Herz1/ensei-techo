@@ -129,6 +129,12 @@ const VENUE_FACTS = new Map([
     city: "大阪市東住吉区",
     sourceUrl: "https://nagaipark.com/stadium/",
   }],
+  ["刈谷市総合文化センター 大ホール", {
+    id: "kariya-cultural-center",
+    prefecture: "aichi",
+    city: "刈谷市",
+    sourceUrl: "https://kariya.hall-info.jp/",
+  }],
 ]);
 
 async function readJson(file) {
