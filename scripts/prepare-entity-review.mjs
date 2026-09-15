@@ -93,6 +93,30 @@ const VENUE_FACTS = new Map([
     city: "和歌山市",
     sourceUrl: "https://www.wakayamasposhin.or.jp/big-whale/",
   }],
+  ["ららアリーナ 東京ベイ", {
+    id: "lalaarena-tokyo-bay",
+    prefecture: "chiba",
+    city: "船橋市",
+    sourceUrl: "https://lalaarenatokyo-bay.com/access/",
+  }],
+  ["宮城セキスイハイムスーパーアリーナ", {
+    id: "sekisui-heim-super-arena",
+    prefecture: "miyagi",
+    city: "利府町",
+    sourceUrl: "https://www.pref.miyagi.jp/documents/52696/kaisaiannai.pdf",
+  }],
+  ["静岡エコパアリーナ", {
+    id: "ecopa-arena",
+    prefecture: "shizuoka",
+    city: "袋井市",
+    sourceUrl: "https://www.ecopa.jp/facility/arena/",
+  }],
+  ["SAGAアリーナ", {
+    id: "saga-arena",
+    prefecture: "saga",
+    city: "佐賀市",
+    sourceUrl: "https://saga-sunrisepark.com/",
+  }],
 ]);
 
 async function readJson(file) {
