@@ -37,24 +37,42 @@ function expectedZeroPolicy(sourceId, monthKeys) {
 }
 
 function evidenceSummary(entries) {
-  const fetchSuccesses = entries.filter((entry) =>
-    FETCH_SUCCESS.has(entry.fetchStatus),
-  ).length;
-  const fetchFailures = entries.length - fetchSuccesses;
-  const parserSuccesses = entries.filter(
-    (entry) => entry.parserStatus === "success",
-  ).length;
-  const parserFailures = entries.filter(
-    (entry) => entry.parserStatus === "parser_failed",
-  ).length;
-  const parserNotRun = entries.filter(
-    (entry) => entry.parserStatus === "not_run",
-  ).length;
-  const parserNotRecorded = entries.filter(
-    (entry) => entry.parserStatus === "not_recorded",
-  ).length;
+  const byRequest = new Map();
+  entries.forEach((entry, index) => {
+    const key = entry.requestedUrl || `__entry_${index}`;
+    const group = byRequest.get(key) ?? [];
+    group.push(entry);
+    byRequest.set(key, group);
+  });
+
+  let fetchSuccesses = 0;
+  let fetchFailures = 0;
+  let parserSuccesses = 0;
+  let parserFailures = 0;
+  let parserNotRun = 0;
+  let parserNotRecorded = 0;
+
+  for (const group of byRequest.values()) {
+    if (group.some((entry) => FETCH_SUCCESS.has(entry.fetchStatus))) {
+      fetchSuccesses += 1;
+    } else {
+      fetchFailures += 1;
+    }
+
+    if (group.some((entry) => entry.parserStatus === "success")) {
+      parserSuccesses += 1;
+    } else if (group.some((entry) => entry.parserStatus === "parser_failed")) {
+      parserFailures += 1;
+    } else if (group.some((entry) => entry.parserStatus === "not_run")) {
+      parserNotRun += 1;
+    } else {
+      parserNotRecorded += 1;
+    }
+  }
+
   return {
-    requestCount: entries.length,
+    requestCount: byRequest.size,
+    attemptCount: entries.length,
     fetchSuccesses,
     fetchFailures,
     parserSuccesses,
