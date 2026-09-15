@@ -124,7 +124,19 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
   return known.length === 1 ? [known[0]] : [];
 }
 
-function scheduleText(bodyText) {
+function scheduleText($, bodyText) {
+  for (const node of $("th,dt").toArray()) {
+    const label = cleanText($(node).text()).normalize("NFKC");
+    if (label !== "日時" && label !== "日程") continue;
+    const value = node.tagName?.toLowerCase() === "th"
+      ? $(node).next("td").first()
+      : $(node).next("dd").first();
+    const clone = value.clone();
+    clone.find("br").replaceWith("\n");
+    const direct = clone.text().normalize("NFKC").trim();
+    if (direct) return direct;
+  }
+
   const normalized = bodyText.normalize("NFKC");
   const markers = ["日時", "日程"];
   const starts = markers
@@ -150,8 +162,8 @@ function resolveYear(month, months) {
   return years.length === 1 ? years[0] : undefined;
 }
 
-function performancesFrom(bodyText, months) {
-  const text = scheduleText(bodyText);
+function performancesFrom($, bodyText, months) {
+  const text = scheduleText($, bodyText);
   const matches = [...text.matchAll(DATE_TOKEN)];
   const records = [];
   for (let index = 0; index < matches.length; index += 1) {
@@ -218,7 +230,7 @@ export function parseBigHatNaganoDetail(
   if (!title || !isMusicTitle(title, knownArtistNames)) {
     return { ok: false, reason: "详情页不是保守规则认可的音乐公演", records: [] };
   }
-  const performances = performancesFrom(bodyText, months);
+  const performances = performancesFrom($, bodyText, months);
   if (!performances.length) {
     return { ok: false, reason: "详情页未解析到目标月份内明确开演时间", records: [] };
   }

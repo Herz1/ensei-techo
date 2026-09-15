@@ -35,6 +35,7 @@ function normalizeVenueName(value) {
     .replace(TOUR_ANNOTATION, "")
     .replace(/^マリンメッセ福岡\s+A館$/u, "マリンメッセ福岡A館")
     .replace(/^北海道立総合体育センター\s+北海きたえーる$/u, "北海きたえーる")
+    .replace(/^長野\s*ビッグハット$/u, "ビッグハット")
     .trim();
   if (normalized === "グリーンアリーナ") return "広島グリーンアリーナ";
   if (normalized === "ワールド記念ホール") return "神戸ワールド記念ホール";

@@ -14,7 +14,7 @@ export function createBigHatNaganoSourceAdapter(context) {
     type: "venue_official",
     role: "venue_schedule",
     parserIds: ["big-hat-event-index-html", "big-hat-event-detail-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://www.nagano-mwave.co.jp/bighat/topics/event/",
     fetchedAt: context.generatedAt,
   };

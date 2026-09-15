@@ -215,10 +215,14 @@ function contextualExternalUrl($, element, sourceUrl, marker) {
     if (!url || new URL(url).hostname === sourceHost || new URL(url).hostname.endsWith("ariake-arena.tokyo")) {
       continue;
     }
-    const contexts = [anchor, ...$(anchor).parents().toArray()];
-    const matched = contexts.find((node) => {
-      const value = cleanText($(node).text());
-      return value.includes(marker) && value.length <= 320;
+    const localNodes = [
+      $(anchor).closest("p,li,dd,dt,tr,td").first(),
+      $(anchor).parent(),
+    ];
+    const matched = localNodes.some((node) => {
+      if (!node?.length) return false;
+      const value = cleanText(node.text());
+      return value.includes(marker) && value.length <= 240;
     });
     if (matched) return url;
   }

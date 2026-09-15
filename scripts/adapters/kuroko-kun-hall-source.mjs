@@ -11,7 +11,7 @@ export function createKurokoKunHallSourceAdapter(context) {
     type: "venue_official",
     role: "venue_schedule",
     parserIds: ["kuroko-kun-hall-concert-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://www.nespa.or.jp/sports-plaza/hall/event-schedule/concert.html",
     fetchedAt: context.generatedAt,
   };
