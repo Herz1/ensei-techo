@@ -121,6 +121,8 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
     /^(.+?)\s+TOUR\s+20\d{2}\b/iu,
     /^(.+?)\s+Ringo\s+Jam\s+Tour\b/iu,
     /^(.+?)\s+2026\s+TOUR\b/iu,
+    /^(.+?)\s+TOUR\b/iu,
+    /^(.+?)\s+CONCERT\b/iu,
   ];
   for (const rule of rules) {
     const match = title.match(rule);
