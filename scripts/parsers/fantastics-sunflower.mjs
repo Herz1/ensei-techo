@@ -10,6 +10,7 @@ const TITLE_RE = /FANTASTICS\s+LIVE\s+TOUR\s+2026\s+[“"]SUNFLOWER[”"]/iu;
 const DATE_RE = /(?:(20\d{2})\/)?(\d{1,2})\/(\d{1,2})[（(][^）)]*[）)]/gu;
 const HEADER_TIME_RE = /(?:開場\s*[／/]\s*開演|OPEN\s*[／/]\s*START|Doors\s+open\s*[／/]\s*Start)\s*(\d{1,2}:\d{2})\s*[／/]\s*(\d{1,2}:\d{2})/iu;
 const LABELED_TIME_RE = /(?:開場|OPEN|Doors\s+open)\s*(\d{1,2}:\d{2})\s*[／/]\s*(?:開演|START|Start)\s*(\d{1,2}:\d{2})/iu;
+const PAIR_TIME_RE = /(\d{1,2}:\d{2})\s*[／/]\s*(\d{1,2}:\d{2})/u;
 const PERFORMANCE_PREFIX = /^\[[^\]]+公演\]\s*/u;
 
 function monthKey(date) {
@@ -79,7 +80,54 @@ function ticketTypesFrom(bodyText) {
   });
 }
 
-function parseAllRecords(bodyText) {
+function dedupe(records) {
+  return records.filter(
+    (record, index, all) =>
+      all.findIndex((candidate) =>
+        candidate.date === record.date &&
+        candidate.venueName === record.venueName &&
+        candidate.startTime === record.startTime,
+      ) === index,
+  );
+}
+
+function parseStructuredArticles($) {
+  const records = [];
+  for (const article of $("section.schedule article").toArray()) {
+    const dayText = cleanText($(article).find(".day_box .day").first().text()).normalize("NFKC");
+    const dayMatch = dayText.match(/(?:(20\d{2})[.\/])?(\d{1,2})[.\/](\d{1,2})/u);
+    if (!dayMatch) continue;
+    const date = toIsoDate(dayMatch[1] ?? 2026, dayMatch[2], dayMatch[3]);
+    if (!date) continue;
+
+    const venueName = normalizeVenueName($(article).find(".info_box .place").first().text());
+    if (!venueName || venueName.length > 100) continue;
+
+    let timeText = "";
+    for (const dt of $(article).find("dt").toArray()) {
+      if (!/開場\s*[／/]\s*開演/u.test(cleanText($(dt).text()).normalize("NFKC"))) continue;
+      timeText = cleanText($(dt).next("dd").first().text()).normalize("NFKC");
+      break;
+    }
+    if (!timeText) timeText = cleanText($(article).text()).normalize("NFKC");
+    const time = timeText.match(PAIR_TIME_RE);
+    const openTime = time ? normalizeTime(time[1]) : undefined;
+    const startTime = time ? normalizeTime(time[2]) : undefined;
+    if (!openTime || !startTime) continue;
+
+    records.push({
+      title: TITLE,
+      artistNames: ["FANTASTICS"],
+      venueName,
+      date,
+      openTime,
+      startTime,
+    });
+  }
+  return dedupe(records);
+}
+
+function parseLegacyText(bodyText) {
   const matches = [...bodyText.matchAll(DATE_RE)];
   const records = [];
   let currentYear = 2026;
@@ -110,15 +158,7 @@ function parseAllRecords(bodyText) {
       startTime: timing.startTime,
     });
   }
-
-  return records.filter(
-    (record, index, all) =>
-      all.findIndex((candidate) =>
-        candidate.date === record.date &&
-        candidate.venueName === record.venueName &&
-        candidate.startTime === record.startTime,
-      ) === index,
-  );
+  return dedupe(records);
 }
 
 export function parseFantasticsSunflower(
@@ -138,7 +178,8 @@ export function parseFantasticsSunflower(
     };
   }
 
-  const allRecords = parseAllRecords(bodyText);
+  const structured = parseStructuredArticles($);
+  const allRecords = structured.length ? structured : parseLegacyText(bodyText);
   if (!allRecords.length) {
     return {
       ok: false,

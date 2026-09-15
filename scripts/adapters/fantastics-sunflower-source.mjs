@@ -30,7 +30,7 @@ export function createFantasticsSunflowerSourceAdapter(context) {
     type: "artist_official",
     role: "artist_official",
     parserIds: ["fantastics-sunflower-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://www.ldh-liveschedule.jp/sys/tour/40198/",
     fetchedAt: context.generatedAt,
   };

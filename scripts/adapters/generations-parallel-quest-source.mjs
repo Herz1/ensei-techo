@@ -37,7 +37,7 @@ export function createGenerationsParallelQuestSourceAdapter(context) {
     type: "artist_official",
     role: "artist_official",
     parserIds: ["generations-parallel-quest-html"],
-    parserVersion: "1",
+    parserVersion: "2",
     url: "https://www.ldh-liveschedule.jp/sys/tour/40102/",
     fetchedAt: context.generatedAt,
   };
