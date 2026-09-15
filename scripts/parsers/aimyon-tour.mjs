@@ -8,7 +8,6 @@ import {
 const TITLE = "AIMYON TOUR 2027 -cosmic%-";
 const TITLE_RE = /AIMYON\s+TOUR\s+2027\s*-\s*cosmic\s*%\s*-/iu;
 const DATE_TIME_RE = /(\d{1,2})\.(\d{1,2})\s+(?:MON|TUE|WED|THU|FRI|SAT|SUN)\s+(\d{1,2}:\d{2})\s*[／/]\s*(\d{1,2}:\d{2})/giu;
-const TICKET_RE = /指定席\s*([0-9][0-9,]*)円\s*[（(]税込[)）]/u;
 
 const VENUES = [
   ["真駒内セキスイハイムアイスアリーナ", "真駒内セキスイハイムアイスアリーナ"],
@@ -51,14 +50,6 @@ function venueFromSegment(segment) {
   return undefined;
 }
 
-function ticketTypesFrom(bodyText) {
-  const match = bodyText.match(TICKET_RE);
-  if (!match) return [];
-  const priceJpy = Number(match[1].replaceAll(",", ""));
-  if (!Number.isInteger(priceJpy) || priceJpy <= 0) return [];
-  return [{ name: "指定席", priceJpy, taxIncluded: true, notes: [] }];
-}
-
 export function parseAimyonTour2027(html, sourceUrl, { months = [] } = {}) {
   const $ = cheerio.load(html);
   const bodyText = cleanText($("body").text()).normalize("NFKC");
@@ -78,8 +69,6 @@ export function parseAimyonTour2027(html, sourceUrl, { months = [] } = {}) {
   const matches = [...bodyText.matchAll(DATE_TIME_RE)];
   const pending = [];
   const records = [];
-  const ticketTypes = ticketTypesFrom(bodyText);
-  const pricesJpy = ticketTypes.map((item) => item.priceJpy);
 
   for (let index = 0; index < matches.length; index += 1) {
     const match = matches[index];
@@ -105,8 +94,6 @@ export function parseAimyonTour2027(html, sourceUrl, { months = [] } = {}) {
         artistNames: ["あいみょん"],
         venueName,
         ...performance,
-        ticketTypes,
-        pricesJpy,
       });
     }
   }
