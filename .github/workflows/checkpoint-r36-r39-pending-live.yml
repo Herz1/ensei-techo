@@ -42,7 +42,9 @@ jobs:
           node --check scripts/ingest-events-pending-only.mjs
       - name: Run pending-only live ingest
         run: node scripts/ingest-events-pending-only.mjs && node scripts/report-source-health.mjs
-      - name: Verify Round 36-39 source outcomes
+      - name: Capture Round 36-39 source outcomes
+        id: verify
+        continue-on-error: true
         run: |
           node <<'NODE'
           const fs = require('node:fs');
@@ -56,11 +58,13 @@ jobs:
           ];
           const sources = report.sources ?? [];
           const rows = ids.map((id) => sources.find((s) => s.id === id));
-          if (rows.some((row) => !row)) throw new Error('missing Round 36-39 source in report');
-          console.log(JSON.stringify(rows.map((s) => ({
+          const summary = rows.map((s, i) => s ? ({
             id:s.id,status:s.status,recordCount:s.recordCount,reason:s.reason,
             health:s.health ?? s.sourceHealth ?? null,
-          })), null, 2));
+          }) : ({id:ids[i],missing:true}));
+          fs.writeFileSync('pending-live-summary.json', JSON.stringify(summary,null,2)+'\n');
+          console.log(JSON.stringify(summary,null,2));
+          if (rows.some((row) => !row)) throw new Error('missing Round 36-39 source in report');
           for (const s of rows) {
             if (s.status === 'failed') throw new Error(`${s.id} failed`);
             const health = s.health ?? s.sourceHealth;
@@ -70,3 +74,17 @@ jobs:
           if (!active.length) throw new Error('no active Round 36-39 source');
           if (active.some((s) => Number(s.recordCount ?? 0) <= 0)) throw new Error('active Round 36-39 source returned zero records');
           NODE
+      - name: Upload pending diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-pending-live-evidence
+          path: |
+            pending-live-summary.json
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/candidates.json
+      - name: Final diagnostic gate
+        if: always()
+        run: test "${{ steps.verify.outcome }}" = "success"
