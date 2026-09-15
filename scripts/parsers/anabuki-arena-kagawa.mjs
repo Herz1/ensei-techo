@@ -145,54 +145,61 @@ function artistNamesFrom(title, knownArtistNames = new Set()) {
   return matches.length === 1 ? [matches[0]] : [];
 }
 
-function ticketTypesFrom($, bodyText) {
+function ticketTypesFrom(bodyText) {
   const results = [];
-  const nodes = $("p,li,dd,div").toArray();
-  for (const node of nodes) {
-    if ($(node).find("p,li,dd,div").length) continue;
-    const value = cleanText($(node).text()).normalize("NFKC");
-    const match = value.match(/^(.{1,80}?)[：:\s　]+([0-9][0-9,]*)\s*円\s*[（(]税込[)）]?$/u);
+  const priceText = segmentBetween(bodyText, "料金", ["公式サイト", "お問い合わせ", "備考"])
+    .normalize("NFKC");
+
+  for (const chunk of priceText.split("(税込)")) {
+    const value = cleanText(chunk);
+    if (!value) continue;
+    const match = value.match(/(?:^|.*?)([^0-9]{1,80}?)[：:\s]+([0-9][0-9,]*)\s*円$/u);
     if (!match) continue;
-    const name = cleanText(match[1]).replace(/^[・※*\s]+/u, "");
+    const name = cleanText(match[1])
+      .replace(/^.*(?:円|税込|[)）])\s*/u, "")
+      .replace(/^[・※*\s]+/u, "");
     const priceJpy = Number(match[2].replaceAll(",", ""));
     if (!name || !Number.isInteger(priceJpy) || priceJpy <= 0) continue;
     if (results.some((item) => item.name === name && item.priceJpy === priceJpy)) continue;
     results.push({ name, priceJpy, taxIncluded: true, notes: [] });
   }
-
-  if (!results.length) {
-    const priceText = segmentBetween(bodyText, "料金", ["公式サイト", "お問い合わせ", "備考"])
-      .normalize("NFKC");
-    for (const match of priceText.matchAll(/([^0-9]{1,70}?)[：:\s]+([0-9][0-9,]*)\s*円\s*\(税込\)/gu)) {
-      const name = cleanText(match[1])
-        .replace(/^.*[)）]\s*/u, "")
-        .replace(/^[・※*\s]+/u, "");
-      const priceJpy = Number(match[2].replaceAll(",", ""));
-      if (!name || !Number.isInteger(priceJpy) || priceJpy <= 0) continue;
-      if (results.some((item) => item.name === name && item.priceJpy === priceJpy)) continue;
-      results.push({ name, priceJpy, taxIncluded: true, notes: [] });
-    }
-  }
   return results;
 }
 
-function classifiedLinks($, sourceUrl) {
+function classifiedLinks($, sourceUrl, bodyText) {
   const sourceHost = new URL(sourceUrl).hostname;
+  const officialText = segmentBetween(bodyText, "公式サイト", ["お問い合わせ", "備考"]);
+  const inquiryText = segmentBetween(bodyText, "お問い合わせ", ["備考"]);
   let artistOfficialUrl;
   let promoterUrl;
+
   for (const anchor of $("a[href]").toArray()) {
     const url = normalizeUrl($(anchor).attr("href"), sourceUrl);
     if (!url) continue;
     const host = new URL(url).hostname;
     if (host === sourceHost) continue;
+    const label = cleanText($(anchor).text());
     const contexts = [anchor, ...$(anchor).parents("p,li,dd,div,section").toArray()]
       .map((node) => cleanText($(node).text()))
       .filter((text) => text.length <= 600);
-    if (!artistOfficialUrl && contexts.some((text) => text.includes("公式サイト"))) {
+
+    if (
+      !artistOfficialUrl &&
+      (
+        (officialText && (officialText.includes(label) || officialText.includes(url))) ||
+        contexts.some((text) => text.includes("公式サイト"))
+      )
+    ) {
       artistOfficialUrl = url;
       continue;
     }
-    if (!promoterUrl && contexts.some((text) => text.includes("お問い合わせ"))) {
+    if (
+      !promoterUrl &&
+      (
+        (inquiryText && (inquiryText.includes(label) || inquiryText.includes(url))) ||
+        contexts.some((text) => text.includes("お問い合わせ"))
+      )
+    ) {
       promoterUrl = url;
     }
   }
@@ -226,9 +233,9 @@ export function parseAnabukiArenaDetail(
     return { ok: false, reason: "详情页未解析到目标月份内的明确开演时间", records: [] };
   }
 
-  const ticketTypes = ticketTypesFrom($, bodyText);
+  const ticketTypes = ticketTypesFrom(bodyText);
   const pricesJpy = [...new Set(ticketTypes.map((item) => item.priceJpy))].sort((a, b) => a - b);
-  const links = classifiedLinks($, sourceUrl);
+  const links = classifiedLinks($, sourceUrl, bodyText);
   const artistNames = artistNamesFrom(title, knownArtistNames);
 
   return {
