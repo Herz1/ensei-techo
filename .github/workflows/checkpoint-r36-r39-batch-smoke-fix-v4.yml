@@ -1,0 +1,52 @@
+name: Round 36-39 Batch Smoke Fix v4
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-batch-smoke-fix
+    paths:
+      - ".github/workflows/checkpoint-r36-r39-batch-smoke-fix-v4.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apply targeted fixes
+        run: python3 scripts/.checkpoint-r36-r39-batch-fix.py
+      - name: Diagnose PayPay parsed record
+        run: |
+          cat > scripts/.paypay-diag.mjs <<'NODE'
+          import { normalizeName } from "./event-ingest-lib.mjs";
+          import { parsePayPayDomeSchedule } from "./parsers/paypay-dome.mjs";
+          const html = `<html><body><h1>2026年みずほPayPayドームイベント日程</h1><div class="event"><p>2026/10/24（土）</p><p>イベント | <a href="https://www.straykidsjapan.com/run-it/">Stray Kids World Tour &lt;RUN IT JAPAN&gt;</a></p><p>開演時間 | 16:30 開場 18:30 開演</p><p>お問い合わせ | BEA</p></div></body></html>`;
+          const knownArtistNames = new Set(["Stray Kids", "YOASOBI", "Snow Man", "BIGBANG"].map(normalizeName));
+          const parsed = parsePayPayDomeSchedule(html, "https://www.softbankhawks.co.jp/stadium/event_schedule/2026/", { year: 2026, months:[{year:2026,month:10}], knownArtistNames });
+          console.log(JSON.stringify(parsed, null, 2));
+          NODE
+          node scripts/.paypay-diag.mjs
+          rm scripts/.paypay-diag.mjs
+      - name: Run targeted fixed smokes
+        run: |
+          node scripts/ariake-arena-smoke.mjs
+          node scripts/tokyo-garden-theater-smoke.mjs
+          node scripts/kuroko-kun-hall-smoke.mjs
+          node scripts/world-memorial-hall-smoke.mjs
+          node scripts/big-hat-nagano-smoke.mjs
+          node scripts/generations-parallel-quest-smoke.mjs
+      - name: Commit tested business fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/parsers/ariake-arena.mjs scripts/adapters/ariake-arena-source.mjs scripts/tokyo-garden-theater-smoke.mjs scripts/world-memorial-hall-smoke.mjs scripts/parsers/kuroko-kun-hall.mjs scripts/adapters/kuroko-kun-hall-source.mjs scripts/parsers/big-hat-nagano.mjs scripts/adapters/big-hat-nagano-source.mjs scripts/parsers/generations-parallel-quest-v2.mjs
+          git commit -m "fix: clear cumulative source smoke regressions"
+          git push origin HEAD:checkpoint/2026-09-15-r36-r39-batch-smoke-fix
