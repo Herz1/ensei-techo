@@ -26,6 +26,7 @@ import { createWorldMemorialHallSourceAdapter } from "./adapters/world-memorial-
 import { createAnabukiArenaKagawaSourceAdapter } from "./adapters/anabuki-arena-kagawa-source.mjs";
 import { createSundomeFukuiSourceAdapter } from "./adapters/sundome-fukui-source.mjs";
 import { createBigHatNaganoSourceAdapter } from "./adapters/big-hat-nagano-source.mjs";
+import { createGlayLiveSourceAdapter } from "./adapters/glay-live-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -350,6 +351,7 @@ async function main() {
     createAnabukiArenaKagawaSourceAdapter(adapterContext),
     createSundomeFukuiSourceAdapter(adapterContext),
     createBigHatNaganoSourceAdapter(adapterContext),
+    createGlayLiveSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
