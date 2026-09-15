@@ -1,0 +1,193 @@
+name: Round 36-39 Batch Smoke Fix
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-batch-smoke-fix
+    paths:
+      - ".github/workflows/checkpoint-r36-r39-batch-smoke-fix.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apply targeted smoke fixes
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              if old not in text:
+                  raise SystemExit(f"missing replacement target in {path}: {old[:80]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          # Ariake: keep official/promoter link context local to the anchor row/paragraph.
+          replace_once(
+              "scripts/parsers/ariake-arena.mjs",
+              '''function contextualExternalUrl($, element, sourceUrl, marker) {
+            const sourceHost = new URL(sourceUrl).hostname;
+            for (const anchor of $(element).find("a[href]").toArray()) {
+              const url = normalizeUrl($(anchor).attr("href"), sourceUrl);
+              if (!url || new URL(url).hostname === sourceHost || new URL(url).hostname.endsWith("ariake-arena.tokyo")) {
+                continue;
+              }
+              const contexts = [anchor, ...$(anchor).parents().toArray()];
+              const matched = contexts.find((node) => {
+                const value = cleanText($(node).text());
+                return value.includes(marker) && value.length <= 320;
+              });
+              if (matched) return url;
+            }
+            return undefined;
+          }''',
+              '''function contextualExternalUrl($, element, sourceUrl, marker) {
+            const sourceHost = new URL(sourceUrl).hostname;
+            for (const anchor of $(element).find("a[href]").toArray()) {
+              const url = normalizeUrl($(anchor).attr("href"), sourceUrl);
+              if (!url || new URL(url).hostname === sourceHost || new URL(url).hostname.endsWith("ariake-arena.tokyo")) {
+                continue;
+              }
+              const localNodes = [
+                $(anchor).closest("p,li,dd,dt,tr,td").first(),
+                $(anchor).parent(),
+              ];
+              const matched = localNodes.some((node) => {
+                if (!node?.length) return false;
+                const value = cleanText(node.text());
+                return value.includes(marker) && value.length <= 240;
+              });
+              if (matched) return url;
+            }
+            return undefined;
+          }''',
+          )
+          replace_once("scripts/adapters/ariake-arena-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # Tokyo Garden / World Hall smokes must pass normalized known-artist sets, matching production context.
+          replace_once(
+              "scripts/tokyo-garden-theater-smoke.mjs",
+              'import assert from "node:assert/strict";\n',
+              'import assert from "node:assert/strict";\nimport { normalizeName } from "./event-ingest-lib.mjs";\n',
+          )
+          replace_once(
+              "scripts/tokyo-garden-theater-smoke.mjs",
+              'knownArtistNames: new Set(["sung si kyung"]),',
+              'knownArtistNames: new Set(["sung si kyung"].map(normalizeName)),',
+          )
+          replace_once(
+              "scripts/world-memorial-hall-smoke.mjs",
+              'import assert from "node:assert/strict";\n',
+              'import assert from "node:assert/strict";\nimport { normalizeName } from "./event-ingest-lib.mjs";\n',
+          )
+          p = Path("scripts/world-memorial-hall-smoke.mjs")
+          text = p.read_text()
+          text2, count = re.subn(r'const known = new Set\((\[.*?\])\);', r'const known = new Set(\1.map(normalizeName));', text, count=1, flags=re.S)
+          if count != 1:
+              raise SystemExit("failed to normalize World Hall known artist fixture")
+          p.write_text(text2)
+
+          # Kuroko: remove trailing Japanese 'ほか/他' before artist splitting.
+          replace_once(
+              "scripts/parsers/kuroko-kun-hall.mjs",
+              'const value = cleanText(match[1]);',
+              'const value = cleanText(match[1]).replace(/\\s*(?:ほか|他)\\s*$/u, "");',
+          )
+          replace_once("scripts/adapters/kuroko-kun-hall-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # Big Hat: read schedule directly from the 日程/日時 table row before whole-page fallback.
+          replace_once(
+              "scripts/parsers/big-hat-nagano.mjs",
+              '''function scheduleText(bodyText) {
+            const normalized = bodyText.normalize("NFKC");
+            const markers = ["日時", "日程"];
+            const starts = markers
+              .map((marker) => ({ marker, index: normalized.indexOf(marker) }))
+              .filter((item) => item.index >= 0)
+              .sort((a, b) => a.index - b.index);
+            if (!starts.length) return "";
+            const first = starts[0];
+            const tail = normalized.slice(first.index + first.marker.length);
+            const stop = ["入場料", "公式HP", "チケットについて", "お問合せ", "お問い合わせ"]
+              .map((marker) => tail.indexOf(marker))
+              .filter((index) => index >= 0)
+              .sort((a, b) => a - b)[0];
+            return cleanText(stop === undefined ? tail : tail.slice(0, stop));
+          }''',
+              '''function scheduleText($, bodyText) {
+            for (const node of $("th,dt").toArray()) {
+              const label = cleanText($(node).text()).normalize("NFKC");
+              if (label !== "日時" && label !== "日程") continue;
+              const value = node.tagName?.toLowerCase() === "th"
+                ? $(node).next("td").first()
+                : $(node).next("dd").first();
+              const text = cleanText(value.text()).normalize("NFKC");
+              if (text) return text;
+            }
+
+            const normalized = bodyText.normalize("NFKC");
+            const markers = ["日時", "日程"];
+            const starts = markers
+              .map((marker) => ({ marker, index: normalized.indexOf(marker) }))
+              .filter((item) => item.index >= 0)
+              .sort((a, b) => a.index - b.index);
+            if (!starts.length) return "";
+            const first = starts[0];
+            const tail = normalized.slice(first.index + first.marker.length);
+            const stop = ["入場料", "公式HP", "チケットについて", "お問合せ", "お問い合わせ"]
+              .map((marker) => tail.indexOf(marker))
+              .filter((index) => index >= 0)
+              .sort((a, b) => a - b)[0];
+            return cleanText(stop === undefined ? tail : tail.slice(0, stop));
+          }''',
+          )
+          replace_once("scripts/parsers/big-hat-nagano.mjs", 'function performancesFrom(bodyText, months) {\n  const text = scheduleText(bodyText);', 'function performancesFrom($, bodyText, months) {\n  const text = scheduleText($, bodyText);')
+          replace_once("scripts/parsers/big-hat-nagano.mjs", 'const performances = performancesFrom(bodyText, months);', 'const performances = performancesFrom($, bodyText, months);')
+          replace_once("scripts/adapters/big-hat-nagano-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # GENERATIONS: align Nagano venue display with the adapter's stable venue map.
+          replace_once(
+              "scripts/parsers/generations-parallel-quest-v2.mjs",
+              '.replace(/^北海道立総合体育センター\\s+北海きたえーる$/u, "北海きたえーる");',
+              '.replace(/^北海道立総合体育センター\\s+北海きたえーる$/u, "北海きたえーる")\n    .replace(/^長野\\s*ビッグハット$/u, "ビッグハット");',
+          )
+          PY
+      - name: Run targeted fixed smokes
+        run: |
+          node scripts/ariake-arena-smoke.mjs
+          node scripts/tokyo-garden-theater-smoke.mjs
+          node scripts/kuroko-kun-hall-smoke.mjs
+          node scripts/world-memorial-hall-smoke.mjs
+          node scripts/big-hat-nagano-smoke.mjs
+          node scripts/generations-parallel-quest-smoke.mjs
+      - name: Diagnose PayPay parsed record
+        run: |
+          cat > scripts/.paypay-diag.mjs <<'NODE'
+          import { normalizeName } from "./event-ingest-lib.mjs";
+          import { parsePayPayDomeSchedule } from "./parsers/paypay-dome.mjs";
+          const html = `<html><body><h1>2026年みずほPayPayドームイベント日程</h1><div class="event"><p>2026/10/24（土）</p><p>イベント | <a href="https://www.straykidsjapan.com/run-it/">Stray Kids World Tour &lt;RUN IT JAPAN&gt;</a></p><p>開演時間 | 16:30 開場 18:30 開演</p><p>お問い合わせ | BEA</p></div></body></html>`;
+          const knownArtistNames = new Set(["Stray Kids", "YOASOBI", "Snow Man", "BIGBANG"].map(normalizeName));
+          const parsed = parsePayPayDomeSchedule(html, "https://www.softbankhawks.co.jp/stadium/event_schedule/2026/", { year: 2026, months:[{year:2026,month:10}], knownArtistNames });
+          console.log(JSON.stringify(parsed, null, 2));
+          NODE
+          node scripts/.paypay-diag.mjs
+          rm scripts/.paypay-diag.mjs
+      - name: Commit tested business fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/parsers/ariake-arena.mjs scripts/adapters/ariake-arena-source.mjs scripts/tokyo-garden-theater-smoke.mjs scripts/world-memorial-hall-smoke.mjs scripts/parsers/kuroko-kun-hall.mjs scripts/adapters/kuroko-kun-hall-source.mjs scripts/parsers/big-hat-nagano.mjs scripts/adapters/big-hat-nagano-source.mjs scripts/parsers/generations-parallel-quest-v2.mjs
+          git commit -m "fix: clear cumulative source smoke regressions"
+          git push origin HEAD:checkpoint/2026-09-15-r36-r39-batch-smoke-fix
