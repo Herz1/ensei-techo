@@ -286,5 +286,32 @@
         }
       ]
     }
+  },
+  {
+    "id": "xebio-arena-sendai",
+    "nameJa": "ゼビオアリーナ仙台",
+    "nameZh": null,
+    "prefecture": "miyagi",
+    "city": "仙台市太白区",
+    "lat": null,
+    "lng": null,
+    "capacity": null,
+    "tier": null,
+    "stations": [],
+    "hubAccess": [],
+    "profileStatus": "minimal",
+    "verification": {
+      "state": "verified",
+      "checkedAt": "2026-09-15T08:19:43.000Z",
+      "evidenceHash": "1a88d28a96fb7177d06bfb1d54eec6d37feb5708c5bdfd5da8ac33d0b156a259",
+      "sources": [
+        {
+          "name": "ゼビオアリーナ仙台公式サイト",
+          "type": "venue_official",
+          "url": "https://www.xebioarena.com/",
+          "fetchedAt": "2026-09-15T08:19:43.000Z"
+        }
+      ]
+    }
   }
 ]
