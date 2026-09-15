@@ -1,0 +1,30 @@
+name: Client Data Refresh
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-client-data-refresh
+    paths:
+      - ".github/workflows/client-data-refresh.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate client data
+        run: node scripts/generate-client-data.mjs
+      - name: Commit refreshed client data
+        run: |
+          if git diff --quiet -- src/data/generated/event-summary-index.json public/data/search-index.json; then
+            echo "No client data changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/generated/event-summary-index.json public/data/search-index.json
+          git commit -m "chore: refresh client data after venue normalization"
+          git push origin HEAD:checkpoint/2026-09-15-client-data-refresh
