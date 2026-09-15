@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - checkpoint/2026-09-15-round1-8-validation
+  pull_request:
+    branches:
+      - feat/round8-marine-messe-a-official-source
 
 permissions:
   contents: read
