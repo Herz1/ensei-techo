@@ -28,6 +28,7 @@ import { createSundomeFukuiSourceAdapter } from "./adapters/sundome-fukui-source
 import { createBigHatNaganoSourceAdapter } from "./adapters/big-hat-nagano-source.mjs";
 import { createGlayLiveSourceAdapter } from "./adapters/glay-live-source.mjs";
 import { createSuperBeaverArenaSourceAdapter } from "./adapters/super-beaver-arena-source.mjs";
+import { createMrChildrenTourSourceAdapter } from "./adapters/mrchildren-tour-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -354,6 +355,7 @@ async function main() {
     createBigHatNaganoSourceAdapter(adapterContext),
     createGlayLiveSourceAdapter(adapterContext),
     createSuperBeaverArenaSourceAdapter(adapterContext),
+    createMrChildrenTourSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
