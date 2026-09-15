@@ -1,0 +1,31 @@
+name: Clean ingested venue duplicates
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-clean-ingested-venues
+
+permissions:
+  contents: read
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Remove canonical venue duplicates
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const base = JSON.parse(fs.readFileSync('src/data/venues.json','utf8'));
+          const ingested = JSON.parse(fs.readFileSync('src/data/venues-ingested.json','utf8'));
+          const ids = new Set(base.map((venue) => venue.id));
+          const output = ingested.filter((venue) => !ids.has(venue.id));
+          const removed = ingested.filter((venue) => ids.has(venue.id)).map((venue) => venue.id);
+          console.log(JSON.stringify({before: ingested.length, after: output.length, removed}, null, 2));
+          fs.writeFileSync('venues-ingested.cleaned.json', JSON.stringify(output, null, 2) + '\n');
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: venues-ingested-cleaned
+          path: venues-ingested.cleaned.json
