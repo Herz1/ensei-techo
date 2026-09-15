@@ -1,0 +1,171 @@
+name: Round 36-39 Batch Smoke Fix v2
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-r36-r39-batch-smoke-fix
+    paths:
+      - ".github/workflows/checkpoint-r36-r39-batch-smoke-fix-v2.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  fix-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Apply targeted smoke fixes
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          def replace_once(path, old, new):
+              p = Path(path)
+              text = p.read_text()
+              if old not in text:
+                  raise SystemExit(f"missing replacement target in {path}: {old[:100]!r}")
+              p.write_text(text.replace(old, new, 1))
+
+          # Ariake: only classify an external URL from the anchor's local row/paragraph.
+          p = Path("scripts/parsers/ariake-arena.mjs")
+          text = p.read_text()
+          old = '''    const contexts = [anchor, ...$(anchor).parents().toArray()];
+              const matched = contexts.find((node) => {
+                const value = cleanText($(node).text());
+                return value.includes(marker) && value.length <= 320;
+              });
+              if (matched) return url;'''
+          new = '''    const localNodes = [
+              $(anchor).closest("p,li,dd,dt,tr,td").first(),
+              $(anchor).parent(),
+            ];
+            const matched = localNodes.some((node) => {
+              if (!node?.length) return false;
+              const value = cleanText(node.text());
+              return value.includes(marker) && value.length <= 240;
+            });
+            if (matched) return url;'''
+          if old not in text:
+              # indentation-independent fallback
+              text, count = re.subn(
+                  r'\s*const contexts = \[anchor, \.\.\.\$\(anchor\)\.parents\(\)\.toArray\(\)\];\n\s*const matched = contexts\.find\(\(node\) => \{\n\s*const value = cleanText\(\$\(node\)\.text\(\)\);\n\s*return value\.includes\(marker\) && value\.length <= 320;\n\s*\}\);\n\s*if \(matched\) return url;',
+                  '\n    const localNodes = [\n      $(anchor).closest("p,li,dd,dt,tr,td").first(),\n      $(anchor).parent(),\n    ];\n    const matched = localNodes.some((node) => {\n      if (!node?.length) return false;\n      const value = cleanText(node.text());\n      return value.includes(marker) && value.length <= 240;\n    });\n    if (matched) return url;',
+                  text,
+                  count=1,
+              )
+              if count != 1:
+                  raise SystemExit("failed to patch Ariake contextualExternalUrl")
+          else:
+              text = text.replace(old, new, 1)
+          p.write_text(text)
+          replace_once("scripts/adapters/ariake-arena-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # Smoke fixtures should match production's normalized artist-name set.
+          replace_once(
+              "scripts/tokyo-garden-theater-smoke.mjs",
+              'import assert from "node:assert/strict";\n',
+              'import assert from "node:assert/strict";\nimport { normalizeName } from "./event-ingest-lib.mjs";\n',
+          )
+          replace_once(
+              "scripts/tokyo-garden-theater-smoke.mjs",
+              'knownArtistNames: new Set(["sung si kyung"]),',
+              'knownArtistNames: new Set(["sung si kyung"].map(normalizeName)),',
+          )
+          replace_once(
+              "scripts/world-memorial-hall-smoke.mjs",
+              'import assert from "node:assert/strict";\n',
+              'import assert from "node:assert/strict";\nimport { normalizeName } from "./event-ingest-lib.mjs";\n',
+          )
+          p = Path("scripts/world-memorial-hall-smoke.mjs")
+          text = p.read_text()
+          text, count = re.subn(
+              r'const known = new Set\((\[.*?\])\);',
+              r'const known = new Set(\1.map(normalizeName));',
+              text,
+              count=1,
+              flags=re.S,
+          )
+          if count != 1:
+              raise SystemExit("failed to normalize World Hall known artists")
+          p.write_text(text)
+
+          # Kuroko: trim a trailing ほか/他 from an artist label before splitting.
+          replace_once(
+              "scripts/parsers/kuroko-kun-hall.mjs",
+              'const value = cleanText(match[1]);',
+              'const value = cleanText(match[1]).replace(/\\s*(?:ほか|他)\\s*$/u, "");',
+          )
+          replace_once("scripts/adapters/kuroko-kun-hall-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # Big Hat: prefer the exact 日程/日時 table row over whole-body marker slicing.
+          p = Path("scripts/parsers/big-hat-nagano.mjs")
+          text = p.read_text()
+          marker = 'function scheduleText(bodyText) {'
+          if marker not in text:
+              raise SystemExit("Big Hat scheduleText marker missing")
+          text = text.replace(marker, '''function scheduleText($, bodyText) {
+            for (const node of $("th,dt").toArray()) {
+              const label = cleanText($(node).text()).normalize("NFKC");
+              if (label !== "日時" && label !== "日程") continue;
+              const value = node.tagName?.toLowerCase() === "th"
+                ? $(node).next("td").first()
+                : $(node).next("dd").first();
+              const direct = cleanText(value.text()).normalize("NFKC");
+              if (direct) return direct;
+            }
+          ''', 1)
+          if 'function performancesFrom(bodyText, months) {\n  const text = scheduleText(bodyText);' not in text:
+              raise SystemExit("Big Hat performancesFrom marker missing")
+          text = text.replace(
+              'function performancesFrom(bodyText, months) {\n  const text = scheduleText(bodyText);',
+              'function performancesFrom($, bodyText, months) {\n  const text = scheduleText($, bodyText);',
+              1,
+          )
+          text = text.replace('const performances = performancesFrom(bodyText, months);', 'const performances = performancesFrom($, bodyText, months);', 1)
+          p.write_text(text)
+          replace_once("scripts/adapters/big-hat-nagano-source.mjs", 'parserVersion: "1"', 'parserVersion: "2"')
+
+          # GENERATIONS: normalize the live Nagano label to the stable venue map key.
+          p = Path("scripts/parsers/generations-parallel-quest-v2.mjs")
+          text = p.read_text()
+          needle = '    .replace(/^北海道立総合体育センター\\s+北海きたえーる$/u, "北海きたえーる")\n    .trim();'
+          replacement = '    .replace(/^北海道立総合体育センター\\s+北海きたえーる$/u, "北海きたえーる")\n    .replace(/^長野\\s*ビッグハット$/u, "ビッグハット")\n    .trim();'
+          if needle not in text:
+              raise SystemExit("GENERATIONS venue normalization marker missing")
+          p.write_text(text.replace(needle, replacement, 1))
+          PY
+      - name: Run targeted fixed smokes
+        run: |
+          node scripts/ariake-arena-smoke.mjs
+          node scripts/tokyo-garden-theater-smoke.mjs
+          node scripts/kuroko-kun-hall-smoke.mjs
+          node scripts/world-memorial-hall-smoke.mjs
+          node scripts/big-hat-nagano-smoke.mjs
+          node scripts/generations-parallel-quest-smoke.mjs
+      - name: Diagnose PayPay parsed record
+        run: |
+          cat > scripts/.paypay-diag.mjs <<'NODE'
+          import { normalizeName } from "./event-ingest-lib.mjs";
+          import { parsePayPayDomeSchedule } from "./parsers/paypay-dome.mjs";
+          const html = `<html><body><h1>2026年みずほPayPayドームイベント日程</h1><div class="event"><p>2026/10/24（土）</p><p>イベント | <a href="https://www.straykidsjapan.com/run-it/">Stray Kids World Tour &lt;RUN IT JAPAN&gt;</a></p><p>開演時間 | 16:30 開場 18:30 開演</p><p>お問い合わせ | BEA</p></div></body></html>`;
+          const knownArtistNames = new Set(["Stray Kids", "YOASOBI", "Snow Man", "BIGBANG"].map(normalizeName));
+          const parsed = parsePayPayDomeSchedule(html, "https://www.softbankhawks.co.jp/stadium/event_schedule/2026/", { year: 2026, months:[{year:2026,month:10}], knownArtistNames });
+          console.log(JSON.stringify(parsed, null, 2));
+          NODE
+          node scripts/.paypay-diag.mjs
+          rm scripts/.paypay-diag.mjs
+      - name: Commit tested business fixes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/parsers/ariake-arena.mjs scripts/adapters/ariake-arena-source.mjs scripts/tokyo-garden-theater-smoke.mjs scripts/world-memorial-hall-smoke.mjs scripts/parsers/kuroko-kun-hall.mjs scripts/adapters/kuroko-kun-hall-source.mjs scripts/parsers/big-hat-nagano.mjs scripts/adapters/big-hat-nagano-source.mjs scripts/parsers/generations-parallel-quest-v2.mjs
+          git commit -m "fix: clear cumulative source smoke regressions"
+          git push origin HEAD:checkpoint/2026-09-15-r36-r39-batch-smoke-fix
