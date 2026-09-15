@@ -6,7 +6,7 @@ import {
 } from "../event-ingest-lib.mjs";
 
 const TITLE = "Mr.Children Tour 2026 “Saturday in the park”";
-const TITLE_RE = /Mr\.Children\s+Tour\s+2026\s+[“\"]Saturday in the park[”\"]/iu;
+const TITLE_RE = /Mr\.Children\s+Tour\s+2026\s+[“"]Saturday in the park[”"]/iu;
 const SCHEDULE_RE = /(20\d{2})\.(\d{1,2})\.(\d{1,2})\s+(?:mon|tue|wed|thu|fri|sat|sun)\s+(.{1,120}?)\s+開場\s*(\d{1,2}:\d{2})\s*[／/]\s*開演\s*(\d{1,2}:\d{2})/giu;
 const AREA_PREFIX = /^(?:千葉|神奈川|愛知|宮城|福岡|大阪|香川|北海道|福井|静岡|東京|佐賀|広島)\s+/u;
 const CANCELLED = new Set([
@@ -47,7 +47,9 @@ function allowedMonthKeys(months) {
 
 function priceFor(bodyText, label) {
   const escaped = label.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const match = bodyText.match(new RegExp(`${escaped}\\s*[¥￥]?\\s*([0-9][0-9,]*)`, "u"));
+  const match = bodyText.match(
+    new RegExp(`(?:^|\\s)${escaped}\\s*[¥￥]?\\s*([0-9][0-9,]*)`, "u"),
+  );
   if (!match) return undefined;
   const price = Number(match[1].replaceAll(",", ""));
   return Number.isInteger(price) && price > 0 ? price : undefined;
