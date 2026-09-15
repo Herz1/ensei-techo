@@ -261,33 +261,6 @@
     }
   },
   {
-    "id": "ig-arena",
-    "nameJa": "IGアリーナ",
-    "nameZh": null,
-    "prefecture": "aichi",
-    "city": "名古屋市北区",
-    "lat": null,
-    "lng": null,
-    "capacity": null,
-    "tier": null,
-    "stations": [],
-    "hubAccess": [],
-    "profileStatus": "minimal",
-    "verification": {
-      "state": "verified",
-      "checkedAt": "2026-09-15T06:48:36.578Z",
-      "evidenceHash": "fcfe82610ae0d1730317937b0b6fcedeaf05d0b372714186d41865dcec204be0",
-      "sources": [
-        {
-          "name": "IGアリーナ公式アクセス",
-          "type": "venue_official",
-          "url": "https://www.ig-arena.jp/access/",
-          "fetchedAt": "2026-09-15T06:48:36.578Z"
-        }
-      ]
-    }
-  },
-  {
     "id": "xebio-arena-sendai",
     "nameJa": "ゼビオアリーナ仙台",
     "nameZh": null,
