@@ -17,6 +17,7 @@ import { createPayPayDomeSourceAdapter } from "./adapters/paypay-dome-source.mjs
 import { createMarineMesseASourceAdapter } from "./adapters/marine-messe-a-source.mjs";
 import { createVantelinDomeSourceAdapter } from "./adapters/vantelin-dome-source.mjs";
 import { createKyoceraDomeSourceAdapter } from "./adapters/kyocera-dome-source.mjs";
+import { createAriakeArenaSourceAdapter } from "./adapters/ariake-arena-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -332,6 +333,7 @@ async function main() {
     createMarineMesseASourceAdapter(adapterContext),
     createVantelinDomeSourceAdapter(adapterContext),
     createKyoceraDomeSourceAdapter(adapterContext),
+    createAriakeArenaSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),
