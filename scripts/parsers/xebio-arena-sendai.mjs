@@ -10,7 +10,7 @@ const DATE_PATTERN = /(20\d{2})\.(\d{2})\.(\d{2})\s*[（(][^）)]*[）)]/u;
 const DETAIL_PATH = /^\/program\/[^/?#]+\/?$/u;
 const NON_MUSIC = /(仙台89ERS|B\.LEAGUE|TOHOKU\s+CUP|RIZIN|SENJO|SPORTS\s*DAY|TOUCH\s+THE\s+SPORTS|ABE\s+CUP|ICE\s+SKATING|アイスショー|プロレス|FIFA|パブリックビューイング|インターンシップ|キャリア発見フェア|はたちの集い|学位記授与式|入学式|卒業|試合開始|キックオフ|サッカー|バスケット|3×3|リアル脱出ゲーム|スケート初心者講習会|防災フェス|体育祭)/iu;
 const MUSIC_SIGNAL = /(?:\bLIVE\b|\bTOUR\b|\bCONCERT\b|\bMUSIC\b|\bARENA\b|\bFES(?:TIVAL)?\b|\bONEMAN\b|\bSAKANAQUARIUM\b|ライブ|コンサート|音楽|ロック|歌謡|シンフォニ|フェス)/iu;
-const TIME_MARKER = /(?:[〖＜][^〗＞]{1,20}[〗＞]\s*)?(?:開場(?:・|\/|／)開演|開場・試合開始|開場(?:\/|／)キックオフ|試合開始|開催時間|イベント時間|オープン時間|開場)\b?/u;
+const TIME_MARKER = /(?:[〖＜][^〗＞]{1,20}[〗＞]\s*)?(?:開場(?:・|\/|／)開演|開場・試合開始|開場(?:\/|／)キックオフ|試合開始|開催時間|イベント時間|オープン時間|開場)/u;
 
 function normalizeUrl(value, base) {
   try {
