@@ -123,6 +123,12 @@ const VENUE_FACTS = new Map([
     city: "北九州市小倉北区",
     sourceUrl: "https://hello-kitakyushu.or.jp/messe/",
   }],
+  ["ヤンマースタジアム長居", {
+    id: "yanmar-stadium-nagai",
+    prefecture: "osaka",
+    city: "大阪市東住吉区",
+    sourceUrl: "https://nagaipark.com/stadium/",
+  }],
 ]);
 
 async function readJson(file) {
