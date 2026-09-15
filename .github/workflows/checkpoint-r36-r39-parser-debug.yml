@@ -1,0 +1,87 @@
+name: Round 36-39 Parser Fix Debug
+
+on:
+  push:
+    branches:
+      - checkpoint/2026-09-15-round36-39-pending-live-fixed
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      EVENT_INGEST_FROM: "2026-09-15"
+      EVENT_INGEST_MONTHS: "4"
+      EVENT_INGEST_FORCE_REFRESH: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: GENERATIONS smoke
+        id: generations
+        continue-on-error: true
+        run: node scripts/generations-parallel-quest-smoke.mjs 2>&1 | tee generations-smoke.log
+      - name: FANTASTICS smoke
+        id: fantastics
+        continue-on-error: true
+        run: node scripts/fantastics-sunflower-smoke.mjs 2>&1 | tee fantastics-smoke.log
+      - name: Vaundy smoke
+        id: vaundy
+        continue-on-error: true
+        run: node scripts/vaundy-horo-smoke.mjs 2>&1 | tee vaundy-smoke.log
+      - name: Create pending-only ingest copy
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          let source = fs.readFileSync('scripts/ingest-events.mjs', 'utf8');
+          const start = source.indexOf('  const adapters = [');
+          const marker = '  adapters.push(...await createPendingSourceAdapters(adapterContext));';
+          const markerIndex = source.indexOf(marker);
+          if (start < 0 || markerIndex < 0 || markerIndex <= start) throw new Error('adapter markers not found');
+          source = `${source.slice(0, start)}  const adapters = [...await createPendingSourceAdapters(adapterContext)];${source.slice(markerIndex + marker.length)}`;
+          fs.writeFileSync('scripts/ingest-events-pending-only.mjs', source);
+          NODE
+      - name: Live pending ingest
+        id: live
+        continue-on-error: true
+        run: node scripts/ingest-events-pending-only.mjs 2>&1 | tee pending-live.log && node scripts/report-source-health.mjs 2>&1 | tee -a pending-live.log
+      - name: Summarize live results
+        if: always() && steps.live.outcome == 'success'
+        run: |
+          node <<'NODE' | tee pending-summary.log
+          const fs=require('node:fs');
+          const r=JSON.parse(fs.readFileSync('src/data/ingest/report.json','utf8'));
+          const ids=['aimyon-tour-2027-official','generations-parallel-quest-official','fantastics-sunflower-official','ini-city-of-lights-official','vaundy-horo-official'];
+          console.log(JSON.stringify(ids.map(id=>{const s=(r.sources??[]).find(x=>x.id===id);return s&&{id:s.id,status:s.status,recordCount:s.recordCount,reason:s.reason,health:s.health??s.sourceHealth??null};}),null,2));
+          NODE
+      - name: Upload debug evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: round36-39-parser-fix-debug
+          path: |
+            *-smoke.log
+            pending-live.log
+            pending-summary.log
+            src/data/ingest/report.json
+            src/data/ingest/source-health.json
+            src/data/ingest/raw-manifest.json
+            src/data/ingest/raw/**
+      - name: Final gate
+        if: always()
+        run: |
+          echo "generations=${{ steps.generations.outcome }}"
+          echo "fantastics=${{ steps.fantastics.outcome }}"
+          echo "vaundy=${{ steps.vaundy.outcome }}"
+          echo "live=${{ steps.live.outcome }}"
+          test "${{ steps.generations.outcome }}" = "success"
+          test "${{ steps.fantastics.outcome }}" = "success"
+          test "${{ steps.vaundy.outcome }}" = "success"
+          test "${{ steps.live.outcome }}" = "success"
