@@ -23,6 +23,7 @@ import { createKurokoKunHallSourceAdapter } from "./adapters/kuroko-kun-hall-sou
 import { createPremistDomeSourceAdapter } from "./adapters/premist-dome-source.mjs";
 import { createXebioArenaSendaiSourceAdapter } from "./adapters/xebio-arena-sendai-source.mjs";
 import { createWorldMemorialHallSourceAdapter } from "./adapters/world-memorial-hall-source.mjs";
+import { createAnabukiArenaKagawaSourceAdapter } from "./adapters/anabuki-arena-kagawa-source.mjs";
 import { createRawEvidenceStore } from "./raw-evidence-store.mjs";
 import {
   nextCheckAt,
@@ -344,6 +345,7 @@ async function main() {
     createPremistDomeSourceAdapter(adapterContext),
     createXebioArenaSendaiSourceAdapter(adapterContext),
     createWorldMemorialHallSourceAdapter(adapterContext),
+    createAnabukiArenaKagawaSourceAdapter(adapterContext),
   ];
   const rawStore = createRawEvidenceStore({
     rawRoot: path.join(ingestDir, "raw"),

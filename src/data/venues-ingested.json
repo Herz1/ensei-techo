@@ -313,5 +313,32 @@
         }
       ]
     }
+  },
+  {
+    "id": "anabuki-arena-kagawa",
+    "nameJa": "あなぶきアリーナ香川",
+    "nameZh": null,
+    "prefecture": "kagawa",
+    "city": "高松市",
+    "lat": null,
+    "lng": null,
+    "capacity": null,
+    "tier": null,
+    "stations": [],
+    "hubAccess": [],
+    "profileStatus": "minimal",
+    "verification": {
+      "state": "verified",
+      "checkedAt": "2026-09-15T09:15:00.000Z",
+      "evidenceHash": "3a9ec15fdaab96f376592a72552bfcef6da86204447dd58a34d11b61daa50c79",
+      "sources": [
+        {
+          "name": "あなぶきアリーナ香川公式サイト",
+          "type": "venue_official",
+          "url": "https://kagawa-arena.com/",
+          "fetchedAt": "2026-09-15T09:15:00.000Z"
+        }
+      ]
+    }
   }
 ]
