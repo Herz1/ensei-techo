@@ -49,7 +49,9 @@ function fallbackBlocks(text) {
 function titleFromBlock(text) {
   const eventIndex = text.indexOf("イベント");
   if (eventIndex < 0) return "";
-  const tail = cleanText(text.slice(eventIndex + "イベント".length).replace(/^[:：|｜]\s*/u, ""));
+  const tail = cleanText(
+    text.slice(eventIndex + "イベント".length).replace(/^\s*[:：|｜]\s*/u, ""),
+  );
   const stop = ["開演時間", "開催時間", "お問い合わせ"]
     .map((marker) => tail.indexOf(marker))
     .filter((index) => index >= 0)
