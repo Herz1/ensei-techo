@@ -56,7 +56,7 @@
     "measure:performance": "node scripts/measure-client-performance.mjs",
     "compare:performance": "node scripts/compare-client-performance.mjs",
     "test:frontier-policy": "node scripts/frontier-policy-smoke.mjs",
-    "ingest:events": "node scripts/ingest-events.mjs && node scripts/report-source-health.mjs",
+    "ingest:events": "node scripts/ingest-events.mjs && node scripts/report-source-health.mjs --write",
     "discover:artists": "node scripts/discover-artists.mjs",
     "review:entities:prepare": "node scripts/prepare-entity-review.mjs",
     "review:entities:apply": "node scripts/apply-entity-review.mjs",
@@ -76,8 +76,11 @@
     "report:source-audit": "node scripts/report-source-audit.mjs",
     "report:source-health": "node scripts/report-source-health.mjs",
     "report:tickets": "node scripts/report-ticket-coverage.mjs --write src/data/ingest/ticket-coverage-current.json --markdown src/data/ingest/ticket-coverage-current.md",
-    "check": "npm run lint && npm run typecheck && npm run validate:data && npm run check:client-data && npm run test:event-ingest && npm run test:source-health && npm run test:k-arena-source && npm run test:osaka-johall-source && npm run test:saitama-arena-source && npm run test:budokan-sogo-source && npm run test:tokyo-dome-source && npm run test:ig-arena-source && npm run test:paypay-dome-source && npm run test:marine-messe-a-source && npm run test:vantelin-dome-source && npm run test:kyocera-dome-source && npm run test:ariake-arena-source && npm run test:tokyo-garden-theater-source && npm run test:kuroko-kun-hall-source && npm run test:premist-dome-source && npm run test:xebio-arena-sendai-source && npm run test:world-memorial-hall-source && npm run test:anabuki-arena-kagawa-source && npm run test:sundome-fukui-source && npm run test:big-hat-nagano-source && npm run test:glay-live-source && npm run test:super-beaver-arena-source && npm run test:mrchildren-tour-source && npm run test:bump-tour-source && npm run test:pending-source-smokes && npm run test:ticket-offers && npm run test:frontier-policy && npm run test:ticket-refresh && npm run test:planned-verification && npm run test:social-leads && npm run test:deadline",
-    "verify:events": "npm run ingest:events && npm run validate:data"
+    "check": "npm run lint && npm run typecheck && npm run validate:data && npm run check:client-data && npm run test:event-ingest && npm run test:source-health && npm run test:k-arena-source && npm run test:osaka-johall-source && npm run test:saitama-arena-source && npm run test:budokan-sogo-source && npm run test:tokyo-dome-source && npm run test:ig-arena-source && npm run test:paypay-dome-source && npm run test:marine-messe-a-source && npm run test:vantelin-dome-source && npm run test:kyocera-dome-source && npm run test:ariake-arena-source && npm run test:tokyo-garden-theater-source && npm run test:kuroko-kun-hall-source && npm run test:premist-dome-source && npm run test:xebio-arena-sendai-source && npm run test:world-memorial-hall-source && npm run test:anabuki-arena-kagawa-source && npm run test:sundome-fukui-source && npm run test:big-hat-nagano-source && npm run test:glay-live-source && npm run test:super-beaver-arena-source && npm run test:mrchildren-tour-source && npm run test:bump-tour-source && npm run test:pending-source-smokes && npm run test:ticket-offers && npm run test:frontier-policy && npm run test:ticket-refresh && npm run test:planned-verification && npm run test:social-leads && npm run test:deadline && npm run test:source-health-report && npm run test:calendar-backup",
+    "verify:events": "npm run ingest:events && npm run validate:data",
+    "test:source-health-report": "node scripts/source-health-report-smoke.mjs",
+    "test:calendar-backup": "node scripts/calendar-backup-smoke.mjs",
+    "audit:evidence": "node scripts/audit-archived-evidence.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

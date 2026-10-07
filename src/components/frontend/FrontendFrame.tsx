@@ -23,7 +23,7 @@ export default function FrontendFrame({ children }: { children: ReactNode }) {
       <div className="paper-header-tools"><button type="button" data-search-trigger aria-label="搜索" className="paper-search"><Search size={18}/></button><ThemeToggle/><FrontendSwitch/></div>
     </div></header> : <Header/>}
     <main className="flex-1 frontend-content"><LocalStorageBoundary>{children}</LocalStorageBoundary></main>
-    {paper ? <footer className="paper-footer"><span>遠征手帳 <small>把想看的现场，写进生活。</small></span><Link href="/me">本机记录与备份 <ArrowUpRight size={13}/></Link></footer> : <Footer/>}
+    {paper ? <footer className="paper-footer"><span>遠征手帳 <small>把想看的现场，写进生活。</small></span><Link href="/sources">官方来源与审核证据</Link><Link href="/me">本机记录与备份 <ArrowUpRight size={13}/></Link></footer> : <Footer/>}
     {paper ? <nav className="paper-bottom-nav" aria-label="移动主导航">{NAV.map(([href,label,index]) => <Link key={href} href={href} prefetch={false} aria-current={(href === "/" ? pathname === href : pathname.startsWith(href)) ? "page" : undefined}><small>{index}</small>{label}</Link>)}</nav> : <BottomTabs/>}
   </>;
 }

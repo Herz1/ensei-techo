@@ -18,6 +18,7 @@ import { clearTripMigrationBackup, replaceTrips } from "@/lib/trip-store";
 import { replaceSocialLeads, useSocialLeads } from "@/lib/social-leads";
 import { buildDeadlineIcs, buildIcs, downloadFile } from "@/lib/ics";
 import { buildBackupPayload, prepareBackupImport } from "@/lib/backup";
+import { restoreBackupAtomically } from "@/lib/backup-transaction.mjs";
 import SectionTitle from "./SectionTitle";
 
 const BTN =
@@ -108,11 +109,13 @@ export default function DataManage({
         setMsg({ ok: false, text: `恢复失败：没有可安全恢复的数据；当前本机状态未改变${prepared.ignored ? ` · 忽略 ${prepared.ignored} 条` : ""}` });
         return;
       }
-      if (prepared.preferences.apply && prepared.preferences.value) replacePreferences(prepared.preferences.value);
-      if (prepared.plans.apply) replacePlans(prepared.plans.values);
-      if (prepared.follows.apply) replaceSet(FOLLOWS_KEY, prepared.follows.values);
-      if (prepared.trips.apply) replaceTrips(prepared.trips.values);
-      if (prepared.socialLeads.apply) replaceSocialLeads(prepared.socialLeads.values);
+      restoreBackupAtomically(localStorage, ["ensei-user-preferences", "ensei-event-plans", "ensei-follows", "ensei-trip-plans", "ensei-social-leads"], () => {
+        if (prepared.preferences.apply && prepared.preferences.value) replacePreferences(prepared.preferences.value);
+        if (prepared.plans.apply) replacePlans(prepared.plans.values);
+        if (prepared.follows.apply) replaceSet(FOLLOWS_KEY, prepared.follows.values);
+        if (prepared.trips.apply) replaceTrips(prepared.trips.values);
+        if (prepared.socialLeads.apply) replaceSocialLeads(prepared.socialLeads.values);
+      }, () => window.dispatchEvent(new Event("storage")));
       setMsg({
         ok: true,
         text: `恢复完成：偏好 ${prepared.preferences.restored} 组 · 计划 ${prepared.plans.restored} 场 · 远征 ${prepared.trips.restored} 个 · 社媒线索 ${prepared.socialLeads.restored} 条 · 关注 ${prepared.follows.restored} 位 · 忽略 ${prepared.ignored} 条${prepared.warnings.length ? ` · ${prepared.warnings.join("；")}` : ""}`,

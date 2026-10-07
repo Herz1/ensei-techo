@@ -5,6 +5,7 @@ const ACTIONABLE_STATES = new Set([
   "fetch_failed",
   "degraded",
   "failed",
+  "evidence_missing",
 ]);
 
 function normalizeMonthKey({ year, month }) {
@@ -124,6 +125,9 @@ function classify({ result, evidence, policy, previousSource, comparableWindow }
       state = "failed";
       reasons.push(result.error ? `adapter_failed:${result.error}` : "adapter_failed");
     }
+  } else if (evidence.requestCount === 0 || evidence.parserNotRecorded > 0 || (evidence.parserSuccesses === 0 && evidence.parserFailures === 0 && evidence.fetchFailures === 0)) {
+    state = "evidence_missing";
+    reasons.push("fetch_or_parser_evidence_missing");
   } else if (recordCount === 0) {
     if (evidence.fetchSuccesses === 0 && evidence.fetchFailures > 0) {
       state = "fetch_failed";
@@ -176,6 +180,7 @@ export function attachSourceHealth({
   rawEntries = [],
   previousSnapshot = null,
   months = [],
+  batchId = null,
 }) {
   const monthKeys = months.map(normalizeMonthKey).filter(Boolean);
   const previousById = new Map(
@@ -195,6 +200,20 @@ export function attachSourceHealth({
       previousSource,
       comparableWindow,
     });
+    // Re-reporting one collection is not another observation. Preserve the
+    // original comparison and streak rather than comparing a batch to itself.
+    if (batchId && previousSnapshot?.batchId === batchId && previousSource?.health && comparableWindow) {
+      health.consecutiveAnomalies = previousSource.health.consecutiveAnomalies;
+      health.previousState = previousSource.health.previousState;
+      health.previousRecordCount = previousSource.health.previousRecordCount;
+      health.recordCountRatio = previousSource.health.recordCountRatio;
+      health.comparableWindow = previousSource.health.comparableWindow;
+      if (previousSource.health.reasons?.some((reason) => reason.startsWith("record_count_drop:"))) {
+        health.state = previousSource.health.state;
+        health.actionable = previousSource.health.actionable;
+        health.reasons = previousSource.health.reasons;
+      }
+    }
     return { ...result, health };
   });
 
@@ -219,11 +238,13 @@ export function attachSourceHealth({
 
 export function buildSourceHealthSnapshot({
   generatedAt,
+  batchId = null,
   collectionWindow,
   sources,
 }) {
   return {
     schemaVersion: 1,
+    batchId,
     generatedAt,
     collectionWindow,
     sources: sources.map((source) => ({

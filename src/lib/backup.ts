@@ -197,6 +197,9 @@ export function prepareBackupImport(value: unknown, catalog: BackupCatalog): Pre
     throw new Error("文件格式不对：请选择本站导出的 JSON 备份");
   }
   const obj = value as Record<string, unknown>;
+  if (obj.version !== undefined && (!Number.isInteger(obj.version) || Number(obj.version) < 1 || Number(obj.version) > BACKUP_VERSION)) {
+    throw new Error("备份版本不受支持：请使用兼容版本的远征手账恢复，本机数据未改变");
+  }
   if (obj.app !== undefined && obj.app !== "ensei-techo") {
     throw new Error("文件不是远征手账备份");
   }

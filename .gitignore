@@ -50,3 +50,4 @@ next-env.d.ts
 
 # Local dual-frontend validation artifacts
 /handoff/dual-frontend-qa/
+/work/

@@ -8,7 +8,7 @@ import { manualTaskTimeZoneLabel } from "@/lib/deadline-core.mjs";
 
 /** ICS 文本字段转义:逗号/分号/反斜杠/换行 */
 function esc(s: string): string {
-  return s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+  return s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\r\n|\r|\n/g, "\\n");
 }
 
 /** Date → ICS UTC 时间戳 "20260812T090000Z" */

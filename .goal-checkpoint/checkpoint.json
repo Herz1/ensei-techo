@@ -1,0 +1,12 @@
+{
+  "repository": "Herz1/ensei-techo",
+  "threadId": "01a115f0-ecb8-7420-b9f5-f981bcd27671",
+  "model": "gpt-6.1-sol",
+  "reasoning": "high",
+  "goalStatus": "paused",
+  "originalBranch": "codex/goal-20261007-ensei-techo",
+  "preCheckpointHead": "3dc213652d8f479524552c41a8475f98ad76b306",
+  "capturedAt": "2026-10-07T11:21:54.582657+00:00",
+  "validation": "Partial work checkpoint. Refer to handoff; not a passing release or completed Goal.",
+  "cleanup": "C drive copy will be removed after remote SHA and recovery copy verification. Resume only at user request in an explicitly chosen workspace."
+}

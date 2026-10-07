@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ReviewEvidence from "@/components/event/ReviewEvidence";
 import { notFound } from "next/navigation";
 import {
   ArrowLeft,
@@ -316,6 +317,7 @@ export default async function EventDetailPage({
                 ))}
               </div>
             </details>
+            <ReviewEvidence event={event} />
           </section>
           {venue && (
             <section className="rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-800 dark:bg-card-dark">

@@ -382,6 +382,11 @@ async function main() {
   const candidates = normalizeAndMerge(records, artists, venues, reviews);
   const approved = candidates.filter((candidate) => candidate.reviewState === "approved");
   const report = buildIngestReport(candidates, sourceResults, reviews, generatedAt);
+  report.batchId = batchId;
+  report.collectionWindow = {
+    from: today,
+    months: months.map(({ year, month }) => `${year}-${String(month).padStart(2, "0")}`),
+  };
 
   await mkdir(ingestDir, { recursive: true });
   await rawStore.writeManifest(path.join(ingestDir, "raw-manifest.json"));

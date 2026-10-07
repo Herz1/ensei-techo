@@ -146,6 +146,9 @@ async function gotoAndCheck(page, path, label) {
 
 async function runViewport(browser, viewport, label) {
   const context = await browser.newContext({ viewport });
+  if (process.env.FRONTEND_TEST_MODE === "paper") {
+    await context.addInitScript(() => localStorage.setItem("ensei-frontend", "paper"));
+  }
   await context.addInitScript(({ seeded, eventId }) => {
     localStorage.setItem("ensei-user-preferences", JSON.stringify(seeded.preferences));
     localStorage.setItem("ensei-event-plans", JSON.stringify(seeded.plans));
@@ -231,6 +234,7 @@ let browser = null;
 try {
   browser = await chromium.launch({ executablePath, headless: true });
   await runViewport(browser, { width: 375, height: 812 }, "375px");
+  await runViewport(browser, { width: 390, height: 844 }, "390px");
   await runViewport(browser, { width: 768, height: 900 }, "768px");
   await runViewport(browser, { width: 1440, height: 900 }, "1440px");
   console.log("UI 质量测试通过：375 / 768 / 1440 三档视口覆盖首页、公演列表、公演详情、我的、远征详情与搜索。");

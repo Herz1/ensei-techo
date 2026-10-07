@@ -1,0 +1,36 @@
+{
+  "uncommitted": [
+    " M .gitignore",
+    " M package.json",
+    " M public/vendor/maplibre-gl-shared.mjs",
+    " M public/vendor/maplibre-gl-worker.mjs",
+    " M scripts/ingest-events.mjs",
+    " M scripts/report-source-health.mjs",
+    " M scripts/source-health.mjs",
+    " M scripts/ui-quality-smoke.mjs",
+    " M src/app/events/[id]/page.tsx",
+    " M src/app/paper.css",
+    " M src/components/frontend/FrontendFrame.tsx",
+    " M src/components/layout/Footer.tsx",
+    " M src/components/me/DataManage.tsx",
+    " M src/lib/backup.ts",
+    " M src/lib/ics.ts",
+    "?? GOAL_ACCEPTANCE.md",
+    "?? REFERENCE_RESEARCH.md",
+    "?? scripts/audit-archived-evidence.mjs",
+    "?? scripts/calendar-backup-smoke.mjs",
+    "?? scripts/source-health-report-smoke.mjs",
+    "?? scripts/source-health-report.mjs",
+    "?? src/app/sources/",
+    "?? src/components/event/ReviewEvidence.tsx",
+    "?? src/lib/backup-transaction.mjs"
+  ],
+  "committedProgress": "复核并 cherry-pick 只读迁移副本的 0cf15d7 双前端提交；本轮 HEAD 3dc2136，尚未推送",
+  "implementationNotes": [
+    "来源健康批次绑定、幂等、缺证据状态；默认 report dry-run，显式 --write 才生成 snapshot",
+    "/sources 与字段证据 UI，触摸切换44px；备份未知版本拒绝和失败写入回滚；ICS CR换行转义",
+    "public/vendor 两文件为 npm postinstall 重新生成的修改，应由总控审查是否保存",
+    "GOAL_ACCEPTANCE.md / REFERENCE_RESEARCH.md 为初步合同与调查。GH查询元数据已取得；部分关键实现查询未充分返回，调查文件需后续复核",
+    "没有批准/发布官方演出，正式 events/reviews 未改，没有购票支付"
+  ]
+}

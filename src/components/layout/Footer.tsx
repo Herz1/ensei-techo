@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="site-footer mt-16 border-t border-zinc-200 pb-24 pt-8 text-center text-xs leading-relaxed text-zinc-400 md:pb-8 dark:border-zinc-800 dark:text-zinc-600">
@@ -9,6 +10,7 @@ export default function Footer() {
       <p className="mt-2">
         票价以 JPY 为准 · 参考汇率非实时 · 地图底图 出典：国土地理院タイル
       </p>
+      <Link href="/sources" className="mt-2 inline-flex min-h-11 items-center text-brand-strong">官方来源与审核证据</Link>
     </footer>
   );
 }
