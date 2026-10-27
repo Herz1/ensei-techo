@@ -48,7 +48,8 @@
     "report:source-audit": "node scripts/report-source-audit.mjs",
     "report:tickets": "node scripts/report-ticket-coverage.mjs --write src/data/ingest/ticket-coverage-current.json --markdown src/data/ingest/ticket-coverage-current.md",
     "check": "npm run lint && npm run typecheck && npm run validate:data && npm run check:client-data && npm run test:event-ingest && npm run test:ticket-offers && npm run test:frontier-policy && npm run test:ticket-refresh && npm run test:planned-verification && npm run test:social-leads && npm run test:deadline",
-    "verify:events": "npm run ingest:events && npm run validate:data"
+    "verify:events": "npm run ingest:events && npm run validate:data",
+    "test:ics": "node scripts/ics-smoke.mjs"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
