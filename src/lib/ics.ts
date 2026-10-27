@@ -4,11 +4,12 @@ import type { ManualTask, UserEventPlan } from "@/lib/store";
 import type { TripPlan } from "@/lib/trip-store";
 import { buildTripTimeline, estimatedEnd } from "@/lib/trip";
 import { jstDate } from "@/lib/time";
+import { calendarAlarm, type CalendarReminderMinutes } from "@/lib/ics-reminder";
 import { manualTaskTimeZoneLabel } from "@/lib/deadline-core.mjs";
 
 /** ICS 文本字段转义:逗号/分号/反斜杠/换行 */
 function esc(s: string): string {
-  return s.replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
+  return s.replace(/\r\n?/g, "\n").replace(/\\/g, "\\\\").replace(/;/g, "\\;").replace(/,/g, "\\,").replace(/\n/g, "\\n");
 }
 
 /** Date → ICS UTC 时间戳 "20260812T090000Z" */
@@ -43,7 +44,7 @@ function fold(line: string): string {
 const LIVE_DURATION_MS = 2.5 * 3600_000;
 
 /** 生成想看演出的 VCALENDAR 文本 */
-export function buildIcs(items: { event: EventSummary; venue?: VenueSummary }[]): string {
+export function buildIcs(items: { event: EventSummary; venue?: VenueSummary }[], reminderMinutes: CalendarReminderMinutes = 0): string {
   const now = utcStamp(new Date());
   const lines: string[] = [
     "BEGIN:VCALENDAR",
@@ -71,13 +72,14 @@ export function buildIcs(items: { event: EventSummary; venue?: VenueSummary }[])
 
     lines.push(
       "BEGIN:VEVENT",
-      `UID:${event.id}@ensei-techo`,
+      `UID:${esc(event.id)}@ensei-techo`,
       `DTSTAMP:${now}`,
       `DTSTART:${utcStamp(start)}`,
       `DTEND:${utcStamp(end)}`,
       `SUMMARY:${esc(event.titleJa)}`,
       location ? `LOCATION:${esc(location)}` : "",
       `DESCRIPTION:${esc(desc)}`,
+      ...calendarAlarm(reminderMinutes),
       "END:VEVENT",
     );
   }
@@ -118,7 +120,7 @@ export function buildDeadlineIcs(
     if (mode === "task") {
       lines.push(
         "BEGIN:VTODO",
-        `UID:deadline-${event.id}-${task.id}@ensei-techo`,
+        `UID:deadline-${esc(event.id)}-${esc(task.id)}@ensei-techo`,
         `DTSTAMP:${now}`,
         `DUE:${utcStamp(due)}`,
         `SUMMARY:${esc(summary)}`,
@@ -130,7 +132,7 @@ export function buildDeadlineIcs(
       const end = new Date(due.getTime() + 30 * 60_000);
       lines.push(
         "BEGIN:VEVENT",
-        `UID:deadline-${event.id}-${task.id}@ensei-techo`,
+        `UID:deadline-${esc(event.id)}-${esc(task.id)}@ensei-techo`,
         `DTSTAMP:${now}`,
         `DTSTART:${utcStamp(due)}`,
         `DTEND:${utcStamp(end)}`,
@@ -149,6 +151,7 @@ export function buildDeadlineIcs(
 export function buildTripIcs(
   trip: TripPlan,
   items: { event: EventSummary; venue?: VenueSummary }[],
+  reminderMinutes: CalendarReminderMinutes = 0,
 ): string {
   const now = utcStamp(new Date());
   const lines = [
@@ -176,13 +179,14 @@ export function buildTripIcs(
     ].join("\n");
     lines.push(
       "BEGIN:VEVENT",
-      `UID:trip-${trip.id}-${event.id}@ensei-techo`,
+      `UID:trip-${esc(trip.id)}-${esc(event.id)}@ensei-techo`,
       `DTSTAMP:${now}`,
       `DTSTART:${utcStamp(start)}`,
       `DTEND:${utcStamp(end)}`,
       `SUMMARY:${esc(event.titleJa)}`,
       location ? `LOCATION:${esc(location)}` : "",
       `DESCRIPTION:${esc(description)}`,
+      ...calendarAlarm(reminderMinutes),
       "END:VEVENT",
     );
   }
@@ -193,7 +197,7 @@ export function buildTripIcs(
   );
   const nonEventItems = buildTripTimeline(trip, { eventById, venueById }).filter((item) => item.kind !== "event");
   for (const item of nonEventItems) {
-    lines.push("BEGIN:VEVENT", `UID:trip-${trip.id}-${item.id}@ensei-techo`, `DTSTAMP:${now}`);
+    lines.push("BEGIN:VEVENT", `UID:trip-${esc(trip.id)}-${esc(item.id)}@ensei-techo`, `DTSTAMP:${now}`);
     if (item.time) {
       const start = jstDate(item.date, item.time);
       lines.push(
@@ -218,9 +222,13 @@ export function buildTripIcs(
 export function downloadFile(filename: string, content: string, mime: string) {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(url);
+  try {
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    try { a.click(); } finally { a.remove(); }
+  } finally {
+    window.setTimeout(() => URL.revokeObjectURL(url), 5000);
+  }
 }

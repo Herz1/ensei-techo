@@ -19,6 +19,8 @@ import { replaceSocialLeads, useSocialLeads } from "@/lib/social-leads";
 import { buildDeadlineIcs, buildIcs, downloadFile } from "@/lib/ics";
 import { buildBackupPayload, prepareBackupImport } from "@/lib/backup";
 import SectionTitle from "./SectionTitle";
+import { CalendarReminderSelect } from "@/components/ui/CalendarReminderSelect";
+import type { CalendarReminderMinutes } from "@/lib/ics-reminder";
 
 const BTN =
   "inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-white px-4 py-2 text-xs font-semibold text-zinc-700 transition hover:border-violet-300 hover:text-brand-strong disabled:cursor-not-allowed disabled:opacity-40 dark:border-zinc-700 dark:bg-card-dark dark:text-zinc-200 dark:hover:border-violet-500 dark:hover:text-violet-300";
@@ -47,6 +49,7 @@ export default function DataManage({
   const [msg, setMsg] = useState<{ ok: boolean; text: string } | null>(null);
   const [armed, setArmed] = useState(false);
   const [deadlineMode, setDeadlineMode] = useState<"task" | "event">("task");
+  const [reminderMinutes, setReminderMinutes] = useState<CalendarReminderMinutes>(0);
   const fileRef = useRef<HTMLInputElement>(null);
   const armTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const deadlineItems = plans.flatMap((plan) => {
@@ -65,11 +68,16 @@ export default function DataManage({
   );
 
   function exportIcs() {
-    const ics = buildIcs(
-      upcoming.map((event) => ({ event, venue: venueById.get(event.venueId) })),
-    );
-    downloadFile("ensei-live-calendar.ics", ics, "text/calendar;charset=utf-8");
-    setMsg({ ok: true, text: `已导出 ${upcoming.length} 场计划中的演出` });
+    try {
+      const ics = buildIcs(
+        upcoming.map((event) => ({ event, venue: venueById.get(event.venueId) })),
+        reminderMinutes,
+      );
+      downloadFile("ensei-live-calendar.ics", ics, "text/calendar;charset=utf-8");
+      setMsg({ ok: true, text: `${upcoming.length} 场演出的日历文件已备妥，请查看下载；提醒由导入后的日历应用处理。` });
+    } catch {
+      setMsg({ ok: false, text: "暂时无法准备日历，请核对演出时间后重试；现有计划未改变。" });
+    }
   }
 
   function exportDeadlines() {
@@ -151,6 +159,10 @@ export default function DataManage({
         sub="计划、社媒线索和私人备注仅保存在本机 · 可导出后在另一设备恢复"
       />
       <div className="rounded-2xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-card-dark">
+        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <CalendarReminderSelect value={reminderMinutes} onChange={setReminderMinutes} />
+          <p className="text-xs text-zinc-400">仅用于演出日历；个人截止保持原设置。</p>
+        </div>
         <div className="flex flex-wrap gap-2">
           <button onClick={exportIcs} disabled={!upcoming.length} className={BTN}>
             <CalendarPlus size={14} /> 导出演出日历

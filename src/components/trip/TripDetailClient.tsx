@@ -27,6 +27,8 @@ import { prefectureById } from "@/data/prefectures";
 import type { EventSummary, VenueSummary } from "@/lib/types";
 import { formatJpy, referenceCurrencyLabel } from "@/lib/currency";
 import { buildTripIcs, downloadFile } from "@/lib/ics";
+import { CalendarReminderSelect } from "@/components/ui/CalendarReminderSelect";
+import type { CalendarReminderMinutes } from "@/lib/ics-reminder";
 import { planStatusLabel } from "@/lib/plan";
 import { containsSensitivePersonalData, useEventPlans, usePreferences } from "@/lib/store";
 import {
@@ -169,6 +171,8 @@ export default function TripDetailClient({ tripId, events, venues }: { tripId: s
   const { getPlan, upsertPlan } = useEventPlans();
   const { preferences } = usePreferences();
   const [armedDelete, setArmedDelete] = useState(false);
+  const [reminderMinutes, setReminderMinutes] = useState<CalendarReminderMinutes>(0);
+  const [calendarMessage, setCalendarMessage] = useState("");
   const [customDate, setCustomDate] = useState("");
   const [customTime, setCustomTime] = useState("");
   const [customLabel, setCustomLabel] = useState("");
@@ -212,7 +216,12 @@ export default function TripDetailClient({ tripId, events, venues }: { tripId: s
     downloadFile(`ensei-trip-${trip.id}.json`, JSON.stringify({ app: "ensei-techo", version: 2, exportedAt: new Date().toISOString(), trip }, null, 2), "application/json");
   };
   const exportCalendar = () => {
-    downloadFile(`ensei-trip-${trip.id}.ics`, buildTripIcs(trip, formalEvents.map((event) => ({ event, venue: venueById.get(event.venueId) }))), "text/calendar;charset=utf-8");
+    try {
+      downloadFile(`ensei-trip-${trip.id}.ics`, buildTripIcs(trip, formalEvents.map((event) => ({ event, venue: venueById.get(event.venueId) })), reminderMinutes), "text/calendar;charset=utf-8");
+      setCalendarMessage("远征日历已备妥，请查看下载；演出提醒由导入后的日历应用处理。");
+    } catch {
+      setCalendarMessage("暂时无法准备日历，请核对行程日期与时间后重试；远征数据未改变。");
+    }
   };
 
   return (
@@ -227,11 +236,14 @@ export default function TripDetailClient({ tripId, events, venues }: { tripId: s
         <div className="print-hide flex flex-wrap gap-2">
           {formalEvents.length > 0 && <Link href={`/trips/${trip.id}/day`} prefetch={false} className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-violet-600 px-3 py-2 text-xs font-bold text-white">演出日模式</Link>}
           <button type="button" onClick={exportJson} className={SECONDARY}><FileJson size={13} /> JSON</button>
+          <CalendarReminderSelect value={reminderMinutes} onChange={setReminderMinutes} />
           <button type="button" onClick={exportCalendar} disabled={!formalEvents.length} className={SECONDARY}><Download size={13} /> ICS</button>
           <button type="button" onClick={() => window.print()} className={SECONDARY}><Printer size={13} /> 打印</button>
           <button type="button" onClick={() => { if (!armedDelete) { setArmedDelete(true); return; } deleteTrip(trip.id); router.push("/trips"); }} className={`inline-flex items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-semibold ${armedDelete ? "bg-red-500 text-white" : "border border-red-200 text-red-500 dark:border-red-500/40"}`}><Trash2 size={13} /> {armedDelete ? "再点一次删除远征" : "删除远征"}</button>
         </div>
       </header>
+      <p className="print-hide mt-2 text-xs text-zinc-400">提醒仅加入演出条目；其他行程不添加提醒，时间由日历应用转换为设备时区。</p>
+      <p className="print-hide mt-1 text-xs text-zinc-500" role="status">{calendarMessage}</p>
 
       {nextItem && (
         <section className="mt-5 rounded-2xl bg-violet-600 p-4 text-white">
